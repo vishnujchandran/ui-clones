@@ -1,32 +1,1321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three Columns Layout</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play by hyperspace</title>
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="h-screen bg-gray-100">
+  </head>
+  <body>
+    <div
+      class="grid h-screen overflow-hidden supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row"
+    >
+      <div
+        class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700"
+      >
+        <!-- Left -->
+        <div
+          class="h-full bg-white grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r max-lg:hidden"
+        >
+          <nav
+            class="flex items-center justify-between gap-3 border-b pl-6 pr-3 max-md:h-[50px] md:h-[67px]"
+          >
+            <div class="flex items-center gap-x-1.5 md:gap-x-2.5">
+              <a href="/">
+                <svg
+                  aria-label="hyperspace icon"
+                  class="text-[#333333] h-6 md:h-8"
+                  fill="none"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 104 104"
+                >
+                  <path
+                    d="M101.747 49.847h-10.37a19.579 19.579 0 01-13.784-5.659 19.241 19.241 0 01-5.71-13.662V20.245c0-1.181-.917-2.208-2.105-2.244-1.189-.036-2.24.94-2.24 2.153v10.368a19.235 19.235 0 01-5.709 13.662l-.082.08c-5.37 5.262-14.107 5.262-19.477 0l-.082-.08a19.242 19.242 0 01-5.71-13.662V20.245c0-1.181-.917-2.208-2.105-2.244-1.189-.036-2.24.94-2.24 2.153v10.368a19.234 19.234 0 01-5.71 13.662 19.583 19.583 0 01-13.782 5.66H2.266c-1.19 0-2.228.909-2.265 2.086-.037 1.177.948 2.218 2.173 2.218h10.458a19.58 19.58 0 0113.783 5.66 19.242 19.242 0 015.71 13.662v10.28c0 1.182.917 2.209 2.106 2.245 1.188.036 2.239-.94 2.239-2.153V73.474a19.234 19.234 0 015.71-13.662l.081-.081c5.37-5.262 14.108-5.262 19.478 0l.082.08a19.242 19.242 0 015.71 13.663v10.28c0 1.182.917 2.209 2.105 2.245 1.188.036 2.24-.94 2.24-2.153V73.478a19.234 19.234 0 015.709-13.662 19.583 19.583 0 0113.783-5.66h10.458c1.221 0 2.21-1 2.173-2.218-.036-1.214-1.066-2.081-2.254-2.086-.002 0-.003-.004-.001-.005h.003z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <svg
+                aria-label="separator"
+                class="text-[#e5e5e5] dark:text-[#30363d] lights-out:text-[#353535] size-5"
+                fill="none"
+                role="img"
+                viewBox="0 0 10 21"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.83607 0.5H9.30273L2.7694 20.5H0.302734L6.83607 0.5Z"
+                  fill="currentColor"
+                ></path></svg
+              ><button
+                type="button"
+                id="radix-:Rqmbtf2db:"
+                aria-haspopup="menu"
+                aria-expanded="false"
 
-    <div class="flex h-full">
-        <!-- Left Column: Play -->
-        <div class="w-1/3 bg-blue-500 p-4">
-            <h2 class="text-white text-2xl font-semibold">Play</h2>
-            <p class="text-white mt-2">Content for the Play section</p>
+                class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] transition-colors hover:bg-[#f2f2f2] data-[state=open]:bg-[#f2f2f2]"
+              >
+                <div>
+                  <svg
+                    aria-label="play icon"
+                    fill="none"
+                    role="img"
+                    viewBox="0 0 150 150"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                  >
+                    <rect
+                      width="150"
+                      height="150"
+                      rx="31.929"
+                      fill="#222"
+                    ></rect>
+                    <g filter="url(#prefix__filter0_d_720_2)">
+                      <rect
+                        width="59.302"
+                        height="75.491"
+                        rx="7.105"
+                        transform="rotate(13.984 -113.534 263.576) skewX(.117)"
+                        fill="#fff"
+                      ></rect>
+                    </g>
+                    <g filter="url(#prefix__filter1_d_720_2)">
+                      <rect
+                        width="61.829"
+                        height="79.807"
+                        rx="7.105"
+                        transform="rotate(8.084 -197.42 352.575) skewX(.05)"
+                        fill="#fff"
+                      ></rect>
+                    </g>
+                    <g filter="url(#prefix__filter2_d_720_2)">
+                      <rect
+                        x="35.496"
+                        y="28.198"
+                        width="63.522"
+                        height="83.694"
+                        rx="7.105"
+                        transform="rotate(3.772 35.496 28.198)"
+                        fill="#fff"
+                      ></rect>
+                    </g>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M40.735 41.075a.966.966 0 011.013-.917L87 42.563c.53.028.938.484.91 1.018a.966.966 0 01-1.013.916l-45.25-2.403a.966.966 0 01-.91-1.019zM40.24 48.338a.966.966 0 011.012-.916l45.251 2.403a.965.965 0 01.91 1.018.966.966 0 01-1.013.916l-45.25-2.403a.965.965 0 01-.91-1.018zM37.822 81.267a.966.966 0 011.013-.916l45.251 2.403c.531.029.939.484.91 1.019a.966.966 0 01-1.013.916l-45.25-2.404a.965.965 0 01-.91-1.018zM39.763 55.602a.966.966 0 011.013-.916l45.25 2.404a.965.965 0 01.91 1.018.966.966 0 01-1.012.916L40.673 56.62a.966.966 0 01-.91-1.018zM37.347 88.53a.966.966 0 011.012-.916l45.251 2.404a.965.965 0 01.91 1.018.966.966 0 01-1.013.916l-45.25-2.404a.965.965 0 01-.91-1.018zM39.288 62.874a.966.966 0 011.004-.926l22.144.96a.965.965 0 01.92 1.009.966.966 0 01-1.005.926l-22.144-.96a.965.965 0 01-.92-1.01zM38.794 70.148a.966.966 0 01.995-.936l14.442.478a.965.965 0 01.93 1 .966.966 0 01-.995.936l-14.442-.479a.965.965 0 01-.93-1zM36.377 95.812a.966.966 0 01.995-.936l14.442.478a.965.965 0 01.93 1 .966.966 0 01-.995.936l-14.442-.479a.965.965 0 01-.93-1z"
+                      fill="#D3D3D3"
+                    ></path>
+                    <defs>
+                      <filter
+                        id="prefix__filter0_d_720_2"
+                        x="42.013"
+                        y="35.035"
+                        width="79.469"
+                        height="91.431"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        ></feFlood>
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        ></feColorMatrix>
+                        <feOffset dx="1.694" dy="1.694"></feOffset>
+                        <feGaussianBlur stdDeviation="1.705"></feGaussianBlur>
+                        <feComposite
+                          in2="hardAlpha"
+                          operator="out"
+                        ></feComposite>
+                        <feColorMatrix
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        ></feColorMatrix>
+                        <feBlend
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_720_2"
+                        ></feBlend>
+                        <feBlend
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_720_2"
+                          result="shape"
+                        ></feBlend>
+                      </filter>
+                      <filter
+                        id="prefix__filter1_d_720_2"
+                        x="35.67"
+                        y="30.476"
+                        width="77.344"
+                        height="92.683"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        ></feFlood>
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        ></feColorMatrix>
+                        <feOffset dx="1.694" dy="1.694"></feOffset>
+                        <feGaussianBlur stdDeviation="1.705"></feGaussianBlur>
+                        <feComposite
+                          in2="hardAlpha"
+                          operator="out"
+                        ></feComposite>
+                        <feColorMatrix
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        ></feColorMatrix>
+                        <feBlend
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_720_2"
+                        ></feBlend>
+                        <feBlend
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_720_2"
+                          result="shape"
+                        ></feBlend>
+                      </filter>
+                      <filter
+                        id="prefix__filter2_d_720_2"
+                        x="28.726"
+                        y="26.934"
+                        width="74.807"
+                        height="93.609"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        ></feFlood>
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        ></feColorMatrix>
+                        <feOffset dx="1.694" dy="1.694"></feOffset>
+                        <feGaussianBlur stdDeviation="1.705"></feGaussianBlur>
+                        <feComposite
+                          in2="hardAlpha"
+                          operator="out"
+                        ></feComposite>
+                        <feColorMatrix
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        ></feColorMatrix>
+                        <feBlend
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_720_2"
+                        ></feBlend>
+                        <feBlend
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_720_2"
+                          result="shape"
+                        ></feBlend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <span>Play</span>
+                <div>
+                  <svg
+                    aria-label="separator"
+                    fill="none"
+                    role="img"
+                    viewBox="0 0 11 11"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-3"
+                  >
+                    <path
+                      d="M7.803 7.643l-2.5 2.5-2.5-2.5M7.803 3.356l-2.5-2.5-2.5 2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width=".974"
+                      stroke="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <button
+              class="flex h-8 w-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-[#f2f2f2]"
+              type="button"
+              id="radix-:R4mbtf2db:"
+              aria-haspopup="menu"
+              aria-expanded="false"
+
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-sun block size-4 lights-out:hidden dark:hidden"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path></svg
+              >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-moon hidden size-4 lights-out:hidden dark:block"
+              >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-contrast hidden size-4 lights-out:block dark:hidden"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 18a6 6 0 0 0 0-12v12z"></path>
+              </svg>
+              <span class="sr-only">Toggle theme</span>
+            </button>
+          </nav>
+          <div
+            dir="ltr"
+
+            class="grid grid-rows-[auto_1fr]"
+          >
+            <div
+              role="tablist"
+              aria-orientation="horizontal"
+              class="inline-flex text-[#333333] h-auto items-stretch justify-start gap-2 rounded-none bg-transparent p-3 *:text-base"
+              tabindex="0"
+
+              style="outline: none"
+            >
+              <button
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="radix-:R16btf2db:-content-graph"
+
+                id="radix-:R16btf2db:-trigger-graph"
+                class="text-[#f5f6f8] bg-[#333333] whitespace-nowrap px-3 py-1.5 text-xs font-medium ring-offset-[#e5e5e5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 flex h-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-[#f2f2f2] w-auto flex-1"
+                tabindex="-1"
+
+
+              >
+                Node View
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="radix-:R16btf2db:-content-tree"
+
+                id="radix-:R16btf2db:-trigger-tree"
+                class="whitespace-nowrap px-3 py-1.5 text-xs font-medium ring-offset-[#e5e5e5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50  flex h-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-[#f2f2f2] w-auto flex-1"
+                tabindex="-1"
+
+
+              >
+                Tab View</button
+              >
+              <button
+                class="flex h-8 w-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-[#f2f2f2]"
+
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus size-4"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5v14"></path>
+                </svg>
+              </button>
+            </div>
+            <div
+
+
+              role="tabpanel"
+              aria-labelledby="radix-:R16btf2db:-trigger-graph"
+              id="radix-:R16btf2db:-content-graph"
+              tabindex="0"
+              class="mt-2 ring-offset-[#e5e5e5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
+              style="animation-duration: 0s"
+            >
+              <div class="relative size-full">
+                <span
+                  ><div
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      overflow: hidden;
+                      position: relative;
+                      z-index: 0;
+                    "
+                    class="react-flow size-full light"
+
+                  >
+                    <div
+                      class="react-flow__renderer"
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    >
+                      <div
+                        class="react-flow__pane draggable"
+                        style="
+                          position: absolute;
+                          width: 100%;
+                          height: 100%;
+                          top: 0;
+                          left: 0;
+                        "
+                      >
+                        <div
+                          class="react-flow__viewport xyflow__viewport react-flow__container"
+                          style="transform: translate(62px, 352px) scale(2)"
+                        >
+                          <div class="react-flow__edges"></div>
+                          <div class="react-flow__edgelabel-renderer"></div>
+                          <div
+                            class="react-flow__nodes"
+                            style="
+                              position: absolute;
+                              width: 100%;
+                              height: 100%;
+                              top: 0;
+                              left: 0;
+                            "
+                          >
+                            <div
+                              class="react-flow__node react-flow__node-knowledgeNode nopan selectable draggable"
+                              style="
+                                z-index: 0;
+                                transform: translate(0px);
+                                pointer-events: all;
+                                visibility: visible;
+                              "
+
+
+                              tabindex="0"
+                              role="button"
+                              aria-describedby="react-flow__node-desc-1"
+                            >
+                              <div
+
+
+
+                                class="react-flow__handle react-flow__handle-top nodrag nopan target connectable connectablestart connectableend connectionindicator"
+                                style="visibility: hidden"
+                              ></div>
+                              <spanclass="relative">
+                                <div
+                                  class="flex items-center w-20 justify-center ml-0 lg:ml-[100px] rounded-md border border-[#e5e5e5] p-1 text-sm hover:cursor-pointer hover:bg-[#f2f2f2] bg-[#333333] border-#e5e5e5 text-white hover:bg-[#333333]"
+                                >
+                                  Welcome!
+                                </div>
+                              </spanclass=>
+                              <div
+
+
+
+                                class="react-flow__handle react-flow__handle-bottom nodrag nopan source connectable connectablestart connectableend connectionindicator"
+                                style="visibility: hidden"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="react-flow__viewport-portal"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <svg
+                      class="react-flow__background"
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+
+                    >
+                      <pattern
+                        id="pattern-1"
+                        x="22"
+                        y="32"
+                        width="40"
+                        height="40"
+                        patternUnits="userSpaceOnUse"
+                        patternTransform="translate(-21,-21)"
+                      >
+                        <circle
+                          cx="1"
+                          cy="1"
+                          r="1"
+                          class="react-flow__background-pattern dots"
+                        ></circle>
+                      </pattern>
+                      <rect
+                        x="0"
+                        y="0"
+                        width="100%"
+                        height="100%"
+                        fill="url(#pattern-1)"
+                      ></rect>
+                    </svg>
+                    <div
+                      class="react-flow__panel react-flow__controls horizontal rounded *:border-none *:bg-[#f5f6f8] *:text-[#333333] *:transition [&amp;>*:hover]:bg-[#f2f2f2] bottom right"
+                      style="pointer-events: all"
+
+                      aria-label="React Flow controls"
+                    >
+                      <button
+                        type="button"
+                        class="react-flow__controls-button react-flow__controls-zoomin"
+                        title="zoom in"
+                        aria-label="zoom in"
+                        disabled=""
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32"
+                        >
+                          <path
+                            d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
+                          ></path>
+                        </svg></button
+                      ><button
+                        type="button"
+                        class="react-flow__controls-button react-flow__controls-zoomout"
+                        title="zoom out"
+                        aria-label="zoom out"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 5"
+                        >
+                          <path d="M0 0h32v4.2H0z"></path>
+                        </svg></button
+                      ><button
+                        type="button"
+                        class="react-flow__controls-button react-flow__controls-fitview"
+                        title="fit view"
+                        aria-label="fit view"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 30"
+                        >
+                          <path
+                            d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
+                          ></path>
+                        </svg></button
+                      ><button
+                        type="button"
+                        class="react-flow__controls-button react-flow__controls-interactive"
+                        title="toggle interactivity"
+                        aria-label="toggle interactivity"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 25 32"
+                        >
+                          <path
+                            d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div
+                      id="react-flow__aria-live-1"
+                      aria-live="assertive"
+                      aria-atomic="true"
+                      style="
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        margin: -1px;
+                        border: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        clip: rect(0px, 0px, 0px, 0px);
+                        clip-path: inset(100%);
+                      "
+                    ></div>
+                  </div> </span
+                ><button
+                  aria-label="Expand Flow"
+                  class="absolute right-2 top-2 rounded-full bg-[#333333] p-2 text-white shadow-md transition-colors hover:bg-[#e5e5e5] hover:text-[#333333]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-maximize2"
+                  >
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" x2="14" y1="3" y2="10"></line>
+                    <line x1="3" x2="10" y1="21" y2="14"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+
+
+              role="tabpanel"
+              aria-labelledby="radix-:R16btf2db:-trigger-tree"
+              hidden=""
+              id="radix-:R16btf2db:-content-tree"
+              tabindex="0"
+              class="mt-2 ring-offset-[#e5e5e5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
+            ></div>
+          </div>
+          <div class="border-t bg-[#f5f6f8] p-3">
+            <label class="ml-3" for="user-public-key"
+              >Public Key<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-info mb-1 ml-2 inline size-3.5 cursor-help"
+
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4"></path>
+                <path d="M12 8h.01"></path></svg
+            ></label>
+            <div class="relative">
+              <input
+                class="flex h-10 rounded-md border border-[#e5e5e5] bg-white px-3 py-2 text-sm ring-offset-[#e5e5e5] file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#818181] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-1.5 mt-3 w-full font-mono tracking-wider subpixel-antialiased"
+                id="user-public-key"
+                readonly=""
+                value="2uHE3p2…4xBWah"
+              />
+              <div
+                class="absolute inset-y-0 right-0 flex items-center gap-1 pr-1.5"
+              >
+                <button
+                  class="flex transform items-center justify-center border transition hover:-translate-y-px hover:bg-[#f2f2f2] size-7 rounded border-none"
+
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-copy size-3"
+                  >
+                    <rect
+                      width="14"
+                      height="14"
+                      x="8"
+                      y="8"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path
+                      d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                    ></path>
+                  </svg></button
+                ><button
+                  class="flex transform items-center justify-center border transition hover:-translate-y-px hover:bg-[#f2f2f2] size-7 rounded border-none"
+
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-key size-3"
+                  >
+                    <path
+                      d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"
+                    ></path>
+                    <path d="m21 2-9.6 9.6"></path>
+                    <circle cx="7.5" cy="15.5" r="5.5"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Middle Column: Chat -->
-        <div class="w-1/3 bg-green-500 p-4">
-            <h2 class="text-white text-2xl font-semibold">Chat</h2>
-            <p class="text-white mt-2">Content for the Chat section</p>
+        <!-- Middle -->
+        <div class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2">
+          <div
+            class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:inset-4 lg:rounded-lg lg:border"
+          >
+            <div
+              class="pointer-events-none absolute bottom-[6rem] left-[0rem] z-10 p-4"
+            >
+              <div
+                class="flex items-center space-x-2 rounded-lg border p-2.5 shadow transition h-0 opacity-0"
+              >
+                <div class="flex items-center justify-center w-8 h-8">
+                  <div class="h-full w-full text-current">
+                    <canvas
+                      style="vertical-align: top; width: 32px; height: 32px"
+                      width="32"
+                      height="32"
+                    ></canvas>
+                  </div>
+                </div>
+                <span class="text-sm" style="opacity: 1; transform: none"
+                  >AI is
+                  <!-- -->thinking<span></span
+                ></span>
+              </div>
+            </div>
+            <div
+              class="relative mb-1.5 overflow-y-auto overflow-x-hidden border-b"
+            >
+              <div
+                class="flex cursor-default select-none flex-col items-center py-8 text-center overflow-hidden pb-[20vh]"
+              >
+                <h1 class="mb-4 text-gray-700 text-xl font-semibold">
+                  Welcome to Play by hyperspace
+                </h1>
+                <p class="mb-8 max-w-lg text-sm text-gray-500 max-md:px-4">
+                  Dive into topics and explore with speed and accuracy. Choose
+                  your desired sources and AI provider to generate your own web
+                  of information.
+                </p>
+                <p class="mb-8 text-sm text-gray-500 max-md:px-4">
+                  Click to explore the news or start with your own topic of
+                  choice.
+                </p>
+                <div
+                  class="relative mb-4 w-full"
+                  role="region"
+                  aria-roledescription="carousel"
+                >
+                  <div class="overflow-hidden">
+                    <div
+                      class="flex -ml-4"
+                      style="transform: translate3d(-30px, 0px, 0px)"
+                    >
+                      <div
+                        role="group"
+                        aria-roledescription="slide"
+                        class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
+                        style="transform: translate3d(0px, 0px, 0px)"
+                      >
+                        <button
+                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          style="animation-duration: 0.1s"
+                        >
+                          <h3
+                            class="text-sm text-gray-700 mb-2 line-clamp-2 font-semibold"
+                          >
+                            C.I.A. Official Charged in Leak of Classified
+                            Documents About Israeli Military Plans - The New
+                            York Times
+                          </h3>
+                          <p
+                            class="mb-4 line-clamp-3 flex-grow text-sm text-gray-400 font-medium text-xs max-sm:line-clamp-2"
+                          >
+                            C.I.A. Official Charged in Leak of Classified
+                            Documents About Israeli Military Plans The New York
+                            TimesFBI arrests alleged leaker of US intelligenc...
+                          </p>
+                          <div class="mb-1 flex items-center justify-between">
+                            <span
+                              class="text-start text-[10px] text-gray-400 text-xs"
+                              >nytimes.com</span
+                            ><span
+                              class="text-end text-[10px] text-gray-400 text-xs"
+                              >19 minutes</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        role="group"
+                        aria-roledescription="slide"
+                        class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
+                        style="transform: translate3d(0px, 0px, 0px)"
+                      >
+                        <button
+                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          style="animation-duration: 0.2s"
+                        >
+                          <h3
+                            class="text-sm text-gray-700 mb-2 line-clamp-2 font-semibold"
+                          >
+                            Live Scam Detection in calls rolling out to Pixel
+                            6-9 Phone app - 9to5Google
+                          </h3>
+                          <p
+                            class="mb-4 line-clamp-3 flex-grow text-sm text-gray-400 font-medium text-xs max-sm:line-clamp-2"
+                          >
+                            Live Scam Detection in calls rolling out to Pixel
+                            6-9 Phone app 9to5GoogleNew Google Pixel AI feature
+                            analyzes phone conversations for scams Bleepi...
+                          </p>
+                          <div class="mb-1 flex items-center justify-between">
+                            <span class="text-start text-[10px] text-gray-400"
+                              >google.com</span
+                            ><span class="text-end text-[10px] text-gray-400"
+                              >about 1 hour</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        role="group"
+                        aria-roledescription="slide"
+                        class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
+                      >
+                        <button
+                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          style="animation-duration: 0.3s"
+                        >
+                          <h3
+                            class="text-sm text-gray-700 mb-2 line-clamp-2 font-semibold"
+                          >
+                            Spurs say Popovich's absence due to mild stroke -
+                            ESPN
+                          </h3>
+                          <p
+                            class="mb-4 line-clamp-3 flex-grow text-sm text-gray-400 font-medium text-xs max-sm:line-clamp-2"
+                          >
+                            Spurs say Popovich's absence due to mild stroke
+                            ESPNSan Antonio Spurs' coach Gregg Popovich suffers
+                            mild stroke NBC NewsSpurs coach Gregg Popovich ...
+                          </p>
+                          <div class="mb-1 flex items-center justify-between">
+                            <span class="text-start text-[10px] text-gray-400"
+                              >espn.com</span
+                            ><span class="text-end text-[10px] text-gray-400"
+                              >about 1 hour</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="inline-flex items-center justify-center text-[#333333] whitespace-nowrap rounded-md text-sm font-medium ring-offset-[#e5e5e5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#f2f2f2] h-10 px-4 py-2 gap-2"
+                >
+                  <span>Open menu</span
+                  ><kbd
+                    class="rounded-sm border px-2 font-semibold tracking-widest"
+                    >⌘K</kbd
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative animate-in fade-in slide-in-from-bottom-1"
+              role="region"
+              aria-roledescription="carousel"
+            >
+              <div class="overflow-hidden">
+                <div
+                  class="flex mx-3 cursor-grab select-none space-x-2 *:cursor-grab"
+                  style="transform: translate3d(0px, 0px, 0px)"
+                >
+                  <div
+                    role="group"
+                    aria-roledescription="slide"
+                    class="min-w-0 shrink-0 grow-0 basis-auto px-0"
+                  >
+                    <button
+                      class="my-px flex h-full items-center gap-2 truncate rounded-md bg-white px-1.5 py-1 text-start font-medium text-xs transition hover:text-[#333333]-light disabled:pointer-events-none"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-refresh-ccw size-3"
+                      >
+                        <path
+                          d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                        ></path>
+                        <path d="M3 3v5h5"></path>
+                        <path
+                          d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                        ></path>
+                        <path d="M16 16h5v5"></path></svg
+                      ><span>Refresh</span>
+                    </button>
+                  </div>
+                  <div
+                    role="group"
+                    aria-roledescription="slide"
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.2s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
+                    >
+                      Comparative cognition between humans and AI
+                    </button>
+                  </div>
+                  <div
+                    role="group"
+                    aria-roledescription="slide"
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.4s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
+                    >
+                      Blockchain consensus mechanisms
+                    </button>
+                  </div>
+                  <div
+                    role="group"
+                    aria-roledescription="slide"
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.6s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
+                    >
+                      Neural correlates of consciousness
+                    </button>
+                  </div>
+                  <div
+                    role="group"
+                    aria-roledescription="slide"
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.8s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
+                    >
+                      Cryptocurrency mining and energy consumption
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group relative p-3 pt-1.5">
+              <textarea
+                class="flex w-full border bg-white px-3 py-2 ring-offset-[#e5e5e5] placeholder:text-gray-500 text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-0 resize-none rounded pr-14 text-md transition hide-scrollbar [field-sizing:content]"
+                autofocus=""
+                id="convo-input"
+                placeholder="What would you like to ask?"
+                required=""
+                rows="2"
+              ></textarea>
+              <div
+                class="absolute flex items-center justify-end bottom-2.5 right-6 top-2 translate-y-[-2px]"
+              >
+                <button
+                  class="aspect-square rounded bg-[#333333] p-2 text-[#f5f6f8] opacity-100 transition disabled:opacity-50"
+                  disabled=""
+                  type="submit"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-up size-4"
+                  >
+                    <path d="m5 12 7-7 7 7"></path>
+                    <path d="M12 19V5"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Right Column: AI Providers -->
-        <div class="w-1/3 bg-red-500 p-4">
-            <h2 class="text-white text-2xl font-semibold">AI Providers</h2>
-            <p class="text-white mt-2">Content for the AI Providers section</p>
+        <!-- Right -->
+        <div
+          class="max-w-[360px] transition-all duration-300 w-1/4 hidden lg:block bg-white"
+        >
+          <div class="relative h-full">
+            <div
+              class="absolute top-4 hidden cursor-pointer rounded-l-lg border bg-white p-2 transition-all duration-300 lg:block -left-6"
+              style="z-index: 10"
+            >
+              <div
+                class="transform transition-transform duration-200 rotate-180"
+              >
+                <svg
+                  class="rotate-180 transform transition-transform duration-200"
+                  fill="none"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  width="10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0.999999L7.5 6L2.5 11"
+                    stroke="#333333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.42857"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="h-full overflow-hidden transition-all duration-300 w-full"
+            >
+              <div
+                class="h-full w-full overflow-y-auto border-l transition-all duration-300 translate-x-0"
+              >
+                <div class="flex flex-col space-y-4 p-4">
+                  <div class="flex flex-col space-y-2">
+                    <h2 class="text-md font-semibold capitalize">
+                      AI Providers
+                    </h2>
+                    <div class="flex flex-col space-y-3">
+                      <div class="flex space-x-2">
+                        <button
+                          type="button"
+                          id="radix-:r0:"
+                          aria-haspopup="menu"
+                          aria-expanded="false"
+                          class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                        >
+                          <div class="flex items-center justify-between">
+                            <div class="flex items-center overflow-hidden">
+                              <img
+                                alt="groq"
+                                loading="lazy"
+                                width="20"
+                                height="20"
+                                decoding="async"
+
+                                class="mr-2 flex-shrink-0"
+                                style="color: transparent"
+                                src="https://play.hyper.space/groq.svg"
+                              /><span class="truncate text-sm font-medium"
+                                >Groq</span
+                              ><span
+                                class="ml-1 hidden items-center text-sm text-gray-500 text-xs 2xl:block"
+                                >(Default)</span
+                              >
+                            </div>
+                            <img
+                              alt="Dropdown arrow"
+                              loading="lazy"
+                              width="12"
+                              height="12"
+                              decoding="async"
+
+                              class="flex-shrink-0"
+                              style="color: transparent"
+                              src="https://play.hyper.space/DropdownIcon.svg"
+                            />
+                          </div></button
+                        ><button
+                          type="button"
+                          id="radix-:r2:"
+                          aria-haspopup="menu"
+                          aria-expanded="false"
+                          class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                        >
+                          <div class="flex items-center justify-between">
+                            <div class="flex items-center overflow-hidden">
+                              <img
+                                alt="llama3-70b-8192"
+                                loading="lazy"
+                                width="20"
+                                height="20"
+                                decoding="async"
+
+                                class="mr-2 flex-shrink-0"
+                                style="color: transparent"
+                                src="https://play.hyper.space/meta.svg"
+                              /><span class="truncate text-sm font-medium"
+                                >llama3-70b-8192</span
+                              >
+                            </div>
+                            <img
+                              alt="Dropdown arrow"
+                              loading="lazy"
+                              width="12"
+                              height="12"
+                              decoding="async"
+
+                              class="flex-shrink-0"
+                              style="color: transparent"
+                              src="https://play.hyper.space/DropdownIcon.svg"
+                            />
+                          </div>
+                        </button>
+                      </div>
+                      <div>
+                        <div class="relative">
+                          <div
+                            class="flex h-[35px] w-full items-center justify-between rounded-lg border px-3 py-1 text-left"
+                          >
+                            <div class="flex w-full items-center">
+                              <input
+                                autocomplete="current-password"
+                                class="h-full w-full bg-transparent text-gray-500 text-xs font-medium placeholder-gray-500 focus:outline-none"
+                                placeholder="Enter API key"
+                                type="password"
+                              />
+                            </div>
+                            <button
+                              class="ml-2 text-sm text-gray-500 text-xs"
+                              type="button"
+                            >
+                              Show
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <p class="text-xs font-medium">
+                          Get Groq API key
+                          <a
+                            class="text-blue-500 hover:underline"
+                            href="#"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            >here </a
+                          >.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="flex w-full flex-col space-y-2">
+                    <h2 class="text-md font-semibold capitalize">
+                      Data Sources
+                    </h2>
+                    <div
+                      role="group"
+                      dir="ltr"
+                      class="space-y-2"
+                      tabindex="0"
+                      style="outline: none"
+                    >
+                      <button
+                        type="button"
+                        aria-pressed="true"
+
+                        class="group w-full rounded-md border p-4 text-start transition hover:border-[#818181] hover:bg-[#f2f2f2] transform-gpu hover:-translate-y-px data-[state=on]:border-gray-500"
+                        tabindex="-1"
+
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-500 text-xs opacity-15 transition-opacity duration-200 group-data-[state=on]:opacity-100"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                        <div class="flex items-center space-x-2">
+                          <img
+                            alt="Web"
+                            class="h-5 w-5"
+                            style="filter: none"
+                            src="https://play.hyper.space/data-sources/web.svg"
+                          />
+                          <h3
+                            class="text-sm text-gray-700 text-md font-semibold capitalize"
+                          >
+                            Web
+                          </h3>
+                        </div>
+                        <p class="mt-2 text-sm">
+                          Search and retrieve information from the web
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div
+                      class="flex w-full flex-col items-center justify-center gap-3 rounded border-2 border-dashed p-4 border-gray-300"
+                    >
+                      <input
+                        accept=".pdf,.txt"
+                        class="hidden"
+                        id="file-upload"
+                        type="file"
+                      />
+                      <div class="text-sm text-gray-500 text-xs">
+                        Drag and drop a PDF or Text File, or click to upload
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-upload"
+                      >
+                        <path
+                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                        ></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" x2="12" y1="3" y2="15"></line>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="flex flex-col gap-1"></ul>
+                  <hr />
+                  <div class="flex flex-col space-y-5">
+                    <div class="space-y-1">
+                      <p class="text-sm">
+                        Select your preferred source below. You may choose
+                        multiple sources.
+                      </p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <div class="flex flex-wrap gap-2">
+                        <button
+                          class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-gray-100"
+                          type="button"
+                          aria-haspopup="dialog"
+                          aria-expanded="false"
+                          aria-controls="radix-:r5:"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-plus size-4 text-[#333333]"
+                          >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                          </svg></button
+                        ><img
+                          alt="Wikipedia"
+                          class="h-7 w-7 cursor-pointer"
+                          src="https://play.hyper.space/data-sources/wikipedia.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="flex flex-col space-y-5">
+                    <div class="flex items-center justify-between">
+                      <h2 class="text-sm font-semibold">Vector Chunks</h2>
+                      <button>
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-gray-500 text-xs"
+                        >
+                          <path
+                            d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="space-y-2">
+                      <p class="text-sm text-gray-500 text-xs">
+                        No vector chunks available. Start a chat to see relevant
+                        chunks.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
