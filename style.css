@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 400 700;
+  src: url(/openalternative.co/fonts/Geist-Variable.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: Uncut Sans;
+  font-style: normal;
+  font-weight: 400 900;
+  src: url(/fonts/UncutSans-Variable.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/fonts/InterVariable.woff2) format("woff2");
+}
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(../fonts/InterVariable-Italic.woff2) format("woff2");
+}
+
+body {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: Geist, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  /* font-variation-settings: normal; */
+  -webkit-tap-highlight-color: transparent;
+}
