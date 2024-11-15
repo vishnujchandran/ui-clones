@@ -76,15 +76,14 @@
         pointer-events: none;
       }
 
-      /* Add scale-up effect when an image enters */
       .image-container img.scale-up {
         transform: scale(1.05);
       }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div class="scene">
-      <!-- Images behind the frame -->
       <div class="image-container">
         <img src="./images/1.jpg" alt="Image 1" />
         <img src="./images/2.jpg" alt="Image 2" />
@@ -115,7 +114,6 @@
         <img src="./images/9.jpg" alt="Image 9" />
       </div>
 
-      <!-- iPhone frame overlay -->
       <div class="iphone-frame">
         <div class="notch"></div>
         <div class="frame-inner"></div>
@@ -132,42 +130,35 @@
       const gap = 5;
       const totalWidth = imageWidth + gap;
 
-      // Set width of the container to fit all images
       imageContainer.style.width = `${totalImages * (imageWidth + gap)}px`;
 
       function moveImages() {
-        // Remove the scale-up class from all images
         images.forEach((img) => img.classList.remove("scale-up"));
 
-        // Move to the next image
         currentIndex = (currentIndex + 1) % totalImages;
         const newPosition = -currentIndex * totalWidth;
         imageContainer.style.transform = `translateX(${newPosition}px)`;
 
-        // Add scale-up effect to the image that's coming into view
         images[currentIndex].classList.add("scale-up");
 
-        // Once we have reached the last image, reset the position after the transition
         if (currentIndex === totalImages - 1) {
           setTimeout(() => {
-            imageContainer.style.transition = "none"; // Disable transition
-            imageContainer.style.transform = `translateX(0)`; // Move back to the start
+            imageContainer.style.transition = "none";
+            imageContainer.style.transform = `translateX(0)`;
             currentIndex = 0;
             setTimeout(() => {
-              imageContainer.style.transition = "transform 1s ease"; // Re-enable transition
-            }, 2000); // Small delay to ensure the transition is enabled again
-          }, 1000); // Wait for the transition to complete before resetting
+              imageContainer.style.transition = "transform 1s ease";
+            }, 2000);
+          }, 1000);
         }
       }
 
-      // Handle window resize
       window.addEventListener("resize", () => {
         const newPosition = -currentIndex * totalWidth;
         imageContainer.style.transform = `translateX(${newPosition}px)`;
       });
 
-      // Start the animation
-      setInterval(moveImages, 2000); // 2 seconds per image
+      setInterval(moveImages, 2000);
     </script>
   </body>
 </html>
