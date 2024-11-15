@@ -3,48 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI Labs</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Clones</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .bg-gray-100 {
+        background-color: #f7fafc;
+      }
+      .font-sans {
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+      .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      .text-gray-800 {
+        color: #2d3748;
+      }
+      .grid {
+        display: grid;
+      }
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gap-8 {
+        gap: 2rem;
+      }
+      @media (max-width: 768px) {
+        .grid-cols-2 {
+          grid-template-columns: 1fr;
+        }
+        .gap-8 {
+          gap: 1rem;
+        }
+      }
+      .card {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 1;
+      }
+      .card:hover .card-overlay {
+        opacity: 1;
+      }
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      .tag {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        z-index: 2;
+      }
+    </style>
   </head>
-  <body class="bg-gray-600">
-    <div class="h-screen flex justify-center items-center">
-      <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
-        <h2 class="text-2xl font-bold mb-6 text-center">UI Clones</h2>
-        <ul class="space-y-4">
-          <li>
-            <a
-              href="./openalternative.co/index.html"
-              class="block text-lg text-blue-600 hover:underline"
-            >
-              Open Alternative
-            </a>
-          </li>
-          <li>
-            <a
-              href="./play.hyper.space/index.html"
-              class="block text-lg text-blue-600 hover:underline"
-            >
-              Play Hyper Space
-            </a>
-          </li>
-          <li>
-            <a
-              href="./perplexity.ai/index.html"
-              class="block text-lg text-blue-600 hover:underline"
-            >
-              Perplexity AI
-            </a>
-          </li>
-          <li>
-            <a
-              href="./xpost/index.html"
-              class="block text-lg text-blue-600 hover:underline"
-            >
-              XPost
-            </a>
-          </li>
-        </ul>
+  <body class="bg-gray-100 font-sans">
+    <div class="flex flex-col items-center justify-center min-h-screen p-4">
+      <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">Clones</h1>
+      <div class="grid grid-cols-2 gap-8">
+        <a href="openalternative.co/index.html" class="card">
+          <div class="tag">Open Alternative</div>
+          <img src="images/OpenAlternative.png" alt="Open Alternative" />
+          <div class="card-overlay">
+            <div class="card-title">Open Alternative</div>
+          </div>
+        </a>
+        <a href="play.hyper.space/index.html" class="card">
+          <div class="tag">Play Hyperspace</div>
+          <img src="images/playbyhyperspace.png" alt="Play Hyperspace" />
+          <div class="card-overlay">
+            <div class="card-title">Play Hyperspace</div>
+          </div>
+        </a>
+        <a href="perplexity.ai/index.html" class="card">
+          <div class="tag">Perplexity</div>
+          <img src="images/Perplexity.png" alt="Perplexity" />
+          <div class="card-overlay">
+            <div class="card-title">Perplexity</div>
+          </div>
+        </a>
+        <a href="framer/index.html" class="card">
+          <div class="tag">Framer Motion</div>
+          <img src="/api/placeholder/600/400" alt="Framer Motion Site" />
+          <div class="card-overlay">
+            <div class="card-title">Framer Motion Site</div>
+          </div>
+        </a>
       </div>
     </div>
   </body>
