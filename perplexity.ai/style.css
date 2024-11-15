@@ -1,0 +1,135 @@
+@layer pplx-base {
+  :root {
+    --pale-yellow-100: 99% 0.004 106.471;
+    --pale-yellow-200: 96.3% 0.007 106.523;
+    --pale-yellow-300: 93% 0.007 106.529;
+    --pale-yellow-400: 93% 0.003 106.451;
+    --pale-yellow-500: 90.6% 0.005 106.506;
+    --pale-yellow-600: 88.3% 0.012 106.646;
+    --pale-yellow-700: 50.2% 0.008 106.677;
+    --pale-yellow-800: 35.9% 0.003 106.569;
+    --pale-teal-100: 92.1% 0.009 171.782;
+    --pale-cyan-100: 65.3% 0.005 197.042;
+    --pale-cyan-200: 30.3% 0.003 197.007;
+    --pale-cyan-300: 25% 0.003 196.966;
+    --pale-cyan-400: 21.7% 0.002 197.042;
+    --pale-blue-100: 36.6% 0.003 228.866;
+    --pale-blue-200: 30.4% 0.04 213.681;
+    --teal-100: 71.9% 0.119 209.76;
+    --teal-200: 55.3% 0.086 208.538;
+    --rose-100: 68.2% 0.207 22.935;
+    --red-100: 53.5% 0.151 25.991;
+    --persimmon-100: 52.8% 0.13 37.369;
+    --background-color-100: var(--pale-yellow-100);
+    --background-color-200: var(--pale-yellow-200);
+    --background-color-300: var(--pale-yellow-300);
+    --background-super-color-100: var(--pale-teal-100);
+    --background-super-color-200: var(--teal-200);
+    --background-super-color-300: var(--teal-100);
+    --background-super-alt-color-100: var(--persimmon-100);
+    --background-back-to-school-orange-color: 252 96 2;
+    --border-color-100: var(--pale-yellow-600);
+    --text-color-100: var(--pale-blue-200);
+    --text-color-200: var(--pale-yellow-700);
+    --dark-background-color-100: var(--pale-cyan-400);
+    --dark-background-color-200: var(--pale-cyan-300);
+    --dark-background-color-300: var(--pale-cyan-200);
+    --dark-background-super-color-100: var(--pale-blue-200);
+    --dark-background-super-color-200: var(--teal-100);
+    --dark-background-super-color-300: var(--teal-200);
+    --dark-background-super-alt-color-100: var(--red-100);
+    --dark-border-color-100: var(--pale-blue-100);
+    --dark-text-color-100: var(--pale-yellow-400);
+    --dark-text-color-200: var(--pale-cyan-100);
+    --light-background-color-100: var(--pale-yellow-100);
+    --light-text-color-100: var(--pale-blue-200);
+    --backdrop-color-100: 0 0 360;
+    --backdrop-lightbox-color-100: 0 0 360;
+  }
+}
+/* svg */
+svg:not(:host).svg-inline--fa,
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.07143em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+}
+.svg-inline--fa .fa-secondary,
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: #000;
+}
+
+@font-face {
+  font-family: __fkGroteskNeue_598ab8;
+  src: url(https://pplx-next-static-public.perplexity.ai/_next/static/media/80d90e1e722a80dc-s.p.woff2)
+    format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: __fkGroteskNeue_598ab8, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica Neue, Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.group:hover .group-hover\:stroke-superDuper {
+  stroke: oklch(var(--background-super-color-300) / 1);
+}
+
+.stroke-super {
+  stroke: oklch(var(--background-super-color-200) / 1);
+}
