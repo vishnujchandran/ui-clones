@@ -5,3 +5,8 @@
 #sidebar.hidden {
   display: none;
 }
+
+.thick-hr {
+  border-top: 3px solid;
+  border-style: solid;
+}
