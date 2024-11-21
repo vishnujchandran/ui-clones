@@ -22,15 +22,28 @@ const expandButton = document.getElementById("expandSidebar");
 const collapseButton = document.getElementById("collapseSidebar");
 
 expandButton.addEventListener("click", function () {
-  sidebar.classList.add("hidden"); // Hide the small sidebar
-  extendedSidebar.classList.remove("hidden"); // Show the extended sidebar
-  extendedSidebar.classList.add("w-64"); // Set width of extended sidebar
-  sidebar.classList.remove("w-16"); // Reset width of small sidebar
+  sidebar.classList.add("hidden");
+  extendedSidebar.classList.remove("hidden");
+  extendedSidebar.classList.add("w-64");
+  sidebar.classList.remove("w-16");
 });
 
 collapseButton.addEventListener("click", function () {
-  extendedSidebar.classList.add("hidden"); // Hide the extended sidebar
-  sidebar.classList.remove("hidden"); // Show the small sidebar
-  sidebar.classList.add("w-16"); // Set width of small sidebar
-  extendedSidebar.classList.remove("w-64"); // Reset width of extended sidebar
+  extendedSidebar.classList.add("hidden");
+  sidebar.classList.remove("hidden");
+  sidebar.classList.add("w-16");
+  extendedSidebar.classList.remove("w-64");
+});
+
+const textarea = document.getElementById("textarea");
+const adjacentDiv = document.getElementById("adjacentDiv");
+
+textarea.addEventListener("focus", () => {
+  adjacentDiv.classList.remove("hidden"); 
+  adjacentDiv.style.opacity = 1; 
+});
+
+textarea.addEventListener("blur", () => {
+  adjacentDiv.classList.add("hidden"); 
+  adjacentDiv.style.opacity = 0; 
 });
