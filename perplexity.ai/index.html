@@ -1,37 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Perplexity</title>
-
-    <link
-      rel="stylesheet"
-      href="https://pplx-next-static-public.perplexity.ai/_next/static/css/4d07c9159d317fa7.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-
     <meta
       name="description"
       content="Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question."
     />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
+    <title>Perplexity</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
   </head>
-  <body>
+  <body class="md:bg-[#F3F3EE] dark:md:bg-[#202222]">
     <main>
-      <div class="bg-[#F3F3EE]">
+      <div
+        class="border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#202222]"
+      >
         <div class="flex h-full min-h-[100dvh]">
-          <div class="hidden md:block">
-            <div class="w-[220px]">
-              <div class="fixed z-20 h-full w-[220px]">
+          <div
+            id="extended-sidebar"
+            class="hidden md:block border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+          >
+            <div
+              id="extended-sidebar"
+              class="sidebar isolate transition-all duration-300 ease-in-out w-[220px]"
+            >
+              <div
+                class="fixed z-20 h-full transition-all duration-300 ease-in-out w-[220px] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+              >
                 <div
-                  class="sticky top-0 flex h-full min-h-0 flex-1 flex-col pt-[14px]"
+                  class="sticky top-0 flex h-full min-h-0 flex-1 flex-col pt-[16px]"
                 >
-                  <div class="flex items-center mb-4 justify-between">
-                    <span
-                      ><a class="block" href="#"
-                        ><div class="ml-[4px] pl-[16px] pr-[8px] pt-[4px]">
-                          <div class="h-auto group w-28 md:w-[140px]">
+                  <div class="flex items-center mb-[16px] justify-between">
+                    <span>
+                      <a class="block" href="#">
+                        <div class="ml-[4px] pl-[16px] pr-[8px] pt-[4px]">
+                          <div class="h-auto w-28 md:w-[140px]">
                             <svg
                               viewBox="0 0 400 91"
                               fill="none"
@@ -39,65 +45,69 @@
                             >
                               <path
                                 d="M196.978 27.8931H200.033V34.1872H196.079C192.979 34.1872 190.669 34.9333 189.14 36.4254C187.615 37.9176 186.85 40.3662 186.85 43.7711V64.401H180.606V28.0333H186.85V33.8367C186.85 34.1622 187.014 34.3274 187.337 34.3274C187.52 34.3274 187.659 34.2823 187.754 34.1872C187.848 34.0921 187.938 33.9068 188.032 33.6264C189.234 29.8058 192.219 27.8931 196.983 27.8931H196.978ZM237.763 35.6894C239.402 38.6036 240.227 42.1137 240.227 46.2146C240.227 50.3156 239.407 53.8257 237.763 56.7399C236.119 59.6541 233.993 61.8323 231.38 63.2794C228.767 64.7265 225.956 65.4476 222.951 65.4476C217.03 65.4476 212.868 63.0691 210.464 58.3122C210.28 57.9417 210.046 57.7514 209.768 57.7514C209.49 57.7514 209.351 57.8916 209.351 58.172V77.6853H203.107V28.0333H209.351V34.2573C209.351 34.5377 209.49 34.6779 209.768 34.6779C210.046 34.6779 210.275 34.4926 210.464 34.1171C212.868 29.3602 217.03 26.9817 222.951 26.9817C225.956 26.9817 228.767 27.7028 231.38 29.1499C233.993 30.597 236.119 32.7751 237.763 35.6894ZM233.983 46.2146C233.983 41.9234 232.841 38.5786 230.551 36.1801C228.261 33.7816 225.246 32.5799 221.496 32.5799C217.745 32.5799 214.73 33.7816 212.44 36.1801C210.151 38.5836 209.311 41.9284 209.311 46.2146C209.311 50.5009 210.151 53.8507 212.44 56.2492C214.73 58.6527 217.75 59.8494 221.496 59.8494C225.241 59.8494 228.261 58.6477 230.551 56.2492C232.841 53.8507 233.983 50.5009 233.983 46.2146ZM134.595 35.7445C136.235 38.6587 137.059 42.1688 137.059 46.2697C137.059 50.3707 136.24 53.8808 134.595 56.795C132.951 59.7092 130.825 61.8874 128.213 63.3345C125.6 64.7816 122.788 65.5026 119.783 65.5026C113.863 65.5026 109.7 63.1242 107.296 58.3673C107.112 57.9967 106.879 57.8065 106.601 57.8065C106.322 57.8065 106.183 57.9467 106.183 58.2271V77.7404H99.9446V28.0883H106.188V34.3124C106.188 34.5928 106.327 34.733 106.606 34.733C106.884 34.733 107.112 34.5477 107.301 34.1722C109.705 29.4153 113.867 27.0368 119.788 27.0368C122.793 27.0368 125.605 27.7579 128.218 29.205C130.83 30.6521 132.956 32.8302 134.6 35.7445H134.595ZM130.815 46.2697C130.815 41.9785 129.673 38.6336 127.383 36.2352C125.093 33.8367 122.078 32.6349 118.328 32.6349C114.578 32.6349 111.563 33.8367 109.273 36.2352C106.983 38.6387 106.144 41.9835 106.144 46.2697C106.144 50.5559 106.983 53.9058 109.273 56.3043C111.563 58.7078 114.578 59.9045 118.328 59.9045C122.078 59.9045 125.093 58.7028 127.383 56.3043C129.673 53.9058 130.815 50.5559 130.815 46.2697ZM169.112 52.8543H175.703C174.824 56.2592 173.031 59.2085 170.329 61.7021C167.622 64.1957 163.748 65.4425 158.706 65.4425C154.911 65.4425 151.573 64.6614 148.682 63.0991C145.791 61.5369 143.561 59.3137 141.986 56.4195C140.412 53.5303 139.627 50.1253 139.627 46.2096C139.627 42.294 140.392 38.889 141.917 35.9998C143.442 33.1106 145.583 30.8824 148.335 29.3201C151.086 27.7579 154.31 26.9767 158.011 26.9767C161.711 26.9767 164.776 27.7479 167.344 29.2851C169.912 30.8223 171.829 32.8653 173.101 35.404C174.372 37.9477 175.008 40.7317 175.008 43.7611V47.9572H146.219C146.447 51.5925 147.664 54.4867 149.859 56.6298C152.055 58.7729 155.005 59.8494 158.706 59.8494C161.711 59.8494 164.016 59.2335 165.61 57.9967C167.205 56.7599 168.372 55.0475 169.112 52.8543ZM146.288 42.7146H168.074C168.074 39.545 167.264 37.0614 165.645 35.2638C164.026 33.4712 161.483 32.5699 158.015 32.5699C154.777 32.5699 152.129 33.4461 150.073 35.1937C148.017 36.9412 146.755 39.4498 146.293 42.7096L146.288 42.7146ZM245.169 64.396H251.413V14.043H245.169V64.401V64.396ZM331.801 24.0625H339.093V16.1911H331.801V24.0625ZM357.526 58.9782C356.393 59.0933 355.708 59.1534 355.479 59.1534C355.156 59.1534 354.898 59.0583 354.714 58.873C354.531 58.6877 354.436 58.4324 354.436 58.1019C354.436 57.8716 354.496 57.1806 354.61 56.0389C354.724 54.8972 354.784 53.1347 354.784 50.7612V33.361H363.69L361.937 28.0333H354.789V18.2391H348.545V28.0283H341.755V33.356H348.545V52.5038C348.545 56.5146 349.519 59.4989 351.461 61.4568C353.403 63.4146 356.363 64.396 360.342 64.396H365.2V58.8029H362.771C360.412 58.8029 358.663 58.863 357.531 58.9782H357.526ZM394.059 28.0283L383.723 58.5425C383.583 58.9181 383.365 59.4088 382.655 59.4088C381.944 59.4088 381.726 58.9181 381.587 58.5425L371.25 28.0283H364.882L376.853 64.396H381.085C381.363 64.396 381.572 64.4211 381.711 64.4661C381.85 64.5112 381.964 64.6264 382.059 64.8166C382.242 65.097 382.217 65.5177 381.989 66.0735L380.047 71.3862C379.769 72.0872 379.237 72.4377 378.452 72.4377C378.174 72.4377 377.529 72.3776 376.51 72.2624C375.492 72.1473 374.176 72.0872 372.556 72.0872H367.49V77.6803H374.151C378.035 77.6803 380.375 77.0143 382.386 75.6874C384.398 74.3605 385.958 72.0171 387.07 68.6572L400 29.4203V28.0233H394.059V28.0283ZM311.406 41.5979L301.626 28.0283H294.756V29.4253L306.478 45.1631L292.188 62.999V64.396H299.197L310.576 49.7798L321.191 64.396H327.922V62.999L315.504 46.2146L328.965 29.5004V28.0333H321.956L311.411 41.603L311.406 41.5979ZM332.467 64.396H338.71V28.0333H332.467V64.401V64.396ZM292.471 52.8543C291.592 56.2592 289.799 59.2085 287.097 61.7021C284.39 64.1957 280.515 65.4425 275.474 65.4425C271.679 65.4425 268.341 64.6614 265.45 63.0991C262.559 61.5369 260.329 59.3137 258.754 56.4195C257.18 53.5303 256.395 50.1253 256.395 46.2096C256.395 42.294 257.16 38.889 258.685 35.9998C260.21 33.1106 262.35 30.8824 265.102 29.3201C267.854 27.7579 271.078 26.9767 274.778 26.9767C278.479 26.9767 281.543 27.7479 284.111 29.2851C286.679 30.8223 288.597 32.8653 289.868 35.404C291.14 37.9477 291.776 40.7317 291.776 43.7611V47.9572H262.986C263.215 51.5925 264.432 54.4867 266.627 56.6298C268.823 58.7729 271.773 59.8494 275.474 59.8494C278.479 59.8494 280.783 59.2335 282.378 57.9967C283.972 56.7599 285.14 55.0475 285.88 52.8543H292.471ZM263.056 42.7146H284.842C284.842 39.545 284.032 37.0614 282.413 35.2638C280.793 33.4712 278.25 32.5699 274.783 32.5699C271.545 32.5699 268.897 33.4461 266.841 35.1937C264.784 36.9412 263.523 39.4498 263.061 42.7096L263.056 42.7146Z"
-                                class="block fill-black group-hover:fill-superDuper -colors"
+                                class="block fill-textMain dark:fill-[#E8E8E6] group-hover:fill-superDuper transition-colors duration-300"
                               ></path>
                               <path
                                 d="M38.6936 29.9832L12.8633 5.88983V29.9832H38.6936Z"
-                                class="stroke-super group-hover:stroke-superDuper -colors"
+                                class="stroke-super dark:stroke-superDark group-hover:stroke-superDuper transition-colors duration-300 transition-all duration-300"
                                 stroke-width="4.30504"
                                 stroke-miterlimit="10"
                               ></path>
                               <path
                                 d="M39.5005 29.9832L65.3308 5.88983V29.9832H39.5005Z"
-                                class="stroke-super group-hover:stroke-superDuper -colors"
+                                class="stroke-super dark:stroke-superDark group-hover:stroke-superDuper transition-colors duration-300 transition-all duration-300"
                                 stroke-width="4.30504"
                                 stroke-miterlimit="10"
                               ></path>
                               <path
                                 d="M38.7227 2L38.7227 90.2534"
-                                class="stroke-super group-hover:stroke-superDuper -colors"
+                                class="stroke-super dark:stroke-superDark group-hover:stroke-superDuper transition-colors duration-300 transition-all duration-300"
                                 stroke-width="4.30504"
                                 stroke-miterlimit="10"
                               ></path>
                               <path
                                 d="M64.5246 53.7584L38.6943 30.0068V62.9404L64.5246 85.9724V53.7584Z"
-                                class="stroke-super group-hover:stroke-superDuper -colors"
+                                class="stroke-super dark:stroke-superDark group-hover:stroke-superDuper transition-colors duration-300 transition-all duration-300"
                                 stroke-width="4.30504"
                                 stroke-miterlimit="10"
                               ></path>
                               <path
                                 d="M12.8924 53.7584L38.7227 30.0068V62.9404L12.8924 85.9724V53.7584Z"
-                                class="stroke-super group-hover:stroke-superDuper -colors"
+                                class="stroke-super dark:stroke-superDark group-hover:stroke-superDuper transition-colors duration-300 transition-all duration-300"
                                 stroke-width="4.30504"
                                 stroke-miterlimit="10"
                               ></path>
                               <path
                                 d="M2.28711 29.9832V64.4236H12.8863V53.7348L38.7226 29.9832H2.28711Z"
-                                class="stroke-super group-hover:stroke-superDuper -colors"
+                                class="stroke-super dark:stroke-superDark group-hover:stroke-superDuper transition-colors duration-300 transition-all duration-300"
                                 stroke-width="4.30504"
                                 stroke-miterlimit="10"
                               ></path>
                               <path
                                 d="M38.6943 30.3L64.5246 54.0515V64.7403H75.2872V30.3L38.6943 30.3Z"
-                                class="stroke-super group-hover:stroke-superDuper -colors"
+                                class="stroke-super dark:stroke-superDark group-hover:stroke-superDuper transition-colors duration-300 transition-all duration-300"
                                 stroke-width="4.30504"
                                 stroke-miterlimit="10"
                               ></path>
                             </svg>
-                          </div></div></a
-                    ></span>
-                    <div class="mr-xs pt-2">
+                          </div>
+                        </div>
+                      </a>
+                    </span>
+                    <div class="mr-[4px] pt-[2px]">
                       <button
+                        id="collapseSidebar"
                         type="button"
-                        class="md:hover:bg-[#F3F3EE] text-gray-500 md:hover:text-black select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm aspect-square h-8"
+                        class="text-[#7E7E79] dark:text-[#868A8A] outline-none outline-transparent dark:hover:bg-[#2D2F2F] dark:hover:text-[#E8E8E6] transition duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded-full cursor-point origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
                       >
                         <div
-                          class="flex items-center min-w-0 justify-center gap-0.5"
+                          class="flex items-center min-w-0 justify-center gap-[4px]"
                         >
                           <svg
                             focusable="false"
+                            data-prefix="far"
+                            data-icon="arrow-left-to-line"
                             class="svg-inline--fa fa-arrow-left-to-line fa-fw fa-1x"
-                            role="img"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"
                           >
@@ -110,26 +120,26 @@
                       </button>
                     </div>
                   </div>
-                  <div class="pt-[4px]">
-                    <div class="ml-[8px]">
+                  <div class="pt-[8px]">
+                    <div class="ml-[4px]">
                       <div
-                        class="group mx-[16px] flex flex-none cursor-pointer select-none items-center justify-between rounded-full border py-[8px] pl-[16px] pr-[8px] ring-1 ring-transparent duration-200 hover:ring-black bg-[#FCFCF9]"
+                        class="mx-[16px] flex flex-none cursor-pointer select-none items-center justify-between rounded-full border-[2px] py-[8px] pl-[16px] pr-[8px] transition duration-200 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#FCFCF9] dark:bg-[#191A1A] dark:hover:border-[#1EADC0]"
                       >
                         <div
-                          class="line-clamp-1 overflow-hidden text-sm font-medium text-gray-500"
+                          class="line-clamp-1 overflow-hidden text-clip light text-sm font-medium text-[#7E7E79] dark:text-[#868A8A]"
                         >
                           New Thread
                         </div>
                         <div
-                          class="flex items-center space-x-two text-base text-gray-500"
+                          class="flex items-center space-x-[2px] light text-base text-[#7E7E79] dark:text-[#868A8A]"
                         >
                           <div
-                            class="flex h-5 min-w-5 items-center justify-center rounded border px-[4px] font-mono text-xs"
+                            class="flex h-5 min-w-5 items-center justify-center rounded border px-[4px] font-mono text-xs border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                           >
                             Ctrl
                           </div>
                           <div
-                            class="flex h-5 w-5 items-center justify-center rounded border font-mono text-xs"
+                            class="flex h-5 w-5 items-center justify-center rounded border font-mono text-xs border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                           >
                             I
                           </div>
@@ -138,24 +148,32 @@
                     </div>
                   </div>
                   <div
-                    class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden pt-5"
+                    class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden pt-[16px] scrollbar-thin scrollbar-track-transparent scrollbar-thumb-idle dark:scrollbar-thumb-"
                   >
                     <div class="w-full">
                       <div class="items-center relative flex-1 w-full">
                         <div class="flex w-full">
-                          <div class="items-center relative flex-1 space-y-xs">
-                            <div class="relative justify-center w-full">
-                              <div class="px-[4px] relative flex items-center">
+                          <div
+                            class="items-center relative flex-1 space-y-[4px]"
+                          >
+                            <div
+                              class="relative dark:hover:bg-[] justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+                            >
+                              <div
+                                class="px-[4px] transition duration-300 relative flex items-center"
+                              >
                                 <a
-                                  class="md:hover:bg-[#E8E8E3] text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-base px-4 font-medium h-10"
+                                  class="text-[#13343B] dark:text-[#E8E8E6] py-[16px] outline-none outline-transparent transition duration-300 ease-out select-none hover:bg-[#E8E8E3] dark:hover:bg-[#2C2E2E] items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-base px-[16px] font-medium h-10"
                                   href="#"
-                                  ><div
-                                    class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                                >
+                                  <div
+                                    class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                                   >
                                     <svg
                                       focusable="false"
+                                      data-prefix="fak"
+                                      data-icon="search"
                                       class="svg-inline--fa fa-search fa-fw fa-1x"
-                                      role="img"
                                       xmlns="http://www.w3.org/2000/svg"
                                       viewBox="0 0 512 512"
                                     >
@@ -165,34 +183,35 @@
                                       ></path>
                                     </svg>
                                     <div
-                                      class="text-center relative truncate leading-loose"
+                                      class="text-align-center relative truncate leading-loose"
                                     >
                                       Home
                                     </div>
-                                  </div></a
-                                >
+                                  </div>
+                                </a>
                                 <div
-                                  class="absolute bg-black"
-                                  style="
-                                    transform: none;
-                                    transform-origin: 50% 50% 0px;
-                                    opacity: 1;
-                                  "
+                                  class="absolute bg-textMain dark:bg-[#E8E8E6]"
                                 ></div>
                               </div>
                             </div>
-                            <div class="relative justify-center w-full">
-                              <div class="px-[4px] relative">
+                            <div
+                              class="relative justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+                            >
+                              <div
+                                class="px-[4px] transition duration-300 relative"
+                              >
                                 <a
-                                  class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-base px-4 font-medium h-10"
+                                  class="text-[#7E7E79] dark:text-[#868A8A] py-[16px] hover:bg-[#E8E8E3] hover:text-[#13343B] dark:hover:bg-[#2C2E2E] dark:hover:text-white outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-base px-[16px] font-medium h-10"
                                   href="#"
-                                  ><div
-                                    class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                                >
+                                  <div
+                                    class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                                   >
                                     <svg
                                       focusable="false"
+                                      data-prefix="fak"
+                                      data-icon="discover"
                                       class="svg-inline--fa fa-discover fa-fw fa-1x"
-                                      role="img"
                                       xmlns="http://www.w3.org/2000/svg"
                                       viewBox="0 0 640 512"
                                     >
@@ -202,26 +221,32 @@
                                       ></path>
                                     </svg>
                                     <div
-                                      class="text-center relative truncate leading-loose"
+                                      class="text-align-center relative truncate leading-loose"
                                     >
                                       Discover
                                     </div>
-                                  </div></a
-                                >
+                                  </div>
+                                </a>
                               </div>
                             </div>
-                            <div class="relative justify-center w-full">
-                              <div class="px-[4px] relative">
+                            <div
+                              class="relative justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+                            >
+                              <div
+                                class="px-[4px] transition duration-300 relative"
+                              >
                                 <a
-                                  class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-base px-4 font-medium h-10"
+                                  class="text-[#7E7E79] dark:text-[#868A8A] py-[16px] outline-none outline-transparent hover:bg-[#E8E8E3] hover:text-[#13343B] dark:hover:bg-[#2C2E2E] dark:hover:text-white transition duration-300 ease-out select-none items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-base px-[16px] font-medium h-10"
                                   href="#"
-                                  ><div
-                                    class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                                >
+                                  <div
+                                    class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                                   >
                                     <svg
                                       focusable="false"
+                                      data-prefix="fak"
+                                      data-icon="collection-2"
                                       class="svg-inline--fa fa-collection-2 fa-fw fa-1x"
-                                      role="img"
                                       xmlns="http://www.w3.org/2000/svg"
                                       viewBox="0 0 512 512"
                                     >
@@ -231,26 +256,32 @@
                                       ></path>
                                     </svg>
                                     <div
-                                      class="text-center relative truncate leading-loose"
+                                      class="text-align-center relative truncate leading-loose"
                                     >
                                       Spaces
                                     </div>
-                                  </div></a
-                                >
+                                  </div>
+                                </a>
                               </div>
                             </div>
-                            <div class="relative justify-center w-full">
-                              <div class="px-[4px] relative">
+                            <div
+                              class="relative justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+                            >
+                              <div
+                                class="px-[4px] transition duration-300 relative"
+                              >
                                 <a
-                                  class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-base px-4 font-medium h-10"
+                                  class="text-[#7E7E79] dark:text-[#868A8A] py-[16px] outline-none outline-transparent hover:bg-[#E8E8E3] hover:text-[#13343B] dark:hover:bg-[#2C2E2E] dark:hover:text-white transition duration-300 ease-out select-none items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-base px-[16px] font-medium h-10"
                                   href="#"
-                                  ><div
-                                    class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                                >
+                                  <div
+                                    class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                                   >
                                     <svg
                                       focusable="false"
+                                      data-prefix="fak"
+                                      data-icon="library"
                                       class="svg-inline--fa fa-library fa-fw fa-1x"
-                                      role="img"
                                       xmlns="http://www.w3.org/2000/svg"
                                       viewBox="0 0 512 512"
                                     >
@@ -260,60 +291,60 @@
                                       ></path>
                                     </svg>
                                     <div
-                                      class="text-center relative truncate leading-loose"
+                                      class="text-align-center relative truncate leading-loose"
                                     >
                                       Library
                                     </div>
-                                  </div></a
-                                >
+                                  </div>
+                                </a>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="group/history">
-                      <div
-                        style="
-                          opacity: 1;
-                          will-change: transform, opacity;
-                          transform: none;
-                        "
-                      >
+                    <div class="">
+                      <div>
                         <div
-                          class="relative mb-md ml-[29px] mt-xs space-y-xs border-l pl-sm pr-sm duration-200"
-                          style="transform: none; transform-origin: 50% 50% 0px"
-                        ></div>
+                          class="relative mb-[16px] ml-[29px] mt-[4px] space-y-[4px] border-l border-borderMain/50 pl-[8px] pr[8px] duration-200 dark:border-borderMainDark"
+                        >
+                          <div></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <div class="flex flex-col gap-md">
-                      <div class="px-4 pb-[8px]">
+                    <div class="flex flex-col gap-[16px]">
+                      <div
+                        class="px-[16px] pb-[8px] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+                      >
                         <div>
                           <div
-                            class="inline default text-sm font-medium text-black"
+                            class="inline default text-sm font-medium text-[#13343B] dark:text-[#E8E8E6]"
                           >
-                            <a class="hover:text-super" href="#">Try Pro</a>
+                            <a class="duration-300" href="#">Try Pro</a>
                           </div>
                         </div>
-                        <div class="text-sm text-gray-500">
+                        <div
+                          class="light text-sm text-[#7E7E79] dark:text-[#868A8A]"
+                        >
                           Upgrade for image upload, smarter AI, and more Pro
                           Search.
                         </div>
-                        <div class="mt-[4px] mb-5">
+                        <div class="mt-[4px]">
                           <div>
                             <button
                               type="button"
-                              class="bg-[#E8E8E3] text-black md:hover:text-gray-500 select-none items-center relative justify-center text-center items-center rounded cursor-pointer whitespace-nowrap text-sm px-[8px] font-medium h-8"
+                              class="bg-[#E8E8E3] hover:text-[#64645F] dark:bg-[#2D2F2F] dark:hover:text-[#8D9191] text-[#13343B] dark:text-[#E8E8E6] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded cursor-point origin-center whitespace-nowrap inline-flex text-sm px-[8px] font-medium h-8"
                             >
                               <div
-                                class="flex items-center min-w-0 justify-center gap-0.5"
+                                class="flex items-center min-w-0 justify-center gap-[4px]"
                               >
                                 <svg
                                   focusable="false"
+                                  data-prefix="far"
+                                  data-icon="arrow-up-right"
                                   class="svg-inline--fa fa-arrow-up-right fa-fw fa-1x"
-                                  role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 384 512"
                                 >
@@ -323,7 +354,7 @@
                                   ></path>
                                 </svg>
                                 <div
-                                  class="text-center relative truncate leading-loose"
+                                  class="text-align-center relative truncate leading-loose"
                                 >
                                   Learn More
                                 </div>
@@ -334,60 +365,67 @@
                       </div>
                       <div>
                         <div>
-                          <div class="w-full border-t py-[8px]">
+                          <div
+                            class="w-full border-t py-[8px] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+                          >
                             <div
-                              class="mx-[8px] flex items-center justify-between gap-0.5"
+                              class="mx-[8px] flex items-center justify-between gap-[4px] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                             >
-                              <span class="min-w-0">
+                              <span class="inline-flex min-w-0">
                                 <div
-                                  class="w-full cursor-pointer select-none items-center justify-start gap-[8px] rounded-full p-1 pr-[8px] !duration-150 bg-[#F3F3EE] md:hover:bg-[#E8E8E3]"
+                                  class="inline-flex w-full cursor-pointer select-none items-center justify-start gap-[8px] rounded-full p-1 pr-[8px] transition !duration-150 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 transition duration-300 bg-[#F3F3EE] hover:bg-[#E8E8E3] dark:bg-[#202222] dark:hover:bg-[#2D2F2F]"
                                 >
-                                  <div class="relative flex gap-2">
+                                  <div class="relative">
                                     <div
-                                      class="relative flex aspect-square shrink-0 items-center justify-center rounded-full h-8 w-8 bg-[#E8E8E3]"
+                                      class="relative flex aspect-square shrink-0 items-center justify-center rounded-full h-8 w-8 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#F3F3EE]Dark"
                                     >
                                       <img
+                                        alt="User avatar"
                                         class="h-full w-full rounded-full object-cover"
-                                        src="https://avatars.dicebear.com/v2/male/baa0f0755e718c0c4320d29e73dcb206.svg"
+                                        src="https://gravatar.com/avatar/6c09d67dd13f71a80c1fa4972fccdde4?s=400&d=robohash&r=x"
                                       />
                                     </div>
+                                  </div>
+                                  <div
+                                    class="relative flex items-center gap-x-[4px]"
+                                  >
                                     <div
-                                      class="relative flex items-center gap-[4px]"
+                                      class="line-clamp-1 break-all default text-sm font-medium text-[#13343B] dark:text-[#E8E8E6]"
                                     >
-                                      <div
-                                        class="line-clamp-1 break-all default text-sm font-medium text-black"
-                                      >
-                                        username
-                                      </div>
-                                      <span
-                                        class="relative top-[1px] text-background opacity-50 text-gray-500 opacity-100 pl-1"
-                                        ><svg
-                                          focusable="false"
-                                          class="svg-inline--fa fa-chevron-down fa-xs"
-                                          role="img"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 512 512"
-                                        >
-                                          <path
-                                            fill="currentColor"
-                                            d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z"
-                                          ></path>
-                                        </svg>
-                                      </span>
+                                      username
                                     </div>
                                   </div>
-                                </div> </span
-                              ><a
-                                class="pt-3 md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black aspect-square min-h-[unset] shrink-0 h-[32px] -mr-[4px] select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm aspect-square h-8"
-                                href="#"
+                                  <span
+                                    class="relative top-[1px] text-background opacity-50 dark:text-backgroundDark !dark:text-[#7E7E79] !text-[#7E7E79] !opacity-100"
+                                  >
+                                    <svg
+                                      focusable="false"
+                                      data-prefix="far"
+                                      data-icon="chevron-down"
+                                      class="svg-inline--fa fa-chevron-down fa-xs"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 512 512"
+                                    >
+                                      <path
+                                        fill="currentColor"
+                                        d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z"
+                                      ></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </span>
+                              <button
+                                type="button"
+                                class="text-[#7E7E79] dark:text-[#868A8A] dark:hover:bg-[#2D2F2F] dark:hover:text-[#E8E8E6] hover:bg-[#E8E8E3] hover:text-[#345055] aspect-square min-h-[unset] shrink-0 h-[32px] -mr-[4px] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded-full cursor-point origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
                               >
                                 <div
-                                  class="flex items-center min-w-0 justify-center gap-0.5"
+                                  class="flex items-center min-w-0 justify-center gap-[4px]"
                                 >
                                   <svg
                                     focusable="false"
+                                    data-prefix="far"
+                                    data-icon="gear"
                                     class="svg-inline--fa fa-gear fa-fw fa-1x"
-                                    role="img"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512"
                                   >
@@ -397,26 +435,27 @@
                                     ></path>
                                   </svg>
                                 </div>
-                              </a>
+                              </button>
                             </div>
                           </div>
                         </div>
                         <div class="h-14 items-stretch">
                           <div
-                            class="mb-[8px] flex items-center justify-between border-t pl-[4px] pr-[4px] pt-[8px]"
+                            class="mb-[8px] flex items-center justify-between border-t pl-[4px] pr-[4px] pt-[8px] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                           >
-                            <span
-                              ><button
+                            <span>
+                              <button
                                 type="button"
-                                class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm px-[8px] font-medium h-8"
+                                class="text-[#7E7E79] dark:text-[#868A8A] hover:bg-[#E8E8E3] hover:text-[#13343B] outline-none outline-transparent transition duration-300 ease-out select-none dark:hover:bg-[#2D2F2F] dark:hover:text-[#E8E8E6] items-center relative justify-center text-center items-center rounded-full cursor-point origin-center whitespace-nowrap inline-flex text-sm px-[8px] font-medium h-8"
                               >
                                 <div
-                                  class="flex items-center min-w-0 justify-center gap-0.5"
+                                  class="flex items-center min-w-0 justify-center gap-[4px]"
                                 >
                                   <svg
                                     focusable="false"
+                                    data-prefix="far"
+                                    data-icon="mobile-screen"
                                     class="svg-inline--fa fa-mobile-screen fa-fw fa-1x"
-                                    role="img"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 384 512"
                                   >
@@ -426,24 +465,27 @@
                                     ></path>
                                   </svg>
                                   <div
-                                    class="text-center relative truncate leading-loose"
+                                    class="text-align-center relative truncate leading-loose"
                                   >
                                     Download
                                   </div>
                                 </div>
-                              </button></span
-                            >
-                            <div class="flex items-center gap-x-2">
+                              </button>
+                            </span>
+                            <div class="flex items-center gap-x-[2px]">
                               <a
-                                class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm aspect-square h-8"
+                                class="text-[#7E7E79] hover:bg-[#E8E8E3] hover:text-[#345055] dark:text-[#868A8A] dark:hover:bg-[#2D2F2F] dark:hover:text-[#E8E8E6] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded-full cursor-point origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
+                                target="_blank"
                                 href="#"
-                                ><div
-                                  class="flex items-center min-w-0 justify-center gap-0.5"
+                              >
+                                <div
+                                  class="flex items-center min-w-0 justify-center gap-[4px]"
                                 >
                                   <svg
                                     focusable="false"
-                                    class="svg-inline--fa fa-x-twitter fa-fw fa-1x pt-2"
-                                    role="img"
+                                    data-prefix="fab"
+                                    data-icon="x-twitter"
+                                    class="svg-inline--fa fa-x-twitter fa-fw fa-1x"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512"
                                   >
@@ -451,18 +493,22 @@
                                       fill="currentColor"
                                       d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
                                     ></path>
-                                  </svg></div
-                              ></a>
+                                  </svg>
+                                </div>
+                              </a>
                               <a
-                                class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm aspect-square h-8"
+                                class="text-[#7E7E79] hover:bg-[#E8E8E3] hover:text-[#345055] dark:text-[#868A8A] dark:hover:bg-[#2D2F2F] dark:hover:text-[#E8E8E6] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded-full cursor-point origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
+                                target="_blank"
                                 href="#"
-                                ><div
-                                  class="flex items-center min-w-0 justify-center gap-0.5"
+                              >
+                                <div
+                                  class="flex items-center min-w-0 justify-center gap-[4px]"
                                 >
                                   <svg
                                     focusable="false"
-                                    class="svg-inline--fa fa-discord fa-fw fa-1x pt-2"
-                                    role="img"
+                                    data-prefix="fab"
+                                    data-icon="discord"
+                                    class="svg-inline--fa fa-discord fa-fw fa-1x"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 640 512"
                                   >
@@ -470,8 +516,9 @@
                                       fill="currentColor"
                                       d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
                                     ></path>
-                                  </svg></div
-                              ></a>
+                                  </svg>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -483,29 +530,357 @@
             </div>
           </div>
           <div
-            class="flex h-auto w-full min-w-0 grow flex-col md:gap-0.5 lg:pb-[8px] lg:pr-[8px] lg:pt-[8px]"
+            id="sidebar"
+            class="relative hidden sidebar fixed z-20 h-full transition-all duration-300 ease-in-out max-w-[90px] border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent"
+          >
+            <div class="sticky top-0 flex h-full min-h-0 flex-1 flex-col pt-md">
+              <div class="flex items-center justify-center">
+                <span>
+                  <a aria-label="Perplexity" class="block" href="/">
+                    <div
+                      class="transition-all duration-300 ease-in-out hover:scale-105"
+                    >
+                      <div class="h-auto group w-10">
+                        <svg
+                          viewBox="0 0 101 116"
+                          stroke="none"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            class="stroke-textMain dark:stroke-textMainDark group-hover:stroke-superDuper transition-colors duration-300"
+                            d="M86.4325 6.53418L50.4634 36.9696H86.4325V6.53418Z"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M50.4625 36.9696L17.2603 6.53418V36.9696H50.4625Z"
+                            class="stroke-textMain dark:stroke-textMainDark group-hover:stroke-superDuper transition-colors duration-300"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M50.4634 1L50.4634 114.441"
+                            class="stroke-textMain dark:stroke-textMainDark group-hover:stroke-superDuper transition-colors duration-300"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M83.6656 70.172L50.4634 36.9697V79.3026L83.6656 108.908V70.172Z"
+                            class="stroke-textMain dark:stroke-textMainDark group-hover:stroke-superDuper transition-colors duration-300"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M17.2603 70.172L50.4625 36.9697V78.4497L17.2603 108.908V70.172Z"
+                            class="stroke-textMain dark:stroke-textMainDark group-hover:stroke-superDuper transition-colors duration-300"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M3.42627 36.9697V81.2394H17.2605V70.172L50.4628 36.9697H3.42627Z"
+                            class="stroke-textMain dark:stroke-textMainDark group-hover:stroke-superDuper transition-colors duration-300"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                          <path
+                            d="M50.4634 36.9697L83.6656 70.172V81.2394H97.4999V36.9697L50.4634 36.9697Z"
+                            class="stroke-textMain dark:stroke-textMainDark group-hover:stroke-superDuper transition-colors duration-300"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </span>
+              </div>
+              <div class="-mb-sm py-lg">
+                <div class="flex items-center justify-center">
+                  <button
+                    aria-label="New Thread"
+                    type="button"
+                    class="bg-offsetPlus dark:bg-offsetPlusDark text-[#13343B] dark:text-textMainDark md:hover:text-textOff md:dark:hover:text-[#868A8A] font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out font-sans select-none items-center relative group/button justify-center text-center items-center rounded-full cursor-point active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-base aspect-square h-10"
+                    data-state="closed"
+                  >
+                    <div
+                      class="flex items-center min-w-0 justify-center gap-xs"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="plus"
+                        class="svg-inline--fa fa-plus fa-fw fa-lg"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M248 72c0-13.3-10.7-24-24-24s-24 10.7-24 24V232H40c-13.3 0-24 10.7-24 24s10.7 24 24 24H200V440c0 13.3 10.7 24 24 24s24-10.7 24-24V280H408c13.3 0 24-10.7 24-24s-10.7-24-24-24H248V72z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden pt-md scrollbar-thin scrollbar-track-transparent scrollbar-thumb-idle dark:scrollbar-thumb-idleDark"
+              >
+                <div class="w-full justify-center">
+                  <div
+                    class="items-center relative justify-center flex-1 w-full"
+                  >
+                    <div class="flex w-full">
+                      <div class="items-center relative flex-1 space-y-xs">
+                        <div
+                          class="relative justify-center w-full border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent"
+                        >
+                          <div
+                            class="px-xs transition duration-300 relative flex items-center"
+                          >
+                            <a
+                              role="button"
+                              aria-label="Home"
+                              class="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-[#13343B] dark:text-textMainDark dark:md:hover:bg-offsetPlusDark py-md font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out font-sans select-none items-center relative group/button justify-center text-center items-center rounded cursor-point active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap flex w-full text-base aspect-square h-10"
+                              data-state="closed"
+                              href="/"
+                            >
+                              <div
+                                class="flex items-center min-w-0 justify-center w-full gap-xs"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="search"
+                                  class="svg-inline--fa fa-search fa-fw fa-lg"
+                                  role="img"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path
+                                    fill="currentColor"
+                                    d="M236.8 288a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 1 0 0 102.4zM434.9 398.7c-10.9 13.1-23 25.3-36.2 36.2l68.5 68.5 36.2-36.2-68.5-68.5zM236.8 32a204.8 204.8 0 1 1 0 409.6 204.8 204.8 0 1 1 0-409.6zm0 51.2a153.6 153.6 0 1 0 0 307.2 153.6 153.6 0 1 0 0-307.2z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </a>
+                            <div
+                              class="absolute right-0 h-full w-[3px] rounded-l-sm bg-textMain dark:bg-textMainDark"
+                              style="
+                                transform: none;
+                                transform-origin: 50% 50% 0px;
+                                opacity: 1;
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                        <div
+                          class="relative justify-center w-full border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent"
+                        >
+                          <div class="px-xs transition duration-300 relative">
+                            <a
+                              role="button"
+                              aria-label="Discover"
+                              class="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-textOff dark:text-[#868A8A] md:hover:text-[#13343B] dark:md:hover:bg-offsetPlusDark dark:md:hover:text-textMainDark py-md font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out font-sans select-none items-center relative group/button justify-center text-center items-center rounded cursor-point active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap flex w-full text-base aspect-square h-10"
+                              data-state="closed"
+                              href="/discover"
+                            >
+                              <div
+                                class="flex items-center min-w-0 justify-center w-full gap-xs"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="discover"
+                                  class="svg-inline--fa fa-discover fa-fw fa-lg"
+                                  role="img"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 640 512"
+                                >
+                                  <path
+                                    fill="currentColor"
+                                    d="M320 51.2c6.4 0 19.2 17.3 30.4 51.2c4.8 14.1 9 31.4 12.5 51.2c2.9 15.4 5.1 32.3 6.4 51.2c1.3 16 1.9 33 1.9 51.2h51.2c0-17-.6-34.2-1.9-51.2c-1.3-17.3-3.2-34.6-5.8-51.2c-2.9-17.9-6.4-35.2-10.9-51.2c-3.8-13.8-8-26.6-13.1-38.4C374.1 25.3 350.7 0 320 0s-54.1 25.3-70.7 64c-5.1 11.5-9.3 24.6-13.1 38.4h53.8c11.2-33.9 23.7-51.2 30.4-51.2H320zm0 409.6c-6.4 0-19.2-17.3-30.4-51.2c-4.8-14.1-9-31.4-12.5-51.2c-2.9-15.4-5.1-32.3-6.4-51.2c-1.3-16-1.9-33-1.9-51.2H217.6c0 17 .6 34.2 1.9 51.2c1.3 17.3 3.2 34.6 5.8 51.2c2.9 17.9 6.4 35.2 10.9 51.2c3.8 13.8 8 26.6 13.1 38.4c16.6 38.7 40 64 70.7 64s54.1-25.3 70.7-64c5.1-11.5 9.3-24.6 13.1-38.4H350.1c-11.2 33.9-23.7 51.2-30.4 51.2h.3zM550.4 145.3c-7.4-15-16-29.4-26.2-42.9c-25-33-57.6-59.8-95.4-77.8C395.8 9 359 0 320 0s-75.8 9-108.8 24.6c-37.8 17.9-70.4 44.8-95.4 77.8c-9.9 13.4-18.9 27.5-26.2 42.9C73.3 178.9 64 216.3 64 256s9.3 77.1 25.6 110.7c7.4 15 16 29.4 26.2 42.9c25 33 57.6 59.8 95.4 77.8C244.2 503 281 512 320 512s75.8-9 108.8-24.6c37.8-17.9 70.4-44.8 95.4-77.8c9.9-13.4 18.9-27.5 26.2-42.9c16.3-33.6 25.6-71 25.6-110.7s-9.3-77.1-25.6-110.7zM390.7 448c-22.1 8.3-45.8 12.8-70.7 12.8s-48.6-4.8-70.7-12.8c-23.7-9-45.4-21.8-64.3-38.4c-1-.6-1.6-1.6-2.6-2.2c-15.7-14.1-29.1-30.7-39.7-49h30.4c-2.2-16.6-4.2-33.9-5.1-51.2H121.9c-4.2-16.3-6.7-33.6-6.7-51.2s2.6-34.9 6.7-51.2H320V153.6H143c10.6-18.2 24-34.9 39.7-49c1-.6 1.6-1.6 2.6-2.2C204.2 86.1 225.6 73 249.6 64c22.1-8.3 45.8-12.8 70.7-12.8s48.6 4.8 70.7 12.8c23.7 9 45.4 21.8 64.3 38.4c1 .6 1.6 1.6 2.6 2.2c15.7 14.1 29.1 30.7 39.7 49H467.2c2.2 16.6 4.2 33.9 5.1 51.2h46.1c4.2 16.3 6.7 33.6 6.7 51.2s-2.6 34.9-6.7 51.2H320.3v51.2h177c-10.6 18.2-24 34.9-39.7 49c-1 .6-1.6 1.6-2.6 2.2c-18.9 16.3-40.3 29.4-64.3 38.4z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="relative justify-center w-full border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent"
+                        >
+                          <div class="px-xs transition duration-300 relative">
+                            <a
+                              role="button"
+                              aria-label="Spaces"
+                              class="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-textOff dark:text-[#868A8A] md:hover:text-[#13343B] dark:md:hover:bg-offsetPlusDark dark:md:hover:text-textMainDark py-md font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out font-sans select-none items-center relative group/button justify-center text-center items-center rounded cursor-point active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap flex w-full text-base aspect-square h-10"
+                              data-state="closed"
+                              href="/spaces"
+                            >
+                              <div
+                                class="flex items-center min-w-0 justify-center w-full gap-xs"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="collection-2"
+                                  class="svg-inline--fa fa-collection-2 fa-fw fa-lg"
+                                  role="img"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path
+                                    fill="currentColor"
+                                    d="M32 236.8V185.6c84.8 0 153.6-68.8 153.6-153.6h51.2C236.8 145 145 236.8 32 236.8zm460.8 0C379.8 236.8 288 145 288 32h51.2c0 84.8 68.8 153.6 153.6 153.6v51.2zm-256 256H185.6c0-84.8-68.8-153.6-153.6-153.6V288c113 0 204.8 91.8 204.8 204.8zm102.4 0H288c0-113 91.8-204.8 204.8-204.8v51.2c-84.8 0-153.6 68.8-153.6 153.6zM262.4 313.6a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 1 0 0 102.4z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="relative justify-center w-full border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent"
+                        >
+                          <div class="px-xs transition duration-300 relative">
+                            <a
+                              role="button"
+                              aria-label="Library"
+                              class="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-textOff dark:text-[#868A8A] md:hover:text-[#13343B] dark:md:hover:bg-offsetPlusDark dark:md:hover:text-textMainDark py-md font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out font-sans select-none items-center relative group/button justify-center text-center items-center rounded cursor-point active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap flex w-full text-base aspect-square h-10"
+                              data-state="closed"
+                              href="/library"
+                            >
+                              <div
+                                class="flex items-center min-w-0 justify-center w-full gap-xs"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="library"
+                                  class="svg-inline--fa fa-library fa-fw fa-lg"
+                                  role="img"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path
+                                    fill="currentColor"
+                                    d="M512 281.6H460.8V256C460.8 143 369 51.2 256 51.2S51.2 143 51.2 256v25.6H0V256C0 114.9 114.9 0 256 0S512 114.9 512 256v25.6zm-102.4 0H358.4V256c0-56.3-46.1-102.4-102.4-102.4s-102.4 46.1-102.4 102.4v25.6H102.4V256c0-84.8 68.8-153.6 153.6-153.6s153.6 68.8 153.6 153.6v25.6zm-51.2 51.2c-41.9 0-79 20.5-102.4 51.8c-23.4-31.4-60.5-51.8-102.4-51.8H0V384H153.6c42.2 0 76.8 34.6 76.8 76.8v25.6h51.2V460.8c0-42.2 34.6-76.8 76.8-76.8H512V332.8H358.4zM256 307.2a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 1 0 0 102.4z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center justify-center pb-md">
+                  <button
+                    id="expandSidebar"
+                    type="button"
+                    class="bg-offsetPlus dark:bg-offsetPlusDark text-[#13343B] dark:text-textMainDark md:hover:text-textOff md:dark:hover:text-[#868A8A] font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out font-sans select-none items-center relative group/button justify-center text-center items-center rounded-full cursor-point active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-base aspect-square h-10"
+                    data-state="closed"
+                  >
+                    <div
+                      class="flex items-center min-w-0 justify-center gap-xs"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="arrow-right-from-line"
+                        class="svg-inline--fa fa-arrow-right-from-line fa-fw fa-lg"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M48 88c0-13.3-10.7-24-24-24S0 74.7 0 88V424c0 13.3 10.7 24 24 24s24-10.7 24-24L48 88zM440.4 273.5c4.8-4.5 7.6-10.9 7.6-17.5s-2.7-12.9-7.6-17.5l-136-128c-9.7-9.1-24.8-8.6-33.9 1s-8.6 24.8 1 33.9L363.5 232H280l-128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l128 0h83.5l-91.9 86.5c-9.7 9.1-10.1 24.3-1 33.9s24.3 10.1 33.9 1l136-128z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="mb-md flex flex-col items-center justify-center gap-sm border-t pt-sm border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent"
+                >
+                  <span class="inline-flex min-w-0">
+                    <button
+                      class="relative mb-xs mt-xs flex items-center justify-between gap-x-sm rounded-full border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 transition duration-300 bg-transparent md:hover:bg-offsetPlus md:dark:hover:bg-offsetPlusDark"
+                    >
+                      <div class="flex items-center gap-[1px]">
+                        <div class="relative flex p-xs">
+                          <div class="relative">
+                            <div
+                              class="relative flex aspect-square shrink-0 items-center justify-center rounded-full h-8 w-8 border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-offsetPlus dark:bg-offsetPlusDark"
+                            >
+                              <img
+                                alt="User avatar"
+                                class="h-full w-full rounded-full object-cover"
+                                src="https://imagedelivery.net/MPdwyYSWT8IY7lxgN3x3Uw/6c29721b-7e4d-4176-1ee8-d5cfe79ba100/thumbnail"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="absolute bottom-0 right-0 inline-flex -translate-y-[2px] translate-x-[4px] rounded-full bg-offset p-[2px] dark:bg-offsetDark ultraLight font-sans text-base text-textOff/50 dark:text-[#868A8A]/50 selection:bg-super/50 selection:text-[#13343B] dark:selection:bg-superDuper/10 dark:selection:text-superDark"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              focusable="false"
+                              data-prefix="far"
+                              data-icon="chevron-down"
+                              class="svg-inline--fa fa-chevron-down fa-2xs"
+                              role="img"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 512 512"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="isolate flex h-auto w-full min-w-0 grow flex-col md:gap-[4px] lg:pb-[8px] lg:pr-[8px] lg:pt-[8px]"
           >
             <div
-              class="flex-1 overflow-clip bg-clip-border shadow-[8px] lg:rounded-lg bg-[#FCFCF9]"
+              class="flex-1 overflow-clip bg-clip-border shadow-sm lg:rounded-lg md:dark:border border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#FCFCF9] dark:bg-[#191A1A]"
             >
               <div
                 class="max-w-screen md:max-w-auto mx-auto flex w-full flex-col h-full"
               >
                 <div></div>
-                <div class="relative hidden w-full pt-5 md:block">
+                <div class="relative z-10 hidden w-full pt-[16px] md:block">
                   <div class="absolute w-full"></div>
                 </div>
                 <div
-                  class="mx-auto h-full w-full max-w-screen-md px-4 md:px-[32px]"
+                  class="mx-auto h-full w-full max-w-screen-md px-[16px] md:px-lg"
                 >
                   <div
-                    class="mx-auto size-full sm:max-w-screen-md sm:px-4 md:px-[32px]"
+                    class="isolate mx-auto size-full sm:max-w-screen-md sm:px-[16px] md:px-lg"
                   >
                     <div class="relative flex h-full flex-col">
                       <div
-                        class="flex items-center justify-between border-b py-4 md:hidden"
+                        class="flex items-center justify-between border-b py-[16px] md:hidden border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                       >
-                        <div class="h-auto group w-40 md:w-52">
+                        <div class="h-auto w-40 md:w-52">
                           <svg
                             viewBox="0 0 400 91"
                             fill="none"
@@ -513,79 +888,82 @@
                           >
                             <path
                               d="M196.978 27.8931H200.033V34.1872H196.079C192.979 34.1872 190.669 34.9333 189.14 36.4254C187.615 37.9176 186.85 40.3662 186.85 43.7711V64.401H180.606V28.0333H186.85V33.8367C186.85 34.1622 187.014 34.3274 187.337 34.3274C187.52 34.3274 187.659 34.2823 187.754 34.1872C187.848 34.0921 187.938 33.9068 188.032 33.6264C189.234 29.8058 192.219 27.8931 196.983 27.8931H196.978ZM237.763 35.6894C239.402 38.6036 240.227 42.1137 240.227 46.2146C240.227 50.3156 239.407 53.8257 237.763 56.7399C236.119 59.6541 233.993 61.8323 231.38 63.2794C228.767 64.7265 225.956 65.4476 222.951 65.4476C217.03 65.4476 212.868 63.0691 210.464 58.3122C210.28 57.9417 210.046 57.7514 209.768 57.7514C209.49 57.7514 209.351 57.8916 209.351 58.172V77.6853H203.107V28.0333H209.351V34.2573C209.351 34.5377 209.49 34.6779 209.768 34.6779C210.046 34.6779 210.275 34.4926 210.464 34.1171C212.868 29.3602 217.03 26.9817 222.951 26.9817C225.956 26.9817 228.767 27.7028 231.38 29.1499C233.993 30.597 236.119 32.7751 237.763 35.6894ZM233.983 46.2146C233.983 41.9234 232.841 38.5786 230.551 36.1801C228.261 33.7816 225.246 32.5799 221.496 32.5799C217.745 32.5799 214.73 33.7816 212.44 36.1801C210.151 38.5836 209.311 41.9284 209.311 46.2146C209.311 50.5009 210.151 53.8507 212.44 56.2492C214.73 58.6527 217.75 59.8494 221.496 59.8494C225.241 59.8494 228.261 58.6477 230.551 56.2492C232.841 53.8507 233.983 50.5009 233.983 46.2146ZM134.595 35.7445C136.235 38.6587 137.059 42.1688 137.059 46.2697C137.059 50.3707 136.24 53.8808 134.595 56.795C132.951 59.7092 130.825 61.8874 128.213 63.3345C125.6 64.7816 122.788 65.5026 119.783 65.5026C113.863 65.5026 109.7 63.1242 107.296 58.3673C107.112 57.9967 106.879 57.8065 106.601 57.8065C106.322 57.8065 106.183 57.9467 106.183 58.2271V77.7404H99.9446V28.0883H106.188V34.3124C106.188 34.5928 106.327 34.733 106.606 34.733C106.884 34.733 107.112 34.5477 107.301 34.1722C109.705 29.4153 113.867 27.0368 119.788 27.0368C122.793 27.0368 125.605 27.7579 128.218 29.205C130.83 30.6521 132.956 32.8302 134.6 35.7445H134.595ZM130.815 46.2697C130.815 41.9785 129.673 38.6336 127.383 36.2352C125.093 33.8367 122.078 32.6349 118.328 32.6349C114.578 32.6349 111.563 33.8367 109.273 36.2352C106.983 38.6387 106.144 41.9835 106.144 46.2697C106.144 50.5559 106.983 53.9058 109.273 56.3043C111.563 58.7078 114.578 59.9045 118.328 59.9045C122.078 59.9045 125.093 58.7028 127.383 56.3043C129.673 53.9058 130.815 50.5559 130.815 46.2697ZM169.112 52.8543H175.703C174.824 56.2592 173.031 59.2085 170.329 61.7021C167.622 64.1957 163.748 65.4425 158.706 65.4425C154.911 65.4425 151.573 64.6614 148.682 63.0991C145.791 61.5369 143.561 59.3137 141.986 56.4195C140.412 53.5303 139.627 50.1253 139.627 46.2096C139.627 42.294 140.392 38.889 141.917 35.9998C143.442 33.1106 145.583 30.8824 148.335 29.3201C151.086 27.7579 154.31 26.9767 158.011 26.9767C161.711 26.9767 164.776 27.7479 167.344 29.2851C169.912 30.8223 171.829 32.8653 173.101 35.404C174.372 37.9477 175.008 40.7317 175.008 43.7611V47.9572H146.219C146.447 51.5925 147.664 54.4867 149.859 56.6298C152.055 58.7729 155.005 59.8494 158.706 59.8494C161.711 59.8494 164.016 59.2335 165.61 57.9967C167.205 56.7599 168.372 55.0475 169.112 52.8543ZM146.288 42.7146H168.074C168.074 39.545 167.264 37.0614 165.645 35.2638C164.026 33.4712 161.483 32.5699 158.015 32.5699C154.777 32.5699 152.129 33.4461 150.073 35.1937C148.017 36.9412 146.755 39.4498 146.293 42.7096L146.288 42.7146ZM245.169 64.396H251.413V14.043H245.169V64.401V64.396ZM331.801 24.0625H339.093V16.1911H331.801V24.0625ZM357.526 58.9782C356.393 59.0933 355.708 59.1534 355.479 59.1534C355.156 59.1534 354.898 59.0583 354.714 58.873C354.531 58.6877 354.436 58.4324 354.436 58.1019C354.436 57.8716 354.496 57.1806 354.61 56.0389C354.724 54.8972 354.784 53.1347 354.784 50.7612V33.361H363.69L361.937 28.0333H354.789V18.2391H348.545V28.0283H341.755V33.356H348.545V52.5038C348.545 56.5146 349.519 59.4989 351.461 61.4568C353.403 63.4146 356.363 64.396 360.342 64.396H365.2V58.8029H362.771C360.412 58.8029 358.663 58.863 357.531 58.9782H357.526ZM394.059 28.0283L383.723 58.5425C383.583 58.9181 383.365 59.4088 382.655 59.4088C381.944 59.4088 381.726 58.9181 381.587 58.5425L371.25 28.0283H364.882L376.853 64.396H381.085C381.363 64.396 381.572 64.4211 381.711 64.4661C381.85 64.5112 381.964 64.6264 382.059 64.8166C382.242 65.097 382.217 65.5177 381.989 66.0735L380.047 71.3862C379.769 72.0872 379.237 72.4377 378.452 72.4377C378.174 72.4377 377.529 72.3776 376.51 72.2624C375.492 72.1473 374.176 72.0872 372.556 72.0872H367.49V77.6803H374.151C378.035 77.6803 380.375 77.0143 382.386 75.6874C384.398 74.3605 385.958 72.0171 387.07 68.6572L400 29.4203V28.0233H394.059V28.0283ZM311.406 41.5979L301.626 28.0283H294.756V29.4253L306.478 45.1631L292.188 62.999V64.396H299.197L310.576 49.7798L321.191 64.396H327.922V62.999L315.504 46.2146L328.965 29.5004V28.0333H321.956L311.411 41.603L311.406 41.5979ZM332.467 64.396H338.71V28.0333H332.467V64.401V64.396ZM292.471 52.8543C291.592 56.2592 289.799 59.2085 287.097 61.7021C284.39 64.1957 280.515 65.4425 275.474 65.4425C271.679 65.4425 268.341 64.6614 265.45 63.0991C262.559 61.5369 260.329 59.3137 258.754 56.4195C257.18 53.5303 256.395 50.1253 256.395 46.2096C256.395 42.294 257.16 38.889 258.685 35.9998C260.21 33.1106 262.35 30.8824 265.102 29.3201C267.854 27.7579 271.078 26.9767 274.778 26.9767C278.479 26.9767 281.543 27.7479 284.111 29.2851C286.679 30.8223 288.597 32.8653 289.868 35.404C291.14 37.9477 291.776 40.7317 291.776 43.7611V47.9572H262.986C263.215 51.5925 264.432 54.4867 266.627 56.6298C268.823 58.7729 271.773 59.8494 275.474 59.8494C278.479 59.8494 280.783 59.2335 282.378 57.9967C283.972 56.7599 285.14 55.0475 285.88 52.8543H292.471ZM263.056 42.7146H284.842C284.842 39.545 284.032 37.0614 282.413 35.2638C280.793 33.4712 278.25 32.5699 274.783 32.5699C271.545 32.5699 268.897 33.4461 266.841 35.1937C264.784 36.9412 263.523 39.4498 263.061 42.7096L263.056 42.7146Z"
-                              class="block fill-black"
+                              class="block fill-textMain dark:fill-[#E8E8E6]"
                             ></path>
                             <path
                               d="M38.6936 29.9832L12.8633 5.88983V29.9832H38.6936Z"
-                              class="stroke-super"
+                              class="stroke-super dark:stroke-superDark transition-all duration-300"
                               stroke-width="4.30504"
                               stroke-miterlimit="10"
                             ></path>
                             <path
                               d="M39.5005 29.9832L65.3308 5.88983V29.9832H39.5005Z"
-                              class="stroke-super"
+                              class="stroke-super dark:stroke-superDark transition-all duration-300"
                               stroke-width="4.30504"
                               stroke-miterlimit="10"
                             ></path>
                             <path
                               d="M38.7227 2L38.7227 90.2534"
-                              class="stroke-super"
+                              class="stroke-super dark:stroke-superDark transition-all duration-300"
                               stroke-width="4.30504"
                               stroke-miterlimit="10"
                             ></path>
                             <path
                               d="M64.5246 53.7584L38.6943 30.0068V62.9404L64.5246 85.9724V53.7584Z"
-                              class="stroke-super"
+                              class="stroke-super dark:stroke-superDark transition-all duration-300"
                               stroke-width="4.30504"
                               stroke-miterlimit="10"
                             ></path>
                             <path
                               d="M12.8924 53.7584L38.7227 30.0068V62.9404L12.8924 85.9724V53.7584Z"
-                              class="stroke-super"
+                              class="stroke-super dark:stroke-superDark transition-all duration-300"
                               stroke-width="4.30504"
                               stroke-miterlimit="10"
                             ></path>
                             <path
                               d="M2.28711 29.9832V64.4236H12.8863V53.7348L38.7226 29.9832H2.28711Z"
-                              class="stroke-super"
+                              class="stroke-super dark:stroke-superDark transition-all duration-300"
                               stroke-width="4.30504"
                               stroke-miterlimit="10"
                             ></path>
                             <path
                               d="M38.6943 30.3L64.5246 54.0515V64.7403H75.2872V30.3L38.6943 30.3Z"
-                              class="stroke-super"
+                              class="stroke-super dark:stroke-superDark transition-all duration-300"
                               stroke-width="4.30504"
                               stroke-miterlimit="10"
                             ></path>
                           </svg>
                         </div>
-                        <div class="flex items-center gap-x-sm">
-                          <a href="#"
-                            ><div class="relative">
+                        <div class="flex items-center gap-x-[8px]">
+                          <a href="#">
+                            <div class="relative">
                               <div
-                                class="relative flex aspect-square shrink-0 items-center justify-center rounded-full h-8 w-8 bg-[#E8E8E3]"
+                                class="relative flex aspect-square shrink-0 items-center justify-center rounded-full h-8 w-8 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#F3F3EE]Dark"
                               >
                                 <img
-                                  alt=""
+                                  alt="User avatar"
                                   class="h-full w-full rounded-full object-cover"
-                                  src="https://avatars.dicebear.com/v2/male/baa0f0755e718c0c4320d29e73dcb206.svg"
+                                  src="https://gravatar.com/avatar/6c09d67dd13f71a80c1fa4972fccdde4?s=400&d=robohash&r=x"
                                 />
-                              </div></div
-                          ></a>
+                              </div>
+                            </div>
+                          </a>
                         </div>
                       </div>
                       <div
-                        class="mt-[32px] w-full grow flex-col items-center justify-center md:mt-0 md:flex"
+                        class="mt-[32px] w-full grow flex-col items-center justify-center md:mt-0 md:flex border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                       >
                         <div class="relative w-full">
                           <div
-                            class="bottom-0 mb-[32px] w-full pb-xs md:absolute md:text-center"
+                            class="bottom-0 mb-[32px] w-full pb-[4px] md:absolute md:text-center"
                           >
-                            <div class="md:mb-[32px]"></div>
-                            <div class="default text-base text-black">
+                            <div class=""></div>
+                            <div
+                              class="default text-base text-[#13343B] dark:text-[#E8E8E6]"
+                            >
                               <span
                                 class="font-regular font-display text-3xl md:text-4xl"
-                                >What will you discover?</span
+                                >Where knowledge begins</span
                               >
                             </div>
                           </div>
@@ -593,36 +971,38 @@
                         <div class="w-full">
                           <div class="relative">
                             <div>
-                              <span class="block"
-                                ><div class="rounded-md">
+                              <span class="grow block">
+                                <div class="max-w-[640px] mx-auto">
                                   <div
-                                    class="items-center grid-rows-1fr-auto grid grid-cols-3 w-full flex items-center duration-200 bg-[#FCFCF9] border text-black border-[#D9D9D0] border-[1px] placeholder-gray-600 shadow-[8px] rounded-t-[8px] rounded-b-[8px] px-4 pt-5 pb-[8px]"
+                                    class="items-center grid-rows-1fr-auto grid grid-cols-3 w-full outline-none flex items-center bg-[#FCFCF9] dark:bg-[#202222] dark:text-[#E8E8E6] dark:placeholder-[#868A8A] h dark:border-borderMainDark duration-200 transition-all border text-[#13343B] border-[1px] border-borderMain placeholder-[#7E7E79] shadow-sm rounded-t-[8px] rounded-b-[8px] px-[16px] pt-[16px] pb-[8px]"
                                   >
                                     <div
                                       class="col-start-1 col-end-4 pb-[8px] overflow-hidden relative flex h-full w-full"
                                     >
                                       <textarea
-                                        placeholder="You ask, we answer..."
-                                        class="overflow-auto max-h-[45vh] lg:max-h-[40vh] sm:max-h-[25vh] w-full r resize-none bg-[#FCFCF9] text-black placeholder-gray-600"
-                                        style="height: 48px !important"
+                                        autofocus=""
+                                        placeholder="Ask anything..."
+                                        class="overflow-auto max-h-[45vh] lg:max-h-[40vh] sm:max-h-[25vh] outline-none w-full caret-superDuper resize-none dark:bg-[#202222] dark:text-[#E8E8E6] dark:placeholder-[#868A8A] bg-[#FCFCF9] text-[#13343B] placeholder-[#7E7E79] scrollbar-thumb-idle dark:scrollbar-thumb- scrollbar-thin scrollbar-track-transparent"
+                                        autocomplete="off"
+                                        data-1p-ignore="true"
                                       ></textarea>
                                     </div>
                                     <div
-                                      class="bg-[#FCFCF9] flex rounded-l-[32px] col-start-1 row-start-2 -ml-2"
+                                      class="bg-[#FCFCF9] dark:bg-[#202222] flex rounded-l-lg col-start-1 row-start-2 -ml-2"
                                     >
-                                      <span
-                                        ><button
+                                      <span>
+                                        <button
                                           type="button"
-                                          class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm px-[8px] font-medium h-8"
+                                          class="group text-[#7E7E79] dark:text-[#868A8A] outline-none outline-transparent transition dark:hover:bg-[#2D2F2F] dark:hover:text-[#E8E8E6] hover:bg-[#E8E8E3] hover:text-[#13343B] duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer origin-center whitespace-nowrap inline-flex text-sm px-[8px] font-medium h-8"
                                         >
                                           <div
-                                            class="flex items-center min-w-0 justify-center gap-0.5"
-                                            style="max-width: 120px"
+                                            class="flex items-center min-w-0 justify-center gap-[4px]"
                                           >
                                             <svg
                                               focusable="false"
+                                              data-prefix="far"
+                                              data-icon="bars-filter"
                                               class="svg-inline--fa fa-bars-filter fa-fw fa-1x"
-                                              role="img"
                                               xmlns="http://www.w3.org/2000/svg"
                                               viewBox="0 0 448 512"
                                             >
@@ -632,25 +1012,32 @@
                                               ></path>
                                             </svg>
                                             <div
-                                              class="text-center relative truncate leading-loose"
+                                              class="text-align-center relative truncate leading-loose"
                                             >
                                               Focus
                                             </div>
                                           </div>
-                                        </button></span
-                                      >
+
+                                          <div
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block text-xs bg-gray-700 text-white dark:bg-[#2D2F2F] rounded px-2 py-1"
+                                          >
+                                            Set a focus for your sources
+                                          </div>
+                                        </button>
+                                      </span>
                                       <div>
                                         <button
                                           type="button"
-                                          class="md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm px-[8px] font-medium h-8"
+                                          class="group text-[#7E7E79] dark:hover:bg-[#2D2F2F] dark:hover:text-[#E8E8E6] dark:text-[#868A8A] hover:bg-[#E8E8E3] hover:text-[#13343B] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer origin-center whitespace-nowrap inline-flex text-sm px-[8px] font-medium h-8"
                                         >
                                           <div
-                                            class="flex items-center min-w-0 justify-center gap-0.5"
+                                            class="flex items-center min-w-0 justify-center gap-[4px]"
                                           >
                                             <svg
                                               focusable="false"
+                                              data-prefix="far"
+                                              data-icon="circle-plus"
                                               class="svg-inline--fa fa-circle-plus fa-fw fa-1x"
-                                              role="img"
                                               xmlns="http://www.w3.org/2000/svg"
                                               viewBox="0 0 512 512"
                                             >
@@ -659,60 +1046,81 @@
                                                 d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344c0 13.3 10.7 24 24 24s24-10.7 24-24V280h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H280V168c0-13.3-10.7-24-24-24s-24 10.7-24 24v64H168c-13.3 0-24 10.7-24 24s10.7 24 24 24h64v64z"
                                               ></path>
                                             </svg>
-
                                             <div
-                                              class="text-center relative truncate leading-loose"
+                                              class="text-align-center relative truncate leading-loose"
                                             >
                                               Attach
                                             </div>
                                           </div>
+
+                                          <div
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block text-xs bg-gray-700 text-white dark:bg-[#2D2F2F] rounded px-2 py-1"
+                                          >
+                                            Attach text or PDF files. 3 left
+                                            today
+                                          </div>
                                         </button>
+
+                                        <input
+                                          type="file"
+                                          multiple=""
+                                          accept=".pdf,.txt,.py,.ipynb,.js,.jsx,.html,.css,.java,.cs,.php,.c,.cpp,.cxx,.h,.hpp,.rs,.R,.Rmd,.swift,.go,.rb,.kt,.kts,.ts,.tsx,.m,.scala,.rs,.dart,.lua,.pl,.pm,.t,.sh,.bash,.zsh,.csv,.log,.ini,.config,.json,.yaml,.yml,.toml,.lua,.sql,.bat,.md,.coffee,.tex,.latex,.less,.pptx,.docx"
+                                          style="display: none"
+                                        />
                                       </div>
                                     </div>
+
                                     <div
-                                      class="bg-[#FCFCF9] flex items-center space-x-2 justify-end rounded-full col-start-3 row-start-2 -mr-2"
+                                      class="bg-[#FCFCF9] dark:bg-[#202222] flex items-center space-x-2 justify-end rounded-full col-start-3 row-start-2 -mr-2"
                                     >
-                                      <span
-                                        ><div
-                                          class="gap-[8px] flex cursor-default items-center cursor-pointer"
+                                      <span class="inline-flex"> </span>
+                                      <div
+                                        class="gap-[8px] group/switch flex cursor-default items-center cursor-pointer relative"
+                                      >
+                                        <button
+                                          class="gap-sm group/switch flex items-center w-10 flex p-[3px] bg-transparent rounded-full border border-borderMain duration-150"
+                                          type="button"
+                                          value="on"
                                         >
-                                          <button
-                                            class="gap-[8px] flex items-center w-10 flex p-[3px] rounded-full border border-[#D9D9D0] duration-150"
-                                            type="button"
-                                            role="switch"
-                                            aria-checked="false"
-                                            value="on"
-                                            id="copilot-toggle"
-                                            style="
-                                              transform: none;
-                                              transform-origin: 50% 50% 0px;
-                                            "
+                                          <div
+                                            class="rounded-full relative size-4 shadow-sm content-[''] duration-150 shadow-[8px] absolute inset-0 rounded-full bg-[#64645F] dark:bg-[#8D9191] md:group-hover/switch hover:scale-90"
+                                          ></div>
+                                        </button>
+
+                                        <label
+                                          class="mr-[8px] whitespace-nowrap duration-150 cursor-pointer group-hover/switch:text-textMain dark:group-hover/switch:text-textMainDark light text-sm font-medium text-[#64645F] dark:text-[#868A8A] selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark"
+                                        >
+                                          Pro
+                                        </label>
+
+                                        <!-- The card that will appear on hover -->
+                                        <div
+                                          class="absolute z-10 group-hover/switch:block bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 mt-2 w-[200px] transition-all duration-300 ease-in-out"
+                                          style="top: 100%; left: -300%"
+                                        >
+                                          <!-- Content of the card -->
+                                          <p
+                                            class="text-sm text-gray-800 dark:text-white"
                                           >
-                                            <div
-                                              class="rounded-full relative size-4 shadow-sm bg-gray-600"
-                                              style="
-                                                transform: none;
-                                                transform-origin: 50% 50% 0px;
-                                              "
-                                            ></div></button
-                                          ><label
-                                            class="mr-[8px] whitespace-nowrap duration-150 cursor-pointer text-sm font-medium text-gray-500"
-                                            for="copilot-toggle"
-                                            >Pro</label
-                                          >
-                                        </div></span
-                                      ><button
+                                            This is a card that appears on
+                                            hover.
+                                          </p>
+                                        </div>
+                                      </div>
+
+                                      <button
                                         type="button"
                                         disabled=""
-                                        class="text-gray-500 select-none items-center relative justify-center text-center items-center rounded-full cursor-default opacity-50 whitespace-nowrap text-sm aspect-square h-8"
+                                        class="bg-idle text-[#7E7E79] dark:bg-[#2E2F2E] dark:text-[#868A8A] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-center text-center items-center rounded-full cursor-default opacity-50 whitespace-nowrap inline-flex text-sm aspect-square h-8"
                                       >
                                         <div
-                                          class="flex items-center min-w-0 justify-center gap-0.5"
+                                          class="flex items-center min-w-0 justify-center gap-[4px]"
                                         >
                                           <svg
                                             focusable="false"
+                                            data-prefix="far"
+                                            data-icon="arrow-right"
                                             class="svg-inline--fa fa-arrow-right fa-fw fa-1x"
-                                            role="img"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 448 512"
                                           >
@@ -724,8 +1132,103 @@
                                         </div>
                                       </button>
                                     </div>
-                                  </div></div
-                              ></span>
+                                  </div>
+                                </div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="relative w-full">
+                          <div class="absolute w-full">
+                            <div>
+                              <div
+                                class="relative mt-[16px] max-w-[640px] mx-auto"
+                              >
+                                <div
+                                  class="grid grid-cols-1 gap-[8px] md:auto-rows-fr md:grid-cols-2"
+                                >
+                                  <div>
+                                    <div
+                                      class="col-span-1 flex h-full w-full cursor-pointer items-center gap-x-[8px] rounded-lg border p-[4px] dark:hover:bg-[#202222] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 transition duration-300 bg-[#FCFCF9] dark:bg-[#191A1A] hover:bg-[#F3F3EE]"
+                                    >
+                                      <div
+                                        class="flex h-8 w-8 items-center justify-center rounded-[4px] p-[4px] transition-all duration-200 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#202222]"
+                                      >
+                                        <div
+                                          class="default text-base text-[#13343B] dark:text-[#E8E8E6]"
+                                        >
+                                          🧑&zwj;🍳
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="line-clamp-2 default text-sm font-medium text-[#13343B] dark:text-[#E8E8E6]"
+                                      >
+                                        Bestselling cookbooks this year
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="col-span-1 flex h-full w-full cursor-pointer items-center gap-x-[8px] rounded-[8px] border p-[4px] dark:hover:bg-[#202222] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 transition duration-300 bg-[#FCFCF9] dark:bg-[#191A1A] hover:bg-[#F3F3EE]"
+                                    >
+                                      <div
+                                        class="flex h-8 w-8 items-center justify-center rounded-[8px] p-[4px] transition-all duration-200 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#202222]"
+                                      >
+                                        <div
+                                          class="default text-base text-[#13343B] dark:text-[#E8E8E6]"
+                                        >
+                                          🔗
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="line-clamp-2 default text-sm font-medium text-[#13343B] dark:text-[#E8E8E6]"
+                                      >
+                                        The future of SEO
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="col-span-1 flex h-full w-full cursor-pointer items-center gap-x-[8px] rounded-[8px] border p-[4px] dark:hover:bg-[#202222] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 transition duration-300 bg-[#FCFCF9] dark:bg-[#191A1A] hover:bg-[#F3F3EE]"
+                                    >
+                                      <div
+                                        class="flex h-8 w-8 items-center justify-center rounded-[8px] p-[4px] transition-all duration-200 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#202222]"
+                                      >
+                                        <div
+                                          class="default text-base text-[#13343B] dark:text-[#E8E8E6]"
+                                        >
+                                          🍳
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="line-clamp-2 default text-sm font-medium text-[#13343B] dark:text-[#E8E8E6]"
+                                      >
+                                        Latest cooking trends on Tiktok
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="col-span-1 flex h-full w-full cursor-pointer items-center gap-x-[8px] rounded-[8px] border p-[4px] dark:hover:bg-[#202222] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 transition duration-300 bg-[#FCFCF9] dark:bg-[#191A1A] hover:bg-[#F3F3EE]"
+                                    >
+                                      <div
+                                        class="flex h-8 w-8 items-center justify-center rounded-[8px] p-[4px] transition-all duration-200 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#202222]"
+                                      >
+                                        <div
+                                          class="default text-base text-[#13343B] dark:text-[#E8E8E6]"
+                                        >
+                                          💵
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="line-clamp-2 default text-sm font-medium text-[#13343B] dark:text-[#E8E8E6]"
+                                      >
+                                        Most expensive city in 2024
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -733,72 +1236,130 @@
                       <div class="hidden pb-[16px] md:block">
                         <div>
                           <div
-                            class="flex flex-wrap items-center gap-x-[16px] gap-y-[8px] px-[8px] pb-2xl md:justify-center md:px-0 md:pb-0"
+                            class="flex flex-wrap items-center gap-x-[16px] gap-y-[8px] px-[8px] pb-2xl md:justify-center md:px-0 md:pb-0 border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                           >
-                            <a href="#"
-                              ><div>
+                            <a href="#">
+                              <div>
                                 <div
-                                  class="hover:underline text-sm text-gray-500"
+                                  class="decoration-[#7E7E79]/40 hover:underline dark:decoration-[#868A8A]/40 light text-sm text-[#7E7E79] dark:text-[#868A8A]"
                                 >
                                   Pro
                                 </div>
-                              </div></a
-                            ><a href="#"
-                              ><div>
+                              </div>
+                            </a>
+                            <a href="#">
+                              <div>
                                 <div
-                                  class="hover:underline text-sm text-gray-500"
+                                  class="decoration-[#7E7E79]/40 hover:underline dark:decoration-[#868A8A]/40 light text-sm text-[#7E7E79] dark:text-[#868A8A]"
                                 >
                                   Enterprise
                                 </div>
-                              </div></a
-                            ><a href="#"
-                              ><div>
+                              </div>
+                            </a>
+                            <a target="_blank" href="#">
+                              <div>
                                 <div
-                                  class="hover:underline text-sm text-gray-500"
+                                  class="decoration-[#7E7E79]/40 hover:underline dark:decoration-[#868A8A]/40 light text-sm text-[#7E7E79] dark:text-[#868A8A]"
                                 >
                                   Store
                                 </div>
-                              </div></a
-                            ><a href="#"
-                              ><div>
+                              </div>
+                            </a>
+                            <a href="#">
+                              <div>
                                 <div
-                                  class="hover:underline text-sm text-gray-500"
+                                  class="decoration-[#7E7E79]/40 hover:underline dark:decoration-[#868A8A]/40 light text-sm text-[#7E7E79] dark:text-[#868A8A]"
                                 >
                                   Blog
                                 </div>
-                              </div></a
-                            ><a href="#"
-                              ><div>
+                              </div>
+                            </a>
+                            <a href="#">
+                              <div>
                                 <div
-                                  class="hover:underline text-sm text-gray-500"
+                                  class="decoration-[#7E7E79]/40 hover:underline dark:decoration-[#868A8A]/40 light text-sm text-[#7E7E79] dark:text-[#868A8A]"
                                 >
                                   Careers
                                 </div>
-                              </div></a
-                            >
+                              </div>
+                            </a>
                             <div
-                              class="relative flex cursor-pointer items-center justify-stretch gap-0.5 overflow-hidden hover:underline text-sm text-gray-500"
+                              class="relative flex cursor-pointer items-center justify-stretch gap-[4px] overflow-hidden decoration-[#7E7E79]/40 hover:underline dark:decoration-[#868A8A]/40 light text-sm text-[#7E7E79] dark:text-[#868A8A]"
                             >
                               English (English)
                               <div class="absolute left-0 top-0 opacity-0">
                                 <div>
-                                  <div class="default text-sm text-black">
+                                  <div
+                                    class="default text-sm text-[#13343B] dark:text-[#E8E8E6]"
+                                  >
                                     <div class="relative flex items-center">
                                       <select
-                                        id="interface-language-select"
-                                        class="border-[#D9D9D0]/75 outline-super ring-[#D9D9D0]/75 p-[8px] bg-[#FCFCF9] pr-[32px] w-full appearance-none rounded border cursor-pointer hover:ring-1"
+                                        class="border-borderMain/75 dark:border-borderMainDark outline-super dark:outline-superDark p-sm bg-[#F3F3EE] dark:bg-[#202222] pr-lg w-full appearance-none rounded border transition duration-300 cursor-pointer hover:"
                                       >
                                         <option value="en-US" selected="">
                                           English (English)
                                         </option>
+                                        <option value="fr-FR">
+                                          French (Français)
+                                        </option>
+                                        <option value="de-DE">
+                                          Standard German (Deutsch)
+                                        </option>
+                                        <option value="ja-JP">
+                                          Japanese (日本語)
+                                        </option>
+                                        <option value="ko-KR">
+                                          Korean (한국어)
+                                        </option>
+                                        <option value="zh-CN">
+                                          Simplified Chinese (简体中文)
+                                        </option>
+                                        <option value="es-ES">
+                                          Spanish (Español)
+                                        </option>
+                                        <option value="hi-IN">
+                                          Hindi (हिंदी)
+                                        </option>
+                                        <option value="it-IT">
+                                          Italian (Italiano)
+                                        </option>
+                                        <option value="pt-BR">
+                                          Brazilian Portuguese (Português do
+                                          Brasil)
+                                        </option>
+                                        <option value="cs-CZ">
+                                          Czech (Čeština)
+                                        </option>
+                                        <option value="hr-HR">
+                                          Croatian (Hrvatski)
+                                        </option>
+                                        <option value="hu-HU">
+                                          Hungarian (Magyar)
+                                        </option>
+                                        <option value="pl-PL">
+                                          Polish (Polski)
+                                        </option>
+                                        <option value="pt-PT">
+                                          Portuguese (Português)
+                                        </option>
+                                        <option value="sk-SK">
+                                          Slovak (Slovenčina)
+                                        </option>
+                                        <option value="mk-MK">
+                                          Macedonian (Македонски)
+                                        </option>
+                                        <option value="sr-Cyrl-ME">
+                                          Montenegrin (Српски)
+                                        </option>
                                       </select>
                                       <div
-                                        class="right-[8px] pointer-events-none absolute text-sm text-gray-500"
+                                        class="right-sm pointer-events-none absolute light text-sm text-[#7E7E79] dark:text-[#868A8A]"
                                       >
                                         <svg
                                           focusable="false"
+                                          data-prefix="far"
+                                          data-icon="chevron-down"
                                           class="svg-inline--fa fa-chevron-down"
-                                          role="img"
                                           xmlns="http://www.w3.org/2000/svg"
                                           viewBox="0 0 512 512"
                                         >
@@ -814,8 +1375,9 @@
                               </div>
                               <svg
                                 focusable="false"
-                                class="svg-inline--fa fa-chevron-down fa-fw fa-xs text-gray-500"
-                                role="img"
+                                data-prefix="far"
+                                data-icon="chevron-down"
+                                class="svg-inline--fa fa-chevron-down fa-fw fa-xs text-[#7E7E79] dark:text-[#868A8A]"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"
                               >
@@ -831,57 +1393,67 @@
                     </div>
                   </div>
                 </div>
-                <div class="fixed bottom-4 right-4 m-[8px] hidden md:block">
-                  <span
-                    ><button
-                      type="button"
-                      class="bg-gray-700 text-white hover:text-green-500 select-none items-center relative justify-center text-center items-center rounded-full cursor-pointer whitespace-nowrap text-sm aspect-square h-8"
+                <div
+                  class="fixed bottom-[16px] right-[16px] m-[8px] hidden md:block"
+                >
+                  <span></span>
+                  <button
+                    aria-label="Help menu"
+                    type="button"
+                    class="bg-textMain text-[#E8E8E6] dark:bg-[#E8E8E6] dark:text-[#191A1A] hover:text-[#20B8CD] hover:dark:text-green-500 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out font-sans select-none items-center relative justify-center text-center items-center rounded-full cursor-point active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
+                  >
+                    <div
+                      class="flex items-center min-w-0 justify-center gap-xs"
                     >
-                      <div
-                        class="flex items-center min-w-0 justify-center gap-0.5"
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="question"
+                        class="svg-inline--fa fa-question fa-fw fa-1x"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
                       >
-                        <svg
-                          focusable="false"
-                          class="svg-inline--fa fa-question fa-fw fa-1x"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 320 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
-                          ></path>
-                        </svg>
-                      </div></button
-                  ></span>
+                        <path
+                          fill="currentColor"
+                          d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
                 </div>
                 <div class="md:hidden"></div>
               </div>
             </div>
             <div
-              class="fixed bottom-0 left-0 right-0 shadow-md md:hidden bg-[#F3F3EE]"
+              class="fixed bottom-0 left-0 right-0 shadow-md md:hidden border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50 bg-[#F3F3EE] dark:bg-[#202222]"
             >
-              <div class="relative h-mobileNavHeight border-t px-[8px]">
+              <div
+                class="relative h-mobileNavHeight border-t px-[8px] border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
+              >
                 <div class="w-full">
                   <div class="items-center relative flex-1 w-full">
                     <div class="flex w-full">
                       <div
-                        class="items-center relative flex-1 gap-x- flex h-14 w-full"
+                        class="items-center relative flex-1 gap-x-[16px] flex h-14 w-full"
                       >
                         <div
-                          class="relative h-full flex items-center justify-center w-full"
+                          class="relative h-full flex items-center justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                         >
                           <div class="justify-center px-[4px]">
                             <a
-                              class="px-0 md:hover:bg-[#E8E8E3] text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
+                              class="!px-0 text-[#13343B] dark:text-[#E8E8E6] py-[16px] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
                               href="#"
-                              ><div
-                                class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                            >
+                              <div
+                                class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                               >
                                 <svg
                                   focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="search"
                                   class="svg-inline--fa fa-search fa-fw fa-1x"
-                                  role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 512 512"
                                 >
@@ -891,28 +1463,33 @@
                                   ></path>
                                 </svg>
                                 <div
-                                  class="text-center relative truncate leading-loose"
+                                  class="text-align-center relative truncate leading-loose"
                                 >
                                   Home
                                 </div>
-                              </div></a
-                            >
+                              </div>
+                            </a>
+                            <div
+                              class="absolute bg-textMain dark:bg-[#E8E8E6]"
+                            ></div>
                           </div>
                         </div>
                         <div
-                          class="relative h-full flex items-center justify-center w-full"
+                          class="relative h-full flex items-center justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                         >
                           <div class="justify-center px-[4px]">
                             <a
-                              class="px-0 md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
+                              class="!px-0 text-[#7E7E79] dark:text-[#868A8A] py-[16px] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
                               href="#"
-                              ><div
-                                class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                            >
+                              <div
+                                class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                               >
                                 <svg
                                   focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="discover"
                                   class="svg-inline--fa fa-discover fa-fw fa-1x"
-                                  role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 640 512"
                                 >
@@ -922,28 +1499,30 @@
                                   ></path>
                                 </svg>
                                 <div
-                                  class="text-center relative truncate leading-loose"
+                                  class="text-align-center relative truncate leading-loose"
                                 >
                                   Discover
                                 </div>
-                              </div></a
-                            >
+                              </div>
+                            </a>
                           </div>
                         </div>
                         <div
-                          class="relative h-full flex items-center justify-center w-full"
+                          class="relative h-full flex items-center justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                         >
                           <div class="justify-center px-[4px]">
                             <a
-                              class="px-0 md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
+                              class="!px-0 text-[#7E7E79] dark:text-[#868A8A] py-[16px] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
                               href="#"
-                              ><div
-                                class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                            >
+                              <div
+                                class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                               >
                                 <svg
                                   focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="collection-2"
                                   class="svg-inline--fa fa-collection-2 fa-fw fa-1x"
-                                  role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 512 512"
                                 >
@@ -953,29 +1532,30 @@
                                   ></path>
                                 </svg>
                                 <div
-                                  class="text-center relative truncate leading-loose"
+                                  class="text-align-center relative truncate leading-loose"
                                 >
                                   Spaces
                                 </div>
-                              </div></a
-                            >
+                              </div>
+                            </a>
                           </div>
                         </div>
                         <div
-                          class="relative h-full flex items-center justify-center w-full"
+                          class="relative h-full flex items-center justify-center w-full border-borderMain/50 divide-borderMain/50 dark:border-borderMainDark/50"
                         >
                           <div class="justify-center px-[4px]">
                             <a
-                              class="px-0 md:hover:bg-[#E8E8E3] text-gray-500 md:hover:text-black py-4 select-none items-center relative justify-start rounded cursor-pointer whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
                               href="#"
+                              class="!px-0 text-[#7E7E79] dark:text-[#868A8A] py-[16px] outline-none outline-transparent transition duration-300 ease-out select-none items-center relative justify-start rounded cursor-point origin-center whitespace-nowrap flex w-full text-sm px-[8px] font-medium h-8"
                             >
                               <div
-                                class="flex items-center min-w-0 justify-left w-full gap-0.5"
+                                class="flex items-center min-w-0 justify-left w-full gap-[4px]"
                               >
                                 <svg
                                   focusable="false"
+                                  data-prefix="fak"
+                                  data-icon="library"
                                   class="svg-inline--fa fa-library fa-fw fa-1x"
-                                  role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 512 512"
                                 >
@@ -985,7 +1565,7 @@
                                   ></path>
                                 </svg>
                                 <div
-                                  class="text-center relative truncate leading-loose"
+                                  class="text-align-center relative truncate leading-loose"
                                 >
                                   Library
                                 </div>
