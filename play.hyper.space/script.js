@@ -143,7 +143,7 @@ document
 
 // mobile view right sheet
 const toggleButton = document.getElementById("toggle-sheet-button");
-const slidingSheet = document.getElementById("sliding-sheet");
+const slidingSheet = document.getElementById("sliding-sheet-r");
 const closeButton = document.getElementById("close-sheet");
 
 toggleButton.addEventListener("click", function () {
@@ -152,4 +152,18 @@ toggleButton.addEventListener("click", function () {
 
 closeButton.addEventListener("click", function () {
   slidingSheet.classList.remove("open");
+});
+
+// mobile view left sheet
+
+const toggleButtonLeft = document.getElementById("toggle-sheet-l");
+const slidingSheetLeft = document.getElementById("sliding-sheet-l");
+const closeButtonLeft = document.getElementById("close-sheet-l");
+
+toggleButtonLeft.addEventListener("click", function () {
+  slidingSheetLeft.classList.toggle("open");
+});
+
+closeButtonLeft.addEventListener("click", function () {
+  slidingSheetLeft.classList.remove("open");
 });

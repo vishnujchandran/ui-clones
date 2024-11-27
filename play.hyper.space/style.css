@@ -799,11 +799,19 @@ body.blurred {
   display: none;
 }
 
-#sliding-sheet {
+#sliding-sheet-r {
   transition: transform 0.3s ease;
   transform: translateX(100%);
 }
 
-#sliding-sheet.open {
+#sliding-sheet-r.open {
+  transform: translateX(0%);
+}
+
+#sliding-sheet-l {
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+#sliding-sheet-l.open {
   transform: translateX(0%);
 }
