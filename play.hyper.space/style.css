@@ -709,10 +709,9 @@
       format("truetype");
 }
 
-
 body {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-mono {
@@ -726,4 +725,85 @@ body {
 .font-sans {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+#sidebar {
+  transition: all 0.3s ease;
+  width: 360px;
+}
+
+#sidebar.sidebar-collapsed {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#right-collapse {
+  position: absolute;
+  top: 16px;
+  left: -24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#right-collapse svg.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  gap: 15px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+#scroll-container {
+  scroll-behavior: smooth;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+/* Blurred effect on the body when popover is shown */
+body.blurred {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+/* Popover animation (fade in) */
+#popoverMenu {
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+#popoverMenu:not(.hidden) {
+  transform: translateY(0);
+}
+
+/* Overlay style (white background with opacity) */
+#overlay {
+  display: none;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* White background with opacity */
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  transition: all 0.3s ease;
+}
+
+/* Hide the overlay by default */
+#overlay.hidden {
+  display: none;
 }
