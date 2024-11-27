@@ -120,36 +120,29 @@ function toggleOpacity(button) {
 }
 
 // Open Menu
-const openMenuBtn = document.getElementById("openMenuBtn");
-const popoverMenu = document.getElementById("popoverMenu");
-const overlay = document.getElementById("overlay");
-
-openMenuBtn.addEventListener("click", () => {
-  popoverMenu.classList.toggle("hidden");
-  overlay.classList.toggle("hidden");
-  document.body.classList.toggle("blurred");
-});
-
-overlay.addEventListener("click", () => {
-  popoverMenu.classList.add("hidden");
-  overlay.classList.add("hidden");
-  document.body.classList.remove("blurred");
-});
-
-const closeButton = popoverMenu.getElementById("popOverClose");
-
-function closePopover() {
-  popoverMenu.classList.add("hidden");
+function openPopover() {
+  const popoverMenu = document.getElementById("popoverMenu");
+  popoverMenu.classList.toggle("hidden"); // Toggle visibility of popover
 }
 
-closeButton.addEventListener("click", closePopover);
+// Close the popover when the close button is clicked
+document.getElementById("popOverClose").addEventListener("click", function () {
+  const popoverMenu = document.getElementById("popoverMenu");
+  popoverMenu.classList.add("hidden"); // Hide the popover
+});
 
+// Close the popover if the user clicks outside of it
 document.addEventListener("click", function (event) {
-  if (!popoverMenu.contains(event.target) && event.target !== closeButton) {
-    closePopover();
+  const popoverMenu = document.getElementById("popoverMenu");
+  const openMenuBtn = document.getElementById("openMenuBtn");
+  if (!popoverMenu.contains(event.target) && event.target !== openMenuBtn) {
+    popoverMenu.classList.add("hidden"); // Hide the popover if clicked outside
   }
 });
 
-popoverMenu.addEventListener("click", function (event) {
-  event.stopPropagation();
-});
+// Prevent the popover from closing when clicking inside it
+document
+  .getElementById("popoverMenu")
+  .addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent propagation to document
+  });
