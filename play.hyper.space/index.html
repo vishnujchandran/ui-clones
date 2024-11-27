@@ -46,7 +46,6 @@
           <div class="flex items-center gap-x-1.5 md:gap-x-2.5">
             <a
               href="/play.hyper.space/index.html"
-              data-state="closed"
               style="-webkit-touch-callout: none"
               ><svg
                 aria-label="hyperspace icon"
@@ -77,7 +76,6 @@
               id="radix-:Rebtf2db:"
               aria-haspopup="menu"
               aria-expanded="false"
-              data-state="closed"
               class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] transition-colors hover:bg-app-hover data-[state=open]:bg-app-hover"
             >
               <div>
@@ -256,11 +254,10 @@
         <div class="w-10">
           <button
             type="button"
-            id="toggle-sheet-button"
+            id="toggle-sheet-r"
             aria-haspopup="dialog"
             aria-expanded="false"
             aria-controls="radix-:R3btf2db:"
-            data-state="closed"
             class="z-50 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] text-black"
           >
             <svg
@@ -297,7 +294,7 @@
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
-        class="hidden fixed z-50 gap-4 bg-white shadow-lg transition ease-in-out sm:max-w-sm p-0"
+        class="hidden absolute right-0 h-full w-1/2 z-50 gap-4 bg-white shadow-lg transition ease-in-out sm:max-w-sm p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -955,7 +952,7 @@
         </div>
         <button
           type="button"
-          id="close-sheet"
+          id="close-sheet-r"
           class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-app-hover"
         >
           <svg
@@ -979,237 +976,47 @@
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
-        class="fixed z-50 shadow-lg transition ease-in-out sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white p-0"
+        class="hidden absolute left-0 z-50 shadow-lg transition w-1/2 ease-in-out inset-y-0 left-0 border-r sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
-        <div class="flex-grow overflow-y-auto">
-          <div class="relative size-full">
-            <div
-              style="
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                position: relative;
-                z-index: 0;
-              "
-              class="react-flow size-full light"
-              data-testid="rf__wrapper"
+        <button
+          aria-label="Expand Flow"
+          class="absolute right-2 top-2 rounded-full bg-[#333333] p-2 text-[white] shadow-md transition-colors hover:bg-[#E5E5E5] hover:text-gray-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-maximize2"
+          >
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" x2="14" y1="3" y2="10"></line>
+            <line x1="3" x2="10" y1="21" y2="14"></line>
+          </svg>
+        </button>
+        <div class="flex justify-center items-center flex-grow">
+          <div>
+            <span
+              class="relative flex items-center justify-center rounded border e px-2 py-1 font-prose text-lg transition hover:cursor-pointer hover:bg-app-hover"
+              style="max-width: 200px"
             >
-              <div
-                class="react-flow__renderer"
-                style="
-                  position: absolute;
-                  width: 100%;
-                  height: 100%;
-                  top: 0px;
-                  left: 0px;
-                "
-              >
-                <div
-                  class="react-flow__pane draggable"
-                  style="
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0px;
-                    left: 0px;
-                  "
-                >
-                  <div
-                    class="react-flow__viewport xyflow__viewport react-flow__container"
-                    style="transform: translate(123.5px, 434px) scale(2)"
-                  >
-                    <div class="react-flow__edges"></div>
-                    <div class="react-flow__edgelabel-renderer"></div>
-                    <div
-                      class="react-flow__nodes"
-                      style="
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0px;
-                        left: 0px;
-                      "
-                    >
-                      <div
-                        class="react-flow__node react-flow__node-labeled nopan selectable draggable"
-                        style="
-                          z-index: 0;
-                          transform: translate(0px);
-                          pointer-events: all;
-                          visibility: visible;
-                        "
-                        data-id="initial"
-                        data-testid="rf__node-initial"
-                        tabindex="0"
-                        role="button"
-                        aria-describedby="react-flow__node-desc-1"
-                      >
-                        <div
-                          data-nodeid="initial"
-                          data-handlepos="top"
-                          data-id="1-initial-null-target"
-                          class="react-flow__handle react-flow__handle-top nodrag nopan !invisible target connectable connectablestart connectableend connectionindicator"
-                        ></div>
-                        <span
-                          data-state="closed"
-                          class="relative flex items-center justify-center rounded border px-2 py-1 font-prose text-sm transition hover:cursor-pointer hover:bg-app-hover bg-white-light"
-                          style="max-width: 180px"
-                          >Welcome!</span
-                        >
-                        <div
-                          data-nodeid="initial"
-                          data-handlepos="bottom"
-                          data-id="1-initial-null-source"
-                          class="react-flow__handle react-flow__handle-bottom nodrag nopan !invisible source connectable connectablestart connectableend connectionindicator"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="react-flow__viewport-portal"></div>
-                  </div>
-                </div>
-              </div>
-              <svg
-                class="react-flow__background"
-                style="
-                  position: absolute;
-                  width: 100%;
-                  height: 100%;
-                  top: 0px;
-                  left: 0px;
-                "
-                data-testid="rf__background"
-              >
-                <pattern
-                  id="pattern-1"
-                  x="3.5"
-                  y="34"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                  patternTransform="translate(-21,-21)"
-                >
-                  <circle
-                    cx="1"
-                    cy="1"
-                    r="1"
-                    class="react-flow__background-pattern dots"
-                  ></circle>
-                </pattern>
-                <rect
-                  x="0"
-                  y="0"
-                  width="100%"
-                  height="100%"
-                  fill="url(#pattern-1)"
-                ></rect>
-              </svg>
-              <div
-                class="react-flow__panel react-flow__controls horizontal rounded *:border-none *:bg-white *:text-app-foreground *:transition [&amp;>*:hover]:bg-app-hover bottom center"
-                style="pointer-events: all"
-                data-testid="rf__controls"
-                aria-label="React Flow controls"
-              >
-                <button
-                  type="button"
-                  class="react-flow__controls-button react-flow__controls-zoomin"
-                  title="zoom in"
-                  aria-label="zoom in"
-                  disabled=""
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                    <path
-                      d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
-                    ></path>
-                  </svg></button
-                ><button
-                  type="button"
-                  class="react-flow__controls-button react-flow__controls-zoomout"
-                  title="zoom out"
-                  aria-label="zoom out"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 5">
-                    <path d="M0 0h32v4.2H0z"></path>
-                  </svg></button
-                ><button
-                  type="button"
-                  class="react-flow__controls-button react-flow__controls-fitview"
-                  title="fit view"
-                  aria-label="fit view"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 30">
-                    <path
-                      d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
-                    ></path>
-                  </svg></button
-                ><button
-                  type="button"
-                  class="react-flow__controls-button react-flow__controls-interactive"
-                  title="toggle interactivity"
-                  aria-label="toggle interactivity"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 32">
-                    <path
-                      d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <div id="react-flow__node-desc-1" style="display: none">
-                Press enter or space to select a node.You can then use the arrow
-                keys to move the node around. Press delete to remove it and
-                escape to cancel.
-              </div>
-              <div id="react-flow__edge-desc-1" style="display: none">
-                Press enter or space to select an edge. You can then press
-                delete to remove it or escape to cancel.
-              </div>
-              <div
-                id="react-flow__aria-live-1"
-                aria-live="assertive"
-                aria-atomic="true"
-                style="
-                  position: absolute;
-                  width: 1px;
-                  height: 1px;
-                  margin: -1px;
-                  border: 0px;
-                  padding: 0px;
-                  overflow: hidden;
-                  clip: rect(0px, 0px, 0px, 0px);
-                  clip-path: inset(100%);
-                "
-              ></div>
-            </div>
-            <button
-              aria-label="Expand Flow"
-              class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-button-text shadow-md transition-colors hover:bg-button-stroke hover:text-app-hyperspace-black"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-maximize2"
-              >
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <polyline points="9 21 3 21 3 15"></polyline>
-                <line x1="21" x2="14" y1="3" y2="10"></line>
-                <line x1="3" x2="10" y1="21" y2="14"></line>
-              </svg>
-            </button>
+              Welcome!
+            </span>
           </div>
         </div>
+
         <button
           type="button"
           id="close-sheet-l"
-          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-app-hover"
+          class="absolute left-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-app-hover"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1224,10 +1031,13 @@
             class="lucide lucide-x h-4 w-4"
           >
             <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path></svg
-          ><span class="sr-only">Close</span>
+            <path d="m6 6 12 12"></path>
+          </svg>
+          <span class="sr-only">Close</span>
         </button>
       </div>
+
+      <!-- Main -->
       <div
         class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700"
       >
@@ -1548,7 +1358,6 @@
               </button>
             </div>
             <div
-              id="radix-:R16btf2db:-content-graph"
               tabindex="0"
               class="mt-2 ring-offset-[#e5e5e5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
               style="animation-duration: 0s"
@@ -1564,181 +1373,7 @@
                       z-index: 0;
                     "
                     class="react-flow size-full light"
-                  >
-                    <div
-                      class="react-flow__renderer"
-                      style="
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                      "
-                    >
-                      <div
-                        class="react-flow__pane draggable"
-                        style="
-                          position: absolute;
-                          width: 100%;
-                          height: 100%;
-                          top: 0;
-                          left: 0;
-                        "
-                      >
-                        <div
-                          class="react-flow__viewport xyflow__viewport react-flow__container"
-                          style="transform: translate(62px, 352px) scale(2)"
-                        >
-                          <div class="react-flow__edges"></div>
-                          <div class="react-flow__edgelabel-renderer"></div>
-                          <div
-                            class="react-flow__nodes"
-                            style="
-                              position: absolute;
-                              width: 100%;
-                              height: 100%;
-                              top: 0;
-                              left: 0;
-                            "
-                          >
-                            <div
-                              class="react-flow__node react-flow__node-knowledgeNode nopan selectable draggable"
-                              style="
-                                z-index: 0;
-                                transform: translate(0px);
-                                pointer-events: all;
-                                visibility: visible;
-                              "
-                              tabindex="0"
-                            >
-                              <div
-                                class="react-flow__handle react-flow__handle-top nodrag nopan target connectable connectablestart connectableend connectionindicator"
-                                style="visibility: hidden"
-                              ></div>
-                              <span class="relative">
-                                <div
-                                  class="flex items-center w-20 justify-center ml-0 lg:ml-[100px] rounded-md border border-[#e5e5e5] p-1 text-sm hover:cursor-pointer hover:bg-[#f2f2f2] bg-[#333333] border-#e5e5e5 text-white hover:bg-[#333333]"
-                                >
-                                  Welcome!
-                                </div>
-                              </span>
-                              <div
-                                class="react-flow__handle react-flow__handle-bottom nodrag nopan source connectable connectablestart connectableend connectionindicator"
-                                style="visibility: hidden"
-                              ></div>
-                            </div>
-                          </div>
-                          <div class="react-flow__viewport-portal"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <svg
-                      class="react-flow__background"
-                      style="
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                      "
-                    >
-                      <pattern
-                        id="pattern-1"
-                        x="22"
-                        y="32"
-                        width="40"
-                        height="40"
-                        patternUnits="userSpaceOnUse"
-                        patternTransform="translate(-21,-21)"
-                      >
-                        <circle
-                          cx="1"
-                          cy="1"
-                          r="1"
-                          class="react-flow__background-pattern dots"
-                        ></circle>
-                      </pattern>
-                      <rect
-                        x="0"
-                        y="0"
-                        width="100%"
-                        height="100%"
-                        fill="url(#pattern-1)"
-                      ></rect>
-                    </svg>
-                    <div
-                      class="react-flow__panel react-flow__controls horizontal rounded *:border-none *:bg-[#f5f6f8] *:text-[#333333] *:transition [&amp;>*:hover]:bg-[#f2f2f2] bottom right"
-                      style="pointer-events: all"
-                    >
-                      <button
-                        type="button"
-                        class="react-flow__controls-button react-flow__controls-zoomin"
-                        title="zoom in"
-                        disabled=""
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
-                          ></path>
-                        </svg></button
-                      ><button
-                        type="button"
-                        class="react-flow__controls-button react-flow__controls-zoomout"
-                        title="zoom out"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 5"
-                        >
-                          <path d="M0 0h32v4.2H0z"></path>
-                        </svg></button
-                      ><button
-                        type="button"
-                        class="react-flow__controls-button react-flow__controls-fitview"
-                        title="fit view"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 30"
-                        >
-                          <path
-                            d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
-                          ></path>
-                        </svg></button
-                      ><button
-                        type="button"
-                        class="react-flow__controls-button react-flow__controls-interactive"
-                        title="toggle interactivity"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 25 32"
-                        >
-                          <path
-                            d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
-                          ></path>
-                        </svg>
-                      </button>
-                    </div>
-
-                    <div
-                      id="react-flow__aria-live-1"
-                      style="
-                        position: absolute;
-                        width: 1px;
-                        height: 1px;
-                        margin: -1px;
-                        border: 0;
-                        padding: 0;
-                        overflow: hidden;
-                        clip: rect(0px, 0px, 0px, 0px);
-                        clip-path: inset(100%);
-                      "
-                    ></div>
-                  </div> </span
+                  ></div> </span
                 ><button
                   class="absolute right-2 top-2 rounded-full bg-[#333333] p-2 text-white shadow-md transition-colors hover:bg-[#e5e5e5] hover:text-[#333333]"
                 >

@@ -142,28 +142,31 @@ document
   });
 
 // mobile view right sheet
-const toggleButton = document.getElementById("toggle-sheet-button");
+const toggleButton = document.getElementById("toggle-sheet-r");
 const slidingSheet = document.getElementById("sliding-sheet-r");
-const closeButton = document.getElementById("close-sheet");
+const closeButton = document.getElementById("close-sheet-r");
 
 toggleButton.addEventListener("click", function () {
   slidingSheet.classList.toggle("open");
+  slidingSheet.classList.toggle("hidden");
 });
 
 closeButton.addEventListener("click", function () {
   slidingSheet.classList.remove("open");
+  slidingSheet.classList.toggle("hidden");
 });
 
 // mobile view left sheet
-
 const toggleButtonLeft = document.getElementById("toggle-sheet-l");
 const slidingSheetLeft = document.getElementById("sliding-sheet-l");
 const closeButtonLeft = document.getElementById("close-sheet-l");
 
 toggleButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.toggle("open");
+  slidingSheetLeft.classList.toggle("hidden");
 });
 
 closeButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.remove("open");
+  slidingSheetLeft.classList.toggle("hidden");
 });

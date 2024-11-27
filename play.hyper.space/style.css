@@ -812,6 +812,7 @@ body.blurred {
   transition: transform 0.3s ease;
   transform: translateX(-100%);
 }
+
 #sliding-sheet-l.open {
   transform: translateX(0%);
 }
