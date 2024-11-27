@@ -252,6 +252,7 @@
         <div class="w-10">
           <button
             type="button"
+            id="toggle-sheet-button"
             aria-haspopup="dialog"
             aria-expanded="false"
             aria-controls="radix-:R3btf2db:"
@@ -288,6 +289,696 @@
           </button>
         </div>
       </nav>
+
+      <!-- Add content for the sheet here -->
+      <div
+        id="sliding-sheet"
+        aria-describedby="radix-:r7j:"
+        aria-labelledby="radix-:r7i:"
+        data-state="open"
+        class="fixed z-50 gap-4 bg-white shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 right-0 w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm p-0"
+        tabindex="-1"
+        style="pointer-events: auto"
+      >
+        <div class="bg-app-container px-2.5 pt-6">
+          <button
+            class="flex h-8 w-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-app-hover disabled:cursor-not-allowed disabled:opacity-50"
+            type="button"
+            id="radix-:rad:"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            data-state="closed"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-sun block size-4 lights-out:hidden dark:hidden"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path></svg
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon hidden size-4 lights-out:hidden dark:block"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-contrast hidden size-4 lights-out:block dark:hidden"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 18a6 6 0 0 0 0-12v12z"></path></svg
+            ><span class="sr-only">Toggle theme</span>
+          </button>
+        </div>
+        <div class="relative h-full">
+          <div
+            class="absolute top-4 z-10 hidden cursor-pointer rounded-l-lg border border-app-stroke bg-app-container p-2 transition-all duration-300 lg:block -left-6"
+          >
+            <div class="transform transition-transform duration-200 rotate-180">
+              <svg
+                class="rotate-180 transform transition-transform duration-200"
+                fill="none"
+                height="12"
+                viewBox="0 0 10 12"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 0.999999L7.5 6L2.5 11"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.42857"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="h-full overflow-hidden transition-all duration-300 w-full"
+          >
+            <div
+              class="h-full w-full overflow-y-auto border-l border-app-stroke transition-all duration-300 translate-x-0"
+            >
+              <div class="flex flex-col space-y-4 p-4">
+                <div class="flex flex-col space-y-2">
+                  <h2 class="text-md font-semibold capitalize">AI Providers</h2>
+                  <div class="flex flex-col space-y-3">
+                    <div class="flex space-x-2">
+                      <button
+                        type="button"
+                        class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                        onclick="toggleDropdown(event)"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center overflow-hidden">
+                            <img
+                              alt="groq"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2 flex-shrink-0"
+                              style="color: transparent"
+                              src="https://play.hyper.space/groq.svg"
+                            /><span class="truncate text-sm font-medium"
+                              >Groq</span
+                            ><span
+                              class="ml-1 hidden items-center text-sm text-gray-500 text-xs 2xl:block"
+                              >(Default)</span
+                            >
+                          </div>
+                          <img
+                            alt="Dropdown arrow"
+                            loading="lazy"
+                            width="12"
+                            height="12"
+                            decoding="async"
+                            class="flex-shrink-0"
+                            style="color: transparent"
+                            src="https://play.hyper.space/DropdownIcon.svg"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        id="dropdownMenu"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border rounded-md absolute top-20 left-0 center z-50 bg-white"
+                      >
+                        <button
+                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2]"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="groq"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              src="https://play.hyper.space/groq.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >Groq
+                              <span class="opacity-50">(Default)</span></span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Together AI"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              src="https://play.hyper.space/togetherai.svg"
+                            />
+                            <span class="text-xs font-medium">Together AI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Mistral AI"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              src="https://play.hyper.space/mistral.svg"
+                            />
+                            <span class="text-xs font-medium">Mistral AI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Open AI"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/openai.svg"
+                            />
+                            <span class="text-xs font-medium">Open AI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Anthropic"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/anthropic.svg"
+                            />
+                            <span class="text-xs font-medium">Anthropic</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="xAI"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/xai.svg"
+                            />
+                            <span class="text-xs font-medium">xAI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Google"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/google.svg"
+                            />
+                            <span class="text-xs font-medium">Google</span>
+                          </div>
+                        </button>
+                        <button
+                          class="w-full p-2 text-left text-xs opacity-50 cursor-not-allowed"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="hyperspace logo light"
+                              class="mr-2 block lights-out:hidden dark:hidden"
+                              height="25"
+                              width="25"
+                              src="https://play.hyper.space/logo-light.svg"
+                            /><img
+                              alt="hyperspace logo dark"
+                              class="mr-2 hidden lights-out:block dark:block"
+                              height="25"
+                              width="25"
+                              src="https://play.hyper.space/logo-dark.svg"
+                            />Hyperspace Network
+                          </div>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        onclick="toggleDropdown2(event)"
+                        class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center overflow-hidden">
+                            <img
+                              alt="llama3-70b-8192"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2 flex-shrink-0"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            /><span class="truncate text-sm font-medium"
+                              >llama3-70b-8192</span
+                            >
+                          </div>
+                          <img
+                            alt="Dropdown arrow"
+                            loading="lazy"
+                            width="12"
+                            height="12"
+                            decoding="async"
+                            class="flex-shrink-0"
+                            style="color: transparent"
+                            src="https://play.hyper.space/DropdownIcon.svg"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        id="dropdownMenu2"
+                        class="hidden flex-col mt-2 w-[232px] border p-2 rounded-md absolute right-0 top-20 z-50 bg-white"
+                      >
+                        <button
+                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2]"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama3-70b-8192"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >Gllama3-70b-8192
+                            </span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama-3.1-8b-instant"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >llama-3.1-8b-instant</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama3-8b-8192"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >llama3-8b-8192</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama-3.1-70b-versatile"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >llama-3.1-70b-versatile</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="mixtral-8x7b-32768"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/mistral.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >mixtral-8x7b-32768</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="gemma2-9b-it"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/Google__G__logo 1.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >gemma2-9b-it</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="gemma-7b-it"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/Google__G__logo 1.svg"
+                            />
+                            <span class="text-xs font-medium">gemma-7b-it</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llava-v1.5-7b-4096-preview"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >llava-v1.5-7b-4096-preview</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="relative">
+                        <div
+                          class="flex h-[35px] w-full items-center justify-between rounded-lg border px-3 py-1 text-left"
+                        >
+                          <div class="flex w-full items-center">
+                            <input
+                              id="apiKeyInput"
+                              autocomplete="current-password"
+                              class="h-full w-full bg-transparent text-gray-800 text-xs font-medium placeholder-gray-400 focus:outline-none"
+                              placeholder="Enter API key"
+                              type="password"
+                            />
+                          </div>
+                          <button
+                            class="ml-2 text-sm text-gray-400 text-xs"
+                            type="button"
+                            onclick="togglePasswordVisibility()"
+                          >
+                            Show
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <p class="text-xs font-medium">
+                        Get Groq API key
+                        <a
+                          class="text-blue-500 hover:underline"
+                          href="https://console.groq.com/keys"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          >here </a
+                        >.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="flex w-full flex-col space-y-2">
+                  <h2 class="text-md font-semibold capitalize">Data Sources</h2>
+                  <div
+                    dir="ltr"
+                    class="space-y-2"
+                    tabindex="0"
+                    style="outline: none"
+                  >
+                    <button
+                      type="button"
+                      class="group w-full border-black ring-offset-[#e5e5e5] rounded-md p-4 text-start transition bg-[#f5f6f8] border-[1px] border-gray-300 hover:bg-[#f2f2f2] transform-gpu hover:-translate-y-px hover:border-black"
+                      tabindex="0"
+                    >
+                      <svg
+                        onclick="toggleOpacity(this)"
+                        id="tick"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 active:opacity-15 transition-opacity duration-200"
+                      >
+                        <path d="M20 6 9 17l-5-5"></path>
+                      </svg>
+                      <div class="flex items-center space-x-2">
+                        <img
+                          alt="Web"
+                          class="h-5 w-5"
+                          style="filter: none"
+                          src="https://play.hyper.space/data-sources/web.svg"
+                        />
+                        <h3 class="text-md font-semibold capitalize">Web</h3>
+                      </div>
+                      <p class="mt-2 text-sm">
+                        Search and retrieve information from the web
+                      </p>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <div
+                    class="flex w-full flex-col items-center justify-center gap-3 rounded border-2 border-dashed p-4 border-gray-300"
+                    onclick="document.getElementById('file-upload').click()"
+                  >
+                    <input
+                      accept=".pdf,.txt"
+                      class="hidden"
+                      id="file-upload"
+                      type="file"
+                    />
+                    <div class="text-sm text-gray-500 text-xs">
+                      Drag and drop a PDF or Text File, or click to upload
+                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-upload"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="17 8 12 3 7 8"></polyline>
+                      <line x1="12" x2="12" y1="3" y2="15"></line>
+                    </svg>
+                  </div>
+                </div>
+                <ul class="flex flex-col gap-1"></ul>
+                <hr />
+                <div class="flex flex-col space-y-5">
+                  <div class="space-y-1">
+                    <p class="text-sm">
+                      Select your preferred source below. You may choose
+                      multiple sources.
+                    </p>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <div class="flex flex-wrap gap-2">
+                      <div class="relative inline-block group">
+                        <button
+                          class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-[#f2f2f2]"
+                          type="button"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-plus size-4 text-[#333333]"
+                          >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                          </svg>
+                        </button>
+
+                        <div
+                          class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white text-black text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
+                        >
+                          Add data source
+                        </div>
+                      </div>
+
+                      <div
+                        class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white text-black text-xs px-2 py-1 rounded-md shadow-md"
+                      >
+                        Add data
+                      </div>
+                      <img
+                        alt="Wikipedia"
+                        class="h-7 w-7 cursor-pointer"
+                        src="https://play.hyper.space/data-sources/wikipedia.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="flex flex-col space-y-5">
+                  <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold">Vector Chunks</h2>
+                    <button>
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 text-gray-500 text-xs"
+                      >
+                        <path
+                          d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="space-y-2">
+                    <p class="text-sm text-gray-500 text-xs">
+                      No vector chunks available. Start a chat to see relevant
+                      chunks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="close-sheet"
+          class="hidden absolute right-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-app-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x h-4 w-4"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path></svg
+          ><span class="sr-only">Close</span>
+        </button>
+      </div>
+
       <div
         class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700"
       >
@@ -1160,40 +1851,44 @@
                               >
                                 General
                               </div>
-                              <div class="space-y-3 pt-3">
-                                <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
-                                  role="option"
-                                >
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-shuffle !size-3"
+                              <a
+                                href="https://play.hyper.space/explore/how-to-reboot-the-brain-effectiv-vnyupE"
+                              >
+                                <div class="space-y-3 pt-3">
+                                  <div
+                                    class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                    role="option"
                                   >
-                                    <path
-                                      d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"
-                                    ></path>
-                                    <path d="m18 2 4 4-4 4"></path>
-                                    <path
-                                      d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"
-                                    ></path>
-                                    <path
-                                      d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"
-                                    ></path>
-                                    <path d="m18 14 4 4-4 4"></path>
-                                  </svg>
-                                  <span class="font-medium"
-                                    >Go to random project</span
-                                  >
-                                </div>
-                              </div>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="lucide lucide-shuffle !size-3"
+                                    >
+                                      <path
+                                        d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"
+                                      ></path>
+                                      <path d="m18 2 4 4-4 4"></path>
+                                      <path
+                                        d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"
+                                      ></path>
+                                      <path
+                                        d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"
+                                      ></path>
+                                      <path d="m18 14 4 4-4 4"></path>
+                                    </svg>
+                                    <span class="font-medium"
+                                      >Go to random project</span
+                                    >
+                                  </div>
+                                </div></a
+                              >
                             </div>
                             <div class="overflow-hidden p-1">
                               <div
@@ -1201,33 +1896,38 @@
                               >
                                 Projects
                               </div>
-                              <div class="space-y-3 pt-3">
-                                <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
-                                >
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-arrow-right !size-3"
+                              <a
+                                href="https://play.hyper.space/explore/nuclear-base-security-breach-hDM7"
+                              >
+                                <div class="space-y-3 pt-3">
+                                  <div
+                                    class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
                                   >
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                  </svg>
-                                  <span class="flex-grow text-start font-medium"
-                                    >Nuclear Base Security Breach</span
-                                  ><span
-                                    class="text-end text-[10px] text-app-label opacity-70"
-                                    >about 4 hours</span
-                                  >
-                                </div>
-                              </div>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="lucide lucide-arrow-right !size-3"
+                                    >
+                                      <path d="M5 12h14"></path>
+                                      <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                    <span
+                                      class="flex-grow text-start font-medium"
+                                      >Nuclear Base Security Breach</span
+                                    ><span
+                                      class="text-end text-[10px] text-app-label opacity-70"
+                                      >about 4 hours</span
+                                    >
+                                  </div>
+                                </div></a
+                              >
                             </div>
                             <div class="overflow-hidden p-1">
                               <div

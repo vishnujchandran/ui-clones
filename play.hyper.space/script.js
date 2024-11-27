@@ -133,9 +133,6 @@ document.getElementById("popOverClose").addEventListener("click", function () {
 document.addEventListener("click", function (event) {
   const popoverMenu = document.getElementById("popoverMenu");
   const openMenuBtn = document.getElementById("openMenuBtn");
-  if (!popoverMenu.contains(event.target) && event.target !== openMenuBtn) {
-    popoverMenu.classList.add("hidden");
-  }
 });
 
 document
@@ -143,3 +140,16 @@ document
   .addEventListener("click", function (event) {
     event.stopPropagation();
   });
+
+// mobile view right sheet
+const toggleButton = document.getElementById("toggle-sheet-button");
+const slidingSheet = document.getElementById("sliding-sheet");
+const closeButton = document.getElementById("close-sheet");
+
+toggleButton.addEventListener("click", function () {
+  slidingSheet.classList.toggle("open");
+});
+
+closeButton.addEventListener("click", function () {
+  slidingSheet.classList.remove("open");
+});
