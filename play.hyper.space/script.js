@@ -122,27 +122,24 @@ function toggleOpacity(button) {
 // Open Menu
 function openPopover() {
   const popoverMenu = document.getElementById("popoverMenu");
-  popoverMenu.classList.toggle("hidden"); // Toggle visibility of popover
+  popoverMenu.classList.toggle("hidden");
 }
 
-// Close the popover when the close button is clicked
 document.getElementById("popOverClose").addEventListener("click", function () {
   const popoverMenu = document.getElementById("popoverMenu");
-  popoverMenu.classList.add("hidden"); // Hide the popover
+  popoverMenu.classList.add("hidden");
 });
 
-// Close the popover if the user clicks outside of it
 document.addEventListener("click", function (event) {
   const popoverMenu = document.getElementById("popoverMenu");
   const openMenuBtn = document.getElementById("openMenuBtn");
   if (!popoverMenu.contains(event.target) && event.target !== openMenuBtn) {
-    popoverMenu.classList.add("hidden"); // Hide the popover if clicked outside
+    popoverMenu.classList.add("hidden");
   }
 });
 
-// Prevent the popover from closing when clicking inside it
 document
   .getElementById("popoverMenu")
   .addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent propagation to document
+    event.stopPropagation();
   });
