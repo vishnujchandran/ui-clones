@@ -291,7 +291,7 @@
       >
         <div class="px-2.5 pt-6">
           <button
-            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:hover:bg-[#262626] dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
             type="button"
           >
             <svg
@@ -385,8 +385,8 @@
                     <div class="flex space-x-2">
                       <button
                         type="button"
+                        id="dropdownButtonMain"
                         class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
-                        onclick="toggleDropdown(event)"
                       >
                         <div class="flex items-center justify-between">
                           <div class="flex items-center overflow-hidden">
@@ -420,10 +420,10 @@
                       </button>
                       <div
                         id="dropdownMenu"
-                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] dark:bg-[#0d1116] rounded-md absolute top-20 left-0 center z-50 bg-white"
                       >
                         <button
-                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] bg-gray-400"
+                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] bg-gray-400 dark:bg-[#272e37]"
                         >
                           <div class="flex items-center">
                             <img
@@ -551,7 +551,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="toggleDropdown2(event)"
+                        id="dropdownButton2Main"
                         class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
                       >
                         <div class="flex items-center justify-between">
@@ -586,7 +586,7 @@
                         class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                       >
                         <button
-                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
                         >
                           <div class="flex items-center">
                             <img
@@ -751,8 +751,8 @@
                             autocomplete="current-password" class="h-full w-full
                             bg-transparent text-gray-800 dark:text-[#D4D4D4]
                             text-xs font-medium placeholder-gray-400
-                            dark:placeholder-white placeholder="Enter API key"
-                            type="password" />
+                            outline-none dark:placeholder-white
+                            placeholder="Enter API key" type="password" />
                           </div>
                           <button
                             id="showButton"
@@ -1640,7 +1640,7 @@
             </label>
             <div class="relative">
               <input
-                class="flex h-10 rounded-md border dark:border-[#30363D] border-[#e5e5e5] bg-white dark:bg-[#0D1116] px-3 py-2 text-xs file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#818181] disabled:cursor-not-allowed disabled:opacity-50 mb-1.5 mt-3 w-full tracking-wider"
+                class="flex outline-none h-10 rounded-md border dark:border-[#30363D] border-[#e5e5e5] bg-white dark:bg-[#0D1116] px-3 py-2 text-xs file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#818181] disabled:cursor-not-allowed disabled:opacity-50 mb-1.5 mt-3 w-full tracking-wider"
                 value="87K5cse…NejX4s"
                 readonly=""
               />
@@ -1921,7 +1921,7 @@
                             <path d="m21 21-4.3-4.3"></path>
                           </svg>
                           <input
-                            class="flex h-11 w-full rounded-md bg-transparent py-3 text-xs outline-none placeholder: disabled:cursor-not-allowed disabled:"
+                            class="flex h-11 outline-none w-full rounded-md bg-transparent py-3 text-xs outline-none placeholder: disabled:cursor-not-allowed disabled:"
                             placeholder="Type anything to search..."
                             autocomplete="off"
                             autocorrect="off"
@@ -2714,7 +2714,7 @@
                               <div class="flex w-full items-center">
                                 <input
                                   id="apiKeyInputMain"
-                                  class="h-full w-full bg-transparent text-gray-800 text-xs font-medium placeholder-gray-400"
+                                  class="h-full w-full bg-transparent outline-none text-gray-800 text-xs font-medium placeholder-gray-400"
                                   placeholder="Enter API key"
                                   type="password"
                                 />

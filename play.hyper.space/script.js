@@ -185,12 +185,6 @@ function openPopover() {
   const popoverMenu = document.getElementById("popoverMenu");
 
   popoverMenu.classList.toggle("hidden");
-
-  if (!popoverMenu.classList.contains("hidden")) {
-    // mainDiv.classList.add("blur-sm", "opacity-70");
-  } else {
-    // mainDiv.classList.remove("blur-sm", "opacity-70");
-  }
 }
 
 document.getElementById("popOverClose").addEventListener("click", function () {
