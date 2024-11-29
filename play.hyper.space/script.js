@@ -1,3 +1,15 @@
+// Theme
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}
+
+if (prefersDarkScheme.matches) {
+  console.log("Added dark");
+  document.body.classList.add("dark");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const collapseButton = document.getElementById("right-collapse");
   const sidebar = document.getElementById("sidebar");
@@ -63,6 +75,39 @@ const scrollInterval = setInterval(() => {
   });
 }, 2000);
 
+// Drop down Main
+function toggleDropdownMain(event) {
+  event.stopPropagation();
+
+  const dropdown = document.getElementById("dropdownMenuMain");
+  dropdown.classList.toggle("hidden");
+}
+
+document.addEventListener("click", function (event) {
+  const dropdown = document.getElementById("dropdownMenuMain");
+  const button = document.querySelector('button[type="button"]');
+
+  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.classList.add("hidden");
+  }
+});
+
+function toggleDropdown2Main(event) {
+  event.stopPropagation();
+
+  const dropdown = document.getElementById("dropdownMenu2Main");
+  dropdown.classList.toggle("hidden");
+}
+
+document.addEventListener("click", function (event) {
+  const dropdown = document.getElementById("dropdownMenu2Main");
+  const button = document.querySelector('button[type="button"]');
+
+  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.classList.add("hidden");
+  }
+});
+
 // Drop down
 function toggleDropdown(event) {
   event.stopPropagation();
@@ -95,6 +140,20 @@ document.addEventListener("click", function (event) {
     dropdown.classList.add("hidden");
   }
 });
+
+// Show password Main
+function togglePasswordVisibilityMain() {
+  const passwordInput = document.getElementById("apiKeyInputMain");
+  const showButton = document.getElementById("showButtonMain");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    showButton.textContent = "Hide";
+  } else {
+    passwordInput.type = "password";
+    showButton.textContent = "Show";
+  }
+}
 
 // Show password
 function togglePasswordVisibility() {
@@ -170,3 +229,71 @@ closeButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.remove("open");
   slidingSheetLeft.classList.toggle("hidden");
 });
+
+// Theme button and dropdown menu
+const themeButton = document.getElementById("theme-btn");
+const dropdownMenu = document.getElementById("dropdown-menu-main");
+
+themeButton.addEventListener("click", function (e) {
+  e.stopPropagation();
+  dropdownMenu.classList.toggle("hidden");
+});
+
+window.addEventListener("click", function (e) {
+  if (!themeButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+    dropdownMenu.classList.add("hidden");
+  }
+});
+
+function setLightTheme() {
+  document.body.classList.remove("dark");
+  localStorage.setItem("theme", "light");
+}
+
+function setDarkTheme() {
+  document.body.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+}
+
+function setSystemTheme() {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
+  localStorage.removeItem("theme");
+}
+
+document.getElementById("light-btn").addEventListener("click", function () {
+  setLightTheme();
+  dropdownMenu.classList.add("hidden");
+});
+
+document.getElementById("dark-btn").addEventListener("click", function () {
+  setDarkTheme();
+  dropdownMenu.classList.add("hidden");
+});
+
+document
+  .getElementById("lights-out-btn")
+  .addEventListener("click", function () {
+    setLightTheme();
+    dropdownMenu.classList.add("hidden");
+  });
+
+document.getElementById("system-btn").addEventListener("click", function () {
+  setSystemTheme();
+  dropdownMenu.classList.add("hidden");
+});
+
+const storedTheme = localStorage.getItem("theme");
+if (storedTheme === "dark") {
+  setDarkTheme();
+} else if (storedTheme === "light") {
+  setLightTheme();
+} else {
+  setSystemTheme();
+}

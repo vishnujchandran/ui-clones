@@ -13,17 +13,17 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="dark:bg-[#161B22] bg-[#F3F4F6]">
     <div
       class="grid h-100vh supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row"
     >
       <nav
-        class="flex items-center justify-between border-b-[1px] border-gray-300 bg-white p-2.5 lg:hidden"
+        class="flex items-center justify-between border-b-[1px] border-gray-300 bg-white dark:bg-[#0D1116] p-2.5 lg:hidden"
       >
         <div class="w-10">
           <button
             type="button"
-            class="border-gray-300 bg-[#FFFFFF] text-black"
+            class="border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black"
             id="toggle-sheet-l"
           >
             <svg
@@ -48,7 +48,6 @@
               href="/play.hyper.space/index.html"
               style="-webkit-touch-callout: none"
               ><svg
-                aria-label="hyperspace icon"
                 class="text-app-hyperspace h-6 md:h-8"
                 fill="none"
                 role="img"
@@ -60,7 +59,6 @@
                   fill="currentColor"
                 ></path></svg></a
             ><svg
-              aria-label="separator"
               class="text-[#e5e5e5] dark:text-[#30363d] lights-out:text-[#353535] size-5"
               fill="none"
               role="img"
@@ -74,13 +72,10 @@
             ><button
               type="button"
               id="radix-:Rebtf2db:"
-              aria-haspopup="menu"
-              aria-expanded="false"
-              class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] transition-colors hover:bg-app-hover data-[state=open]:bg-app-hover"
+              class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-app-hover data-[state=open]:bg-app-hover"
             >
               <div>
                 <svg
-                  aria-label="play icon"
                   fill="none"
                   role="img"
                   viewBox="0 0 150 150"
@@ -232,7 +227,6 @@
               <span>Play</span>
               <div>
                 <svg
-                  aria-label="separator"
                   fill="none"
                   role="img"
                   viewBox="0 0 11 11"
@@ -255,10 +249,7 @@
           <button
             type="button"
             id="toggle-sheet-r"
-            aria-haspopup="dialog"
-            aria-expanded="false"
-            aria-controls="radix-:R3btf2db:"
-            class="z-50 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] text-black"
+            class="z-50 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black"
           >
             <svg
               class="h-4 w-4"
@@ -294,7 +285,7 @@
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
-        class="hidden absolute right-0 h-full w-1/2 z-50 gap-4 bg-white shadow-lg transition ease-in-out sm:max-w-sm p-0"
+        class="hidden absolute right-0 h-full w-3/5 z-50 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -407,7 +398,7 @@
                             /><span class="truncate text-sm font-medium"
                               >Groq</span
                             ><span
-                              class="ml-1 hidden items-center text-sm text-gray-500 text-xs 2xl:block"
+                              class="ml-1 hidden items-center text-sm text-gray-500 dark:text-[#818181] text-xs 2xl:block"
                               >(Default)</span
                             >
                           </div>
@@ -425,7 +416,7 @@
                       </button>
                       <div
                         id="dropdownMenu"
-                        class="hidden flex-col p-2 mt-2 w-[202px] border rounded-md absolute top-20 left-0 center z-50 bg-white"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
                       >
                         <button
                           class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2]"
@@ -588,7 +579,7 @@
                       </button>
                       <div
                         id="dropdownMenu2"
-                        class="hidden flex-col mt-2 w-[232px] border p-2 rounded-md absolute right-0 top-20 z-50 bg-white"
+                        class="hidden flex-col mt-2 w-[232px] border p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                       >
                         <button
                           class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2]"
@@ -761,6 +752,7 @@
                             />
                           </div>
                           <button
+                            id="showButton"
                             class="ml-2 text-sm text-gray-400 text-xs"
                             type="button"
                             onclick="togglePasswordVisibility()"
@@ -796,7 +788,7 @@
                   >
                     <button
                       type="button"
-                      class="group w-full border-black ring-offset-[#e5e5e5] rounded-md p-4 text-start transition bg-[#f5f6f8] border-[1px] border-gray-300 hover:bg-[#f2f2f2] transform-gpu hover:-translate-y-px hover:border-black"
+                      class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border-[1px] border-gray-300 hover:bg-[#f2f2f2] transform-gpu hover:-translate-y-px hover:border-black"
                       tabindex="0"
                     >
                       <svg
@@ -841,7 +833,9 @@
                       id="file-upload"
                       type="file"
                     />
-                    <div class="text-sm text-gray-500 text-xs">
+                    <div
+                      class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+                    >
                       Drag and drop a PDF or Text File, or click to upload
                     </div>
                     <svg
@@ -877,7 +871,7 @@
                     <div class="flex flex-wrap gap-2">
                       <div class="relative inline-block group">
                         <button
-                          class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-[#f2f2f2]"
+                          class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2]"
                           type="button"
                         >
                           <svg
@@ -890,7 +884,7 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="lucide lucide-plus size-4 text-[#333333]"
+                            class="lucide lucide-plus size-4 text-[#333333] dark:text-[white]"
                           >
                             <path d="M5 12h14"></path>
                             <path d="M12 5v14"></path>
@@ -898,14 +892,14 @@
                         </button>
 
                         <div
-                          class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white text-black text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
+                          class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
                         >
                           Add data source
                         </div>
                       </div>
 
                       <div
-                        class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white text-black text-xs px-2 py-1 rounded-md shadow-md"
+                        class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black text-xs px-2 py-1 rounded-md shadow-md"
                       >
                         Add data
                       </div>
@@ -928,7 +922,7 @@
                         viewBox="0 0 15 15"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 text-gray-500 text-xs"
+                        class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
                       >
                         <path
                           d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
@@ -940,7 +934,9 @@
                     </button>
                   </div>
                   <div class="space-y-2">
-                    <p class="text-sm text-gray-500 text-xs">
+                    <p
+                      class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+                    >
                       No vector chunks available. Start a chat to see relevant
                       chunks.
                     </p>
@@ -976,13 +972,12 @@
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
-        class="hidden absolute left-0 z-50 shadow-lg transition w-1/2 ease-in-out inset-y-0 left-0 border-r sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white p-0"
+        class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#0D1116] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
         <button
-          aria-label="Expand Flow"
-          class="absolute right-2 top-2 rounded-full bg-[#333333] p-2 text-[white] shadow-md transition-colors hover:bg-[#E5E5E5] hover:text-gray-600"
+          class="absolute right-2 top-2 rounded-full bg-[#333333] p-2 text-[white] shadow-md hover:bg-[#E5E5E5] hover:text-gray-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1005,14 +1000,45 @@
         <div class="flex justify-center items-center flex-grow">
           <div>
             <span
-              class="relative flex items-center justify-center rounded border e px-2 py-1 font-prose text-lg transition hover:cursor-pointer hover:bg-app-hover"
+              class="relative flex items-center justify-center rounded border e px-2 py-1 text-lg transition hover:bg-[#F9F9F9] bg-[#FFFFFF]"
               style="max-width: 200px"
             >
               Welcome!
             </span>
           </div>
         </div>
-
+        <div class="absolute bottom-0 right-1/2">
+          <div>
+            <button
+              type="button"
+              class="text-black"
+              title="zoom in"
+              disabled=""
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                  d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
+                ></path>
+              </svg></button
+            ><button type="button" title="zoom out">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 5">
+                <path d="M0 0h32v4.2H0z"></path>
+              </svg></button
+            ><button type="button" title="fit view">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 30">
+                <path
+                  d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
+                ></path>
+              </svg></button
+            ><button type="button" class="" title="toggle interactivity">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 32">
+                <path
+                  d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
         <button
           type="button"
           id="close-sheet-l"
@@ -1039,11 +1065,11 @@
 
       <!-- Main -->
       <div
-        class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700"
+        class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700 dark:text-[#D4D4D4]"
       >
         <!-- Left -->
         <div
-          class="h-full bg-white grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r max-lg:hidden"
+          class="h-full bg-white dark:bg-[#0D1116] grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r max-lg:hidden"
         >
           <nav
             class="flex items-center justify-between gap-3 border-b pl-6 pr-3 max-md:h-[50px] md:h-[67px]"
@@ -1051,7 +1077,7 @@
             <div class="flex items-center gap-x-1.5 md:gap-x-2.5">
               <a href="/play.hyper.space/index.html">
                 <svg
-                  class="text-[#333333] h-6 md:h-8"
+                  class="text-[#333333] dark:text-[white] h-6 md:h-8"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 104 104"
@@ -1075,8 +1101,7 @@
               </svg>
               <button
                 type="button"
-                id="radix-:Rqmbtf2db:"
-                class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] transition-colors hover:bg-[#f2f2f2]"
+                class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2]"
               >
                 <div>
                   <svg
@@ -1261,9 +1286,9 @@
               </button>
             </div>
             <button
+              id="theme-btn"
               class="flex h-8 w-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-[#f2f2f2]"
               type="button"
-              id="radix-:R4mbtf2db:"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1318,27 +1343,59 @@
               </svg>
               <span class="sr-only">Toggle theme</span>
             </button>
-          </nav>
-          <div dir="ltr" class="grid grid-rows-[auto_1fr]">
             <div
-              class="inline-flex text-[#333333] h-auto items-stretch justify-start gap-2 rounded-none bg-transparent p-3"
+              id="dropdown-menu-main"
+              class="hidden z-50 absolute top-14 left-52 mt-2 w-36 bg-white dark:bg-[#0D1116] border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg"
+            >
+              <div class="flex flex-col text-xs p-1">
+                <button
+                  id="light-btn"
+                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                >
+                  Light
+                </button>
+                <button
+                  id="dark-btn"
+                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                >
+                  Dark
+                </button>
+                <button
+                  id="lights-out-btn"
+                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                >
+                  Lights Out
+                </button>
+                <button
+                  id="system-btn"
+                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                >
+                  System
+                </button>
+              </div>
+            </div>
+          </nav>
+
+          <div class="grid grid-rows-[auto_1fr]">
+            <div
+              class="inline-flex text-[#333333] dark:text-[white] h-auto items-stretch justify-start gap-2 rounded-none bg-transparent p-3"
               tabindex="0"
               style="outline: none"
             >
               <button
-                class="disabled:pointer-events-none text-[#f5f6f8] bg-[#333333] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border w-auto flex-1 hover:-translate-y-px"
+                class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#161B22] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border w-auto flex-1 hover:-translate-y-px"
               >
                 Node View
               </button>
 
               <button
-                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border w-auto flex-1 hover:-translate-y-px"
+                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border w-auto flex-1 hover:-translate-y-px dark:bg-[#0D1116] dark:text-[#CBCBCB]"
               >
                 Tab View
               </button>
 
               <button
-                class="flex h-8 w-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-[#f2f2f2]"
+                class="flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg opacity-50 border transition hover:-translate-y-px hover:bg-[#f2f2f2]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1359,23 +1416,158 @@
             </div>
             <div
               tabindex="0"
-              class="mt-2 ring-offset-[#e5e5e5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
+              class="mt-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
               style="animation-duration: 0s"
             >
               <div class="relative size-full">
-                <span
-                  ><div
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 0;
+                  "
+                  class="size-full light"
+                >
+                  <div
                     style="
+                      position: absolute;
                       width: 100%;
                       height: 100%;
-                      overflow: hidden;
-                      position: relative;
-                      z-index: 0;
+                      top: 0;
+                      left: 0;
                     "
-                    class="react-flow size-full light"
-                  ></div> </span
-                ><button
-                  class="absolute right-2 top-2 rounded-full bg-[#333333] p-2 text-white shadow-md transition-colors hover:bg-[#e5e5e5] hover:text-[#333333]"
+                  >
+                    <div
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    >
+                      <div class="">
+                        <div></div>
+                        <div></div>
+                        <div
+                          style="
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                          "
+                        >
+                          <div
+                            style="
+                              z-index: 0;
+                              transform: translate(0px);
+                              pointer-events: all;
+                            "
+                            tabindex="0"
+                            role="button"
+                          >
+                            <div class="flex justify-center"></div>
+                            <span
+                              class="mx-auto relative flex items-center justify-center rounded border px-2 py-1 text-sm hover:cursor-pointer hover:bg-[#F9F9F9] bg-white"
+                              style="max-width: 100px"
+                              >Welcome!</span
+                            >
+                            <div class=""></div>
+                          </div>
+                        </div>
+                        <div class=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  <svg
+                    class=""
+                    style="
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      top: 0;
+                      left: 0;
+                    "
+                  >
+                    <pattern
+                      id="pattern-1"
+                      x="7"
+                      y="36.5"
+                      width="40"
+                      height="40"
+                      patternUnits="userSpaceOnUse"
+                      patternTransform="translate(-21,-21)"
+                    >
+                      <circle cx="1" cy="1" r="1"></circle>
+                    </pattern>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="100%"
+                      height="100%"
+                      fill="url(#pattern-1)"
+                    ></rect>
+                  </svg>
+                  <div
+                    class="horizontal rounded *:border-none *:bg-app-background *:text-app-foreground *:transition [&amp;>*:hover]:bg-app-hover bottom center"
+                    style="pointer-events: all"
+                  >
+                    <button type="button" title="zoom in" disabled="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                      >
+                        <path
+                          d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
+                        ></path>
+                      </svg></button
+                    ><button type="button" title="zoom out">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 5"
+                      >
+                        <path d="M0 0h32v4.2H0z"></path>
+                      </svg></button
+                    ><button type="button" title="fit view">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 30"
+                      >
+                        <path
+                          d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
+                        ></path>
+                      </svg></button
+                    ><button type="button" title="toggle interactivity">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 25 32"
+                      >
+                        <path
+                          d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div
+                    style="
+                      position: absolute;
+                      width: 1px;
+                      height: 1px;
+                      margin: -1px;
+                      border: 0;
+                      padding: 0;
+                      overflow: hidden;
+                      clip: rect(0px, 0px, 0px, 0px);
+                      clip-path: inset(100%);
+                    "
+                  ></div>
+                </div>
+                <button
+                  class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-button-text shadow-md hover:bg-button-stroke hover:text-app-hyperspace-black"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1398,14 +1590,12 @@
               </div>
             </div>
             <div
-              hidden=""
-              id="radix-:R16btf2db:-content-tree"
               tabindex="0"
-              class="mt-2 ring-offset-[#e5e5e5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
+              class="mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
             ></div>
           </div>
-          <div class="border-t bg-[#f5f6f8] p-3">
-            <label class="ml-3" for="user-public-key"
+          <div class="border-t bg-[#f5f6f8] p-3 dark:bg-[#161B22]">
+            <label class="ml-3"
               >Public Key<svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -1425,10 +1615,9 @@
             </label>
             <div class="relative">
               <input
-                class="flex h-10 rounded-md border border-[#e5e5e5] bg-white px-3 py-2 text-sm ring-offset-[#e5e5e5] file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#818181] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-1.5 mt-3 w-full font-mono tracking-wider subpixel-antialiased"
-                id="user-public-key"
+                class="flex h-10 rounded-md border border-[#e5e5e5] bg-white dark:bg-[#0D1116] px-3 py-2 text-xs file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#818181] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-1.5 mt-3 w-full tracking-wider"
+                value="87K5cse…NejX4s"
                 readonly=""
-                value="2uHE3p2…4xBWah"
               />
               <div
                 class="absolute inset-y-0 right-0 flex items-center gap-1 pr-1.5"
@@ -1488,9 +1677,11 @@
         </div>
 
         <!-- Middle -->
-        <div class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2">
+        <div
+          class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2 dark:bg-[#151A21]"
+        >
           <div
-            class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:inset-4 lg:rounded-lg lg:border"
+            class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white dark:bg-[#0D1116] shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:inset-4 lg:rounded-lg lg:border"
           >
             <div
               class="pointer-events-none absolute bottom-[6rem] left-[0rem] z-10 p-4"
@@ -1519,15 +1710,21 @@
               <div
                 class="flex cursor-default select-none flex-col items-center py-8 text-center overflow-hidden pb-[20vh]"
               >
-                <h1 class="mb-4 text-gray-700 text-xl font-semibold">
+                <h1
+                  class="mb-4 text-gray-700 dark:text-[#D4D4D4] text-xl font-semibold"
+                >
                   Welcome to Play by hyperspace
                 </h1>
-                <p class="mb-8 max-w-lg text-sm text-gray-500 max-md:px-4">
+                <p
+                  class="mb-8 max-w-lg text-sm text-gray-500 dark:text-[#818181] max-md:px-4"
+                >
                   Dive into topics and explore with speed and accuracy. Choose
                   your desired sources and AI provider to generate your own web
                   of information.
                 </p>
-                <p class="mb-8 text-sm text-gray-500 max-md:px-4">
+                <p
+                  class="mb-8 text-sm text-gray-500 dark:text-[#818181] max-md:px-4"
+                >
                   Click to explore the news or start with your own topic of
                   choice.
                 </p>
@@ -1538,7 +1735,6 @@
                   >
                     <div
                       class="flex -ml-4"
-                      id="modules"
                       style="transform: translate3d(-30px, 0px, 0px)"
                     >
                       <div
@@ -1546,11 +1742,11 @@
                         style="transform: translate3d(0px, 0px, 0px)"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.2s"
                         >
                           <h3
-                            class="text-sm text-gray-700 mb-2 line-clamp-2 font-semibold"
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
                           >
                             Live Scam Detection in calls rolling out to Pixel
                             6-9 Phone app - 9to5Google
@@ -1575,11 +1771,11 @@
                         class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.3s"
                         >
                           <h3
-                            class="text-sm text-gray-700 mb-2 line-clamp-2 font-semibold"
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
                           >
                             Spurs say Popovich's absence due to mild stroke -
                             ESPN
@@ -1605,11 +1801,11 @@
                         style="transform: translate3d(0px, 0px, 0px)"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.2s"
                         >
                           <h3
-                            class="text-sm text-gray-700 mb-2 line-clamp-2 font-semibold"
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
                           >
                             Live Scam Detection in calls rolling out to Pixel
                             6-9 Phone app - 9to5Google
@@ -1634,11 +1830,11 @@
                         class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.3s"
                         >
                           <h3
-                            class="text-sm text-gray-700 mb-2 line-clamp-2 font-semibold"
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
                           >
                             Spurs say Popovich's absence due to mild stroke -
                             ESPN
@@ -1666,7 +1862,7 @@
                   id="openMenuBtn"
                   onclick="openPopover()"
                   type="button"
-                  class="inline-flex items-center justify-center text-[#333333] whitespace-nowrap rounded-md text-xs font-medium ring-offset-[#e5e5e5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:pointer-events-none hover:bg-[#f2f2f2] h-10 px-4 py-2 gap-2"
+                  class="inline-flex items-center justify-center text-[#333333] dark:text-[white] whitespace-nowrap rounded-md text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:pointer-events-none hover:bg-[#f2f2f2] dark:hover:bg-[#262626] h-10 px-4 py-2 gap-2"
                 >
                   <span>Open menu</span
                   ><kbd
@@ -1676,11 +1872,11 @@
                 </button>
 
                 <div
-                  class="flex bg-white h-full w-full justify-center items-center bg-white"
+                  class="flex bg-white h-full w-full justify-center items-center dark:bg-[#0D1116]"
                 >
                   <div
                     id="popoverMenu"
-                    class="absolute hidden max-w-[512px] hidden z-50 bg-white p-4 rounded-md shadow-lg w-full text-xs"
+                    class="absolute hidden max-w-[512px] hidden z-50 bg-white dark:bg-[#0D1116] p-4 rounded-md shadow-lg w-full text-xs"
                   >
                     <div class="" style="pointer-events: auto">
                       <div
@@ -2004,7 +2200,7 @@
                 >
                   <div class="min-w-0 shrink-0 grow-0 basis-auto px-0">
                     <button
-                      class="my-px flex h-full items-center gap-2 truncate rounded-md bg-white px-1.5 py-1 text-start font-medium text-xs transition hover:text-[#333333]-light disabled:pointer-events-none"
+                      class="my-px flex h-full items-center gap-2 truncate rounded-md bg-white dark:bg-[#0D1116] px-1.5 py-1 text-start font-medium text-xs transition hover:text-[#333333] dark:text-[white]-light disabled:pointer-events-none"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -2035,7 +2231,7 @@
                     style="animation-duration: 0.2s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md border bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
                     >
                       Comparative cognition between humans and AI
                     </button>
@@ -2045,7 +2241,7 @@
                     style="animation-duration: 0.4s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md border bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
                     >
                       Blockchain consensus mechanisms
                     </button>
@@ -2065,7 +2261,7 @@
                     style="animation-duration: 0.8s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md border bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] disabled:pointer-events-none w-full"
                     >
                       Cryptocurrency mining and energy consumption
                     </button>
@@ -2075,9 +2271,8 @@
             </div>
             <div class="group relative p-3 pt-1.5">
               <textarea
-                class="flex w-full font-semibold opacity-60 border sm:p-16 md:p-2 bg-white px-3 py-2 ring-offset-[#e5e5e5] placeholder:text-gray-500 text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-0 resize-none rounded pr-14 text-md transition hide-scrollbar"
+                class="flex w-full font-semibold opacity-60 border sm:p-16 md:p-2 bg-white dark:bg-[#0D1116] px-3 py-2 placeholder:text-gray-500 dark:text-[#818181] text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-0 resize-none rounded pr-14 text-md transition hide-scrollbar"
                 autofocus=""
-                id="convo-input"
                 placeholder="What would you like to ask?"
                 required=""
                 rows="2"
@@ -2086,7 +2281,7 @@
                 class="absolute flex items-center justify-end bottom-2.5 right-6 top-2 translate-y-[-2px]"
               >
                 <button
-                  class="aspect-square rounded bg-[#333333] p-2 text-[#f5f6f8] opacity-100 transition disabled:opacity-50"
+                  class="aspect-square rounded bg-[#333333] p-2 text-[#f5f6f8] dark:bg-[#161B22] opacity-100 transition disabled:opacity-50"
                   disabled=""
                   type="submit"
                 >
@@ -2112,10 +2307,10 @@
         </div>
 
         <!-- Right -->
-        <div id="sidebar-container" class="relative hidden lg:block bg-white">
+        <div class="relative hidden lg:block bg-white dark:bg-[#0D1116]">
           <div
             id="sidebar"
-            class="max-w-[360px] transition-all duration-300 hidden w-1/4 lg:block bg-white"
+            class="max-w-[360px] transition-all duration-300 hidden w-1/4 lg:block bg-white dark:bg-[#0D1116]"
           >
             <div class="relative h-full">
               <div
@@ -2134,7 +2329,7 @@
                           <button
                             type="button"
                             class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
-                            onclick="toggleDropdown(event)"
+                            onclick="toggleDropdownMain(event)"
                           >
                             <div class="flex items-center justify-between">
                               <div class="flex items-center overflow-hidden">
@@ -2150,7 +2345,7 @@
                                 /><span class="truncate text-sm font-medium"
                                   >Groq</span
                                 ><span
-                                  class="ml-1 hidden items-center text-sm text-gray-500 text-xs 2xl:block"
+                                  class="ml-1 hidden items-center text-sm text-gray-500 dark:text-[#818181] text-xs 2xl:block"
                                   >(Default)</span
                                 >
                               </div>
@@ -2167,8 +2362,8 @@
                             </div>
                           </button>
                           <div
-                            id="dropdownMenu"
-                            class="hidden flex-col p-2 mt-2 w-[202px] border rounded-md absolute top-20 left-0 center z-50 bg-white"
+                            id="dropdownMenuMain"
+                            class="hidden flex-col p-2 mt-2 w-[202px] border rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
                           >
                             <button
                               class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2]"
@@ -2307,7 +2502,7 @@
                           </div>
                           <button
                             type="button"
-                            onclick="toggleDropdown2(event)"
+                            onclick="toggleDropdown2Main(event)"
                             class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
                           >
                             <div class="flex items-center justify-between">
@@ -2338,8 +2533,8 @@
                             </div>
                           </button>
                           <div
-                            id="dropdownMenu2"
-                            class="hidden flex-col mt-2 w-[232px] border p-2 rounded-md absolute right-0 top-20 z-50 bg-white"
+                            id="dropdownMenu2Main"
+                            class="hidden flex-col mt-2 w-[232px] border p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                           >
                             <button
                               class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2]"
@@ -2506,17 +2701,17 @@
                             >
                               <div class="flex w-full items-center">
                                 <input
-                                  id="apiKeyInput"
-                                  autocomplete="current-password"
+                                  id="apiKeyInputMain"
                                   class="h-full w-full bg-transparent text-gray-800 text-xs font-medium placeholder-gray-400 focus:outline-none"
                                   placeholder="Enter API key"
                                   type="password"
                                 />
                               </div>
                               <button
+                                id="showButtonMain"
                                 class="ml-2 text-sm text-gray-400 text-xs"
                                 type="button"
-                                onclick="togglePasswordVisibility()"
+                                onclick="togglePasswordVisibilityMain()"
                               >
                                 Show
                               </button>
@@ -2551,7 +2746,7 @@
                       >
                         <button
                           type="button"
-                          class="group w-full border-black ring-offset-[#e5e5e5] rounded-md p-4 text-start transition bg-[#f5f6f8] border-[1px] border-gray-300 hover:bg-[#f2f2f2] transform-gpu hover:-translate-y-px hover:border-black"
+                          class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border-[1px] border-gray-300 hover:bg-[#f2f2f2] transform-gpu hover:-translate-y-px hover:border-black"
                           tabindex="0"
                         >
                           <svg
@@ -2598,7 +2793,9 @@
                           id="file-upload"
                           type="file"
                         />
-                        <div class="text-sm text-gray-500 text-xs">
+                        <div
+                          class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+                        >
                           Drag and drop a PDF or Text File, or click to upload
                         </div>
                         <svg
@@ -2634,7 +2831,7 @@
                         <div class="flex flex-wrap gap-2">
                           <div class="relative inline-block group">
                             <button
-                              class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-[#f2f2f2]"
+                              class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2]"
                               type="button"
                             >
                               <svg
@@ -2647,7 +2844,7 @@
                                 stroke-width="2"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="lucide lucide-plus size-4 text-[#333333]"
+                                class="lucide lucide-plus size-4 text-[#333333] dark:text-[white]"
                               >
                                 <path d="M5 12h14"></path>
                                 <path d="M12 5v14"></path>
@@ -2655,14 +2852,14 @@
                             </button>
 
                             <div
-                              class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white text-black text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
+                              class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
                             >
                               Add data source
                             </div>
                           </div>
 
                           <div
-                            class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white text-black text-xs px-2 py-1 rounded-md shadow-md"
+                            class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black text-xs px-2 py-1 rounded-md shadow-md"
                           >
                             Add data
                           </div>
@@ -2685,7 +2882,7 @@
                             viewBox="0 0 15 15"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 text-gray-500 text-xs"
+                            class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
                           >
                             <path
                               d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
@@ -2697,7 +2894,9 @@
                         </button>
                       </div>
                       <div class="space-y-2">
-                        <p class="text-sm text-gray-500 text-xs">
+                        <p
+                          class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+                        >
                           No vector chunks available. Start a chat to see
                           relevant chunks.
                         </p>
@@ -2710,7 +2909,7 @@
           </div>
           <div
             id="right-collapse"
-            class="absolute top-4 cursor-pointer rounded-l-lg border bg-white p-2 transition-all duration-300 lg:block"
+            class="absolute top-4 cursor-pointer rounded-l-lg border bg-white dark:bg-[#0D1116] p-2 transition-all duration-300 lg:block"
             style="z-index: 10"
           >
             <div class="transform transition-transform duration-200 rotate-180">
