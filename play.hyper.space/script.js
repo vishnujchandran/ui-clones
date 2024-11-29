@@ -179,9 +179,18 @@ function toggleOpacity(button) {
 }
 
 // Open Menu
+const mainDiv = document.getElementById("main");
+
 function openPopover() {
   const popoverMenu = document.getElementById("popoverMenu");
+
   popoverMenu.classList.toggle("hidden");
+
+  if (!popoverMenu.classList.contains("hidden")) {
+    // mainDiv.classList.add("blur-sm", "opacity-70");
+  } else {
+    // mainDiv.classList.remove("blur-sm", "opacity-70");
+  }
 }
 
 document.getElementById("popOverClose").addEventListener("click", function () {
@@ -245,14 +254,41 @@ window.addEventListener("click", function (e) {
   }
 });
 
+function updateThemeDot() {
+  const lightDot = document.getElementById("light-dot");
+  const darkDot = document.getElementById("dark-dot");
+  const lightsOutDot = document.getElementById("lights-out-dot");
+  const systemDot = document.getElementById("system-dot");
+
+  const storedTheme = localStorage.getItem("theme");
+
+  if (
+    storedTheme === "dark" ||
+    (storedTheme === null &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    darkDot.classList.remove("hidden");
+    lightDot.classList.add("hidden");
+    lightsOutDot.classList.add("hidden");
+    systemDot.classList.add("hidden");
+  } else {
+    lightDot.classList.remove("hidden");
+    darkDot.classList.add("hidden");
+    lightsOutDot.classList.add("hidden");
+    systemDot.classList.add("hidden");
+  }
+}
+
 function setLightTheme() {
   document.body.classList.remove("dark");
   localStorage.setItem("theme", "light");
+  updateThemeDot();
 }
 
 function setDarkTheme() {
   document.body.classList.add("dark");
   localStorage.setItem("theme", "dark");
+  updateThemeDot();
 }
 
 function setSystemTheme() {
@@ -265,6 +301,7 @@ function setSystemTheme() {
     document.body.classList.remove("dark");
   }
   localStorage.removeItem("theme");
+  updateThemeDot();
 }
 
 document.getElementById("light-btn").addEventListener("click", function () {

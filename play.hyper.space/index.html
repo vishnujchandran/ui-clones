@@ -420,10 +420,10 @@
                       </button>
                       <div
                         id="dropdownMenu"
-                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white"
                       >
                         <button
-                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] bg-gray-400"
                         >
                           <div class="flex items-center">
                             <img
@@ -1070,6 +1070,7 @@
 
       <!-- Main -->
       <div
+        id="main"
         class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700 dark:text-[#D4D4D4]"
       >
         <!-- Left -->
@@ -1358,11 +1359,19 @@
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
                   Light
+                  <span
+                    id="light-dot"
+                    class="ml-2 w-2 h-2 rounded-full bg-black dark:bg-white hidden"
+                  ></span>
                 </button>
                 <button
                   id="dark-btn"
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
+                  <span
+                    id="dark-dot"
+                    class="ml-2 w-2 h-2 rounded-full bg-white dark:bg-black hidden"
+                  ></span>
                   Dark
                 </button>
                 <button
@@ -1370,12 +1379,20 @@
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
                   Lights Out
+                  <span
+                    id="lights-out-dot"
+                    class="ml-2 w-2 h-2 rounded-full bg-black dark:bg-white hidden"
+                  ></span>
                 </button>
                 <button
                   id="system-btn"
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
                   System
+                  <span
+                    id="system-dot"
+                    class="ml-2 w-2 h-2 rounded-full bg-black dark:bg-white hidden"
+                  ></span>
                 </button>
               </div>
             </div>
@@ -1394,13 +1411,13 @@
               </button>
 
               <button
-                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px dark:bg-[#0D1116] dark:text-[#CBCBCB]"
+                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px dark:bg-[#0D1116] dark:text-[#CBCBCB] dark:hover:bg-[#262626]"
               >
                 Tab View
               </button>
 
               <button
-                class="flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg opacity-50 border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                class="dark:hover:bg-[#262626] flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg opacity-50 border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1866,7 +1883,7 @@
                 >
                   <div
                     id="popoverMenu"
-                    class="absolute hidden max-w-[512px] hidden z-50 bg-white dark:bg-[#0D1116] p-4 rounded-md shadow-lg w-full text-xs"
+                    class="absolute blur-none max-w-[512px] hidden z-50 bg-white dark:bg-[#0D1116] p-4 rounded-md shadow-lg w-full text-xs bg-black/30 backdrop-blur-sm"
                   >
                     <div class="" style="pointer-events: auto">
                       <div
@@ -1926,9 +1943,9 @@
                               <a
                                 href="https://play.hyper.space/explore/how-to-reboot-the-brain-effectiv-vnyupE"
                               >
-                                <div class="space-y-3 pt-3">
+                                <div class="space-y-3 py-1.5">
                                   <div
-                                    class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                    class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                     role="option"
                                   >
                                     <svg
@@ -1971,9 +1988,11 @@
                               <a
                                 href="https://play.hyper.space/explore/nuclear-base-security-breach-hDM7"
                               >
-                                <div class="space-y-3 pt-3">
+                                <div
+                                  class="space-y-3 py-1.5 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                >
                                   <div
-                                    class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                    class="relative flex items-center rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
                                   >
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
@@ -2007,9 +2026,9 @@
                               >
                                 Theme
                               </div>
-                              <div class="space-y-3 pt-3">
+                              <div class="space-y-3 py-1.5">
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2038,7 +2057,7 @@
                                   >
                                 </div>
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2061,7 +2080,7 @@
                                   >
                                 </div>
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2083,7 +2102,7 @@
                                   >
                                 </div>
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2359,7 +2378,7 @@
                             class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
                           >
                             <button
-                              class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
                             >
                               <div class="flex items-center">
                                 <img
@@ -2530,7 +2549,7 @@
                             class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                           >
                             <button
-                              class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
                             >
                               <div class="flex items-center">
                                 <img
@@ -2739,7 +2758,7 @@
                       >
                         <button
                           type="button"
-                          class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border-[1px] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
+                          class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-gray-200 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px"
                           tabindex="0"
                         >
                           <svg
@@ -2758,9 +2777,7 @@
                           >
                             <path d="M20 6 9 17l-5-5"></path>
                           </svg>
-                          <div
-                            class="flex items-center space-x-2 dark:border-[#30363D]"
-                          >
+                          <div class="flex items-center space-x-2">
                             <img
                               alt="Web"
                               class="h-5 w-5"
