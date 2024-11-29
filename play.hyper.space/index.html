@@ -983,12 +983,12 @@
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
-        class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#0D1116] p-0"
+        class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
         <button
-          class="absolute right-2 top-2 rounded-full bg-[#333333] p-2 text-[white] shadow-md hover:bg-[#E5E5E5] hover:text-gray-600"
+          class="absolute right-2 top-2 rounded-full dark:hover:bg-[#333333] dark:bg-[#272E37] p-2 text-[white] shadow-md hover:bg-[#E5E5E5] hover:text-gray-600 dark:hover:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1008,15 +1008,11 @@
             <line x1="3" x2="10" y1="21" y2="14"></line>
           </svg>
         </button>
-        <div class="flex justify-center items-center flex-grow">
-          <div>
-            <span
-              class="relative flex items-center justify-center rounded border dark:border-[#30363D] e px-2 py-1 text-lg transition hover:bg-[#F9F9F9] bg-[#FFFFFF]"
-              style="max-width: 200px"
-            >
-              <!-- Welcome! -->
-            </span>
-          </div>
+        <div class="flex flex-col items-center my-auto">
+          <span
+            class="relative flex items-center justify-center rounded border dark:border-gray-400 outline-none px-2 py-1 text-xl dark:text-white transition hover:cursor-pointer hover:bg-app-hover bg-app-background-light"
+            >Welcome!</span
+          >
         </div>
         <div class="absolute bottom-0 right-1/2">
           <div>
