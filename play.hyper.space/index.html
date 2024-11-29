@@ -285,13 +285,13 @@
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
-        class="hidden absolute right-0 h-full w-3/5 z-50 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0"
+        class="hidden absolute right-0 h-full w-3/5 z-50 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0 dark:border-[#30363D]"
         tabindex="-1"
         style="pointer-events: auto"
       >
         <div class="px-2.5 pt-6">
           <button
-            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
             type="button"
           >
             <svg
@@ -369,14 +369,18 @@
             </div>
           </div>
           <div
-            class="h-full overflow-hidden transition-all duration-300 w-full"
+            class="h-full overflow-hidden transition-all duration-300 w-full dark:text-[#D4D4D4]"
           >
             <div
-              class="h-full w-full overflow-y-auto border-l transition-all duration-300 translate-x-0"
+              class="h-full w-full overflow-y-auto border-l dark:border-[#30363D] transition-all duration-300 translate-x-0"
             >
               <div class="flex flex-col space-y-4 p-4">
                 <div class="flex flex-col space-y-2">
-                  <h2 class="text-md font-semibold capitalize">AI Providers</h2>
+                  <h2
+                    class="text-md font-semibold capitalize dark:text-[#D4D4D4]"
+                  >
+                    AI Providers
+                  </h2>
                   <div class="flex flex-col space-y-3">
                     <div class="flex space-x-2">
                       <button
@@ -788,7 +792,7 @@
                   >
                     <button
                       type="button"
-                      class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border-[1px] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
+                      class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
                       tabindex="0"
                     >
                       <svg
@@ -1005,7 +1009,7 @@
               class="relative flex items-center justify-center rounded border dark:border-[#30363D] e px-2 py-1 text-lg transition hover:bg-[#F9F9F9] bg-[#FFFFFF]"
               style="max-width: 200px"
             >
-              Welcome!
+              <!-- Welcome! -->
             </span>
           </div>
         </div>
@@ -1475,8 +1479,9 @@
                             <span
                               class="mx-auto relative flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-sm hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#262626] bg-white"
                               style="max-width: 100px"
-                              >Welcome!</span
                             >
+                              <!-- Welcome! -->
+                            </span>
                             <div class=""></div>
                           </div>
                         </div>
@@ -2755,7 +2760,9 @@
                           >
                             <path d="M20 6 9 17l-5-5"></path>
                           </svg>
-                          <div class="flex items-center space-x-2">
+                          <div
+                            class="flex items-center space-x-2 dark:border-[#30363D]"
+                          >
                             <img
                               alt="Web"
                               class="h-5 w-5"
