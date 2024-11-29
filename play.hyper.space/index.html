@@ -15,10 +15,10 @@
   </head>
   <body class="dark:bg-[#161B22] bg-[#F3F4F6]">
     <div
-      class="grid h-100vh supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row"
+      class="grid h-100vh supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1"
     >
       <nav
-        class="flex items-center justify-between border-b-[1px] border-gray-300 bg-white dark:bg-[#0D1116] p-2.5 lg:hidden"
+        class="flex items-center justify-between border-b dark:border-[#30363D] bg-white dark:bg-[#0D1116] p-2.5 lg:hidden"
       >
         <div class="w-10">
           <button
@@ -48,7 +48,7 @@
               href="/play.hyper.space/index.html"
               style="-webkit-touch-callout: none"
               ><svg
-                class="text-app-hyperspace h-6 md:h-8"
+                class="h-6 md:h-8"
                 fill="none"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@
             ><button
               type="button"
               id="radix-:Rebtf2db:"
-              class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-app-hover data-[state=open]:bg-app-hover"
+              class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px]"
             >
               <div>
                 <svg
@@ -289,9 +289,9 @@
         tabindex="-1"
         style="pointer-events: auto"
       >
-        <div class="bg-app-container px-2.5 pt-6">
+        <div class="px-2.5 pt-6">
           <button
-            class="flex h-8 w-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-app-hover disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
             type="button"
           >
             <svg
@@ -347,7 +347,7 @@
         </div>
         <div class="relative h-full">
           <div
-            class="absolute top-4 z-10 hidden cursor-pointer rounded-l-lg border bg-app-container p-2 transition-all duration-300 lg:block -left-6"
+            class="absolute top-4 z-10 hidden cursor-pointer rounded-l-lg border dark:border-[#30363D] p-2 transition-all duration-300 lg:block -left-6"
           >
             <div class="transform transition-transform duration-200 rotate-180">
               <svg
@@ -381,7 +381,7 @@
                     <div class="flex space-x-2">
                       <button
                         type="button"
-                        class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                        class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
                         onclick="toggleDropdown(event)"
                       >
                         <div class="flex items-center justify-between">
@@ -416,7 +416,7 @@
                       </button>
                       <div
                         id="dropdownMenu"
-                        class="hidden flex-col p-2 mt-2 w-[202px] border rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
                       >
                         <button
                           class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
@@ -548,7 +548,7 @@
                       <button
                         type="button"
                         onclick="toggleDropdown2(event)"
-                        class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                        class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
                       >
                         <div class="flex items-center justify-between">
                           <div class="flex items-center overflow-hidden">
@@ -579,7 +579,7 @@
                       </button>
                       <div
                         id="dropdownMenu2"
-                        class="hidden flex-col mt-2 w-[232px] border p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
+                        class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                       >
                         <button
                           class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
@@ -740,13 +740,13 @@
                     <div>
                       <div class="relative">
                         <div
-                          class="flex h-[35px] w-full items-center justify-between rounded-lg border px-3 py-1 text-left"
+                          class="flex h-[35px] w-full items-center justify-between rounded-lg border dark:border-[#30363D] px-3 py-1 text-left"
                         >
                           <div class="flex w-full items-center">
                             <input
                               id="apiKeyInput"
                               autocomplete="current-password"
-                              class="h-full w-full bg-transparent text-gray-800 text-xs font-medium placeholder-gray-400 focus:outline-none"
+                              class="h-full w-full bg-transparent text-gray-800 text-xs font-medium placeholder-gray-400"
                               placeholder="Enter API key"
                               type="password"
                             />
@@ -776,7 +776,7 @@
                     </div>
                   </div>
                 </div>
-                <hr />
+                <hr class="border-t dark:border-[#30363D]" />
 
                 <div class="flex w-full flex-col space-y-2">
                   <h2 class="text-md font-semibold capitalize">Data Sources</h2>
@@ -803,7 +803,7 @@
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 active:opacity-15 transition-opacity duration-200"
+                        class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 transition-opacity duration-200"
                       >
                         <path d="M20 6 9 17l-5-5"></path>
                       </svg>
@@ -859,7 +859,8 @@
                   </div>
                 </div>
                 <ul class="flex flex-col gap-1"></ul>
-                <hr />
+                <hr class="border-t dark:border-[#30363D]" />
+
                 <div class="flex flex-col space-y-5">
                   <div class="space-y-1">
                     <p class="text-sm">
@@ -871,7 +872,7 @@
                     <div class="flex flex-wrap gap-2">
                       <div class="relative inline-block group">
                         <button
-                          class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
                           type="button"
                         >
                           <svg
@@ -911,7 +912,8 @@
                     </div>
                   </div>
                 </div>
-                <hr />
+                <hr class="border-t dark:border-[#30363D]" />
+
                 <div class="flex flex-col space-y-5">
                   <div class="flex items-center justify-between">
                     <h2 class="text-sm font-semibold">Vector Chunks</h2>
@@ -949,7 +951,7 @@
         <button
           type="button"
           id="close-sheet-r"
-          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-app-hover"
+          class="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -972,7 +974,7 @@
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
-        class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#0D1116] p-0"
+        class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#0D1116] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -1000,7 +1002,7 @@
         <div class="flex justify-center items-center flex-grow">
           <div>
             <span
-              class="relative flex items-center justify-center rounded border e px-2 py-1 text-lg transition hover:bg-[#F9F9F9] bg-[#FFFFFF]"
+              class="relative flex items-center justify-center rounded border dark:border-[#30363D] e px-2 py-1 text-lg transition hover:bg-[#F9F9F9] bg-[#FFFFFF]"
               style="max-width: 200px"
             >
               Welcome!
@@ -1042,7 +1044,7 @@
         <button
           type="button"
           id="close-sheet-l"
-          class="absolute left-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-app-hover"
+          class="absolute left-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1069,10 +1071,10 @@
       >
         <!-- Left -->
         <div
-          class="h-full bg-white dark:bg-[#0D1116] grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r max-lg:hidden"
+          class="h-full bg-white dark:bg-[#0D1116] grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r dark:border-[#30363D] max-lg:hidden"
         >
           <nav
-            class="flex items-center justify-between gap-3 border-b pl-6 pr-3 max-md:h-[50px] md:h-[67px]"
+            class="flex items-center justify-between gap-3 border-b dark:border-[#30363D] pl-6 pr-3 max-md:h-[50px] md:h-[67px]"
           >
             <div class="flex items-center gap-x-1.5 md:gap-x-2.5">
               <a href="/play.hyper.space/index.html">
@@ -1287,7 +1289,7 @@
             </div>
             <button
               id="theme-btn"
-              class="flex h-8 w-8 transform items-center justify-center rounded-lg border transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+              class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
               type="button"
             >
               <svg
@@ -1345,7 +1347,7 @@
             </button>
             <div
               id="dropdown-menu-main"
-              class="hidden z-50 absolute top-14 left-52 mt-2 w-36 bg-white dark:bg-[#0D1116] border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg"
+              class="hidden z-50 absolute top-14 left-52 mt-2 w-36 bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
             >
               <div class="flex flex-col text-xs p-1">
                 <button
@@ -1383,19 +1385,19 @@
               style="outline: none"
             >
               <button
-                class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#161B22] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border w-auto flex-1 hover:-translate-y-px"
+                class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#161B22] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px"
               >
                 Node View
               </button>
 
               <button
-                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border w-auto flex-1 hover:-translate-y-px dark:bg-[#0D1116] dark:text-[#CBCBCB]"
+                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px dark:bg-[#0D1116] dark:text-[#CBCBCB]"
               >
                 Tab View
               </button>
 
               <button
-                class="flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg opacity-50 border transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                class="flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg opacity-50 border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1471,7 +1473,7 @@
                           >
                             <div class="flex justify-center"></div>
                             <span
-                              class="mx-auto relative flex items-center justify-center rounded border px-2 py-1 text-sm hover:cursor-pointer hover:bg-[#F9F9F9] bg-white"
+                              class="mx-auto relative flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-sm hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#262626] bg-white"
                               style="max-width: 100px"
                               >Welcome!</span
                             >
@@ -1512,7 +1514,7 @@
                     ></rect>
                   </svg>
                   <div
-                    class="horizontal rounded *:border-none *:bg-app-background *:text-app-foreground *:transition [&amp;>*:hover]:bg-app-hover bottom center"
+                    class="horizontal rounded bottom center"
                     style="pointer-events: all"
                   >
                     <button type="button" title="zoom in" disabled="">
@@ -1567,7 +1569,7 @@
                   ></div>
                 </div>
                 <button
-                  class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-button-text shadow-md hover:bg-button-stroke hover:text-app-hyperspace-black"
+                  class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-button-text shadow-md hover:bg-button-stroke hover:-black"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1591,10 +1593,12 @@
             </div>
             <div
               tabindex="0"
-              class="mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
+              class="mt-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
             ></div>
           </div>
-          <div class="border-t bg-[#f5f6f8] p-3 dark:bg-[#161B22]">
+          <div
+            class="border-t dark:border-[#30363D] bg-[#f5f6f8] p-3 dark:bg-[#161B22]"
+          >
             <label class="ml-3"
               >Public Key<svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1615,7 +1619,7 @@
             </label>
             <div class="relative">
               <input
-                class="flex h-10 rounded-md border border-[#e5e5e5] bg-white dark:bg-[#0D1116] px-3 py-2 text-xs file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#818181] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5e5e5]-dark focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-1.5 mt-3 w-full tracking-wider"
+                class="flex h-10 rounded-md border dark:border-[#30363D] border-[#e5e5e5] bg-white dark:bg-[#0D1116] px-3 py-2 text-xs file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#818181] disabled:cursor-not-allowed disabled:opacity-50 mb-1.5 mt-3 w-full tracking-wider"
                 value="87K5cse…NejX4s"
                 readonly=""
               />
@@ -1623,7 +1627,7 @@
                 class="absolute inset-y-0 right-0 flex items-center gap-1 pr-1.5"
               >
                 <button
-                  class="flex transform items-center justify-center border transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
+                  class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1650,7 +1654,7 @@
                     ></path>
                   </svg></button
                 ><button
-                  class="flex transform items-center justify-center border transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
+                  class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1681,31 +1685,13 @@
           class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2 dark:bg-[#151A21]"
         >
           <div
-            class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white dark:bg-[#0D1116] shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:inset-4 lg:rounded-lg lg:border"
+            class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white dark:bg-[#0D1116] shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:inset-4 lg:rounded-lg lg:border dark:lg:border-[#30363D]"
           >
             <div
               class="pointer-events-none absolute bottom-[6rem] left-[0rem] z-10 p-4"
-            >
-              <div
-                class="flex items-center space-x-2 rounded-lg border p-2.5 shadow transition h-0 opacity-0"
-              >
-                <div class="flex items-center justify-center w-8 h-8">
-                  <div class="h-full w-full text-current">
-                    <canvas
-                      style="vertical-align: top; width: 32px; height: 32px"
-                      width="32"
-                      height="32"
-                    ></canvas>
-                  </div>
-                </div>
-                <span class="text-sm" style="opacity: 1; transform: none"
-                  >AI is
-                  <!-- -->thinking<span></span
-                ></span>
-              </div>
-            </div>
+            ></div>
             <div
-              class="relative mb-1.5 overflow-y-auto overflow-x-hidden border-b"
+              class="relative mb-1.5 overflow-y-auto overflow-x-hidden border-b dark:border-[#30363D]"
             >
               <div
                 class="flex cursor-default select-none flex-col items-center py-8 text-center overflow-hidden pb-[20vh]"
@@ -1742,7 +1728,7 @@
                         style="transform: translate3d(0px, 0px, 0px)"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.2s"
                         >
                           <h3
@@ -1771,7 +1757,7 @@
                         class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.3s"
                         >
                           <h3
@@ -1801,7 +1787,7 @@
                         style="transform: translate3d(0px, 0px, 0px)"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.2s"
                         >
                           <h3
@@ -1830,7 +1816,7 @@
                         class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.3s"
                         >
                           <h3
@@ -1862,11 +1848,11 @@
                   id="openMenuBtn"
                   onclick="openPopover()"
                   type="button"
-                  class="inline-flex items-center justify-center text-[#333333] dark:text-[white] whitespace-nowrap rounded-md text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:pointer-events-none hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:hover:bg-[#262626] h-10 px-4 py-2 gap-2"
+                  class="inline-flex items-center justify-center text-[#333333] dark:text-[white] whitespace-nowrap rounded-md text-xs font-medium disabled:pointer-events-none hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:hover:bg-[#262626] h-10 px-4 py-2 gap-2"
                 >
                   <span>Open menu</span
                   ><kbd
-                    class="rounded-sm hidden md:block border px-2 font-semibold tracking-widest"
+                    class="rounded-sm hidden md:block border dark:border-[#30363D] px-2 font-semibold tracking-widest"
                     >⌘K</kbd
                   >
                 </button>
@@ -1895,7 +1881,9 @@
                             border-width: 0px;
                           "
                         ></label>
-                        <div class="flex items-center border-b px-3">
+                        <div
+                          class="flex items-center border-b dark:border-[#30363D] px-3"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -1912,7 +1900,7 @@
                             <path d="m21 21-4.3-4.3"></path>
                           </svg>
                           <input
-                            class="flex h-11 w-full rounded-md bg-transparent py-3 text-xs outline-none placeholder:text-app-label disabled:cursor-not-allowed disabled:"
+                            class="flex h-11 w-full rounded-md bg-transparent py-3 text-xs outline-none placeholder: disabled:cursor-not-allowed disabled:"
                             placeholder="Type anything to search..."
                             autocomplete="off"
                             autocorrect="off"
@@ -2002,7 +1990,7 @@
                                       class="flex-grow text-start font-medium"
                                       >Nuclear Base Security Breach</span
                                     ><span
-                                      class="text-end text-[10px] text-app-label opacity-70"
+                                      class="text-end text-[10px] opacity-70"
                                       >about 4 hours</span
                                     >
                                   </div>
@@ -2169,7 +2157,7 @@
                     <button
                       id="popOverClose"
                       type="button"
-                      class="absolute right-4 top-4 rounded-sm focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none"
+                      class="absolute right-4 top-4 rounded-sm disabled:pointer-events-none"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -2231,7 +2219,7 @@
                     style="animation-duration: 0.2s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
                     >
                       Comparative cognition between humans and AI
                     </button>
@@ -2241,7 +2229,7 @@
                     style="animation-duration: 0.4s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
                     >
                       Blockchain consensus mechanisms
                     </button>
@@ -2251,7 +2239,7 @@
                     style="animation-duration: 0.6s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border bg-white px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
                     >
                       Neural correlates of consciousness
                     </button>
@@ -2261,7 +2249,7 @@
                     style="animation-duration: 0.8s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
                     >
                       Cryptocurrency mining and energy consumption
                     </button>
@@ -2271,7 +2259,7 @@
             </div>
             <div class="group relative p-3 pt-1.5">
               <textarea
-                class="flex w-full font-semibold opacity-60 border sm:p-16 md:p-2 bg-white dark:bg-[#0D1116] px-3 py-2 placeholder:text-gray-500 dark:text-[#818181] text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d4d4d] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-0 resize-none rounded pr-14 text-md transition hide-scrollbar"
+                class="flex w-full font-semibold opacity-60 border dark:border-[#30363D] sm:p-16 md:p-2 bg-white dark:bg-[#0D1116] px-3 py-2 placeholder:text-gray-500 dark:text-[#818181] text-xs disabled:cursor-not-allowed disabled:opacity-50 min-h-0 resize-none rounded pr-14 text-md transition hide-scrollbar"
                 autofocus=""
                 placeholder="What would you like to ask?"
                 required=""
@@ -2307,7 +2295,9 @@
         </div>
 
         <!-- Right -->
-        <div class="relative hidden lg:block bg-white dark:bg-[#0D1116]">
+        <div
+          class="relative hidden lg:block bg-white dark:bg-[#0D1116] border-l dark:border-[#30363D]"
+        >
           <div
             id="sidebar"
             class="max-w-[360px] transition-all duration-300 hidden w-1/4 lg:block bg-white dark:bg-[#0D1116]"
@@ -2317,7 +2307,7 @@
                 class="h-full overflow-hidden transition-all duration-300 w-full w-0"
               >
                 <div
-                  class="h-full w-full overflow-y-auto border-l transition-all duration-300 translate-x-0"
+                  class="h-full w-full overflow-y-auto transition-all duration-300 translate-x-0"
                 >
                   <div class="flex flex-col space-y-4 p-4">
                     <div class="flex flex-col space-y-2">
@@ -2328,7 +2318,7 @@
                         <div class="flex space-x-2">
                           <button
                             type="button"
-                            class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                            class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
                             onclick="toggleDropdownMain(event)"
                           >
                             <div class="flex items-center justify-between">
@@ -2363,7 +2353,7 @@
                           </button>
                           <div
                             id="dropdownMenuMain"
-                            class="hidden flex-col p-2 mt-2 w-[202px] border rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
+                            class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
                           >
                             <button
                               class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
@@ -2503,7 +2493,7 @@
                           <button
                             type="button"
                             onclick="toggleDropdown2Main(event)"
-                            class="w-1/2 flex-1 rounded-lg border p-1.5 text-left"
+                            class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
                           >
                             <div class="flex items-center justify-between">
                               <div class="flex items-center overflow-hidden">
@@ -2534,7 +2524,7 @@
                           </button>
                           <div
                             id="dropdownMenu2Main"
-                            class="hidden flex-col mt-2 w-[232px] border p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
+                            class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                           >
                             <button
                               class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
@@ -2697,12 +2687,12 @@
                         <div>
                           <div class="relative">
                             <div
-                              class="flex h-[35px] w-full items-center justify-between rounded-lg border px-3 py-1 text-left"
+                              class="flex h-[35px] w-full items-center justify-between rounded-lg border dark:border-[#30363D] px-3 py-1 text-left"
                             >
                               <div class="flex w-full items-center">
                                 <input
                                   id="apiKeyInputMain"
-                                  class="h-full w-full bg-transparent text-gray-800 text-xs font-medium placeholder-gray-400 focus:outline-none"
+                                  class="h-full w-full bg-transparent text-gray-800 text-xs font-medium placeholder-gray-400"
                                   placeholder="Enter API key"
                                   type="password"
                                 />
@@ -2732,7 +2722,7 @@
                         </div>
                       </div>
                     </div>
-                    <hr />
+                    <hr class="border-t dark:border-[#30363D]" />
 
                     <div class="flex w-full flex-col space-y-2">
                       <h2 class="text-md font-semibold capitalize">
@@ -2761,7 +2751,7 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 active:opacity-15 transition-opacity duration-200"
+                            class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 transition-opacity duration-200"
                           >
                             <path d="M20 6 9 17l-5-5"></path>
                           </svg>
@@ -2819,7 +2809,8 @@
                       </div>
                     </div>
                     <ul class="flex flex-col gap-1"></ul>
-                    <hr />
+                    <hr class="border-t dark:border-[#30363D]" />
+
                     <div class="flex flex-col space-y-5">
                       <div class="space-y-1">
                         <p class="text-sm">
@@ -2831,7 +2822,7 @@
                         <div class="flex flex-wrap gap-2">
                           <div class="relative inline-block group">
                             <button
-                              class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
                               type="button"
                             >
                               <svg
@@ -2871,7 +2862,8 @@
                         </div>
                       </div>
                     </div>
-                    <hr />
+                    <hr class="border-t dark:border-[#30363D]" />
+
                     <div class="flex flex-col space-y-5">
                       <div class="flex items-center justify-between">
                         <h2 class="text-sm font-semibold">Vector Chunks</h2>
@@ -2909,7 +2901,7 @@
           </div>
           <div
             id="right-collapse"
-            class="absolute top-4 cursor-pointer rounded-l-lg border bg-white dark:bg-[#0D1116] p-2 transition-all duration-300 lg:block"
+            class="absolute top-4 cursor-pointer rounded-l-lg border dark:border-[#30363D] bg-white dark:bg-[#0D1116] dark:text-white p-2 transition-all duration-300 lg:block"
             style="z-index: 10"
           >
             <div class="transform transition-transform duration-200 rotate-180">
@@ -2927,6 +2919,7 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1.42857"
+                  class="stroke-[#333333] dark:stroke-white"
                 ></path>
               </svg>
             </div>
