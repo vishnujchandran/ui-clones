@@ -195,18 +195,11 @@ document.getElementById("popOverClose").addEventListener("click", function () {
 document.addEventListener("click", function (event) {
   const popoverMenu = document.getElementById("popoverMenu");
   const openMenuBtn = document.getElementById("openMenuBtn");
-});
 
-document.addEventListener("click", function (event) {
-  const popoverMenu = document.getElementById("popoverMenu");
-  const openMenuBtn = document.getElementById("openMenuBtn");
-
-  // Check if the click is outside the popover and not on the open button
   if (!popoverMenu.contains(event.target) && event.target !== openMenuBtn) {
     popoverMenu.classList.add("hidden");
   }
 });
-
 document
   .getElementById("popoverMenu")
   .addEventListener("click", function (event) {

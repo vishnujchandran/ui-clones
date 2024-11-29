@@ -281,7 +281,6 @@
           </button>
         </div>
       </nav>
-
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
@@ -791,7 +790,7 @@
                   >
                     <button
                       type="button"
-                      class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
+                      class="group w-full border-black rounded-md p-4 transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
                       tabindex="0"
                     >
                       <svg
@@ -806,17 +805,25 @@
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 transition-opacity duration-200"
+                        class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 dark:text-[#585d67] transition-opacity duration-200"
                       >
                         <path d="M20 6 9 17l-5-5"></path>
                       </svg>
                       <div class="flex items-center space-x-2">
                         <img
                           alt="Web"
-                          class="h-5 w-5"
+                          class="h-6 w-6 dark:hidden"
                           style="filter: none"
-                          src="https://play.hyper.space/data-sources/web.svg"
+                          src="./images/web.svg"
                         />
+
+                        <img
+                          alt="Web"
+                          class="h-6 w-6 hidden dark:block"
+                          style="filter: none"
+                          src="./images/web-invert.svg"
+                        />
+
                         <h3 class="text-md font-semibold capitalize">Web</h3>
                       </div>
                       <p class="mt-2 text-sm">
@@ -954,7 +961,7 @@
         <button
           type="button"
           id="close-sheet-r"
-          class="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none"
+          class="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none dark:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -973,7 +980,6 @@
           ><span class="sr-only">Close</span>
         </button>
       </div>
-
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
@@ -1047,7 +1053,7 @@
         <button
           type="button"
           id="close-sheet-l"
-          class="absolute left-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none"
+          class="absolute left-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none dark:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1400,12 +1406,12 @@
 
           <div class="grid grid-rows-[auto_1fr]">
             <div
-              class="inline-flex text-[#333333] dark:text-[white] h-auto items-stretch justify-start gap-2 rounded-none bg-transparent p-3"
+              class="inline-flex text-[#333333] dark:text-[white] h-auto items-stretch justify-start gap-2 bg-transparent p-3"
               tabindex="0"
               style="outline: none"
             >
               <button
-                class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#161B22] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px"
+                class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#161B22] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-md border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px"
               >
                 Node View
               </button>
@@ -1417,7 +1423,7 @@
               </button>
 
               <button
-                class="dark:hover:bg-[#262626] flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg opacity-50 border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                class="dark:hover:bg-[#262626] flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1448,7 +1454,6 @@
                     height: 100%;
                     overflow: hidden;
                     position: relative;
-                    z-index: 0;
                   "
                   class="size-full light"
                 >
@@ -1484,21 +1489,20 @@
                         >
                           <div
                             style="
-                              z-index: 0;
                               transform: translate(0px);
                               pointer-events: all;
                             "
                             tabindex="0"
                             role="button"
                           >
-                            <div class="flex justify-center"></div>
-                            <span
-                              class="mx-auto relative flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-sm hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#262626] bg-white"
-                              style="max-width: 100px"
-                            >
-                              <!-- Welcome! -->
-                            </span>
-                            <div class=""></div>
+                            <div class="flex justify-center">
+                              <span
+                                class="mx-auto relative bg-white flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-lg font-bold hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#262626] bg-white"
+                                style="max-width: 130px"
+                              >
+                                Welcome!
+                              </span>
+                            </div>
                           </div>
                         </div>
                         <div class=""></div>
@@ -1517,14 +1521,14 @@
                   >
                     <pattern
                       id="pattern-1"
-                      x="7"
+                      x="-6"
                       y="36.5"
                       width="40"
                       height="40"
                       patternUnits="userSpaceOnUse"
                       patternTransform="translate(-21,-21)"
                     >
-                      <circle cx="1" cy="1" r="1"></circle>
+                      <circle cx="1" cy="1" r="1" fill="currentColor"></circle>
                     </pattern>
                     <rect
                       x="0"
@@ -1534,6 +1538,7 @@
                       fill="url(#pattern-1)"
                     ></rect>
                   </svg>
+
                   <div
                     class="horizontal rounded bottom center"
                     style="pointer-events: all"
@@ -1590,7 +1595,7 @@
                   ></div>
                 </div>
                 <button
-                  class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-button-text shadow-md hover:bg-button-stroke hover:-black"
+                  class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-white shadow-md bg-black hover:bg-[#E5E5E5] hover:text-black dark:bg-[#161B22] dark:hover:bg-[#30363D] dark:text-white dark:hover:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1610,18 +1615,89 @@
                     <line x1="3" x2="10" y1="21" y2="14"></line>
                   </svg>
                 </button>
+                <div class="absolute bottom-0 left-36">
+                  <div
+                    class="flex items-center gap-4 p-2 bg-[#F2F2F2] dark:bg-[#161B22] dark:text-gray-400 max-w-[120px]"
+                    style="pointer-events: all"
+                  >
+                    <button
+                      type="button"
+                      title="zoom in"
+                      aria-label="zoom in"
+                      disabled
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        class="w-3 h-3 fill-current"
+                      >
+                        <path
+                          d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <button
+                      type="button"
+                      title="zoom out"
+                      aria-label="zoom out"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 5"
+                        class="w-3 h-3 fill-current"
+                      >
+                        <path d="M0 0h32v4.2H0z"></path>
+                      </svg>
+                    </button>
+
+                    <button
+                      type="button"
+                      title="fit view"
+                      aria-label="fit view"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 30"
+                        class="w-3 h-3 fill-current"
+                      >
+                        <path
+                          d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <button
+                      type="button"
+                      title="toggle interactivity"
+                      aria-label="toggle interactivity"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 25 32"
+                        class="w-3 h-3 fill-current"
+                      >
+                        <path
+                          d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
+
             <div
               tabindex="0"
-              class="mt-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
+              class="mt-4 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
             ></div>
           </div>
           <div
             class="border-t dark:border-[#30363D] bg-[#f5f6f8] p-3 dark:bg-[#161B22]"
           >
             <label class="ml-3"
-              >Public Key<svg
+              ><span class="text-sm font-semibold"> Public Key</span
+              ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -1700,7 +1776,6 @@
             </div>
           </div>
         </div>
-
         <!-- Middle -->
         <div
           class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2 dark:bg-[#151A21]"
@@ -2180,7 +2255,7 @@
                     <button
                       id="popOverClose"
                       type="button"
-                      class="absolute right-4 top-4 rounded-sm disabled:pointer-events-none"
+                      class="absolute right-4 top-4 rounded-sm disabled:pointer-events-none dark:text-white"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -2315,7 +2390,6 @@
             </div>
           </div>
         </div>
-
         <!-- Right -->
         <div
           class="relative hidden lg:block bg-white dark:bg-[#0D1116] border-l dark:border-[#30363D]"
@@ -2773,7 +2847,7 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 transition-opacity duration-200"
+                            class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 dark:text-[#585d67] transition-opacity duration-200"
                           >
                             <path d="M20 6 9 17l-5-5"></path>
                           </svg>
