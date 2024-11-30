@@ -13,11 +13,10 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="dark:bg-[#161B22] bg-[#F3F4F6]">
+  <body class="dark:bg-[#161B22] bg-[#F3F4F6]"></div>
     <div
       class="grid h-100vh supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1"
     >
-      <div class="">
         <nav
           class="flex items-center justify-between border-b dark:border-[#30363D] bg-white dark:bg-[#0D1116] p-2.5 lg:hidden"
         >
@@ -401,7 +400,7 @@
                       <div class="flex space-x-2">
                         <button
                           type="button"
-                          id="dropdownButtonMain"
+                          id="dropdownButton" onclick="toggleDropdown(event)"
                           class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
                         >
                           <div class="flex items-center justify-between">
@@ -571,7 +570,7 @@
                         </div>
                         <button
                           type="button"
-                          id="dropdownButton2Main"
+                          id="dropdownButton2"  onclick="toggleDropdown2(event)"
                           class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
                         >
                           <div class="flex items-center justify-between">
@@ -769,8 +768,7 @@
                             class="flex h-[35px] w-full items-center justify-between rounded-lg border dark:border-[#30363D] px-3 py-1 text-left"
                           >
                             <div class="flex w-full items-center">
-                              <input id="apiKeyInput" placeholder="Enter API
-                              key" autocomplete="current-password" class="h-full
+                              <input id="apiKeyInput" placeholder="Enter API key" autocomplete="current-password" class="h-full
                               w-full bg-transparent text-gray-800
                               dark:text-[#D4D4D4] text-xs font-medium
                               placeholder-gray-400 outline-none
@@ -1095,7 +1093,6 @@
             <span class="sr-only">Close</span>
           </button>
         </div>
-      </div>
 
       <!-- Main -->
       <div

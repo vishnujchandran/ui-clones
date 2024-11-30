@@ -108,7 +108,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Drop down
+// Drop down mobile
 function toggleDropdown(event) {
   event.stopPropagation();
 
@@ -195,11 +195,8 @@ document.getElementById("popOverClose").addEventListener("click", function () {
 document.addEventListener("click", function (event) {
   const popoverMenu = document.getElementById("popoverMenu");
   const openMenuBtn = document.getElementById("openMenuBtn");
-
-  if (!popoverMenu.contains(event.target) && event.target !== openMenuBtn) {
-    popoverMenu.classList.add("hidden");
-  }
 });
+
 document
   .getElementById("popoverMenu")
   .addEventListener("click", function (event) {
