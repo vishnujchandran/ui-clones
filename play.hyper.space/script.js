@@ -327,3 +327,14 @@ if (storedTheme === "dark") {
 } else {
   setSystemTheme();
 }
+
+function toggleLogoPopover() {
+  const popoverLogo = document.getElementById("popoverLogoContent");
+  popoverLogo.classList.toggle("hidden");
+}
+
+
+function popoverLogoContentMain() {
+  const popoverLogo = document.getElementById("popoverLogoContentMain");
+  popoverLogo.classList.toggle("hidden");
+}
