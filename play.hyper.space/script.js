@@ -6,7 +6,6 @@ function toggleDarkMode() {
 }
 
 if (prefersDarkScheme.matches) {
-  console.log("Added dark");
   document.body.classList.add("dark");
 }
 
