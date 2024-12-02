@@ -247,39 +247,31 @@ window.addEventListener("click", function (e) {
   }
 });
 
-// Function to toggle visibility of the first popover
 function toggleLogoPopover(e) {
   const popoverLogo = document.getElementById("popoverLogoContent");
   popoverLogo.classList.toggle("hidden");
 
-  // Ensure the second popover is closed when the first is toggled
   const popoverMain = document.getElementById("popoverLogoContentMain");
   popoverMain.classList.add("hidden");
 
-  // Prevent event from propagating to document click listener
   e.stopPropagation();
 }
 
-// Function to toggle visibility of the second popover
 function popoverLogoContentMain(e) {
   const popoverLogo = document.getElementById("popoverLogoContentMain");
   popoverLogo.classList.toggle("hidden");
 
-  // Ensure the first popover is closed when the second is toggled
   const popover = document.getElementById("popoverLogoContent");
   popover.classList.add("hidden");
 
-  // Prevent event from propagating to document click listener
   e.stopPropagation();
 }
 
-// Event listener to close the popovers if clicked outside of them
 document.addEventListener("click", function (e) {
   const popoverLogo = document.getElementById("popoverLogoContent");
   const popoverMain = document.getElementById("popoverLogoContentMain");
-  const button = document.querySelector("button"); // Assuming your button is used to trigger popoverLogoContent
+  const button = document.querySelector("button");
 
-  // Check if the click is outside the popovers and button
   if (
     !popoverLogo.contains(e.target) &&
     !popoverMain.contains(e.target) &&
