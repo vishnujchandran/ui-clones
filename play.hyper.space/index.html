@@ -13,702 +13,22 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="dark:bg-[#161B22] bg-[#F3F4F6]"></div>
+  <body class="dark:bg-[#161B22] bg-[#F3F4F6]">
     <div
+      id="main"
       class="grid supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1"
     >
-   
-        <!-- Right Sheet -->
-        <div
-          id="sliding-sheet-r"
-          class="hidden absolute right-0 h-full w-3/5 z-50 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0 dark:border-[#30363D]"
-          tabindex="-1"
-          style="pointer-events: auto"
-        >
-          <div class="px-2.5 pt-6">
-            <button
-              class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:hover:bg-[#262626] dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
-              type="button"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-sun block size-4 lights-out:hidden dark:hidden"
-              >
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v2"></path>
-                <path d="M12 20v2"></path>
-                <path d="m4.93 4.93 1.41 1.41"></path>
-                <path d="m17.66 17.66 1.41 1.41"></path>
-                <path d="M2 12h2"></path>
-                <path d="M20 12h2"></path>
-                <path d="m6.34 17.66-1.41 1.41"></path>
-                <path d="m19.07 4.93-1.41 1.41"></path></svg
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-moon hidden size-4 lights-out:hidden dark:block"
-              >
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-contrast hidden size-4 lights-out:block dark:hidden"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 18a6 6 0 0 0 0-12v12z"></path></svg
-              ><span class="sr-only">Toggle theme</span>
-            </button>
-          </div>
-          <div class="relative h-full">
-            <div
-              class="absolute top-4 z-10 hidden cursor-pointer rounded-l-lg border dark:border-[#30363D] p-2 transition-all duration-300 lg:block -left-6"
-            >
-              <div
-                class="transform transition-transform duration-200 rotate-180"
-              >
-                <svg
-                  class="rotate-180 transform transition-transform duration-200"
-                  fill="none"
-                  height="12"
-                  viewBox="0 0 10 12"
-                  width="10"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.5 0.999999L7.5 6L2.5 11"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.42857"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <div
-              class="h-full overflow-hidden transition-all duration-300 w-full dark:text-[#D4D4D4]"
-            >
-              <div
-                class="h-full w-full overflow-y-auto border-l dark:border-[#30363D] transition-all duration-300 translate-x-0"
-              >
-                <div class="flex flex-col space-y-4 p-4">
-                  <div class="flex flex-col space-y-2">
-                    <h2
-                      class="text-md font-semibold capitalize dark:text-[#D4D4D4]"
-                    >
-                      AI Providers
-                    </h2>
-                    <div class="flex flex-col space-y-3">
-                      <div class="flex space-x-2">
-                        <button
-                          type="button"
-                          id="dropdownButton" onclick="toggleDropdown(event)"
-                          class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
-                        >
-                          <div class="flex items-center justify-between">
-                            <div class="flex items-center overflow-hidden">
-                              <img
-                                alt="groq"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2 flex-shrink-0"
-                                style="color: transparent"
-                                src="https://play.hyper.space/groq.svg"
-                              /><span class="truncate text-sm font-medium"
-                                >Groq</span
-                              ><span
-                                class="ml-1 hidden items-center text-sm text-gray-500 dark:text-[#818181] text-xs 2xl:block"
-                                >(Default)</span
-                              >
-                            </div>
-                            <img
-                              alt="Dropdown arrow"
-                              loading="lazy"
-                              width="12"
-                              height="12"
-                              decoding="async"
-                              class="flex-shrink-0"
-                              style="color: transparent"
-                              src="https://play.hyper.space/DropdownIcon.svg"
-                            />
-                          </div>
-                        </button>
-                        <div
-                          id="dropdownMenu"
-                          class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] dark:bg-[#0d1116] rounded-md absolute top-20 left-0 center z-50 bg-white"
-                        >
-                          <button
-                            class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] bg-gray-400 dark:bg-[#272e37]"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="groq"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                src="https://play.hyper.space/groq.svg"
-                              />
-                              <span class="text-xs font-medium"
-                                >Groq
-                                <span class="opacity-50">(Default)</span></span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="Together AI"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                src="https://play.hyper.space/togetherai.svg"
-                              />
-                              <span class="text-xs font-medium"
-                                >Together AI</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="Mistral AI"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                src="https://play.hyper.space/mistral.svg"
-                              />
-                              <span class="text-xs font-medium"
-                                >Mistral AI</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="Open AI"
-                                class="mr-2"
-                                height="20"
-                                width="20"
-                                src="https://play.hyper.space/openai.svg"
-                              />
-                              <span class="text-xs font-medium">Open AI</span>
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="Anthropic"
-                                class="mr-2"
-                                height="20"
-                                width="20"
-                                src="https://play.hyper.space/anthropic.svg"
-                              />
-                              <span class="text-xs font-medium">Anthropic</span>
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="xAI"
-                                class="mr-2"
-                                height="20"
-                                width="20"
-                                src="https://play.hyper.space/xai.svg"
-                              />
-                              <span class="text-xs font-medium">xAI</span>
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="Google"
-                                class="mr-2"
-                                height="20"
-                                width="20"
-                                src="https://play.hyper.space/google.svg"
-                              />
-                              <span class="text-xs font-medium">Google</span>
-                            </div>
-                          </button>
-                          <button
-                            class="w-full p-2 text-left text-xs opacity-50 cursor-not-allowed"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="hyperspace logo light"
-                                class="mr-2 block lights-out:hidden dark:hidden"
-                                height="25"
-                                width="25"
-                                src="https://play.hyper.space/logo-light.svg"
-                              /><img
-                                alt="hyperspace logo dark"
-                                class="mr-2 hidden lights-out:block dark:block"
-                                height="25"
-                                width="25"
-                                src="https://play.hyper.space/logo-dark.svg"
-                              />Hyperspace Network
-                            </div>
-                          </button>
-                        </div>
-                        <button
-                          type="button"
-                          id="dropdownButton2"  onclick="toggleDropdown2(event)"
-                          class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
-                        >
-                          <div class="flex items-center justify-between">
-                            <div class="flex items-center overflow-hidden">
-                              <img
-                                alt="llama3-70b-8192"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2 flex-shrink-0"
-                                style="color: transparent"
-                                src="https://play.hyper.space/meta.svg"
-                              /><span class="truncate text-sm font-medium"
-                                >llama3-70b-8192</span
-                              >
-                            </div>
-                            <img
-                              alt="Dropdown arrow"
-                              loading="lazy"
-                              width="12"
-                              height="12"
-                              decoding="async"
-                              class="flex-shrink-0"
-                              style="color: transparent"
-                              src="https://play.hyper.space/DropdownIcon.svg"
-                            />
-                          </div>
-                        </button>
-                        <div
-                          id="dropdownMenu2"
-                          class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
-                        >
-                          <button
-                            class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="llama3-70b-8192"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/meta.svg"
-                              />
-
-                              <span class="text-xs font-medium"
-                                >Gllama3-70b-8192
-                              </span>
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="llama-3.1-8b-instant"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/meta.svg"
-                              />
-
-                              <span class="text-xs font-medium"
-                                >llama-3.1-8b-instant</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="llama3-8b-8192"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/meta.svg"
-                              />
-
-                              <span class="text-xs font-medium"
-                                >llama3-8b-8192</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="llama-3.1-70b-versatile"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/meta.svg"
-                              />
-
-                              <span class="text-xs font-medium"
-                                >llama-3.1-70b-versatile</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="mixtral-8x7b-32768"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/mistral.svg"
-                              />
-                              <span class="text-xs font-medium"
-                                >mixtral-8x7b-32768</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="gemma2-9b-it"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/Google__G__logo 1.svg"
-                              />
-                              <span class="text-xs font-medium"
-                                >gemma2-9b-it</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="gemma-7b-it"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/Google__G__logo 1.svg"
-                              />
-                              <span class="text-xs font-medium"
-                                >gemma-7b-it</span
-                              >
-                            </div>
-                          </button>
-                          <button
-                            class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
-                          >
-                            <div class="flex items-center">
-                              <img
-                                alt="llava-v1.5-7b-4096-preview"
-                                loading="lazy"
-                                width="20"
-                                height="20"
-                                decoding="async"
-                                class="mr-2"
-                                style="color: transparent"
-                                src="https://play.hyper.space/meta.svg"
-                              />
-                              <span class="text-xs font-medium"
-                                >llava-v1.5-7b-4096-preview</span
-                              >
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="relative">
-                          <div
-                            class="flex h-[35px] w-full items-center justify-between rounded-lg border dark:border-[#30363D] px-3 py-1 text-left"
-                          >
-                            <div class="flex w-full items-center">
-                              <input id="apiKeyInput" placeholder="Enter API key" autocomplete="current-password" class="h-full
-                              w-full bg-transparent text-gray-800
-                              dark:text-[#D4D4D4] text-xs font-medium
-                              placeholder-gray-400 outline-none
-                              dark:placeholder-white placeholder="Enter API key"
-                              type="password" />
-                            </div>
-                            <button
-                              id="showButton"
-                              class="ml-2 text-sm text-gray-400 text-xs"
-                              type="button"
-                              onclick="togglePasswordVisibility()"
-                            >
-                              Show
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <p class="text-xs font-medium">
-                          Get Groq API key
-                          <a
-                            class="text-blue-500 hover:underline"
-                            href="https://console.groq.com/keys"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >here </a
-                          >.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr class="border-t dark:border-[#30363D]" />
-
-                  <div class="flex w-full flex-col space-y-2">
-                    <h2 class="text-md font-semibold capitalize">
-                      Data Sources
-                    </h2>
-                    <div
-                      dir="ltr"
-                      class="space-y-2"
-                      tabindex="0"
-                      style="outline: none"
-                    >
-                      <button
-                        type="button"
-                        class="group w-full border-black rounded-md p-4 transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
-                        tabindex="0"
-                      >
-                        <svg
-                          onclick="toggleOpacity(this)"
-                          id="tick"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 dark:text-[#585d67] transition-opacity duration-200"
-                        >
-                          <path d="M20 6 9 17l-5-5"></path>
-                        </svg>
-                        <div class="flex items-center space-x-2">
-                          <img
-                            alt="Web"
-                            class="h-6 w-6 dark:hidden"
-                            style="filter: none"
-                            src="./images/web.svg"
-                          />
-
-                          <img
-                            alt="Web"
-                            class="h-6 w-6 hidden dark:block"
-                            style="filter: none"
-                            src="./images/web-invert.svg"
-                          />
-
-                          <h3 class="text-md font-semibold capitalize">Web</h3>
-                        </div>
-                        <p class="mt-2 text-sm">
-                          Search and retrieve information from the web
-                        </p>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="p-2">
-                    <div
-                      class="flex w-full flex-col items-center justify-center gap-3 rounded border-2 border-dashed p-4 border-gray-300"
-                      onclick="document.getElementById('file-upload').click()"
-                    >
-                      <input
-                        accept=".pdf,.txt"
-                        class="hidden"
-                        id="file-upload"
-                        type="file"
-                      />
-                      <div
-                        class="text-sm text-gray-500 dark:text-[#818181] text-xs"
-                      >
-                        Drag and drop a PDF or Text File, or click to upload
-                      </div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-upload"
-                      >
-                        <path
-                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                        ></path>
-                        <polyline points="17 8 12 3 7 8"></polyline>
-                        <line x1="12" x2="12" y1="3" y2="15"></line>
-                      </svg>
-                    </div>
-                  </div>
-                  <ul class="flex flex-col gap-1"></ul>
-                  <hr class="border-t dark:border-[#30363D]" />
-
-                  <div class="flex flex-col space-y-5">
-                    <div class="space-y-1">
-                      <p class="text-sm">
-                        Select your preferred source below. You may choose
-                        multiple sources.
-                      </p>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <div class="flex flex-wrap gap-2">
-                        <div class="relative inline-block group">
-                          <button
-                            class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
-                            type="button"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              class="lucide lucide-plus size-4 text-[#333333] dark:text-[white]"
-                            >
-                              <path d="M5 12h14"></path>
-                              <path d="M12 5v14"></path>
-                            </svg>
-                          </button>
-
-                          <div
-                            class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
-                          >
-                            Add data source
-                          </div>
-                        </div>
-
-                        <div
-                          class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md"
-                        >
-                          Add data
-                        </div>
-                        <img
-                          alt="Wikipedia"
-                          class="h-7 w-7 cursor-pointer"
-                          src="https://play.hyper.space/data-sources/wikipedia.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <hr class="border-t dark:border-[#30363D]" />
-
-                  <div class="flex flex-col space-y-5">
-                    <div class="flex items-center justify-between">
-                      <h2 class="text-sm font-semibold">Vector Chunks</h2>
-                      <button>
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
-                        >
-                          <path
-                            d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
-                            fill="currentColor"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="space-y-2">
-                      <p
-                        class="text-sm text-gray-500 dark:text-[#818181] text-xs"
-                      >
-                        No vector chunks available. Start a chat to see relevant
-                        chunks.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- Right Sheet -->
+      <div
+        id="sliding-sheet-r"
+        class="hidden absolute right-0 h-full w-3/5 z-50 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0 dark:border-[#30363D]"
+        tabindex="-1"
+        style="pointer-events: auto"
+      >
+        <div class="px-2.5 pt-6">
           <button
+            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:hover:bg-[#262626] dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
             type="button"
-            id="close-sheet-r"
-            class="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none dark:text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -720,30 +40,698 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-x h-4 w-4"
+              class="lucide lucide-sun block size-4 lights-out:hidden dark:hidden"
             >
-              <path d="M18 6 6 18"></path>
-              <path d="m6 6 12 12"></path></svg
-            ><span class="sr-only">Close</span>
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path></svg
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon hidden size-4 lights-out:hidden dark:block"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-contrast hidden size-4 lights-out:block dark:hidden"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 18a6 6 0 0 0 0-12v12z"></path></svg
+            ><span class="sr-only">Toggle theme</span>
           </button>
         </div>
-        <!-- Left Sheet -->
-        <div
-          id="sliding-sheet-l"
-          class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
-          tabindex="-1"
-          style="pointer-events: auto"
-        >  <div class="absolute bottom-3 left-1/3 ">
+        <div class="relative h-full">
+          <div
+            class="absolute top-4 z-10 hidden cursor-pointer rounded-l-lg border dark:border-[#30363D] p-2 transition-all duration-300 lg:block -left-6"
+          >
+            <div class="transform transition-transform duration-200 rotate-180">
+              <svg
+                class="rotate-180 transform transition-transform duration-200"
+                fill="none"
+                height="12"
+                viewBox="0 0 10 12"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 0.999999L7.5 6L2.5 11"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.42857"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="h-full overflow-hidden transition-all duration-300 w-full dark:text-[#D4D4D4]"
+          >
+            <div
+              class="h-full w-full overflow-y-auto border-l dark:border-[#30363D] transition-all duration-300 translate-x-0"
+            >
+              <div class="flex flex-col space-y-4 p-4">
+                <div class="flex flex-col space-y-2">
+                  <h2
+                    class="text-md font-semibold capitalize dark:text-[#D4D4D4]"
+                  >
+                    AI Providers
+                  </h2>
+                  <div class="flex flex-col space-y-3">
+                    <div class="flex space-x-2">
+                      <button
+                        type="button"
+                        id="dropdownButton"
+                        onclick="toggleDropdown(event)"
+                        class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center overflow-hidden">
+                            <img
+                              alt="groq"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2 flex-shrink-0"
+                              style="color: transparent"
+                              src="https://play.hyper.space/groq.svg"
+                            /><span class="truncate text-sm font-medium"
+                              >Groq</span
+                            ><span
+                              class="ml-1 hidden items-center text-sm text-gray-500 dark:text-[#818181] text-xs 2xl:block"
+                              >(Default)</span
+                            >
+                          </div>
+                          <img
+                            alt="Dropdown arrow"
+                            loading="lazy"
+                            width="12"
+                            height="12"
+                            decoding="async"
+                            class="flex-shrink-0"
+                            style="color: transparent"
+                            src="https://play.hyper.space/DropdownIcon.svg"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        id="dropdownMenu"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] dark:bg-[#0d1116] rounded-md absolute top-20 left-0 center z-50 bg-white"
+                      >
+                        <button
+                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] bg-gray-400 dark:bg-[#272e37]"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="groq"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              src="https://play.hyper.space/groq.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >Groq
+                              <span class="opacity-50">(Default)</span></span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Together AI"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              src="https://play.hyper.space/togetherai.svg"
+                            />
+                            <span class="text-xs font-medium">Together AI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Mistral AI"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              src="https://play.hyper.space/mistral.svg"
+                            />
+                            <span class="text-xs font-medium">Mistral AI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Open AI"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/openai.svg"
+                            />
+                            <span class="text-xs font-medium">Open AI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Anthropic"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/anthropic.svg"
+                            />
+                            <span class="text-xs font-medium">Anthropic</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="xAI"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/xai.svg"
+                            />
+                            <span class="text-xs font-medium">xAI</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="Google"
+                              class="mr-2"
+                              height="20"
+                              width="20"
+                              src="https://play.hyper.space/google.svg"
+                            />
+                            <span class="text-xs font-medium">Google</span>
+                          </div>
+                        </button>
+                        <button
+                          class="w-full p-2 text-left text-xs opacity-50 cursor-not-allowed"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="hyperspace logo light"
+                              class="mr-2 block lights-out:hidden dark:hidden"
+                              height="25"
+                              width="25"
+                              src="https://play.hyper.space/logo-light.svg"
+                            /><img
+                              alt="hyperspace logo dark"
+                              class="mr-2 hidden lights-out:block dark:block"
+                              height="25"
+                              width="25"
+                              src="https://play.hyper.space/logo-dark.svg"
+                            />Hyperspace Network
+                          </div>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        id="dropdownButton2"
+                        onclick="toggleDropdown2(event)"
+                        class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center overflow-hidden">
+                            <img
+                              alt="llama3-70b-8192"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2 flex-shrink-0"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            /><span class="truncate text-sm font-medium"
+                              >llama3-70b-8192</span
+                            >
+                          </div>
+                          <img
+                            alt="Dropdown arrow"
+                            loading="lazy"
+                            width="12"
+                            height="12"
+                            decoding="async"
+                            class="flex-shrink-0"
+                            style="color: transparent"
+                            src="https://play.hyper.space/DropdownIcon.svg"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        id="dropdownMenu2"
+                        class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
+                      >
+                        <button
+                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama3-70b-8192"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >Gllama3-70b-8192
+                            </span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama-3.1-8b-instant"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >llama-3.1-8b-instant</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama3-8b-8192"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >llama3-8b-8192</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llama-3.1-70b-versatile"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+
+                            <span class="text-xs font-medium"
+                              >llama-3.1-70b-versatile</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="mixtral-8x7b-32768"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/mistral.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >mixtral-8x7b-32768</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="gemma2-9b-it"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/Google__G__logo 1.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >gemma2-9b-it</span
+                            >
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="gemma-7b-it"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/Google__G__logo 1.svg"
+                            />
+                            <span class="text-xs font-medium">gemma-7b-it</span>
+                          </div>
+                        </button>
+                        <button
+                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                        >
+                          <div class="flex items-center">
+                            <img
+                              alt="llava-v1.5-7b-4096-preview"
+                              loading="lazy"
+                              width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
+                              style="color: transparent"
+                              src="https://play.hyper.space/meta.svg"
+                            />
+                            <span class="text-xs font-medium"
+                              >llava-v1.5-7b-4096-preview</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="relative">
+                        <div
+                          class="flex h-[35px] w-full items-center justify-between rounded-lg border dark:border-[#30363D] px-3 py-1 text-left"
+                        >
+                          <div class="flex w-full items-center">
+                            <input id="apiKeyInput" placeholder="Enter API key"
+                            autocomplete="current-password" class="h-full w-full
+                            bg-transparent text-gray-800 dark:text-[#D4D4D4]
+                            text-xs font-medium placeholder-gray-400
+                            outline-none dark:placeholder-white
+                            placeholder="Enter API key" type="password" />
+                          </div>
+                          <button
+                            id="showButton"
+                            class="ml-2 text-sm text-gray-400 text-xs"
+                            type="button"
+                            onclick="togglePasswordVisibility()"
+                          >
+                            Show
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <p class="text-xs font-medium">
+                        Get Groq API key
+                        <a
+                          class="text-blue-500 hover:underline"
+                          href="https://console.groq.com/keys"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          >here </a
+                        >.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr class="border-t dark:border-[#30363D]" />
+
+                <div class="flex w-full flex-col space-y-2">
+                  <h2 class="text-md font-semibold capitalize">Data Sources</h2>
+                  <div
+                    dir="ltr"
+                    class="space-y-2"
+                    tabindex="0"
+                    style="outline: none"
+                  >
+                    <button
+                      type="button"
+                      class="group w-full border-black rounded-md p-4 transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
+                      tabindex="0"
+                    >
+                      <svg
+                        onclick="toggleOpacity(this)"
+                        id="tick"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 dark:text-[#585d67] transition-opacity duration-200"
+                      >
+                        <path d="M20 6 9 17l-5-5"></path>
+                      </svg>
+                      <div class="flex items-center space-x-2">
+                        <img
+                          alt="Web"
+                          class="h-6 w-6 dark:hidden"
+                          style="filter: none"
+                          src="./images/web.svg"
+                        />
+
+                        <img
+                          alt="Web"
+                          class="h-6 w-6 hidden dark:block"
+                          style="filter: none"
+                          src="./images/web-invert.svg"
+                        />
+
+                        <h3 class="text-md font-semibold capitalize">Web</h3>
+                      </div>
+                      <p class="mt-2 text-sm">
+                        Search and retrieve information from the web
+                      </p>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <div
+                    class="flex w-full flex-col items-center justify-center gap-3 rounded border-2 border-dashed p-4 border-gray-300"
+                    onclick="document.getElementById('file-upload').click()"
+                  >
+                    <input
+                      accept=".pdf,.txt"
+                      class="hidden"
+                      id="file-upload"
+                      type="file"
+                    />
+                    <div
+                      class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+                    >
+                      Drag and drop a PDF or Text File, or click to upload
+                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-upload"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="17 8 12 3 7 8"></polyline>
+                      <line x1="12" x2="12" y1="3" y2="15"></line>
+                    </svg>
+                  </div>
+                </div>
+                <ul class="flex flex-col gap-1"></ul>
+                <hr class="border-t dark:border-[#30363D]" />
+
+                <div class="flex flex-col space-y-5">
+                  <div class="space-y-1">
+                    <p class="text-sm">
+                      Select your preferred source below. You may choose
+                      multiple sources.
+                    </p>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <div class="flex flex-wrap gap-2">
+                      <div class="relative inline-block group">
+                        <button
+                          class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          type="button"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-plus size-4 text-[#333333] dark:text-[white]"
+                          >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                          </svg>
+                        </button>
+
+                        <div
+                          class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
+                        >
+                          Add data source
+                        </div>
+                      </div>
+
+                      <div
+                        class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md"
+                      >
+                        Add data
+                      </div>
+                      <img
+                        alt="Wikipedia"
+                        class="h-7 w-7 cursor-pointer"
+                        src="https://play.hyper.space/data-sources/wikipedia.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr class="border-t dark:border-[#30363D]" />
+
+                <div class="flex flex-col space-y-5">
+                  <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold">Vector Chunks</h2>
+                    <button>
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
+                      >
+                        <path
+                          d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="space-y-2">
+                    <p
+                      class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+                    >
+                      No vector chunks available. Start a chat to see relevant
+                      chunks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="close-sheet-r"
+          class="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none dark:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x h-4 w-4"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path></svg
+          ><span class="sr-only">Close</span>
+        </button>
+      </div>
+      <!-- Left Sheet -->
+      <div
+        id="sliding-sheet-l"
+        class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
+        tabindex="-1"
+        style="pointer-events: auto"
+      >
+        <div class="absolute bottom-3 left-1/3">
           <div
             class="flex items-center gap-4 p-2 bg-[#F2F2F2] dark:bg-[#161B22] dark:text-gray-400 max-w-[120px]"
             style="pointer-events: all"
           >
-            <button
-              type="button"
-              title="zoom in"
-              aria-label="zoom in"
-              disabled
-            >
+            <button type="button" title="zoom in" aria-label="zoom in" disabled>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -755,11 +743,7 @@
               </svg>
             </button>
 
-            <button
-              type="button"
-              title="zoom out"
-              aria-label="zoom out"
-            >
+            <button type="button" title="zoom out" aria-label="zoom out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 5"
@@ -769,11 +753,7 @@
               </svg>
             </button>
 
-            <button
-              type="button"
-              title="fit view"
-              aria-label="fit view"
-            >
+            <button type="button" title="fit view" aria-label="fit view">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 30"
@@ -802,98 +782,96 @@
             </button>
           </div>
         </div>
-          <button
-            class="absolute right-2 top-2 rounded-full dark:hover:bg-[#333333] dark:bg-[#272E37] p-2 text-[white] shadow-md hover:bg-[#E5E5E5] hover:text-gray-600 dark:hover:text-white"
+        <button
+          class="absolute right-2 top-2 rounded-full dark:hover:bg-[#333333] dark:bg-[#272E37] p-2 text-[white] shadow-md hover:bg-[#E5E5E5] hover:text-gray-600 dark:hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-maximize2"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-maximize2"
-            >
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <polyline points="9 21 3 21 3 15"></polyline>
-              <line x1="21" x2="14" y1="3" y2="10"></line>
-              <line x1="3" x2="10" y1="21" y2="14"></line>
-            </svg>
-          </button>
-          <div class="flex flex-col items-center my-auto">
-            <span
-              class="relative flex items-center justify-center rounded border dark:border-gray-400 outline-none px-2 py-1 text-xl dark:text-white transition hover:cursor-pointer hover:bg-app-hover bg-app-background-light"
-              >Welcome!</span
-            >
-          </div>
-          <div class="absolute bottom-0 right-1/2">
-            <div>
-              <button
-                type="button"
-                class="text-black"
-                title="zoom in"
-                disabled=""
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                  <path
-                    d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
-                  ></path>
-                </svg></button
-              ><button type="button" title="zoom out">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 5">
-                  <path d="M0 0h32v4.2H0z"></path>
-                </svg></button
-              ><button type="button" title="fit view">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 30">
-                  <path
-                    d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
-                  ></path>
-                </svg></button
-              ><button type="button" class="" title="toggle interactivity">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 32">
-                  <path
-                    d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
-                  ></path>
-                </svg>
-              </button>
-             
-            </div>
-          </div>
-          <button
-            type="button"
-            id="close-sheet-l"
-            class="absolute left-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none dark:text-white"
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" x2="14" y1="3" y2="10"></line>
+            <line x1="3" x2="10" y1="21" y2="14"></line>
+          </svg>
+        </button>
+        <div class="flex flex-col items-center my-auto">
+          <span
+            class="relative flex items-center justify-center rounded border dark:border-gray-400 outline-none px-2 py-1 text-xl dark:text-white transition hover:cursor-pointer hover:bg-app-hover bg-app-background-light"
+            >Welcome!</span
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-x h-4 w-4"
-            >
-              <path d="M18 6 6 18"></path>
-              <path d="m6 6 12 12"></path>
-            </svg>
-            <span class="sr-only">Close</span>
-          </button>
         </div>
+        <div class="absolute bottom-0 right-1/2">
+          <div>
+            <button
+              type="button"
+              class="text-black"
+              title="zoom in"
+              disabled=""
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                  d="M32 18.133H18.133V32h-4.266V18.133H0v-4.266h13.867V0h4.266v13.867H32z"
+                ></path>
+              </svg></button
+            ><button type="button" title="zoom out">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 5">
+                <path d="M0 0h32v4.2H0z"></path>
+              </svg></button
+            ><button type="button" title="fit view">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 30">
+                <path
+                  d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"
+                ></path>
+              </svg></button
+            ><button type="button" class="" title="toggle interactivity">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 32">
+                <path
+                  d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="close-sheet-l"
+          class="absolute left-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none dark:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x h-4 w-4"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
 
       <!-- Main -->
       <div
-        id="main"
         class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700 dark:text-[#D4D4D4]"
       >
         <!-- Left -->
         <div
-          class=" bg-white dark:bg-[#0D1116] grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r dark:border-[#30363D] max-lg:hidden"
+          class="bg-white dark:bg-[#0D1116] grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r dark:border-[#30363D] max-lg:hidden"
         >
           <nav
             class="flex items-center justify-between gap-3 border-b dark:border-[#30363D] pl-6 pr-3 max-md:h-[50px] md:h-[67px]"
@@ -924,7 +902,8 @@
                 ></path>
               </svg>
               <button
-                type="button" onclick="popoverLogoContentMain(event)"
+                type="button"
+                onclick="popoverLogoContentMain(event)"
                 class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
               >
                 <div>
@@ -1108,33 +1087,137 @@
                   </svg>
                 </div>
               </button>
-              <div id="popoverLogoContentMain" class="hidden fixed left-0  top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-50 dark:bg-[#0d1116] ">
-                <div role="menu" aria-orientation="vertical" class="space-y-2.5">
-                  <a href="https://compute.hyper.space" target="_blank" class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]">
+              <div
+                id="popoverLogoContentMain"
+                class="hidden fixed left-0 top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-50 dark:bg-[#0d1116]"
+              >
+                <div
+                  role="menu"
+                  aria-orientation="vertical"
+                  class="space-y-2.5"
+                >
+                  <a
+                    href="https://compute.hyper.space"
+                    target="_blank"
+                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                  >
                     <div class="flex items-center">
-                      <svg aria-label="compute icon" fill="none" role="img" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" class="size-10 rounded-lg shadow"><rect width="150" height="150" rx="32" fill="#222"></rect><path d="M121.838 71.838v-.002l.001-.003A3.169 3.169 0 01125 75a3.17 3.17 0 01-3.167 3.167h-15.249c-1.947 0-3.875.2-5.754.589a7.716 7.716 0 00-4.915 11.858 28.419 28.419 0 003.66 4.498l10.779 10.778.003-.001.002-.001a3.169 3.169 0 01-.004 4.474 3.169 3.169 0 01-4.479 0L95.093 99.58a28.4 28.4 0 00-4.48-3.65 7.715 7.715 0 00-11.86 4.917 28.402 28.402 0 00-.586 5.737v15.249A3.17 3.17 0 0175 125a3.17 3.17 0 01-3.167-3.167v-15.249c0-1.942-.2-3.864-.586-5.739a7.715 7.715 0 00-11.861-4.915 28.408 28.408 0 00-4.48 3.65l-10.783 10.782a3.168 3.168 0 01-4.479 0 3.17 3.17 0 010-4.479l10.783-10.782a28.393 28.393 0 003.652-4.486 7.715 7.715 0 00-4.914-11.86 28.407 28.407 0 00-5.749-.588H28.167A3.169 3.169 0 0125 75a3.169 3.169 0 013.167-3.167h15.26c1.938 0 3.857-.198 5.728-.584a7.714 7.714 0 004.917-11.862 28.409 28.409 0 00-3.645-4.474L39.644 44.13a3.17 3.17 0 010-4.479 3.17 3.17 0 014.479 0l10.79 10.79a28.397 28.397 0 004.478 3.648 7.716 7.716 0 0011.862-4.909c.39-1.882.59-3.813.59-5.764V28.167A3.17 3.17 0 0175.012 25a3.169 3.169 0 013.167 3.167v15.254c0 1.948.2 3.875.589 5.754a7.715 7.715 0 0011.863 4.91 28.41 28.41 0 004.47-3.643l10.783-10.783a3.17 3.17 0 014.479 0 3.169 3.169 0 010 4.479L99.576 54.924a28.392 28.392 0 00-3.637 4.462 7.714 7.714 0 004.91 11.865c1.876.388 3.801.587 5.746.587h15.243z" fill="url(#prefix__paint0_linear_1989_1073)"></path><defs><linearGradient id="prefix__paint0_linear_1989_1073" x1="49.891" y1="17.881" x2="126.289" y2="107.648" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"></stop><stop offset="1" stop-color="#D8D8D8"></stop></linearGradient></defs></svg>
+                      <svg
+                        aria-label="compute icon"
+                        fill="none"
+                        role="img"
+                        viewBox="0 0 150 150"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="size-10 rounded-lg shadow"
+                      >
+                        <rect
+                          width="150"
+                          height="150"
+                          rx="32"
+                          fill="#222"
+                        ></rect>
+                        <path
+                          d="M121.838 71.838v-.002l.001-.003A3.169 3.169 0 01125 75a3.17 3.17 0 01-3.167 3.167h-15.249c-1.947 0-3.875.2-5.754.589a7.716 7.716 0 00-4.915 11.858 28.419 28.419 0 003.66 4.498l10.779 10.778.003-.001.002-.001a3.169 3.169 0 01-.004 4.474 3.169 3.169 0 01-4.479 0L95.093 99.58a28.4 28.4 0 00-4.48-3.65 7.715 7.715 0 00-11.86 4.917 28.402 28.402 0 00-.586 5.737v15.249A3.17 3.17 0 0175 125a3.17 3.17 0 01-3.167-3.167v-15.249c0-1.942-.2-3.864-.586-5.739a7.715 7.715 0 00-11.861-4.915 28.408 28.408 0 00-4.48 3.65l-10.783 10.782a3.168 3.168 0 01-4.479 0 3.17 3.17 0 010-4.479l10.783-10.782a28.393 28.393 0 003.652-4.486 7.715 7.715 0 00-4.914-11.86 28.407 28.407 0 00-5.749-.588H28.167A3.169 3.169 0 0125 75a3.169 3.169 0 013.167-3.167h15.26c1.938 0 3.857-.198 5.728-.584a7.714 7.714 0 004.917-11.862 28.409 28.409 0 00-3.645-4.474L39.644 44.13a3.17 3.17 0 010-4.479 3.17 3.17 0 014.479 0l10.79 10.79a28.397 28.397 0 004.478 3.648 7.716 7.716 0 0011.862-4.909c.39-1.882.59-3.813.59-5.764V28.167A3.17 3.17 0 0175.012 25a3.169 3.169 0 013.167 3.167v15.254c0 1.948.2 3.875.589 5.754a7.715 7.715 0 0011.863 4.91 28.41 28.41 0 004.47-3.643l10.783-10.783a3.17 3.17 0 014.479 0 3.169 3.169 0 010 4.479L99.576 54.924a28.392 28.392 0 00-3.637 4.462 7.714 7.714 0 004.91 11.865c1.876.388 3.801.587 5.746.587h15.243z"
+                          fill="url(#prefix__paint0_linear_1989_1073)"
+                        ></path>
+                        <defs>
+                          <linearGradient
+                            id="prefix__paint0_linear_1989_1073"
+                            x1="49.891"
+                            y1="17.881"
+                            x2="126.289"
+                            y2="107.648"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#fff"></stop>
+                            <stop offset="1" stop-color="#D8D8D8"></stop>
+                          </linearGradient>
+                        </defs>
+                      </svg>
                     </div>
                     <div>
-                      <div class="font-bold text-black dark:text-white">Compute</div>
-                      <div class="font-normal text-gray-500">Advanced AI research tool</div>
+                      <div class="font-bold text-black dark:text-white">
+                        Compute
+                      </div>
+                      <div class="font-normal text-gray-500">
+                        Advanced AI research tool
+                      </div>
                     </div>
                   </a>
-                  <a href="https://network.hyper.space" target="_blank" class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]">
+                  <a
+                    href="https://network.hyper.space"
+                    target="_blank"
+                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                  >
                     <div class="flex items-center">
-                     <svg aria-label="network product icon" fill="none" role="img" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" class="size-10 rounded-lg shadow"><rect width="150" height="150" rx="32" fill="#222"></rect><path d="M45.988 73.304h9.565A17.824 17.824 0 0073.378 55.48v-9.565a1.988 1.988 0 013.973 0v9.566a17.824 17.824 0 0017.824 17.824h9.565c1.096 0 1.987.89 1.987 1.987a1.988 1.988 0 01-1.987 1.986h-9.565a17.823 17.823 0 00-17.824 17.825v9.565a1.987 1.987 0 01-3.974 0v-9.565a17.824 17.824 0 00-17.824-17.825h-9.565A1.988 1.988 0 0144 75.291c0-1.096.89-1.987 1.987-1.987zM74.99 34.5c4.915 0 8.916-4 8.916-8.915 0-4.915-4.001-8.915-8.916-8.915-4.917 0-8.917 4-8.917 8.915 0 4.914 4 8.915 8.918 8.915z" fill="#fff"></path><path d="M48.425 100.61c-.459.459-.4 1.21.059 1.668.451.452 1.19.487 1.641.036l11.85-11.852c.458-.459.427-1.21-.03-1.672-.463-.469-1.223-.499-1.689-.032L48.425 100.61zM109.932 48.97a8.883 8.883 0 006.305-2.607c3.475-3.476 3.475-9.132 0-12.607-3.476-3.478-9.134-3.476-12.61 0-3.471 3.475-3.471 9.131 0 12.607a8.883 8.883 0 006.305 2.608zM101.94 49.781c.465-.465.43-1.225-.035-1.69-.463-.467-1.225-.5-1.69-.035L88.417 59.853c-.465.465-.44 1.225.028 1.687.476.47 1.246.49 1.719.018L101.94 49.78zM61.528 61.542c.468-.464.492-1.224.026-1.69L49.757 48.055c-.465-.465-1.222-.428-1.687.036-.454.451-.5 1.204-.048 1.657l11.789 11.81c.472.474 1.242.454 1.717-.016zM34.483 74.997c0-4.91-3.989-8.92-8.92-8.92-4.91 0-8.896 4.01-8.896 8.92s3.986 8.92 8.895 8.92c4.932 0 8.92-4.01 8.92-8.92zM33.754 103.654a8.765 8.765 0 00-2.625 6.295c0 2.382.924 4.618 2.625 6.295a8.808 8.808 0 006.295 2.625c2.282 0 4.57-.875 6.295-2.625 3.473-3.476 3.473-9.115 0-12.59-3.354-3.379-9.236-3.379-12.59 0zM103.633 103.654a8.873 8.873 0 00-2.601 6.295c0 2.284.872 4.569 2.601 6.295a8.806 8.806 0 006.295 2.625 8.905 8.905 0 006.317-2.625 8.836 8.836 0 002.603-6.295 8.836 8.836 0 00-2.603-6.295c-3.474-3.476-9.137-3.476-12.612 0zM40.049 48.966c2.282 0 4.569-.875 6.295-2.6 3.475-3.476 3.475-9.14 0-12.615a8.905 8.905 0 00-12.59 0c-1.702 1.677-2.625 3.937-2.625 6.32 0 2.381.923 4.617 2.625 6.294a8.889 8.889 0 006.295 2.601zM75 115.514c-4.934 0-8.92 3.987-8.92 8.896a8.91 8.91 0 008.92 8.92c4.91 0 8.896-3.986 8.896-8.92 0-4.909-3.987-8.896-8.896-8.896zM124.413 66.077c-4.934 0-8.92 4.01-8.92 8.92s3.986 8.92 8.92 8.92c4.91 0 8.92-4.01 8.92-8.92s-4.01-8.92-8.92-8.92zM102.319 102.255c.465-.465.5-1.225.035-1.69L90.549 88.758c-.466-.466-1.227-.436-1.691.033-.457.46-.489 1.213-.03 1.673l11.839 11.839c.452.451 1.202.405 1.652-.048z" fill="#fff"></path></svg>
+                      <svg
+                        aria-label="network product icon"
+                        fill="none"
+                        role="img"
+                        viewBox="0 0 150 150"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="size-10 rounded-lg shadow"
+                      >
+                        <rect
+                          width="150"
+                          height="150"
+                          rx="32"
+                          fill="#222"
+                        ></rect>
+                        <path
+                          d="M45.988 73.304h9.565A17.824 17.824 0 0073.378 55.48v-9.565a1.988 1.988 0 013.973 0v9.566a17.824 17.824 0 0017.824 17.824h9.565c1.096 0 1.987.89 1.987 1.987a1.988 1.988 0 01-1.987 1.986h-9.565a17.823 17.823 0 00-17.824 17.825v9.565a1.987 1.987 0 01-3.974 0v-9.565a17.824 17.824 0 00-17.824-17.825h-9.565A1.988 1.988 0 0144 75.291c0-1.096.89-1.987 1.987-1.987zM74.99 34.5c4.915 0 8.916-4 8.916-8.915 0-4.915-4.001-8.915-8.916-8.915-4.917 0-8.917 4-8.917 8.915 0 4.914 4 8.915 8.918 8.915z"
+                          fill="#fff"
+                        ></path>
+                        <path
+                          d="M48.425 100.61c-.459.459-.4 1.21.059 1.668.451.452 1.19.487 1.641.036l11.85-11.852c.458-.459.427-1.21-.03-1.672-.463-.469-1.223-.499-1.689-.032L48.425 100.61zM109.932 48.97a8.883 8.883 0 006.305-2.607c3.475-3.476 3.475-9.132 0-12.607-3.476-3.478-9.134-3.476-12.61 0-3.471 3.475-3.471 9.131 0 12.607a8.883 8.883 0 006.305 2.608zM101.94 49.781c.465-.465.43-1.225-.035-1.69-.463-.467-1.225-.5-1.69-.035L88.417 59.853c-.465.465-.44 1.225.028 1.687.476.47 1.246.49 1.719.018L101.94 49.78zM61.528 61.542c.468-.464.492-1.224.026-1.69L49.757 48.055c-.465-.465-1.222-.428-1.687.036-.454.451-.5 1.204-.048 1.657l11.789 11.81c.472.474 1.242.454 1.717-.016zM34.483 74.997c0-4.91-3.989-8.92-8.92-8.92-4.91 0-8.896 4.01-8.896 8.92s3.986 8.92 8.895 8.92c4.932 0 8.92-4.01 8.92-8.92zM33.754 103.654a8.765 8.765 0 00-2.625 6.295c0 2.382.924 4.618 2.625 6.295a8.808 8.808 0 006.295 2.625c2.282 0 4.57-.875 6.295-2.625 3.473-3.476 3.473-9.115 0-12.59-3.354-3.379-9.236-3.379-12.59 0zM103.633 103.654a8.873 8.873 0 00-2.601 6.295c0 2.284.872 4.569 2.601 6.295a8.806 8.806 0 006.295 2.625 8.905 8.905 0 006.317-2.625 8.836 8.836 0 002.603-6.295 8.836 8.836 0 00-2.603-6.295c-3.474-3.476-9.137-3.476-12.612 0zM40.049 48.966c2.282 0 4.569-.875 6.295-2.6 3.475-3.476 3.475-9.14 0-12.615a8.905 8.905 0 00-12.59 0c-1.702 1.677-2.625 3.937-2.625 6.32 0 2.381.923 4.617 2.625 6.294a8.889 8.889 0 006.295 2.601zM75 115.514c-4.934 0-8.92 3.987-8.92 8.896a8.91 8.91 0 008.92 8.92c4.91 0 8.896-3.986 8.896-8.92 0-4.909-3.987-8.896-8.896-8.896zM124.413 66.077c-4.934 0-8.92 4.01-8.92 8.92s3.986 8.92 8.92 8.92c4.91 0 8.92-4.01 8.92-8.92s-4.01-8.92-8.92-8.92zM102.319 102.255c.465-.465.5-1.225.035-1.69L90.549 88.758c-.466-.466-1.227-.436-1.691.033-.457.46-.489 1.213-.03 1.673l11.839 11.839c.452.451 1.202.405 1.652-.048z"
+                          fill="#fff"
+                        ></path>
+                      </svg>
                     </div>
                     <div>
-                      <div class="font-bold text-black dark:text-white">Network</div>
-                      <div class="font-normal text-gray-500">Peer-to-peer AI network</div>
+                      <div class="font-bold text-black dark:text-white">
+                        Network
+                      </div>
+                      <div class="font-normal text-gray-500">
+                        Peer-to-peer AI network
+                      </div>
                     </div>
                   </a>
-                  <a href="https://node.hyper.space" target="_blank" class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]">
+                  <a
+                    href="https://node.hyper.space"
+                    target="_blank"
+                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                  >
                     <div class="flex items-center">
-                   <svg aria-label="node web icon" fill="none" role="img" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" class="size-10 rounded-lg shadow"><rect width="150" height="150" rx="32" fill="#fff"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M86.51 46.629c.61.828 1.338 1.56 2.161 2.174l-4.188 7.303-7.139-4.15 9.166-5.327zm18.65 24.215a10.451 10.451 0 000 8.303L85.341 90.663l-4.188-7.3a10.384 10.384 0 003.087-3.681 10.458 10.458 0 000-9.373 10.384 10.384 0 00-3.087-3.681l4.187-7.301 19.819 11.517h.001zm-16.489 30.343a10.494 10.494 0 00-2.161 2.174l-9.166-5.327 7.14-4.149 4.187 7.302zm-25.18 2.174a10.48 10.48 0 00-2.16-2.174l4.187-7.302 7.14 4.15-9.166 5.326zM44.843 79.147a10.452 10.452 0 000-8.303L64.66 59.327l4.188 7.3a10.386 10.386 0 00-3.087 3.682 10.457 10.457 0 000 9.373 10.386 10.386 0 003.087 3.68l-4.188 7.3-19.817-11.515zm26.033-13.7a10.249 10.249 0 018.25 0l4.186-7.3-8.31-4.83-8.313 4.83 4.187 7.3zm8.25 19.097a10.25 10.25 0 01-8.25 0l-4.186 7.298L75 96.672l8.31-4.83-4.186-7.298zM61.33 48.803a10.436 10.436 0 002.16-2.174l9.167 5.326-7.14 4.15-4.187-7.302zm3.333-4.216a10.482 10.482 0 00.45-7.048 10.415 10.415 0 00-4.118-5.718 10.298 10.298 0 00-13.144 1.247 10.47 10.47 0 00-1.234 13.23 10.354 10.354 0 005.682 4.144c2.316.673 4.792.512 7.002-.456l4.187 7.299L43.669 68.8a10.35 10.35 0 00-5.185-3.733 10.285 10.285 0 00-6.375.034 10.353 10.353 0 00-5.145 3.788A10.462 10.462 0 0025 74.995c0 2.192.687 4.328 1.964 6.104a10.353 10.353 0 005.145 3.789c2.069.686 4.3.698 6.375.034a10.352 10.352 0 005.185-3.734l19.82 11.518-4.187 7.298a10.302 10.302 0 00-7.013-.46 10.37 10.37 0 00-5.692 4.149 10.482 10.482 0 001.236 13.251 10.31 10.31 0 0013.165 1.245 10.43 10.43 0 004.122-5.728c.67-2.335.508-4.831-.456-7.059l10.337-6.006 10.335 6.008a10.483 10.483 0 00-.45 7.049 10.417 10.417 0 004.119 5.718 10.294 10.294 0 006.796 1.76 10.32 10.32 0 006.35-3.007 10.473 10.473 0 001.234-13.232 10.357 10.357 0 00-5.683-4.144 10.288 10.288 0 00-7.002.456l-4.187-7.298 19.82-11.517a10.348 10.348 0 005.185 3.732c2.075.664 4.306.652 6.374-.034a10.356 10.356 0 005.145-3.788A10.463 10.463 0 00125 74.995c0-2.192-.687-4.328-1.963-6.104a10.357 10.357 0 00-5.145-3.788 10.283 10.283 0 00-6.374-.034 10.348 10.348 0 00-5.185 3.732l-19.82-11.516 4.186-7.3c2.212.97 4.69 1.132 7.008.458a10.362 10.362 0 005.688-4.147 10.477 10.477 0 00-1.236-13.242 10.307 10.307 0 00-13.156-1.245 10.422 10.422 0 00-4.12 5.724 10.489 10.489 0 00.453 7.054l-10.335 6.006-10.337-6.006z" fill="#333"></path></svg>
+                      <svg
+                        aria-label="node web icon"
+                        fill="none"
+                        role="img"
+                        viewBox="0 0 150 150"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="size-10 rounded-lg shadow"
+                      >
+                        <rect
+                          width="150"
+                          height="150"
+                          rx="32"
+                          fill="#fff"
+                        ></rect>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M86.51 46.629c.61.828 1.338 1.56 2.161 2.174l-4.188 7.303-7.139-4.15 9.166-5.327zm18.65 24.215a10.451 10.451 0 000 8.303L85.341 90.663l-4.188-7.3a10.384 10.384 0 003.087-3.681 10.458 10.458 0 000-9.373 10.384 10.384 0 00-3.087-3.681l4.187-7.301 19.819 11.517h.001zm-16.489 30.343a10.494 10.494 0 00-2.161 2.174l-9.166-5.327 7.14-4.149 4.187 7.302zm-25.18 2.174a10.48 10.48 0 00-2.16-2.174l4.187-7.302 7.14 4.15-9.166 5.326zM44.843 79.147a10.452 10.452 0 000-8.303L64.66 59.327l4.188 7.3a10.386 10.386 0 00-3.087 3.682 10.457 10.457 0 000 9.373 10.386 10.386 0 003.087 3.68l-4.188 7.3-19.817-11.515zm26.033-13.7a10.249 10.249 0 018.25 0l4.186-7.3-8.31-4.83-8.313 4.83 4.187 7.3zm8.25 19.097a10.25 10.25 0 01-8.25 0l-4.186 7.298L75 96.672l8.31-4.83-4.186-7.298zM61.33 48.803a10.436 10.436 0 002.16-2.174l9.167 5.326-7.14 4.15-4.187-7.302zm3.333-4.216a10.482 10.482 0 00.45-7.048 10.415 10.415 0 00-4.118-5.718 10.298 10.298 0 00-13.144 1.247 10.47 10.47 0 00-1.234 13.23 10.354 10.354 0 005.682 4.144c2.316.673 4.792.512 7.002-.456l4.187 7.299L43.669 68.8a10.35 10.35 0 00-5.185-3.733 10.285 10.285 0 00-6.375.034 10.353 10.353 0 00-5.145 3.788A10.462 10.462 0 0025 74.995c0 2.192.687 4.328 1.964 6.104a10.353 10.353 0 005.145 3.789c2.069.686 4.3.698 6.375.034a10.352 10.352 0 005.185-3.734l19.82 11.518-4.187 7.298a10.302 10.302 0 00-7.013-.46 10.37 10.37 0 00-5.692 4.149 10.482 10.482 0 001.236 13.251 10.31 10.31 0 0013.165 1.245 10.43 10.43 0 004.122-5.728c.67-2.335.508-4.831-.456-7.059l10.337-6.006 10.335 6.008a10.483 10.483 0 00-.45 7.049 10.417 10.417 0 004.119 5.718 10.294 10.294 0 006.796 1.76 10.32 10.32 0 006.35-3.007 10.473 10.473 0 001.234-13.232 10.357 10.357 0 00-5.683-4.144 10.288 10.288 0 00-7.002.456l-4.187-7.298 19.82-11.517a10.348 10.348 0 005.185 3.732c2.075.664 4.306.652 6.374-.034a10.356 10.356 0 005.145-3.788A10.463 10.463 0 00125 74.995c0-2.192-.687-4.328-1.963-6.104a10.357 10.357 0 00-5.145-3.788 10.283 10.283 0 00-6.374-.034 10.348 10.348 0 00-5.185 3.732l-19.82-11.516 4.186-7.3c2.212.97 4.69 1.132 7.008.458a10.362 10.362 0 005.688-4.147 10.477 10.477 0 00-1.236-13.242 10.307 10.307 0 00-13.156-1.245 10.422 10.422 0 00-4.12 5.724 10.489 10.489 0 00.453 7.054l-10.335 6.006-10.337-6.006z"
+                          fill="#333"
+                        ></path>
+                      </svg>
                     </div>
                     <div>
-                      <div class="font-bold text-black dark:text-white">Node</div>
-                      <div class="font-normal text-gray-500">AI node network</div>
+                      <div class="font-bold text-black dark:text-white">
+                        Node
+                      </div>
+                      <div class="font-normal text-gray-500">
+                        AI node network
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -1148,7 +1231,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
-                height="2
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -1208,19 +1291,11 @@
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
                   Light
-                  <span
-                    id="light-dot"
-                    class="ml-2 w-2 h-2 rounded-full bg-black dark:bg-white hidden"
-                  ></span>
                 </button>
                 <button
                   id="dark-btn"
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
-                  <span
-                    id="dark-dot"
-                    class="ml-2 w-2 h-2 rounded-full bg-white dark:bg-black hidden"
-                  ></span>
                   Dark
                 </button>
                 <button
@@ -1228,20 +1303,12 @@
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
                   Lights Out
-                  <span
-                    id="lights-out-dot"
-                    class="ml-2 w-2 h-2 rounded-full bg-black dark:bg-white hidden"
-                  ></span>
                 </button>
                 <button
                   id="system-btn"
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
                   System
-                  <span
-                    id="system-dot"
-                    class="ml-2 w-2 h-2 rounded-full bg-black dark:bg-white hidden"
-                  ></span>
                 </button>
               </div>
             </div>
@@ -1330,21 +1397,27 @@
                             left: 0;
                           "
                         >
-                        <div
-                        style="transform: translate(0px); pointer-events: all; height: 100%; display: flex; justify-content: center; align-items: center;"
-                        tabindex="0"
-                        role="button"
-                      >
-                        <div class="flex justify-center my-auto">
-                          <span
-                            class="mx-auto relative bg-white flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-lg font-bold hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#262626] bg-white dark:bg-[#30363D]"
-                            style="max-width: 130px"
+                          <div
+                            style="
+                              transform: translate(0px);
+                              pointer-events: all;
+                              height: 100%;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                            "
+                            tabindex="0"
+                            role="button"
                           >
-                            Welcome!
-                          </span>
-                        </div>
-                      </div>
-                      
+                            <div class="flex justify-center my-auto">
+                              <span
+                                class="mx-auto relative bg-white flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-lg font-bold hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#262626] bg-white dark:bg-[#30363D]"
+                                style="max-width: 130px"
+                              >
+                                Welcome!
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div class=""></div>
                       </div>
@@ -1619,7 +1692,7 @@
         </div>
         <!-- Middle -->
         <div
-          class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2 dark:bg-[#151A21] "
+          class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2 dark:bg-[#151A21]"
         >
           <div
             class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white dark:bg-[#0D1116] shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:inset-4 lg:rounded-lg lg:border dark:lg:border-[#30363D]"
@@ -1630,322 +1703,420 @@
             <div
               class="relative mb-1.5 overflow-y-auto overflow-x-hidden border-b dark:border-[#30363D]"
             >
-
-            <nav
-            class=" flex items-center justify-between border-b dark:border-[#30363D] bg-white dark:bg-[#0D1116] p-2.5 lg:hidden"
-          >
-            <div class="w-10">
-              <button
-                type="button"
-                class="border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] dark:text-[#D4D4D4]"
-                id="toggle-sheet-l"
+              <nav
+                class="flex items-center justify-between border-b dark:border-[#30363D] bg-white dark:bg-[#0D1116] p-2.5 lg:hidden"
               >
-                <svg
-                  class="h-4 w-4"
-                  fill="none"
-                  height="10"
-                  viewBox="0 0 12 10"
-                  width="12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.5 9H9.5C10.3284 9 11 8.32843 11 7.5V2.5C11 1.67157 10.3284 1 9.5 1H2.5M2.5 9C1.67157 9 1 8.32843 1 7.5V2.5C1 1.67157 1.67157 1 2.5 1M2.5 9H5V1H2.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div class="mx-auto flex flex-grow items-center justify-center px-2">
-              <div class="flex items-center gap-x-1.5 md:gap-x-2.5">
-                <a
-                  href="/play.hyper.space/index.html"
-                  style="-webkit-touch-callout: none"
-                  ><svg
-                    class="h-6 md:h-8"
-                    fill="none"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 104 104"
+                <div class="w-10">
+                  <button
+                    type="button"
+                    class="border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] dark:text-[#D4D4D4]"
+                    id="toggle-sheet-l"
                   >
-                    <path
-                      d="M101.747 49.847h-10.37a19.579 19.579 0 01-13.784-5.659 19.241 19.241 0 01-5.71-13.662V20.245c0-1.181-.917-2.208-2.105-2.244-1.189-.036-2.24.94-2.24 2.153v10.368a19.235 19.235 0 01-5.709 13.662l-.082.08c-5.37 5.262-14.107 5.262-19.477 0l-.082-.08a19.242 19.242 0 01-5.71-13.662V20.245c0-1.181-.917-2.208-2.105-2.244-1.189-.036-2.24.94-2.24 2.153v10.368a19.234 19.234 0 01-5.71 13.662 19.583 19.583 0 01-13.782 5.66H2.266c-1.19 0-2.228.909-2.265 2.086-.037 1.177.948 2.218 2.173 2.218h10.458a19.58 19.58 0 0113.783 5.66 19.242 19.242 0 015.71 13.662v10.28c0 1.182.917 2.209 2.106 2.245 1.188.036 2.239-.94 2.239-2.153V73.474a19.234 19.234 0 015.71-13.662l.081-.081c5.37-5.262 14.108-5.262 19.478 0l.082.08a19.242 19.242 0 015.71 13.663v10.28c0 1.182.917 2.209 2.105 2.245 1.188.036 2.24-.94 2.24-2.153V73.478a19.234 19.234 0 015.709-13.662 19.583 19.583 0 0113.783-5.66h10.458c1.221 0 2.21-1 2.173-2.218-.036-1.214-1.066-2.081-2.254-2.086-.002 0-.003-.004-.001-.005h.003z"
-                      class="fill-[#333333] dark:fill-[#D4D4D4]"
-                    ></path></svg></a
-                ><svg
-                  class="text-[#e5e5e5] dark:text-[#30363d] lights-out:text-[#353535] size-5"
-                  fill="none"
-                  role="img
-                  viewBox="0 0 10 21"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.83607 0.5H9.30273L2.7694 20.5H0.302734L6.83607 0.5Z"
-                    fill="currentColor"
-                  ></path></svg
-                >
-                <button
-                  type="button" onclick="toggleLogoPopover(event)"
-                  class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
-                >
-                  <div class="text-[#333333] dark:text-[#D4D4D4]">
                     <svg
+                      class="h-4 w-4"
                       fill="none"
-                      role="img"
-                      viewBox="0 0 150 150"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      width="12"
                       xmlns="http://www.w3.org/2000/svg"
-                      class="size-5"
-                    >
-                      <rect
-                        width="150"
-                        height="150"
-                        rx="31.929"
-                        fill="#222"
-                      ></rect>
-                      <g filter="url(#prefix__filter0_d_720_2)">
-                        <rect
-                          width="59.302"
-                          height="75.491"
-                          rx="7.105"
-                          transform="rotate(13.984 -113.534 263.576) skewX(.117)"
-                          fill="#fff"
-                        ></rect>
-                      </g>
-                      <g filter="url(#prefix__filter1_d_720_2)">
-                        <rect
-                          width="61.829"
-                          height="79.807"
-                          rx="7.105"
-                          transform="rotate(8.084 -197.42 352.575) skewX(.05)"
-                          fill="#fff"
-                        ></rect>
-                      </g>
-                      <g filter="url(#prefix__filter2_d_720_2)">
-                        <rect
-                          x="35.496"
-                          y="28.198"
-                          width="63.522"
-                          height="83.694"
-                          rx="7.105"
-                          transform="rotate(3.772 35.496 28.198)"
-                          fill="#fff"
-                        ></rect>
-                      </g>
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M40.735 41.075a.966.966 0 011.013-.917L87 42.563c.53.028.938.484.91 1.018a.966.966 0 01-1.013.916l-45.25-2.403a.966.966 0 01-.91-1.019zM40.24 48.338a.966.966 0 011.012-.916l45.251 2.403a.965.965 0 01.91 1.018.966.966 0 01-1.013.916l-45.25-2.403a.965.965 0 01-.91-1.018zM37.822 81.267a.966.966 0 011.013-.916l45.251 2.403c.531.029.939.484.91 1.019a.966.966 0 01-1.013.916l-45.25-2.404a.965.965 0 01-.91-1.018zM39.763 55.602a.966.966 0 011.013-.916l45.25 2.404a.965.965 0 01.91 1.018.966.966 0 01-1.012.916L40.673 56.62a.966.966 0 01-.91-1.018zM37.347 88.53a.966.966 0 011.012-.916l45.251 2.404a.965.965 0 01.91 1.018.966.966 0 01-1.013.916l-45.25-2.404a.965.965 0 01-.91-1.018zM39.288 62.874a.966.966 0 011.004-.926l22.144.96a.965.965 0 01.92 1.009.966.966 0 01-1.005.926l-22.144-.96a.965.965 0 01-.92-1.01zM38.794 70.148a.966.966 0 01.995-.936l14.442.478a.965.965 0 01.93 1 .966.966 0 01-.995.936l-14.442-.479a.965.965 0 01-.93-1zM36.377 95.812a.966.966 0 01.995-.936l14.442.478a.965.965 0 01.93 1 .966.966 0 01-.995.936l-14.442-.479a.965.965 0 01-.93-1z"
-                        fill="#D3D3D3"
-                      ></path>
-                      <defs>
-                        <filter
-                          id="prefix__filter0_d_720_2"
-                          x="42.013"
-                          y="35.035"
-                          width="79.469"
-                          height="91.431"
-                          filterUnits="userSpaceOnUse"
-                          color-interpolation-filters="sRGB"
-                        >
-                          <feFlood
-                            flood-opacity="0"
-                            result="BackgroundImageFix"
-                          ></feFlood>
-                          <feColorMatrix
-                            in="SourceAlpha"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                            result="hardAlpha"
-                          ></feColorMatrix>
-                          <feOffset dx="1.694" dy="1.694"></feOffset>
-                          <feGaussianBlur stdDeviation="1.705"></feGaussianBlur>
-                          <feComposite
-                            in2="hardAlpha"
-                            operator="out"
-                          ></feComposite>
-                          <feColorMatrix
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                          ></feColorMatrix>
-                          <feBlend
-                            in2="BackgroundImageFix"
-                            result="effect1_dropShadow_720_2"
-                          ></feBlend>
-                          <feBlend
-                            in="SourceGraphic"
-                            in2="effect1_dropShadow_720_2"
-                            result="shape"
-                          ></feBlend>
-                        </filter>
-                        <filter
-                          id="prefix__filter1_d_720_2"
-                          x="35.67"
-                          y="30.476"
-                          width="77.344"
-                          height="92.683"
-                          filterUnits="userSpaceOnUse"
-                          color-interpolation-filters="sRGB"
-                        >
-                          <feFlood
-                            flood-opacity="0"
-                            result="BackgroundImageFix"
-                          ></feFlood>
-                          <feColorMatrix
-                            in="SourceAlpha"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                            result="hardAlpha"
-                          ></feColorMatrix>
-                          <feOffset dx="1.694" dy="1.694"></feOffset>
-                          <feGaussianBlur stdDeviation="1.705"></feGaussianBlur>
-                          <feComposite
-                            in2="hardAlpha"
-                            operator="out"
-                          ></feComposite>
-                          <feColorMatrix
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                          ></feColorMatrix>
-                          <feBlend
-                            in2="BackgroundImageFix"
-                            result="effect1_dropShadow_720_2"
-                          ></feBlend>
-                          <feBlend
-                            in="SourceGraphic"
-                            in2="effect1_dropShadow_720_2"
-                            result="shape"
-                          ></feBlend>
-                        </filter>
-                        <filter
-                          id="prefix__filter2_d_720_2"
-                          x="28.726"
-                          y="26.934"
-                          width="74.807"
-                          height="93.609"
-                          filterUnits="userSpaceOnUse"
-                          color-interpolation-filters="sRGB"
-                        >
-                          <feFlood
-                            flood-opacity="0"
-                            result="BackgroundImageFix"
-                          ></feFlood>
-                          <feColorMatrix
-                            in="SourceAlpha"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                            result="hardAlpha"
-                          ></feColorMatrix>
-                          <feOffset dx="1.694" dy="1.694"></feOffset>
-                          <feGaussianBlur stdDeviation="1.705"></feGaussianBlur>
-                          <feComposite
-                            in2="hardAlpha"
-                            operator="out"
-                          ></feComposite>
-                          <feColorMatrix
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                          ></feColorMatrix>
-                          <feBlend
-                            in2="BackgroundImageFix"
-                            result="effect1_dropShadow_720_2"
-                          ></feBlend>
-                          <feBlend
-                            in="SourceGraphic"
-                            in2="effect1_dropShadow_720_2"
-                            result="shape"
-                          ></feBlend>
-                        </filter>
-                      </defs>
-                    </svg>
-                  </div>
-                  <span class="dark:text-[#D4D4D4]">Play</span>
-                  <div>
-                    <svg
-                      fill="none"
-                      role="img"
-                      viewBox="0 0 11 11"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="size-3"
                     >
                       <path
-                        d="M7.803 7.643l-2.5 2.5-2.5-2.5M7.803 3.356l-2.5-2.5-2.5 2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width=".974"
-                        class="stroke-[#333333] dark:stroke-[#D4D4D4]"
+                        d="M2.5 9H9.5C10.3284 9 11 8.32843 11 7.5V2.5C11 1.67157 10.3284 1 9.5 1H2.5M2.5 9C1.67157 9 1 8.32843 1 7.5V2.5C1 1.67157 1.67157 1 2.5 1M2.5 9H5V1H2.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
                       ></path>
                     </svg>
-                  </div>
-                </button>
+                  </button>
+                </div>
+                <div
+                  class="mx-auto flex flex-grow items-center justify-center px-2"
+                >
+                  <div class="flex items-center gap-x-1.5 md:gap-x-2.5">
+                    <a
+                      href="/play.hyper.space/index.html"
+                      style="-webkit-touch-callout: none"
+                      ><svg
+                        class="h-6 md:h-8"
+                        fill="none"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 104 104"
+                      >
+                        <path
+                          d="M101.747 49.847h-10.37a19.579 19.579 0 01-13.784-5.659 19.241 19.241 0 01-5.71-13.662V20.245c0-1.181-.917-2.208-2.105-2.244-1.189-.036-2.24.94-2.24 2.153v10.368a19.235 19.235 0 01-5.709 13.662l-.082.08c-5.37 5.262-14.107 5.262-19.477 0l-.082-.08a19.242 19.242 0 01-5.71-13.662V20.245c0-1.181-.917-2.208-2.105-2.244-1.189-.036-2.24.94-2.24 2.153v10.368a19.234 19.234 0 01-5.71 13.662 19.583 19.583 0 01-13.782 5.66H2.266c-1.19 0-2.228.909-2.265 2.086-.037 1.177.948 2.218 2.173 2.218h10.458a19.58 19.58 0 0113.783 5.66 19.242 19.242 0 015.71 13.662v10.28c0 1.182.917 2.209 2.106 2.245 1.188.036 2.239-.94 2.239-2.153V73.474a19.234 19.234 0 015.71-13.662l.081-.081c5.37-5.262 14.108-5.262 19.478 0l.082.08a19.242 19.242 0 015.71 13.663v10.28c0 1.182.917 2.209 2.105 2.245 1.188.036 2.24-.94 2.24-2.153V73.478a19.234 19.234 0 015.709-13.662 19.583 19.583 0 0113.783-5.66h10.458c1.221 0 2.21-1 2.173-2.218-.036-1.214-1.066-2.081-2.254-2.086-.002 0-.003-.004-.001-.005h.003z"
+                          class="fill-[#333333] dark:fill-[#D4D4D4]"
+                        ></path></svg></a
+                    ><svg
+                      class="text-[#e5e5e5] dark:text-[#30363d] lights-out:text-[#353535] size-5"
+                      fill="none"
+                      role="img"
+                      viewBox="0 0 10 21"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.83607 0.5H9.30273L2.7694 20.5H0.302734L6.83607 0.5Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    <button
+                      type="button"
+                      onclick="toggleLogoPopover(event)"
+                      class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                    >
+                      <div class="text-[#333333] dark:text-[#D4D4D4]">
+                        <svg
+                          fill="none"
+                          role="img"
+                          viewBox="0 0 150 150"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-5"
+                        >
+                          <rect
+                            width="150"
+                            height="150"
+                            rx="31.929"
+                            fill="#222"
+                          ></rect>
+                          <g filter="url(#prefix__filter0_d_720_2)">
+                            <rect
+                              width="59.302"
+                              height="75.491"
+                              rx="7.105"
+                              transform="rotate(13.984 -113.534 263.576) skewX(.117)"
+                              fill="#fff"
+                            ></rect>
+                          </g>
+                          <g filter="url(#prefix__filter1_d_720_2)">
+                            <rect
+                              width="61.829"
+                              height="79.807"
+                              rx="7.105"
+                              transform="rotate(8.084 -197.42 352.575) skewX(.05)"
+                              fill="#fff"
+                            ></rect>
+                          </g>
+                          <g filter="url(#prefix__filter2_d_720_2)">
+                            <rect
+                              x="35.496"
+                              y="28.198"
+                              width="63.522"
+                              height="83.694"
+                              rx="7.105"
+                              transform="rotate(3.772 35.496 28.198)"
+                              fill="#fff"
+                            ></rect>
+                          </g>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M40.735 41.075a.966.966 0 011.013-.917L87 42.563c.53.028.938.484.91 1.018a.966.966 0 01-1.013.916l-45.25-2.403a.966.966 0 01-.91-1.019zM40.24 48.338a.966.966 0 011.012-.916l45.251 2.403a.965.965 0 01.91 1.018.966.966 0 01-1.013.916l-45.25-2.403a.965.965 0 01-.91-1.018zM37.822 81.267a.966.966 0 011.013-.916l45.251 2.403c.531.029.939.484.91 1.019a.966.966 0 01-1.013.916l-45.25-2.404a.965.965 0 01-.91-1.018zM39.763 55.602a.966.966 0 011.013-.916l45.25 2.404a.965.965 0 01.91 1.018.966.966 0 01-1.012.916L40.673 56.62a.966.966 0 01-.91-1.018zM37.347 88.53a.966.966 0 011.012-.916l45.251 2.404a.965.965 0 01.91 1.018.966.966 0 01-1.013.916l-45.25-2.404a.965.965 0 01-.91-1.018zM39.288 62.874a.966.966 0 011.004-.926l22.144.96a.965.965 0 01.92 1.009.966.966 0 01-1.005.926l-22.144-.96a.965.965 0 01-.92-1.01zM38.794 70.148a.966.966 0 01.995-.936l14.442.478a.965.965 0 01.93 1 .966.966 0 01-.995.936l-14.442-.479a.965.965 0 01-.93-1zM36.377 95.812a.966.966 0 01.995-.936l14.442.478a.965.965 0 01.93 1 .966.966 0 01-.995.936l-14.442-.479a.965.965 0 01-.93-1z"
+                            fill="#D3D3D3"
+                          ></path>
+                          <defs>
+                            <filter
+                              id="prefix__filter0_d_720_2"
+                              x="42.013"
+                              y="35.035"
+                              width="79.469"
+                              height="91.431"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              ></feFlood>
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              ></feColorMatrix>
+                              <feOffset dx="1.694" dy="1.694"></feOffset>
+                              <feGaussianBlur
+                                stdDeviation="1.705"
+                              ></feGaussianBlur>
+                              <feComposite
+                                in2="hardAlpha"
+                                operator="out"
+                              ></feComposite>
+                              <feColorMatrix
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              ></feColorMatrix>
+                              <feBlend
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_720_2"
+                              ></feBlend>
+                              <feBlend
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_720_2"
+                                result="shape"
+                              ></feBlend>
+                            </filter>
+                            <filter
+                              id="prefix__filter1_d_720_2"
+                              x="35.67"
+                              y="30.476"
+                              width="77.344"
+                              height="92.683"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              ></feFlood>
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              ></feColorMatrix>
+                              <feOffset dx="1.694" dy="1.694"></feOffset>
+                              <feGaussianBlur
+                                stdDeviation="1.705"
+                              ></feGaussianBlur>
+                              <feComposite
+                                in2="hardAlpha"
+                                operator="out"
+                              ></feComposite>
+                              <feColorMatrix
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              ></feColorMatrix>
+                              <feBlend
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_720_2"
+                              ></feBlend>
+                              <feBlend
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_720_2"
+                                result="shape"
+                              ></feBlend>
+                            </filter>
+                            <filter
+                              id="prefix__filter2_d_720_2"
+                              x="28.726"
+                              y="26.934"
+                              width="74.807"
+                              height="93.609"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              ></feFlood>
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              ></feColorMatrix>
+                              <feOffset dx="1.694" dy="1.694"></feOffset>
+                              <feGaussianBlur
+                                stdDeviation="1.705"
+                              ></feGaussianBlur>
+                              <feComposite
+                                in2="hardAlpha"
+                                operator="out"
+                              ></feComposite>
+                              <feColorMatrix
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              ></feColorMatrix>
+                              <feBlend
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_720_2"
+                              ></feBlend>
+                              <feBlend
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_720_2"
+                                result="shape"
+                              ></feBlend>
+                            </filter>
+                          </defs>
+                        </svg>
+                      </div>
+                      <span class="dark:text-[#D4D4D4]">Play</span>
+                      <div>
+                        <svg
+                          fill="none"
+                          role="img"
+                          viewBox="0 0 11 11"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-3"
+                        >
+                          <path
+                            d="M7.803 7.643l-2.5 2.5-2.5-2.5M7.803 3.356l-2.5-2.5-2.5 2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width=".974"
+                            class="stroke-[#333333] dark:stroke-[#D4D4D4]"
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
 
-                <div id="popoverLogoContent" class="hidden fixed left-0  top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-50 dark:bg-[#0d1116]">
-                  <div role="menu" aria-orientation="vertical" class="space-y-2.5">
-                    <a href="https://compute.hyper.space" target="_blank" class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]">
-                      <div class="flex items-center">
-                        <svg aria-label="compute icon" fill="none" role="img" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" class="size-10 rounded-lg shadow"><rect width="150" height="150" rx="32" fill="#222"></rect><path d="M121.838 71.838v-.002l.001-.003A3.169 3.169 0 01125 75a3.17 3.17 0 01-3.167 3.167h-15.249c-1.947 0-3.875.2-5.754.589a7.716 7.716 0 00-4.915 11.858 28.419 28.419 0 003.66 4.498l10.779 10.778.003-.001.002-.001a3.169 3.169 0 01-.004 4.474 3.169 3.169 0 01-4.479 0L95.093 99.58a28.4 28.4 0 00-4.48-3.65 7.715 7.715 0 00-11.86 4.917 28.402 28.402 0 00-.586 5.737v15.249A3.17 3.17 0 0175 125a3.17 3.17 0 01-3.167-3.167v-15.249c0-1.942-.2-3.864-.586-5.739a7.715 7.715 0 00-11.861-4.915 28.408 28.408 0 00-4.48 3.65l-10.783 10.782a3.168 3.168 0 01-4.479 0 3.17 3.17 0 010-4.479l10.783-10.782a28.393 28.393 0 003.652-4.486 7.715 7.715 0 00-4.914-11.86 28.407 28.407 0 00-5.749-.588H28.167A3.169 3.169 0 0125 75a3.169 3.169 0 013.167-3.167h15.26c1.938 0 3.857-.198 5.728-.584a7.714 7.714 0 004.917-11.862 28.409 28.409 0 00-3.645-4.474L39.644 44.13a3.17 3.17 0 010-4.479 3.17 3.17 0 014.479 0l10.79 10.79a28.397 28.397 0 004.478 3.648 7.716 7.716 0 0011.862-4.909c.39-1.882.59-3.813.59-5.764V28.167A3.17 3.17 0 0175.012 25a3.169 3.169 0 013.167 3.167v15.254c0 1.948.2 3.875.589 5.754a7.715 7.715 0 0011.863 4.91 28.41 28.41 0 004.47-3.643l10.783-10.783a3.17 3.17 0 014.479 0 3.169 3.169 0 010 4.479L99.576 54.924a28.392 28.392 0 00-3.637 4.462 7.714 7.714 0 004.91 11.865c1.876.388 3.801.587 5.746.587h15.243z" fill="#fff"></path></svg>
+                    <div
+                      id="popoverLogoContent"
+                      class="hidden fixed left-0 top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-50 dark:bg-[#0d1116]"
+                    >
+                      <div
+                        role="menu"
+                        aria-orientation="vertical"
+                        class="space-y-2.5"
+                      >
+                        <a
+                          href="https://compute.hyper.space"
+                          target="_blank"
+                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                        >
+                          <div class="flex items-center">
+                            <svg
+                              aria-label="compute icon"
+                              fill="none"
+                              role="img"
+                              viewBox="0 0 150 150"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="size-10 rounded-lg shadow"
+                            >
+                              <rect
+                                width="150"
+                                height="150"
+                                rx="32"
+                                fill="#222"
+                              ></rect>
+                              <path
+                                d="M121.838 71.838v-.002l.001-.003A3.169 3.169 0 01125 75a3.17 3.17 0 01-3.167 3.167h-15.249c-1.947 0-3.875.2-5.754.589a7.716 7.716 0 00-4.915 11.858 28.419 28.419 0 003.66 4.498l10.779 10.778.003-.001.002-.001a3.169 3.169 0 01-.004 4.474 3.169 3.169 0 01-4.479 0L95.093 99.58a28.4 28.4 0 00-4.48-3.65 7.715 7.715 0 00-11.86 4.917 28.402 28.402 0 00-.586 5.737v15.249A3.17 3.17 0 0175 125a3.17 3.17 0 01-3.167-3.167v-15.249c0-1.942-.2-3.864-.586-5.739a7.715 7.715 0 00-11.861-4.915 28.408 28.408 0 00-4.48 3.65l-10.783 10.782a3.168 3.168 0 01-4.479 0 3.17 3.17 0 010-4.479l10.783-10.782a28.393 28.393 0 003.652-4.486 7.715 7.715 0 00-4.914-11.86 28.407 28.407 0 00-5.749-.588H28.167A3.169 3.169 0 0125 75a3.169 3.169 0 013.167-3.167h15.26c1.938 0 3.857-.198 5.728-.584a7.714 7.714 0 004.917-11.862 28.409 28.409 0 00-3.645-4.474L39.644 44.13a3.17 3.17 0 010-4.479 3.17 3.17 0 014.479 0l10.79 10.79a28.397 28.397 0 004.478 3.648 7.716 7.716 0 0011.862-4.909c.39-1.882.59-3.813.59-5.764V28.167A3.17 3.17 0 0175.012 25a3.169 3.169 0 013.167 3.167v15.254c0 1.948.2 3.875.589 5.754a7.715 7.715 0 0011.863 4.91 28.41 28.41 0 004.47-3.643l10.783-10.783a3.17 3.17 0 014.479 0 3.169 3.169 0 010 4.479L99.576 54.924a28.392 28.392 0 00-3.637 4.462 7.714 7.714 0 004.91 11.865c1.876.388 3.801.587 5.746.587h15.243z"
+                                fill="#fff"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div>
+                            <div class="font-bold text-black dark:text-white">
+                              Compute
+                            </div>
+                            <div class="font-normal text-gray-500">
+                              Advanced AI research tool
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="https://network.hyper.space"
+                          target="_blank"
+                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                        >
+                          <div class="flex items-center">
+                            <svg
+                              aria-label="network product icon"
+                              fill="none"
+                              role="img"
+                              viewBox="0 0 150 150"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="size-10 rounded-lg shadow"
+                            >
+                              <rect
+                                width="150"
+                                height="150"
+                                rx="32"
+                                fill="#222"
+                              ></rect>
+                              <path
+                                d="M45.988 73.304h9.565A17.824 17.824 0 0073.378 55.48v-9.565a1.988 1.988 0 013.973 0v9.566a17.824 17.824 0 0017.824 17.824h9.565c1.096 0 1.987.89 1.987 1.987a1.988 1.988 0 01-1.987 1.986h-9.565a17.823 17.823 0 00-17.824 17.825v9.565a1.987 1.987 0 01-3.974 0v-9.565a17.824 17.824 0 00-17.824-17.825h-9.565A1.988 1.988 0 0144 75.291c0-1.096.89-1.987 1.987-1.987zM74.99 34.5c4.915 0 8.916-4 8.916-8.915 0-4.915-4.001-8.915-8.916-8.915-4.917 0-8.917 4-8.917 8.915 0 4.914 4 8.915 8.918 8.915z"
+                                fill="#fff"
+                              ></path>
+                              <path
+                                d="M48.425 100.61c-.459.459-.4 1.21.059 1.668.451.452 1.19.487 1.641.036l11.85-11.852c.458-.459.427-1.21-.03-1.672-.463-.469-1.223-.499-1.689-.032L48.425 100.61zM109.932 48.97a8.883 8.883 0 006.305-2.607c3.475-3.476 3.475-9.132 0-12.607-3.476-3.478-9.134-3.476-12.61 0-3.471 3.475-3.471 9.131 0 12.607a8.883 8.883 0 006.305 2.608zM101.94 49.781c.465-.465.43-1.225-.035-1.69-.463-.467-1.225-.5-1.69-.035L88.417 59.853c-.465.465-.44 1.225.028 1.687.476.47 1.246.49 1.719.018L101.94 49.78zM61.528 61.542c.468-.464.492-1.224.026-1.69L49.757 48.055c-.465-.465-1.222-.428-1.687.036-.454.451-.5 1.204-.048 1.657l11.789 11.81c.472.474 1.242.454 1.717-.016zM34.483 74.997c0-4.91-3.989-8.92-8.92-8.92-4.91 0-8.896 4.01-8.896 8.92s3.986 8.92 8.895 8.92c4.932 0 8.92-4.01 8.92-8.92zM33.754 103.654a8.765 8.765 0 00-2.625 6.295c0 2.382.924 4.618 2.625 6.295a8.808 8.808 0 006.295 2.625c2.282 0 4.57-.875 6.295-2.625 3.473-3.476 3.473-9.115 0-12.59-3.354-3.379-9.236-3.379-12.59 0zM103.633 103.654a8.873 8.873 0 00-2.601 6.295c0 2.284.872 4.569 2.601 6.295a8.806 8.806 0 006.295 2.625 8.905 8.905 0 006.317-2.625 8.836 8.836 0 002.603-6.295 8.836 8.836 0 00-2.603-6.295c-3.474-3.476-9.137-3.476-12.612 0zM40.049 48.966c2.282 0 4.569-.875 6.295-2.6 3.475-3.476 3.475-9.14 0-12.615a8.905 8.905 0 00-12.59 0c-1.702 1.677-2.625 3.937-2.625 6.32 0 2.381.923 4.617 2.625 6.294a8.889 8.889 0 006.295 2.601zM75 115.514c-4.934 0-8.92 3.987-8.92 8.896a8.91 8.91 0 008.92 8.92c4.91 0 8.896-3.986 8.896-8.92 0-4.909-3.987-8.896-8.896-8.896zM124.413 66.077c-4.934 0-8.92 4.01-8.92 8.92s3.986 8.92 8.92 8.92c4.91 0 8.92-4.01 8.92-8.92s-4.01-8.92-8.92-8.92zM102.319 102.255c.465-.465.5-1.225.035-1.69L90.549 88.758c-.466-.466-1.227-.436-1.691.033-.457.46-.489 1.213-.03 1.673l11.839 11.839c.452.451 1.202.405 1.652-.048z"
+                                fill="#fff"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div>
+                            <div class="font-bold text-black dark:text-white">
+                              Network
+                            </div>
+                            <div class="font-normal text-gray-500">
+                              Peer-to-peer AI network
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="https://node.hyper.space"
+                          target="_blank"
+                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                        >
+                          <div class="flex items-center">
+                            <svg
+                              aria-label="node web icon"
+                              fill="none"
+                              role="img"
+                              viewBox="0 0 150 150"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="size-10 rounded-lg shadow"
+                            >
+                              <rect
+                                width="150"
+                                height="150"
+                                rx="32"
+                                fill="#fff"
+                              ></rect>
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M86.51 46.629c.61.828 1.338 1.56 2.161 2.174l-4.188 7.303-7.139-4.15 9.166-5.327zm18.65 24.215a10.451 10.451 0 000 8.303L85.341 90.663l-4.188-7.3a10.384 10.384 0 003.087-3.681 10.458 10.458 0 000-9.373 10.384 10.384 0 00-3.087-3.681l4.187-7.301 19.819 11.517h.001zm-16.489 30.343a10.494 10.494 0 00-2.161 2.174l-9.166-5.327 7.14-4.149 4.187 7.302zm-25.18 2.174a10.48 10.48 0 00-2.16-2.174l4.187-7.302 7.14 4.15-9.166 5.326zM44.843 79.147a10.452 10.452 0 000-8.303L64.66 59.327l4.188 7.3a10.386 10.386 0 00-3.087 3.682 10.457 10.457 0 000 9.373 10.386 10.386 0 003.087 3.68l-4.188 7.3-19.817-11.515zm26.033-13.7a10.249 10.249 0 018.25 0l4.186-7.3-8.31-4.83-8.313 4.83 4.187 7.3zm8.25 19.097a10.25 10.25 0 01-8.25 0l-4.186 7.298L75 96.672l8.31-4.83-4.186-7.298zM61.33 48.803a10.436 10.436 0 002.16-2.174l9.167 5.326-7.14 4.15-4.187-7.302zm3.333-4.216a10.482 10.482 0 00.45-7.048 10.415 10.415 0 00-4.118-5.718 10.298 10.298 0 00-13.144 1.247 10.47 10.47 0 00-1.234 13.23 10.354 10.354 0 005.682 4.144c2.316.673 4.792.512 7.002-.456l4.187 7.299L43.669 68.8a10.35 10.35 0 00-5.185-3.733 10.285 10.285 0 00-6.375.034 10.353 10.353 0 00-5.145 3.788A10.462 10.462 0 0025 74.995c0 2.192.687 4.328 1.964 6.104a10.353 10.353 0 005.145 3.789c2.069.686 4.3.698 6.375.034a10.352 10.352 0 005.185-3.734l19.82 11.518-4.187 7.298a10.302 10.302 0 00-7.013-.46 10.37 10.37 0 00-5.692 4.149 10.482 10.482 0 001.236 13.251 10.31 10.31 0 0013.165 1.245 10.43 10.43 0 004.122-5.728c.67-2.335.508-4.831-.456-7.059l10.337-6.006 10.335 6.008a10.483 10.483 0 00-.45 7.049 10.417 10.417 0 004.119 5.718 10.294 10.294 0 006.796 1.76 10.32 10.32 0 006.35-3.007 10.473 10.473 0 001.234-13.232 10.357 10.357 0 00-5.683-4.144 10.288 10.288 0 00-7.002.456l-4.187-7.298 19.82-11.517a10.348 10.348 0 005.185 3.732c2.075.664 4.306.652 6.374-.034a10.356 10.356 0 005.145-3.788A10.463 10.463 0 00125 74.995c0-2.192-.687-4.328-1.963-6.104a10.357 10.357 0 00-5.145-3.788 10.283 10.283 0 00-6.374-.034 10.348 10.348 0 00-5.185 3.732l-19.82-11.516 4.186-7.3c2.212.97 4.69 1.132 7.008.458a10.362 10.362 0 005.688-4.147 10.477 10.477 0 00-1.236-13.242 10.307 10.307 0 00-13.156-1.245 10.422 10.422 0 00-4.12 5.724 10.489 10.489 0 00.453 7.054l-10.335 6.006-10.337-6.006z"
+                                fill="#333"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div>
+                            <div class="font-bold text-black dark:text-white">
+                              Node
+                            </div>
+                            <div class="font-normal text-gray-500">
+                              AI node network
+                            </div>
+                          </div>
+                        </a>
                       </div>
-                      <div>
-                        <div class="font-bold text-black dark:text-white">Compute</div>
-                        <div class="font-normal text-gray-500">Advanced AI research tool</div>
-                      </div>
-                    </a>
-                    <a href="https://network.hyper.space" target="_blank" class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]">
-                      <div class="flex items-center">
-                       <svg aria-label="network product icon" fill="none" role="img" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" class="size-10 rounded-lg shadow"><rect width="150" height="150" rx="32" fill="#222"></rect><path d="M45.988 73.304h9.565A17.824 17.824 0 0073.378 55.48v-9.565a1.988 1.988 0 013.973 0v9.566a17.824 17.824 0 0017.824 17.824h9.565c1.096 0 1.987.89 1.987 1.987a1.988 1.988 0 01-1.987 1.986h-9.565a17.823 17.823 0 00-17.824 17.825v9.565a1.987 1.987 0 01-3.974 0v-9.565a17.824 17.824 0 00-17.824-17.825h-9.565A1.988 1.988 0 0144 75.291c0-1.096.89-1.987 1.987-1.987zM74.99 34.5c4.915 0 8.916-4 8.916-8.915 0-4.915-4.001-8.915-8.916-8.915-4.917 0-8.917 4-8.917 8.915 0 4.914 4 8.915 8.918 8.915z" fill="#fff"></path><path d="M48.425 100.61c-.459.459-.4 1.21.059 1.668.451.452 1.19.487 1.641.036l11.85-11.852c.458-.459.427-1.21-.03-1.672-.463-.469-1.223-.499-1.689-.032L48.425 100.61zM109.932 48.97a8.883 8.883 0 006.305-2.607c3.475-3.476 3.475-9.132 0-12.607-3.476-3.478-9.134-3.476-12.61 0-3.471 3.475-3.471 9.131 0 12.607a8.883 8.883 0 006.305 2.608zM101.94 49.781c.465-.465.43-1.225-.035-1.69-.463-.467-1.225-.5-1.69-.035L88.417 59.853c-.465.465-.44 1.225.028 1.687.476.47 1.246.49 1.719.018L101.94 49.78zM61.528 61.542c.468-.464.492-1.224.026-1.69L49.757 48.055c-.465-.465-1.222-.428-1.687.036-.454.451-.5 1.204-.048 1.657l11.789 11.81c.472.474 1.242.454 1.717-.016zM34.483 74.997c0-4.91-3.989-8.92-8.92-8.92-4.91 0-8.896 4.01-8.896 8.92s3.986 8.92 8.895 8.92c4.932 0 8.92-4.01 8.92-8.92zM33.754 103.654a8.765 8.765 0 00-2.625 6.295c0 2.382.924 4.618 2.625 6.295a8.808 8.808 0 006.295 2.625c2.282 0 4.57-.875 6.295-2.625 3.473-3.476 3.473-9.115 0-12.59-3.354-3.379-9.236-3.379-12.59 0zM103.633 103.654a8.873 8.873 0 00-2.601 6.295c0 2.284.872 4.569 2.601 6.295a8.806 8.806 0 006.295 2.625 8.905 8.905 0 006.317-2.625 8.836 8.836 0 002.603-6.295 8.836 8.836 0 00-2.603-6.295c-3.474-3.476-9.137-3.476-12.612 0zM40.049 48.966c2.282 0 4.569-.875 6.295-2.6 3.475-3.476 3.475-9.14 0-12.615a8.905 8.905 0 00-12.59 0c-1.702 1.677-2.625 3.937-2.625 6.32 0 2.381.923 4.617 2.625 6.294a8.889 8.889 0 006.295 2.601zM75 115.514c-4.934 0-8.92 3.987-8.92 8.896a8.91 8.91 0 008.92 8.92c4.91 0 8.896-3.986 8.896-8.92 0-4.909-3.987-8.896-8.896-8.896zM124.413 66.077c-4.934 0-8.92 4.01-8.92 8.92s3.986 8.92 8.92 8.92c4.91 0 8.92-4.01 8.92-8.92s-4.01-8.92-8.92-8.92zM102.319 102.255c.465-.465.5-1.225.035-1.69L90.549 88.758c-.466-.466-1.227-.436-1.691.033-.457.46-.489 1.213-.03 1.673l11.839 11.839c.452.451 1.202.405 1.652-.048z" fill="#fff"></path></svg>
-                      </div>
-                      <div>
-                        <div class="font-bold text-black dark:text-white">Network</div>
-                        <div class="font-normal text-gray-500">Peer-to-peer AI network</div>
-                      </div>
-                    </a>
-                    <a href="https://node.hyper.space" target="_blank" class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]">
-                      <div class="flex items-center">
-                       <svg aria-label="node web icon" fill="none" role="img" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" class="size-10 rounded-lg shadow"><rect width="150" height="150" rx="32" fill="#fff"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M86.51 46.629c.61.828 1.338 1.56 2.161 2.174l-4.188 7.303-7.139-4.15 9.166-5.327zm18.65 24.215a10.451 10.451 0 000 8.303L85.341 90.663l-4.188-7.3a10.384 10.384 0 003.087-3.681 10.458 10.458 0 000-9.373 10.384 10.384 0 00-3.087-3.681l4.187-7.301 19.819 11.517h.001zm-16.489 30.343a10.494 10.494 0 00-2.161 2.174l-9.166-5.327 7.14-4.149 4.187 7.302zm-25.18 2.174a10.48 10.48 0 00-2.16-2.174l4.187-7.302 7.14 4.15-9.166 5.326zM44.843 79.147a10.452 10.452 0 000-8.303L64.66 59.327l4.188 7.3a10.386 10.386 0 00-3.087 3.682 10.457 10.457 0 000 9.373 10.386 10.386 0 003.087 3.68l-4.188 7.3-19.817-11.515zm26.033-13.7a10.249 10.249 0 018.25 0l4.186-7.3-8.31-4.83-8.313 4.83 4.187 7.3zm8.25 19.097a10.25 10.25 0 01-8.25 0l-4.186 7.298L75 96.672l8.31-4.83-4.186-7.298zM61.33 48.803a10.436 10.436 0 002.16-2.174l9.167 5.326-7.14 4.15-4.187-7.302zm3.333-4.216a10.482 10.482 0 00.45-7.048 10.415 10.415 0 00-4.118-5.718 10.298 10.298 0 00-13.144 1.247 10.47 10.47 0 00-1.234 13.23 10.354 10.354 0 005.682 4.144c2.316.673 4.792.512 7.002-.456l4.187 7.299L43.669 68.8a10.35 10.35 0 00-5.185-3.733 10.285 10.285 0 00-6.375.034 10.353 10.353 0 00-5.145 3.788A10.462 10.462 0 0025 74.995c0 2.192.687 4.328 1.964 6.104a10.353 10.353 0 005.145 3.789c2.069.686 4.3.698 6.375.034a10.352 10.352 0 005.185-3.734l19.82 11.518-4.187 7.298a10.302 10.302 0 00-7.013-.46 10.37 10.37 0 00-5.692 4.149 10.482 10.482 0 001.236 13.251 10.31 10.31 0 0013.165 1.245 10.43 10.43 0 004.122-5.728c.67-2.335.508-4.831-.456-7.059l10.337-6.006 10.335 6.008a10.483 10.483 0 00-.45 7.049 10.417 10.417 0 004.119 5.718 10.294 10.294 0 006.796 1.76 10.32 10.32 0 006.35-3.007 10.473 10.473 0 001.234-13.232 10.357 10.357 0 00-5.683-4.144 10.288 10.288 0 00-7.002.456l-4.187-7.298 19.82-11.517a10.348 10.348 0 005.185 3.732c2.075.664 4.306.652 6.374-.034a10.356 10.356 0 005.145-3.788A10.463 10.463 0 00125 74.995c0-2.192-.687-4.328-1.963-6.104a10.357 10.357 0 00-5.145-3.788 10.283 10.283 0 00-6.374-.034 10.348 10.348 0 00-5.185 3.732l-19.82-11.516 4.186-7.3c2.212.97 4.69 1.132 7.008.458a10.362 10.362 0 005.688-4.147 10.477 10.477 0 00-1.236-13.242 10.307 10.307 0 00-13.156-1.245 10.422 10.422 0 00-4.12 5.724 10.489 10.489 0 00.453 7.054l-10.335 6.006-10.337-6.006z" fill="#333"></path></svg>
-                      </div>
-                      <div>
-                        <div class="font-bold text-black dark:text-white">Node</div>
-                        <div class="font-normal text-gray-500">AI node network</div>
-                      </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="w-10">
-              <button
-                type="button"
-                id="toggle-sheet-r"
-                class="z-50 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4]"
-              >
-                <svg
-                  class="h-4 w-4"
-                  fill="none"
-                  height="8"
-                  viewBox="0 0 11 8"
-                  width="11"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.15125 1H9.55124"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-width="1.2"
-                  ></path>
-                  <path
-                    d="M1.15125 4H7.15125"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-width="1.2"
-                  ></path>
-                  <path
-                    d="M1.15125 7H4.75125"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-width="1.2"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-          </nav>
+                <div class="w-10">
+                  <button
+                    type="button"
+                    id="toggle-sheet-r"
+                    class="z-50 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4]"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      fill="none"
+                      height="8"
+                      viewBox="0 0 11 8"
+                      width="11"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.15125 1H9.55124"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-width="1.2"
+                      ></path>
+                      <path
+                        d="M1.15125 4H7.15125"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-width="1.2"
+                      ></path>
+                      <path
+                        d="M1.15125 7H4.75125"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-width="1.2"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </nav>
 
               <div
                 class="flex cursor-default select-none flex-col items-center py-8 text-center overflow-hidden pb-[20vh]"
               >
-              
                 <h1
                   class="mb-4 text-gray-700 dark:text-[#D4D4D4] text-xl font-semibold"
                 >
@@ -3007,18 +3178,18 @@
                           </svg>
                           <div class="flex items-center space-x-2">
                             <img
-                            alt="Web"
-                            class="h-6 w-6 dark:hidden"
-                            style="filter: none"
-                            src="./images/web.svg"
-                          />
+                              alt="Web"
+                              class="h-6 w-6 dark:hidden"
+                              style="filter: none"
+                              src="./images/web.svg"
+                            />
 
-                          <img
-                            alt="Web"
-                            class="h-6 w-6 hidden dark:block"
-                            style="filter: none"
-                            src="./images/web-invert.svg"
-                          />
+                            <img
+                              alt="Web"
+                              class="h-6 w-6 hidden dark:block"
+                              style="filter: none"
+                              src="./images/web-invert.svg"
+                            />
                             <h3 class="text-md font-semibold capitalize">
                               Web
                             </h3>
