@@ -52,7 +52,6 @@
               class="size-7 duration-300 select-none will-change-transform group-data-[state=open]/menu:rotate-45"
               viewBox="0 0 100 100"
               role="img"
-              aria-label="Toggle navigation icon"
             >
               <path
                 class="fill-none duration-300 stroke-current stroke-[5] [stroke-linecap:round] [stroke-dasharray:40_121] group-data-[state=open]/menu:[stroke-dashoffset:-68px]"
@@ -90,7 +89,6 @@
                   width="24"
                   class="text-black !duration-300 !ease-in-out will-change-transform group-hover/link:rotate-90 size-5 shrink-0 dark:text-[#D4D4D4]"
                   role="img"
-                  aria-label="Logo"
                 >
                   <path
                     fill="currentColor"
@@ -150,7 +148,6 @@
                 id="searchButton"
                 class="p-0.5 -m-0.5 hover:text-black duration-200 ease-in-out will-change-transform absolute inset-y-0 right-0 opacity-100 dark:text-[#999999] dark:hover:text-[#D4D4D4]"
                 tabindex="-1"
-                aria-label="Search"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -374,9 +371,9 @@
               class="border dark:border-[#303030] flex rounded-lg overflow-clip"
             >
               <input type="hidden" value="subscribe_form" /><input
-                class="border dark:border-[#303030] focus-visible:outline-none dark:bg-[#141414] dark:placeholder-[#5F5F5F] focus-visible:z-10 w-full appearance-none text-gray-700 resize-none [field-sizing:content] font-medium transition duration-150 placeholder:text-inherit placeholder:opacity-50 px-4 py-2.5 text-sm/tight rounded-lg flex-1 min-w-0 border-0 outline-0 !ring-0"
+                class="border dark:border-[#303030] focus-visible:outline-none dark:bg-[#141414] dark:placeholder-[#5F5F5F] focus-visible:z-10 w-full appearance-none text-gray-700 resize-none [field-sizing:content] font-medium transition duration-150 placeholder:text-inherit placeholder:opacity-90 px-4 py-2.5 text-sm/tight rounded-lg flex-1 min-w-0 border-0 outline-0 !ring-0"
                 type="email"
-                placeholder="Your email here..."
+                placeholder="Enter your email"
                 data-1p-ignore="true"
                 required=""
               />
@@ -5736,7 +5733,7 @@
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    class="border dark:border-[#303030] focus-visible:outline-none dark:bg-[#141414] focus-visible:z-10 w-full appearance-none bg-white text-gray-700 resize-none font-medium transition duration-150 placeholder-gray-400 dark:placeholder-[] placeholder-opacity-50 px-3 py-2 text-[0.8125rem] rounded-md flex-1 min-w-0 border-0 outline-0 ring-0"
+                    class="border dark:border-[#303030] focus-visible:outline-none dark:bg-[#141414] focus-visible:z-10 w-full appearance-none bg-white text-gray-700 resize-none font-medium transition duration-150 placeholder-gray-400 dark:placeholder-[] placeholder-opacity-60 px-3 py-2 text-[0.8125rem] rounded-md flex-1 min-w-0 border-0 outline-0 ring-0"
                     required
                   />
                   <button
@@ -5752,7 +5749,7 @@
               <div
                 class="flex gap-x-3 gap-y-2 flex-row flex-wrap items-center place-content-start text-gray-500 dark:text-[#999999] dark:hover:text-white"
               >
-                <button type="button" class="">
+                <a href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -5763,40 +5760,17 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-sun size-[1.44em] stroke-[1.25] hover:text-black"
-                  >
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <path d="M12 2v2"></path>
-                    <path d="M12 20v2"></path>
-                    <path d="m4.93 4.93 1.41 1.41"></path>
-                    <path d="m17.66 17.66 1.41 1.41"></path>
-                    <path d="M2 12h2"></path>
-                    <path d="M20 12h2"></path>
-                    <path d="m6.34 17.66-1.41 1.41"></path>
-                    <path d="m19.07 4.93-1.41 1.41"></path>
-                  </svg>
-                </button>
-                <button type="button" class="">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-rss size-[1.44em] stroke-[1.25] hover:text-black"
+                    class="lucide lucide-rss size-[1.44em] stroke-[1.25] hover:text-black dark:hover:text-white"
                   >
                     <path d="M4 11a9 9 0 0 1 9 9"></path>
                     <path d="M4 4a16 16 0 0 1 16 16"></path>
                     <circle cx="5" cy="19" r="1"></circle>
                   </svg>
-                </button>
-                <div
-                  aria-label="Contact us"
-                  class="group flex items-center text-gray-500 gap-2 p-0.5 -m-0.5 text-sm cursor-pointer text-gray-500 hover:text-black dark:text-[#999999] dark:hover:text-white"
+                </a>
+
+                <a
+                  href="https://x.com/ossalternative"
+                  class="flex items-center text-gray-500 gap-2 p-0.5 -m-0.5 text-sm cursor-pointer text-gray-500 hover:text-black dark:text-[#999999] dark:hover:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -5813,8 +5787,9 @@
                     <circle cx="12" cy="12" r="4"></circle>
                     <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"></path>
                   </svg>
-                </div>
-                <div
+                </a>
+                <a
+                  href="https://x.com/ossalternative"
                   class="group flex items-center text-gray-500 gap-2 p-0.5 -m-0.5 text-sm cursor-pointer text-gray-500 hover:text-black dark:text-[#999999] dark:hover:text-white"
                 >
                   <svg
@@ -5835,8 +5810,9 @@
                     <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
                     <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
                   </svg>
-                </div>
-                <div
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/openalternative"
                   class="group flex items-center text-gray-500 gap-2 p-0.5 -m-0.5 text-sm cursor-pointer text-gray-500 hover:text-black dark:text-[#999999] dark:hover:text-white"
                 >
                   <svg
@@ -5859,8 +5835,10 @@
                     <rect width="4" height="12" x="2" y="9"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
-                </div>
-                <div
+                </a>
+
+                <a
+                  href="https://github.com/piotrkulpinski/openalternative"
                   class="group flex items-center text-gray-500 gap-2 p-0.5 -m-0.5 text-sm cursor-pointer text-gray-500 hover:text-black dark:text-[#999999] dark:hover:text-white"
                 >
                   <svg
@@ -5882,7 +5860,7 @@
                       d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
                     ></path>
                   </svg>
-                </div>
+                </a>
               </div>
             </div>
             <div
