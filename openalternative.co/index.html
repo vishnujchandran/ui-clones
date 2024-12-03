@@ -37,15 +37,17 @@
         >
       </div>
       <div
-        class="w-full max-w-[64rem] mx-auto px-6 lg:px-8 group/menu sticky top-[var(--header-top)] inset-x-0 z-50 duration-300"
+        class="w-full max-w-[64rem] mx-auto px-6 lg:px-8 group/menu sticky top-0 inset-x-0 z-50 duration-300 bg-gradient-to-b from-white via-white to-transparent dark:from-[#141414] dark:via-[#141414] h-24"
       >
-        <div
-          class="absolute top-0 inset-x-0 h-[calc(var(--header-top)+var(--header-height)+2rem)] pointer-events-none from-background via-background to-transparent lg:h-[calc(var(--header-top)+var(--header-height)+3rem)]"
-        ></div>
+        <div class="absolute top-0 inset-x-0"></div>
         <div
           class="relative flex flex-nowrap items-center py-3.5 gap-x-3 text-sm h-[var(--header-height)] isolate duration-300 lg:gap-4"
         >
-          <button type="button" class="block -m-1 lg:hidden">
+          <button
+            id="navbar"
+            type="button"
+            class="block -m-1 lg:hidden dark:text-white/90"
+          >
             <svg
               class="size-7 duration-300 select-none will-change-transform group-data-[state=open]/menu:rotate-45"
               viewBox="0 0 100 100"
