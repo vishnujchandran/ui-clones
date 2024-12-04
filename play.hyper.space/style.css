@@ -322,14 +322,15 @@ body {
 }
 
 #sidebar {
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: translateX(0); /* Default position */
   width: 360px;
 }
 
 #sidebar.sidebar-collapsed {
-  width: 0;
-  padding: 0;
+  transform: translateX(100%);
   overflow: hidden;
+  display: none;
 }
 
 #right-collapse {
