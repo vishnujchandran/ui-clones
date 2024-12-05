@@ -1,9 +1,112 @@
-const themeToggleButton = document.getElementById("theme-toggle");
+// Theme
+function updateDots(theme, isMobile = false) {
+  const lightDot = document.getElementById(
+    isMobile ? "light-dot-mob" : "light-dot"
+  );
+  const darkDot = document.getElementById(
+    isMobile ? "dark-dot-mob" : "dark-dot"
+  );
+  const systemDot = document.getElementById(
+    isMobile ? "system-dot-mob" : "system-dot"
+  );
 
-themeToggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+  lightDot.style.opacity = theme === "light" ? "1" : "0";
+  darkDot.style.opacity = theme === "dark" ? "1" : "0";
+  systemDot.style.opacity = theme === "system" ? "1" : "0";
+}
+
+function applySystemTheme() {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (prefersDark) {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+
+  updateDots("system");
+}
+
+function handleThemeChange(savedTheme, isMobile = false) {
+  if (savedTheme === "system") {
+    applySystemTheme();
+  } else {
+    document.body.classList.add(savedTheme);
+    updateDots(savedTheme, isMobile);
+  }
+}
+
+// Desktop Theme Logic
+const savedTheme = localStorage.getItem("theme") || "system";
+handleThemeChange(savedTheme);
+
+document.getElementById("light-btn").addEventListener("click", () => {
+  document.body.classList.remove("dark");
+  localStorage.setItem("theme", "light");
+  updateDots("light");
+  if (themeMobileDropdown) themeMobileDropdown.classList.add("hidden");
 });
 
+document.getElementById("dark-btn").addEventListener("click", () => {
+  document.body.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+  updateDots("dark");
+  if (themeMobileDropdown) themeMobileDropdown.classList.add("hidden");
+});
+
+document.getElementById("system-btn").addEventListener("click", () => {
+  applySystemTheme();
+  if (themeMobileDropdown) themeMobileDropdown.classList.add("hidden");
+});
+
+// Mobile Theme Logic
+const themeMobileToggle = document.getElementById("theme-mobile-toggle");
+const themeMobileDropdown = document.getElementById("theme-mobile");
+
+themeMobileToggle.addEventListener("click", () => {
+  themeMobileDropdown.classList.toggle("hidden");
+});
+
+handleThemeChange(savedTheme, true);
+
+document.getElementById("light-btn-mob").addEventListener("click", () => {
+  document.body.classList.remove("dark");
+  localStorage.setItem("theme", "light");
+  updateDots("light", true);
+  themeMobileDropdown.classList.add("hidden");
+});
+
+document.getElementById("dark-btn-mob").addEventListener("click", () => {
+  document.body.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+  updateDots("dark", true);
+  themeMobileDropdown.classList.add("hidden");
+});
+
+document.getElementById("system-btn-mob").addEventListener("click", () => {
+  applySystemTheme();
+  updateDots("system", true);
+  themeMobileDropdown.classList.add("hidden");
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    !themeMobileDropdown.contains(event.target) &&
+    !themeMobileToggle.contains(event.target)
+  ) {
+    themeMobileDropdown.classList.add("hidden");
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    themeMobileDropdown.classList.add("hidden");
+  }
+});
+
+// Right Collapse
 document.addEventListener("DOMContentLoaded", function () {
   const collapseButton = document.getElementById("right-collapse");
   const sidebar = document.getElementById("sidebar");
@@ -17,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// carousel
+// News Carousel
 const container = document.getElementById("newsContainer");
 
 container.addEventListener(
@@ -357,20 +460,20 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleButtonLeft.addEventListener("click", function () {
     slidingSheetLeft.classList.toggle("open");
     slidingSheetLeft.classList.toggle("hidden");
-    blurBgLeft.classList.toggle("hidden"); // Ensure blurBg visibility is toggled
+    blurBgLeft.classList.toggle("hidden");
   });
 
   closeButtonLeft.addEventListener("click", function () {
     slidingSheetLeft.classList.remove("open");
     slidingSheetLeft.classList.toggle("hidden");
-    blurBgLeft.classList.add("hidden"); // Hide blurBg when closing the sheet
+    blurBgLeft.classList.add("hidden");
   });
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       slidingSheetLeft.classList.remove("open");
       slidingSheetLeft.classList.toggle("hidden");
-      blurBgLeft.classList.add("hidden"); // Hide blurBg when Escape is pressed
+      blurBgLeft.classList.add("hidden");
     }
   });
 });
@@ -520,7 +623,6 @@ const nodeViewContent = document.getElementById("node-view-content");
 const tabViewContent = document.getElementById("tab-view-content");
 
 function switchTab(activeTab, activeContent) {
-  // Hide all tab contents
   const allTabs = document.querySelectorAll(".tab-content");
   allTabs.forEach((tab) => {
     tab.classList.add("hidden");

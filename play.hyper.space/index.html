@@ -12,6 +12,14 @@
       sizes="300x300"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
   </head>
   <body class="dark:bg-[#161B22] bg-[#F3F4F6]">
     <div
@@ -30,8 +38,9 @@
         tabindex="-1"
         style="pointer-events: auto"
       >
-        <div class="px-2.5 pt-6">
+        <div class="px-2.5 pt-6 dark:text-white">
           <button
+            id="theme-mobile-toggle"
             class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:hover:bg-[#262626] dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
             type="button"
           >
@@ -85,6 +94,44 @@
               <path d="M12 18a6 6 0 0 0 0-12v12z"></path>
             </svg>
           </button>
+          <div
+            id="theme-mobile"
+            class="hidden z-50 absolute mt-2 w-[118px] bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
+          >
+            <div class="flex flex-col text-xs p-1">
+              <button
+                id="light-btn-mob"
+                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+              >
+                <span
+                  class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
+                  id="light-dot-mob"
+                ></span>
+                Light
+              </button>
+              <button
+                id="dark-btn-mob"
+                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+              >
+                <span
+                  class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
+                  id="dark-dot-mob"
+                ></span>
+                Dark
+              </button>
+
+              <button
+                id="system-btn-mob"
+                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+              >
+                <span
+                  class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
+                  id="system-dot-mob"
+                ></span>
+                System
+              </button>
+            </div>
+          </div>
         </div>
         <div class="relative h-full">
           <div
@@ -1357,31 +1404,38 @@
             </button>
             <div
               id="dropdown-menu-main"
-              class="hidden z-50 absolute top-14 left-52 mt-2 w-36 bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
+              class="hidden z-50 absolute top-12 left-56 mt-2 w-[118px] bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
             >
               <div class="flex flex-col text-xs p-1">
                 <button
                   id="light-btn"
-                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
+                  <span
+                    class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
+                    id="light-dot"
+                  ></span>
                   Light
                 </button>
                 <button
                   id="dark-btn"
-                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
+                  <span
+                    class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
+                    id="dark-dot"
+                  ></span>
                   Dark
                 </button>
-                <button
-                  id="lights-out-btn"
-                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
-                >
-                  Lights Out
-                </button>
+
                 <button
                   id="system-btn"
-                  class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
+                  <span
+                    class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
+                    id="system-dot"
+                  ></span>
                   System
                 </button>
               </div>
@@ -1409,7 +1463,7 @@
               </button>
 
               <button
-                class="dark:hover:bg-[#262626] flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                class="dark:hover:bg-[#262626] flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] opacity-50"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
