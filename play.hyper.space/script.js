@@ -349,7 +349,7 @@ const closeButtonLeft = document.getElementById("close-sheet-l");
 toggleButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.toggle("open");
   slidingSheetLeft.classList.toggle("hidden");
-  blurBg.classList.toggle("hidden");
+  blurBg.classList.remove("hidden");
 });
 
 closeButtonLeft.addEventListener("click", function () {
@@ -444,22 +444,18 @@ const dataSheet = document.getElementById("data-sheet");
 const openButton = document.getElementById("open-data-sheet-button");
 const closeSheetBtn = document.getElementById("close-data-sheet-button");
 
-// Open data sheet
 openButton.addEventListener("click", () => {
-  blurBg.classList.remove("hidden"); // Show blur background
-  dataSheet.classList.remove("hidden"); // Show data sheet
+  blurBg.classList.remove("hidden"); 
+  dataSheet.classList.remove("hidden"); 
 });
 
-// Close data sheet
 function closeDataSheet() {
-  blurBg.classList.add("hidden"); // Hide blur background
-  dataSheet.classList.add("hidden"); // Hide data sheet
+  blurBg.classList.add("hidden"); 
+  dataSheet.classList.add("hidden"); 
 }
 
-// Close on button click
 closeSheetBtn.addEventListener("click", closeDataSheet);
 
-// Close on Escape key
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeDataSheet();
