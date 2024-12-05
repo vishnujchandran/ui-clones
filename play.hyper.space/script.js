@@ -520,6 +520,7 @@ const nodeViewContent = document.getElementById("node-view-content");
 const tabViewContent = document.getElementById("tab-view-content");
 
 function switchTab(activeTab, activeContent) {
+  // Hide all tab contents
   const allTabs = document.querySelectorAll(".tab-content");
   allTabs.forEach((tab) => {
     tab.classList.add("hidden");
@@ -531,12 +532,6 @@ function switchTab(activeTab, activeContent) {
     button.classList.add("bg-gray-200", "text-gray-800", "border-transparent");
   });
 
-  activeTab.classList.add("bg-gray-800", "text-white", "border-gray-800");
-  activeTab.classList.remove(
-    "bg-gray-200",
-    "text-gray-800",
-    "border-transparent"
-  );
   activeContent.classList.remove("hidden");
 }
 
