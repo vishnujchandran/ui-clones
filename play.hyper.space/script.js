@@ -95,25 +95,7 @@ const scrollInterval = setInterval(() => {
 }, 2000);
 
 // Drop down Main
-function toggleDropdownMain(event) {
-  event.stopPropagation();
-
-  const dropdown = document.getElementById("dropdownMenuMain");
-  dropdown.classList.toggle("hidden");
-}
-document.addEventListener("click", function (event) {
-  const dropdown = document.getElementById("dropdownMenuMain");
-  const button = document.getElementById("toggleButtonMain");
-
-  dropdown.classList.add("hidden");
-});
-document.addEventListener("keydown", function (event) {
-  const dropdown = document.getElementById("dropdownMenuMain");
-  if (event.key === "Escape") {
-    dropdown.classList.add("hidden");
-  }
-});
-
+//1
 const dropdownMenuMain = document.getElementById("dropdownMenuMain");
 const selectedIcon = document.getElementById("selectedIcon");
 const selectedText = document.getElementById("selectedText");
@@ -170,7 +152,7 @@ document.addEventListener("keydown", function (event) {
     dropdown.classList.add("hidden");
   }
 });
-
+//2
 const dropdownMenu2Main = document.getElementById("dropdownMenu2Main");
 const selectedIcon2 = document.getElementById("selectedIcon2");
 const selectedText2 = document.getElementById("selectedText2");
@@ -195,10 +177,7 @@ dropdownItems2.forEach((item) => {
 });
 
 document.addEventListener("click", function (event) {
-  if (
-    !dropdownMenuMain.contains(event.target) &&
-    !openMenuBtn.contains(event.target)
-  ) {
+  if (!dropdownMenu2Main.contains(event.target)) {
     dropdownMenuMain.classList.add("hidden");
   }
 });
@@ -211,18 +190,39 @@ document.addEventListener("keydown", function (event) {
 });
 
 // Drop down mobile
+//1
+const dropdownMenuMini = document.getElementById("dropdownMenu");
+const selectedIconmini = document.getElementById("selectedIconmini");
+const selectedTextmini = document.getElementById("selectedTextmini");
+const selectedSubTextMini = document.getElementById("selectedSubTextmini");
+
 function toggleDropdown(event) {
+  dropdownMenuMini.classList.toggle("hidden");
   event.stopPropagation();
-
-  const dropdown = document.getElementById("dropdownMenu");
-  dropdown.classList.toggle("hidden");
 }
-document.addEventListener("click", function (event) {
-  const dropdown = document.getElementById("dropdownMenu");
-  const button = document.querySelector('button[type="button"]');
 
-  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-    dropdown.classList.add("hidden");
+const dropdownItemsmini = dropdownMenuMini.querySelectorAll(".dropdown-item");
+
+dropdownItemsmini.forEach((item) => {
+  item.addEventListener("click", function () {
+    const name = this.getAttribute("data-name");
+    const imgSrc = this.getAttribute("data-img");
+    const subText = this.getAttribute("data-subtext");
+
+    selectedIconmini.src = imgSrc;
+    selectedTextmini.textContent = name;
+    selectedSubTextMini.textContent = subText;
+
+    dropdownMenuMini.classList.add("hidden");
+  });
+});
+
+document.addEventListener("click", function (event) {
+  if (
+    !dropdownMenuMini.contains(event.target) &&
+    !openMenuBtn.contains(event.target)
+  ) {
+    dropdownMenuMini.classList.add("hidden");
   }
 });
 
@@ -232,18 +232,37 @@ document.addEventListener("keydown", function (event) {
     dropdown.classList.add("hidden");
   }
 });
+
+//2
+const dropdownMenu2 = document.getElementById("dropdownMenu2");
+const selectedIcon2mini = document.getElementById("selectedIcon2mini");
+const selectedText2mini = document.getElementById("selectedText2mini");
+
 function toggleDropdown2(event) {
+  dropdownMenu2.classList.toggle("hidden");
   event.stopPropagation();
-
-  const dropdown = document.getElementById("dropdownMenu2");
-  dropdown.classList.toggle("hidden");
 }
-document.addEventListener("click", function (event) {
-  const dropdown = document.getElementById("dropdownMenu2");
-  const button = document.querySelector('button[type="button"]');
 
-  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-    dropdown.classList.add("hidden");
+const dropdownItems2mini = dropdownMenu2.querySelectorAll(".dropdown-item");
+
+dropdownItems2mini.forEach((item) => {
+  item.addEventListener("click", function () {
+    const name = this.getAttribute("data-name");
+    const imgSrc = this.getAttribute("data-img");
+
+    selectedIcon2mini.src = imgSrc;
+    selectedText2mini.textContent = name;
+
+    dropdownMenu2.classList.add("hidden");
+  });
+});
+
+document.addEventListener("click", function (event) {
+  if (
+    !dropdownMenu2.contains(event.target) &&
+    !openMenuBtn.contains(event.target)
+  ) {
+    dropdownMenu2.classList.add("hidden");
   }
 });
 

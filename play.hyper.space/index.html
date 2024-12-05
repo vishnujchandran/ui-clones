@@ -133,6 +133,7 @@
                         <div class="flex items-center justify-between">
                           <div class="flex items-center overflow-hidden">
                             <img
+                              id="selectedIconmini"
                               alt="groq"
                               loading="lazy"
                               width="20"
@@ -141,9 +142,12 @@
                               class="mr-2 flex-shrink-0"
                               style="color: transparent"
                               src="https://play.hyper.space/groq.svg"
-                            /><span class="truncate text-sm font-medium"
+                            /><span
+                              id="selectedTextmini"
+                              class="truncate text-sm font-medium"
                               >Groq</span
                             ><span
+                              id="selectedSubTextmini"
                               class="ml-1 hidden items-center text-sm text-gray-500 dark:text-[#818181] text-xs 2xl:block"
                               >(Default)</span
                             >
@@ -162,10 +166,13 @@
                       </button>
                       <div
                         id="dropdownMenu"
-                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] dark:bg-[#0d1116] rounded-md absolute top-20 left-0 center z-50 bg-white"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
                       >
                         <button
-                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] bg-gray-400 dark:bg-[#272e37]"
+                          class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          data-name="Groq"
+                          data-img="https://play.hyper.space/groq.svg"
+                          data-subtext="(Default)"
                         >
                           <div class="flex items-center">
                             <img
@@ -183,8 +190,12 @@
                             >
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item w-full p-2 text-left text-xs dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          data-name="Together AI"
+                          data-img="https://play.hyper.space/togetherai.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -199,8 +210,12 @@
                             <span class="text-xs font-medium">Together AI</span>
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item w-full p-2 text-left text-xs dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          data-name="Mistral AI"
+                          data-img="https://play.hyper.space/mistral.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -215,64 +230,90 @@
                             <span class="text-xs font-medium">Mistral AI</span>
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item w-full p-2 text-left text-xs dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          data-name="Open AI"
+                          data-img="https://play.hyper.space/openai.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
                               alt="Open AI"
-                              class="mr-2"
-                              height="20"
+                              loading="lazy"
                               width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
                               src="https://play.hyper.space/openai.svg"
                             />
                             <span class="text-xs font-medium">Open AI</span>
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item w-full p-2 text-left text-xs dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          data-name="Anthropic"
+                          data-img="https://play.hyper.space/anthropic.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
                               alt="Anthropic"
-                              class="mr-2"
-                              height="20"
+                              loading="lazy"
                               width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
                               src="https://play.hyper.space/anthropic.svg"
                             />
                             <span class="text-xs font-medium">Anthropic</span>
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item w-full p-2 text-left text-xs dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          data-name="xAI"
+                          data-img="https://play.hyper.space/xai.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
                               alt="xAI"
-                              class="mr-2"
-                              height="20"
+                              loading="lazy"
                               width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
                               src="https://play.hyper.space/xai.svg"
                             />
                             <span class="text-xs font-medium">xAI</span>
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item w-full p-2 text-left text-xs dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          data-name="Google"
+                          data-img="https://play.hyper.space/google.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
                               alt="Google"
-                              class="mr-2"
-                              height="20"
+                              loading="lazy"
                               width="20"
+                              height="20"
+                              decoding="async"
+                              class="mr-2"
                               src="https://play.hyper.space/google.svg"
                             />
                             <span class="text-xs font-medium">Google</span>
                           </div>
                         </button>
+
                         <button
                           class="w-full p-2 text-left text-xs opacity-50 cursor-not-allowed"
+                          disabled
                         >
                           <div class="flex items-center">
                             <img
@@ -281,13 +322,15 @@
                               height="25"
                               width="25"
                               src="https://play.hyper.space/logo-light.svg"
-                            /><img
+                            />
+                            <img
                               alt="hyperspace logo dark"
                               class="mr-2 hidden lights-out:block dark:block"
                               height="25"
                               width="25"
                               src="https://play.hyper.space/logo-dark.svg"
-                            />Hyperspace Network
+                            />
+                            Hyperspace Network
                           </div>
                         </button>
                       </div>
@@ -300,6 +343,7 @@
                         <div class="flex items-center justify-between">
                           <div class="flex items-center overflow-hidden">
                             <img
+                              id="selectedIcon2mini"
                               alt="llama3-70b-8192"
                               loading="lazy"
                               width="20"
@@ -308,7 +352,9 @@
                               class="mr-2 flex-shrink-0"
                               style="color: transparent"
                               src="https://play.hyper.space/meta.svg"
-                            /><span class="truncate text-sm font-medium"
+                            /><span
+                              id="selectedText2mini"
+                              class="truncate text-sm font-medium"
                               >llama3-70b-8192</span
                             >
                           </div>
@@ -329,7 +375,10 @@
                         class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                       >
                         <button
-                          class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
+                          class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
+                          data-name="llama3-70b-8192"
+                          data-img="https://play.hyper.space/meta.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -342,14 +391,17 @@
                               style="color: transparent"
                               src="https://play.hyper.space/meta.svg"
                             />
-
                             <span class="text-xs font-medium"
-                              >Gllama3-70b-8192
-                            </span>
+                              >llama3-70b-8192</span
+                            >
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          data-name="llama-3.1-8b-instant"
+                          data-img="https://play.hyper.space/meta.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -362,14 +414,17 @@
                               style="color: transparent"
                               src="https://play.hyper.space/meta.svg"
                             />
-
                             <span class="text-xs font-medium"
                               >llama-3.1-8b-instant</span
                             >
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          data-name="llama3-8b-8192"
+                          data-img="https://play.hyper.space/meta.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -382,14 +437,17 @@
                               style="color: transparent"
                               src="https://play.hyper.space/meta.svg"
                             />
-
                             <span class="text-xs font-medium"
                               >llama3-8b-8192</span
                             >
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          data-name="llama-3.1-70b-versatile"
+                          data-img="https://play.hyper.space/meta.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -402,14 +460,17 @@
                               style="color: transparent"
                               src="https://play.hyper.space/meta.svg"
                             />
-
                             <span class="text-xs font-medium"
                               >llama-3.1-70b-versatile</span
                             >
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          data-name="mixtral-8x7b-32768"
+                          data-img="https://play.hyper.space/mistral.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -427,8 +488,12 @@
                             >
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          data-name="gemma2-9b-it"
+                          data-img="https://play.hyper.space/Google__G__logo 1.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -446,8 +511,12 @@
                             >
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          data-name="gemma-7b-it"
+                          data-img="https://play.hyper.space/Google__G__logo 1.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -463,8 +532,12 @@
                             <span class="text-xs font-medium">gemma-7b-it</span>
                           </div>
                         </button>
+
                         <button
-                          class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          data-name="llava-v1.5-7b-4096-preview"
+                          data-img="https://play.hyper.space/meta.svg"
+                          data-subtext=""
                         >
                           <div class="flex items-center">
                             <img
@@ -621,6 +694,7 @@
                     <div class="flex flex-wrap gap-2">
                       <div class="relative inline-block group">
                         <button
+                          id="open-data-sheet-button"
                           class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
                           type="button"
                         >
@@ -783,7 +857,7 @@
           </div>
         </div>
         <button
-          class="absolute right-2 top-2 rounded-full dark:hover:bg-[#333333] dark:bg-[#272E37] p-2 text-[white] shadow-md hover:bg-[#E5E5E5] hover:text-gray-600 dark:hover:text-white"
+          class="absolute right-2 text-gray-600 top-2 rounded-full dark:hover:bg-[#333333] dark:bg-[#272E37] p-2 text-[white] shadow-md hover:bg-[#E5E5E5] hover:text-gray-600 dark:hover:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
