@@ -15,15 +15,14 @@
   </head>
   <body class="dark:bg-[#161B22] bg-[#F3F4F6]">
     <div
+      id="bgblur"
+      class="hidden bg-white/80 dark:bg-[#0D1116] bg-opacity-70 fixed inset-0 z-30 backdrop-blur-sm"
+      style="pointer-events: auto"
+    ></div>
+    <div
       id="main"
-      class="grid supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1"
+      class="grid supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1 h-screen"
     >
-      <div
-        id="bgblur"
-        class="hidden bg-white dark:bg-[#0D1116] bg-opacity-70 fixed inset-0 z-30 backdrop-blur-sm"
-        style="pointer-events: auto"
-      ></div>
-
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
@@ -527,12 +526,7 @@
 
                 <div class="flex w-full flex-col space-y-2">
                   <h2 class="text-md font-semibold capitalize">Data Sources</h2>
-                  <div
-                    dir="ltr"
-                    class="space-y-2"
-                    tabindex="0"
-                    style="outline: none"
-                  >
+                  <div class="space-y-2" tabindex="0" style="outline: none">
                     <button
                       type="button"
                       class="group w-full border-black rounded-md p-4 transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
@@ -1294,6 +1288,7 @@
               <div class="flex flex-col text-xs p-1">
                 <button
                   id="light-btn"
+                  onclick="toggleDarkMode()"
                   class="py-2 px-4 text-left pl-10 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
                 >
                   Light
@@ -3004,7 +2999,7 @@
                             class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
                           >
                             <button
-                              class="w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
+                              class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
                               data-name="llama3-70b-8192"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3027,7 +3022,7 @@
                             </button>
 
                             <button
-                              class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
                               data-name="llama-3.1-8b-instant"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3050,7 +3045,7 @@
                             </button>
 
                             <button
-                              class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
                               data-name="llama3-8b-8192"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3073,7 +3068,7 @@
                             </button>
 
                             <button
-                              class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
                               data-name="llama-3.1-70b-versatile"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3096,7 +3091,7 @@
                             </button>
 
                             <button
-                              class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
                               data-name="mixtral-8x7b-32768"
                               data-img="https://play.hyper.space/mistral.svg"
                               data-subtext=""
@@ -3119,7 +3114,7 @@
                             </button>
 
                             <button
-                              class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
                               data-name="gemma2-9b-it"
                               data-img="https://play.hyper.space/Google__G__logo 1.svg"
                               data-subtext=""
@@ -3142,7 +3137,7 @@
                             </button>
 
                             <button
-                              class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
                               data-name="gemma-7b-it"
                               data-img="https://play.hyper.space/Google__G__logo 1.svg"
                               data-subtext=""
@@ -3165,7 +3160,7 @@
                             </button>
 
                             <button
-                              class="rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
                               data-name="llava-v1.5-7b-4096-preview"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3232,12 +3227,7 @@
                       <h2 class="text-md font-semibold capitalize">
                         Data Sources
                       </h2>
-                      <div
-                        dir="ltr"
-                        class="space-y-2"
-                        tabindex="0"
-                        style="outline: none"
-                      >
+                      <div class="space-y-2" tabindex="0" style="outline: none">
                         <button
                           type="button"
                           class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-gray-200 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px"
@@ -3333,6 +3323,7 @@
                         <div class="flex flex-wrap gap-2">
                           <div class="relative inline-block group">
                             <button
+                              id="open-data-sheet-button"
                               class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
                               type="button"
                             >
@@ -3360,11 +3351,6 @@
                             </div>
                           </div>
 
-                          <div
-                            class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md"
-                          >
-                            Add data
-                          </div>
                           <img
                             alt="Wikipedia"
                             class="h-7 w-7 cursor-pointer"
@@ -3412,8 +3398,7 @@
           </div>
           <div
             id="right-collapse"
-            class="absolute top-4 cursor-pointer rounded-l-lg border dark:border-[#30363D] bg-white dark:bg-[#0D1116] dark:text-white p-2 transition-all duration-300 lg:block"
-            style="z-index: 10"
+            class="sm:hidden hidden md:block absolute top-4 z-5 cursor-pointer rounded-l-lg border dark:border-[#30363D] bg-white dark:bg-[#0D1116] dark:text-white p-2 transition-all duration-300 lg:block"
           >
             <div class="transform transition-transform duration-200 rotate-180">
               <svg
@@ -3436,6 +3421,397 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div
+      id="data-sheet"
+      class="hidden px-2 pt-6 flex min-w-[321px] md:w-[384px] absolute bottom-0 z-50 right-0 top-0 bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md transition-all duration-300 ease-in-out"
+    >
+      <div class="" tabindex="-1" style="pointer-events: auto">
+        <div class="flex flex-col text-center sm:text-left space-y-0">
+          <h2 class="text-lg font-semibold text-app-hyperspace-black">
+            Data Sources
+          </h2>
+          <p class="text-sm text-app-hyperspace-black">
+            Select your preffered source below. You may choose multiple sources.
+          </p>
+        </div>
+        <div
+          class="relative overflow-hidden mt-4 h-[calc(100vh-120px)]"
+          style="position: relative"
+        >
+          <div
+            class="h-full w-full rounded-[inherit]"
+            style="overflow: hidden scroll"
+          >
+            <div style="min-width: 100%; display: table">
+              <div class="space-y-2">
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors border-app-hyperspace-black bg-app-highlight"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Wikipedia"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/wikipedia.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Wikipedia
+                        </h3>
+                        <span class="ml-2 text-lg font-semibold text-gray-400"
+                          >(Sept. 2024)</span
+                        >
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        The open content encyclopedia that you already know and
+                        love
+                      </p>
+                      <p class="mt-1 text-xs text-gray-400">
+                        Powered by: Hyperspace Vector Database
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="PubMed"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/pubmed.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          PubMed
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        More than 37 million citations for biomedical literature
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="arXiv"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/arxiv.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          arXiv
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        An open-access archive of nearly 2.4 million scholarly
+                        articles
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Reddit Comments"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/reddit-comments.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Reddit Comments
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Large-scale dataset of Reddit comments across various
+                        subreddits
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Polymarket"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/polymarket.png"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Polymarket
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Polymarket is an online prediction market platform that
+                        would allow users to trade on the outcome of world
+                        events.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <p class="pb-2 pt-4 text-lg font-semibold">Coming soon...</p>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Seattle Airbnb Data"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/airbnb.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Seattle Airbnb Data
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Comprehensive dataset of Airbnb listings and pricing in
+                        Seattle
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Real Estate Data for the US"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/real-estate.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Real Estate Data for the US
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Extensive collection of US real estate market trends and
+                        property data
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Tesla Stock"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/tesla-stock.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Tesla Stock
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Historical and real-time stock data for Tesla, Inc.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="EV Sales Dataset"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/ev-sales.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          EV Sales Dataset
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Global electric vehicle sales statistics and market
+                        analysis
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Amazon Products"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/amazon.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Amazon Products
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Detailed catalog of Amazon products, including reviews
+                        and pricing
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="US univ Admissions"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/us-univ.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          US univ Admissions
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Comprehensive data on US university admissions,
+                        including acceptance rates and demographics
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="US Airline"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/us-airlines.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          US Airline
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Extensive dataset on US airline performance, including
+                        delays, cancellations, and customer satisfaction
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Trip Advisor"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/tripadvisor.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Trip Advisor
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Curated collection of TripAdvisor reviews and ratings
+                        for various travel destinations
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
+                >
+                  <div class="flex items-center">
+                    <div>
+                      <div class="flex items-center">
+                        <img
+                          alt="Fineweb by HF"
+                          class="mr-2 h-5 w-5"
+                          src="https://play.hyper.space/data-sources/fineweb-hf.svg"
+                        />
+                        <h3
+                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
+                        >
+                          Fineweb by HF
+                        </h3>
+                      </div>
+                      <p class="mt-1 text-sm text-app-hyperspace-black">
+                        Comprehensive financial web data curated by Hugging Face
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="close-data-sheet-button"
+          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x h-4 w-4"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path></svg
+          ><span class="sr-only">Close</span>
+        </button>
       </div>
     </div>
     <script src="script.js"></script>

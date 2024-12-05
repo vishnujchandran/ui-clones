@@ -1,13 +1,34 @@
-// Theme
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+document.addEventListener("DOMContentLoaded", () => {
+  // Light and Dark Mode Buttons
+  const lightBtn = document.getElementById("light-btn");
+  const darkBtn = document.getElementById("dark-btn");
 
-function toggleDarkMode() {
-  document.body.classList.toggle("dark");
-}
+  if (!lightBtn || !darkBtn) {
+    console.error("Buttons not found in the DOM.");
+    return; // Exit if buttons are not found
+  }
 
-if (prefersDarkScheme.matches) {
-  document.body.classList.add("dark");
-}
+  // Apply Light Mode
+  lightBtn.addEventListener("click", () => {
+    document.body.classList.remove("dark");
+    document.body.classList.add("light");
+    console.log("Switched to Light Mode");
+  });
+
+  // Apply Dark Mode
+  darkBtn.addEventListener("click", () => {
+    document.body.classList.remove("light");
+    document.body.classList.add("dark");
+    console.log("Switched to Dark Mode");
+  });
+
+  // Detect System Preference for Dark Mode
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (prefersDarkScheme.matches) {
+    document.body.classList.add("dark");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const collapseButton = document.getElementById("right-collapse");
@@ -84,9 +105,7 @@ document.addEventListener("click", function (event) {
   const dropdown = document.getElementById("dropdownMenuMain");
   const button = document.getElementById("toggleButtonMain");
 
-  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-    dropdown.classList.add("hidden");
-  }
+  dropdown.classList.add("hidden");
 });
 document.addEventListener("keydown", function (event) {
   const dropdown = document.getElementById("dropdownMenuMain");
@@ -134,19 +153,53 @@ dropdownMenuMain.addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
-function toggleDropdown2Main(event) {
+function toggleDropdownMain(event) {
   event.stopPropagation();
 
-  const dropdown = document.getElementById("dropdownMenu2Main");
+  const dropdown = document.getElementById("dropdownMenuMain");
   dropdown.classList.toggle("hidden");
 }
+document.addEventListener("click", function (event) {
+  const dropdown = document.getElementById("dropdownMenuMain");
+
+  dropdown.classList.add("hidden");
+});
+document.addEventListener("keydown", function (event) {
+  const dropdown = document.getElementById("dropdownMenuMain");
+  if (event.key === "Escape") {
+    dropdown.classList.add("hidden");
+  }
+});
+
+const dropdownMenu2Main = document.getElementById("dropdownMenu2Main");
+const selectedIcon2 = document.getElementById("selectedIcon2");
+const selectedText2 = document.getElementById("selectedText2");
+
+function toggleDropdown2Main(event) {
+  dropdownMenu2Main.classList.toggle("hidden");
+  event.stopPropagation();
+}
+
+const dropdownItems2 = dropdownMenu2Main.querySelectorAll(".dropdown-item");
+
+dropdownItems2.forEach((item) => {
+  item.addEventListener("click", function () {
+    const name = this.getAttribute("data-name");
+    const imgSrc = this.getAttribute("data-img");
+
+    selectedIcon2.src = imgSrc;
+    selectedText2.textContent = name;
+
+    dropdownMenu2Main.classList.add("hidden");
+  });
+});
 
 document.addEventListener("click", function (event) {
-  const dropdown = document.getElementById("dropdownMenu2Main");
-  const button = document.getElementById("toggleButton2Main");
-
-  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-    dropdown.classList.add("hidden");
+  if (
+    !dropdownMenuMain.contains(event.target) &&
+    !openMenuBtn.contains(event.target)
+  ) {
+    dropdownMenuMain.classList.add("hidden");
   }
 });
 
@@ -155,26 +208,6 @@ document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     dropdown.classList.add("hidden");
   }
-});
-function toggleDropdown2Main(event) {
-  const dropdown = document.getElementById("dropdownMenu2Main");
-  dropdown.classList.toggle("hidden");
-}
-
-function selectDropdown2Item(event) {
-  const button = event.currentTarget;
-  const name = button.getAttribute("data-name");
-  const img = button.getAttribute("data-img");
-
-  document.getElementById("selectedText2").textContent = name;
-  document.getElementById("selectedIcon2").src = img;
-
-  document.getElementById("dropdownMenu2Main").classList.add("hidden");
-}
-
-const dropdownItems2 = document.querySelectorAll("#dropdownMenu2Main button");
-dropdownItems2.forEach((item) => {
-  item.addEventListener("click", selectDropdown2Item);
 });
 
 // Drop down mobile
@@ -304,13 +337,14 @@ const closeButton = document.getElementById("close-sheet-r");
 
 toggleButton.addEventListener("click", function () {
   slidingSheet.classList.toggle("open");
-  slidingSheet.classList.toggle("hidden");
   blurBg.classList.remove("hidden");
+  slidingSheet.classList.toggle("hidden");
 });
 
 closeButton.addEventListener("click", function () {
   slidingSheet.classList.remove("open");
-  blurBg.classList.add("hidden");
+  blurBg.classList.toggle("hidden");
+
   slidingSheet.classList.toggle("hidden");
 });
 
@@ -328,12 +362,13 @@ const closeButtonLeft = document.getElementById("close-sheet-l");
 toggleButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.toggle("open");
   slidingSheetLeft.classList.toggle("hidden");
-  blurBg.classList.remove("hidden");
+  blurBg.classList.toggle("hidden");
 });
 
 closeButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.remove("open");
-  blurBg.classList.toggle("hidden");
+  slidingSheetLeft.classList.toggle("hidden");
+  blurBg.classList.remove("hidden");
 });
 
 document.addEventListener("keydown", function (event) {
@@ -359,6 +394,7 @@ window.addEventListener("click", function (e) {
   }
 });
 
+//Logo popover
 function toggleLogoPopover(e) {
   const popoverLogo = document.getElementById("popoverLogoContent");
   popoverLogo.classList.toggle("hidden");
@@ -401,21 +437,44 @@ document.addEventListener("keydown", function (event) {
     const slidingSheetLeft = document.getElementById("sliding-sheet-l");
     const blurBg = document.getElementById("bgblur");
 
-    // Check if any popover, dropdown, or sheet is open
     if (
       (popoverMenu && !popoverMenu.classList.contains("hidden")) ||
       (dropdownMenu && !dropdownMenu.classList.contains("hidden")) ||
       (slidingSheet && !slidingSheet.classList.contains("hidden")) ||
       (slidingSheetLeft && !slidingSheetLeft.classList.contains("hidden"))
     ) {
-      // Close popover, dropdown, or sheet if it's open
       if (popoverMenu) popoverMenu.classList.add("hidden");
       if (dropdownMenu) dropdownMenu.classList.add("hidden");
       if (slidingSheet) slidingSheet.classList.add("hidden");
       if (slidingSheetLeft) slidingSheetLeft.classList.add("hidden");
 
-      // Hide the background blur only if one of the above is open
       if (blurBg) blurBg.classList.add("hidden");
     }
+  }
+});
+
+const dataSheet = document.getElementById("data-sheet");
+const openButton = document.getElementById("open-data-sheet-button");
+const closeSheetBtn = document.getElementById("close-data-sheet-button");
+
+// Open data sheet
+openButton.addEventListener("click", () => {
+  blurBg.classList.remove("hidden"); // Show blur background
+  dataSheet.classList.remove("hidden"); // Show data sheet
+});
+
+// Close data sheet
+function closeDataSheet() {
+  blurBg.classList.add("hidden"); // Hide blur background
+  dataSheet.classList.add("hidden"); // Hide data sheet
+}
+
+// Close on button click
+closeSheetBtn.addEventListener("click", closeDataSheet);
+
+// Close on Escape key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeDataSheet();
   }
 });
