@@ -476,3 +476,39 @@ document.addEventListener("keydown", (event) => {
     closeDataSheet();
   }
 });
+
+// Search filter
+document.getElementById("searchInput").addEventListener("input", function () {
+  const searchQuery = this.value.toLowerCase();
+  const sections = document.querySelectorAll(".searchable-section");
+  let hasResults = false;
+
+  sections.forEach((section) => {
+    const items = section.querySelectorAll(".searchable-item");
+    let sectionHasResults = false;
+
+    items.forEach((item) => {
+      const itemText = item.getAttribute("data-search-terms").toLowerCase();
+      if (itemText.includes(searchQuery)) {
+        item.style.display = "flex";
+        sectionHasResults = true;
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    if (sectionHasResults) {
+      section.style.display = "block";
+      hasResults = true;
+    } else {
+      section.style.display = "none";
+    }
+  });
+
+  const noResultsMessage = document.getElementById("noResultsFound");
+  if (hasResults) {
+    noResultsMessage.style.display = "none";
+  } else {
+    noResultsMessage.style.display = "block";
+  }
+});

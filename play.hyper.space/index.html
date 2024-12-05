@@ -694,7 +694,7 @@
                     <div class="flex flex-wrap gap-2">
                       <div class="relative inline-block group">
                         <button
-                          id="open-data-sheet-button"
+                          id="open-data-sheet-button2"
                           class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
                           type="button"
                         >
@@ -2351,7 +2351,6 @@
                     >⌘K</kbd
                   >
                 </button>
-
                 <div
                   class="flex bg-white h-full w-full justify-center items-center dark:bg-[#0D1116]"
                 >
@@ -2363,19 +2362,6 @@
                       <div
                         class="flex h-full w-full flex-col overflow-hidden rounded-md"
                       >
-                        <label
-                          style="
-                            position: absolute;
-                            width: 1px;
-                            height: 1px;
-                            padding: 0px;
-                            margin: -1px;
-                            overflow: hidden;
-                            clip: rect(0px, 0px, 0px, 0px);
-                            white-space: nowrap;
-                            border-width: 0px;
-                          "
-                        ></label>
                         <div
                           class="flex items-center border-b dark:border-[#30363D] px-3"
                         >
@@ -2395,112 +2381,115 @@
                             <path d="m21 21-4.3-4.3"></path>
                           </svg>
                           <input
+                            id="searchInput"
                             class="flex h-11 outline-none w-full rounded-md bg-transparent py-3 text-xs outline-none placeholder: disabled:cursor-not-allowed disabled:"
                             placeholder="Type anything to search..."
                             autocomplete="off"
                             autocorrect="off"
                             spellcheck="false"
                             type="text"
-                            value=""
                           />
                         </div>
                         <div
+                          id="searchableItems"
                           class="max-h-[300px] overflow-y-auto overflow-x-hidden"
                         >
-                          <div>
-                            <div class="overflow-hidden p-1">
+                          <div id="searchResultsContainer">
+                            <div class="searchable-section" id="generalSection">
                               <div
                                 class="text-[10px] opacity-70 flex justify-start"
                               >
                                 General
                               </div>
-                              <a
-                                href="https://play.hyper.space/explore/how-to-reboot-the-brain-effectiv-vnyupE"
+                              <div
+                                class="searchable-item"
+                                data-search-terms="random project shuffle"
                               >
-                                <div class="space-y-3 py-1.5">
-                                  <div
-                                    class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
-                                    role="option"
+                                <div
+                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-shuffle !size-3"
                                   >
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width="24"
-                                      height="24"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      class="lucide lucide-shuffle !size-3"
-                                    >
-                                      <path
-                                        d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"
-                                      ></path>
-                                      <path d="m18 2 4 4-4 4"></path>
-                                      <path
-                                        d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"
-                                      ></path>
-                                      <path
-                                        d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"
-                                      ></path>
-                                      <path d="m18 14 4 4-4 4"></path>
-                                    </svg>
-                                    <span class="font-medium"
-                                      >Go to random project</span
-                                    >
-                                  </div>
-                                </div></a
-                              >
+                                    <path
+                                      d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"
+                                    ></path>
+                                    <path d="m18 2 4 4-4 4"></path>
+                                    <path
+                                      d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"
+                                    ></path>
+                                    <path
+                                      d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"
+                                    ></path>
+                                    <path d="m18 14 4 4-4 4"></path>
+                                  </svg>
+                                  <span class="font-medium"
+                                    >Go to random project</span
+                                  >
+                                </div>
+                              </div>
                             </div>
-                            <div class="overflow-hidden p-1">
+
+                            <div
+                              class="searchable-section"
+                              id="projectsSection"
+                            >
                               <div
                                 class="text-[10px] opacity-70 flex justify-start"
                               >
                                 Projects
                               </div>
-                              <a
-                                href="https://play.hyper.space/explore/nuclear-base-security-breach-hDM7"
+                              <div
+                                class="searchable-item"
+                                data-search-terms="nuclear base security breach project"
                               >
                                 <div
-                                  class="space-y-3 py-1.5 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex items-center rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
-                                  <div
-                                    class="relative flex items-center rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-arrow-right !size-3"
                                   >
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width="24"
-                                      height="24"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      class="lucide lucide-arrow-right !size-3"
-                                    >
-                                      <path d="M5 12h14"></path>
-                                      <path d="m12 5 7 7-7 7"></path>
-                                    </svg>
-                                    <span
-                                      class="flex-grow text-start font-medium"
-                                      >Nuclear Base Security Breach</span
-                                    ><span
-                                      class="text-end text-[10px] opacity-70"
-                                      >about 4 hours</span
-                                    >
-                                  </div>
-                                </div></a
-                              >
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                  </svg>
+                                  <span class="flex-grow text-start font-medium"
+                                    >Nuclear Base Security Breach</span
+                                  >
+                                  <span class="text-end text-[10px] opacity-70"
+                                    >about 4 hours</span
+                                  >
+                                </div>
+                              </div>
                             </div>
-                            <div class="overflow-hidden p-1">
+
+                            <div class="searchable-section" id="themeSection">
                               <div
                                 class="text-[10px] opacity-70 flex justify-start"
                               >
                                 Theme
                               </div>
-                              <div class="space-y-3 py-1.5">
+                              <div
+                                class="searchable-item"
+                                data-search-terms="light theme sun brightness"
+                              >
                                 <div
                                   class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
@@ -2530,6 +2519,11 @@
                                     >Change to Light theme</span
                                   >
                                 </div>
+                              </div>
+                              <div
+                                class="searchable-item"
+                                data-search-terms="dark theme moon night"
+                              >
                                 <div
                                   class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
@@ -2553,6 +2547,11 @@
                                     >Change to Dark theme</span
                                   >
                                 </div>
+                              </div>
+                              <div
+                                class="searchable-item"
+                                data-search-terms="lights out contrast dark"
+                              >
                                 <div
                                   class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
@@ -2575,6 +2574,11 @@
                                     >Change to Lights Out theme</span
                                   >
                                 </div>
+                              </div>
+                              <div
+                                class="searchable-item"
+                                data-search-terms="system theme computer default"
+                              >
                                 <div
                                   class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
@@ -2613,15 +2617,22 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="overflow-hidden p-1">
+
+                            <div
+                              class="searchable-section"
+                              id="advancedSection"
+                            >
                               <div
                                 class="text-[10px] opacity-70 flex justify-start"
                               >
                                 Advanced
                               </div>
-                              <div class="space-y-3 pt-3">
+                              <div
+                                class="searchable-item"
+                                data-search-terms="manage private key security"
+                              >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2"
+                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2647,34 +2658,41 @@
                                 </div>
                               </div>
                             </div>
+
+                            <div
+                              id="noResultsFound"
+                              class="hidden text-center text-gray-500 p-4"
+                            >
+                              No results found
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <button
-                      id="popOverClose"
-                      type="button"
-                      class="absolute right-4 top-4 rounded-sm disabled:pointer-events-none dark:text-white"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-x h-4 w-4"
-                      >
-                        <path d="M18 6 6 18"></path>
-                        <path d="m6 6 12 12"></path>
-                      </svg>
-                      <span class="sr-only">Close</span>
-                    </button>
                   </div>
                 </div>
+                <button
+                  id="popOverClose"
+                  type="button"
+                  class="absolute right-4 top-4 rounded-sm disabled:pointer-events-none dark:text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-x h-4 w-4"
+                  >
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                  <span class="sr-only">Close</span>
+                </button>
               </div>
             </div>
             <div class="relative animate-in fade-in slide-in-from-bottom-1 z-0">
@@ -3396,7 +3414,7 @@
                         <div class="flex flex-wrap gap-2">
                           <div class="relative inline-block group">
                             <button
-                              id="open-data-sheet-button2"
+                              id="open-data-sheet-button"
                               class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
                               type="button"
                             >
