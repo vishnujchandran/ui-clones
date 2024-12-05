@@ -1,35 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Light and Dark Mode Buttons
-  const lightBtn = document.getElementById("light-btn");
-  const darkBtn = document.getElementById("dark-btn");
-
-  if (!lightBtn || !darkBtn) {
-    console.error("Buttons not found in the DOM.");
-    return; // Exit if buttons are not found
-  }
-
-  // Apply Light Mode
-  lightBtn.addEventListener("click", () => {
-    document.body.classList.remove("dark");
-    document.body.classList.add("light");
-    console.log("Switched to Light Mode");
-  });
-
-  // Apply Dark Mode
-  darkBtn.addEventListener("click", () => {
-    document.body.classList.remove("light");
-    document.body.classList.add("dark");
-    console.log("Switched to Dark Mode");
-  });
-
-  // Detect System Preference for Dark Mode
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-  if (prefersDarkScheme.matches) {
-    document.body.classList.add("dark");
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const collapseButton = document.getElementById("right-collapse");
   const sidebar = document.getElementById("sidebar");
