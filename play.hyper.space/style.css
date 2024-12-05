@@ -323,7 +323,7 @@ body {
 
 #sidebar {
   transition: transform 0.3s ease;
-  transform: translateX(0); /* Default position */
+  transform: translateX(0);
   width: 360px;
 }
 

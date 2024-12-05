@@ -1,3 +1,9 @@
+const themeToggleButton = document.getElementById("theme-toggle");
+
+themeToggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const collapseButton = document.getElementById("right-collapse");
   const sidebar = document.getElementById("sidebar");
@@ -342,32 +348,35 @@ document.addEventListener("keydown", function (event) {
   }
 });
 // mobile view left sheet
-const toggleButtonLeft = document.getElementById("toggle-sheet-l");
-const slidingSheetLeft = document.getElementById("sliding-sheet-l");
-const closeButtonLeft = document.getElementById("close-sheet-l");
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtonLeft = document.getElementById("toggle-sheet-l");
+  const slidingSheetLeft = document.getElementById("sliding-sheet-l");
+  const closeButtonLeft = document.getElementById("close-sheet-l");
+  const blurBgLeft = document.getElementById("bgblur");
 
-toggleButtonLeft.addEventListener("click", function () {
-  slidingSheetLeft.classList.toggle("open");
-  slidingSheetLeft.classList.toggle("hidden");
-  blurBg.classList.remove("hidden");
-});
+  toggleButtonLeft.addEventListener("click", function () {
+    slidingSheetLeft.classList.toggle("open");
+    slidingSheetLeft.classList.toggle("hidden");
+    blurBgLeft.classList.toggle("hidden"); // Ensure blurBg visibility is toggled
+  });
 
-closeButtonLeft.addEventListener("click", function () {
-  slidingSheetLeft.classList.remove("open");
-  slidingSheetLeft.classList.toggle("hidden");
-  blurBg.classList.remove("hidden");
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
+  closeButtonLeft.addEventListener("click", function () {
     slidingSheetLeft.classList.remove("open");
     slidingSheetLeft.classList.toggle("hidden");
-    blurBg.classList.add("hidden");
-  }
+    blurBgLeft.classList.add("hidden"); // Hide blurBg when closing the sheet
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      slidingSheetLeft.classList.remove("open");
+      slidingSheetLeft.classList.toggle("hidden");
+      blurBgLeft.classList.add("hidden"); // Hide blurBg when Escape is pressed
+    }
+  });
 });
 
 // Theme button and dropdown menu
-const themeButton = document.getElementById("theme-btn");
+const themeButton = document.getElementById("theme-toggle");
 const dropdownMenu = document.getElementById("dropdown-menu-main");
 
 themeButton.addEventListener("click", function (e) {
@@ -435,23 +444,29 @@ document.addEventListener("keydown", function (event) {
       if (slidingSheet) slidingSheet.classList.add("hidden");
       if (slidingSheetLeft) slidingSheetLeft.classList.add("hidden");
 
-      if (blurBg) blurBg.classList.add("hidden");
+      if (blurBg) blurBg.classList.toggle("hidden");
     }
   }
 });
 
 const dataSheet = document.getElementById("data-sheet");
-const openButton = document.getElementById("open-data-sheet-button");
+const openSheetButton = document.getElementById("open-data-sheet-button");
+const openSheetButton2 = document.getElementById("open-data-sheet-button2");
 const closeSheetBtn = document.getElementById("close-data-sheet-button");
 
-openButton.addEventListener("click", () => {
-  blurBg.classList.remove("hidden"); 
-  dataSheet.classList.remove("hidden"); 
+openSheetButton.addEventListener("click", () => {
+  dataSheet.classList.remove("hidden");
+  blurBg.classList.remove("hidden");
+});
+
+openSheetButton2.addEventListener("click", () => {
+  dataSheet.classList.remove("hidden");
+  blurBg.classList.remove("hidden");
 });
 
 function closeDataSheet() {
-  blurBg.classList.add("hidden"); 
-  dataSheet.classList.add("hidden"); 
+  dataSheet.classList.add("hidden");
+  blurBg.classList.add("hidden");
 }
 
 closeSheetBtn.addEventListener("click", closeDataSheet);
