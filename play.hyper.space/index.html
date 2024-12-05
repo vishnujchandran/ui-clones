@@ -1390,18 +1390,20 @@
 
           <div class="grid grid-rows-[auto_1fr]">
             <div
-              class="inline-flex text-[#333333] dark:text-[white] h-auto items-stretch justify-start gap-2 bg-transparent p-3"
+              class="tabs inline-flex text-[#333333] dark:text-[white] h-auto items-stretch justify-start gap-2 bg-transparent p-3"
               tabindex="0"
               style="outline: none"
             >
               <button
+                id="node-tab"
                 class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#161B22] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px"
               >
                 Node View
               </button>
 
               <button
-                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px dark:bg-[#0D1116] dark:text-[#CBCBCB] dark:hover:bg-[#262626]"
+                id="tab-tab"
+                class="disabled:pointer-events-none bg-[#FFFFFF] hover:bg-[#F2F2F2] whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px dark:bg-[#0D1116] dark:text-[#CBCBCB] dark:hover:bg-[#262626]"
               >
                 Tab View
               </button>
@@ -1427,8 +1429,9 @@
               </button>
             </div>
             <div
+              id="node-view-content"
               tabindex="0"
-              class="mt-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
+              class="tab-content mt-2 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
               style="animation-duration: 0s"
             >
               <div class="relative size-full">
@@ -1674,7 +1677,23 @@
                 </div>
               </div>
             </div>
-
+            <div id="tab-view-content" class="tab-content hidden">
+              <div
+                data-radix-scroll-area-viewport=""
+                class="h-full w-full rounded-[inherit]"
+                style="overflow: hidden scroll"
+              >
+                <div style="min-width: 100%; display: table">
+                  <div
+                    class="flex flex-col items-center justify-center p-8 text-center"
+                  >
+                    <p class="text-balance text-xs text-gray-400">
+                      Node tree will appear here once you delve into a project.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div
               tabindex="0"
               class="mt-4 flex-grow overflow-hidden animate-in fade-in slide-in-from-bottom-1"
