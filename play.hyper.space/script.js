@@ -304,14 +304,13 @@ const closeButton = document.getElementById("close-sheet-r");
 
 toggleButton.addEventListener("click", function () {
   slidingSheet.classList.toggle("open");
-  blurBg.classList.remove("hidden");
   slidingSheet.classList.toggle("hidden");
+  blurBg.classList.remove("hidden");
 });
 
 closeButton.addEventListener("click", function () {
   slidingSheet.classList.remove("open");
-  blurBg.classList.toggle("hidden");
-
+  blurBg.classList.add("hidden");
   slidingSheet.classList.toggle("hidden");
 });
 
@@ -329,13 +328,12 @@ const closeButtonLeft = document.getElementById("close-sheet-l");
 toggleButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.toggle("open");
   slidingSheetLeft.classList.toggle("hidden");
-  blurBg.classList.toggle("hidden");
+  blurBg.classList.remove("hidden");
 });
 
 closeButtonLeft.addEventListener("click", function () {
   slidingSheetLeft.classList.remove("open");
-  slidingSheetLeft.classList.toggle("hidden");
-  blurBg.classList.remove("hidden");
+  blurBg.classList.toggle("hidden");
 });
 
 document.addEventListener("keydown", function (event) {
@@ -403,17 +401,20 @@ document.addEventListener("keydown", function (event) {
     const slidingSheetLeft = document.getElementById("sliding-sheet-l");
     const blurBg = document.getElementById("bgblur");
 
+    // Check if any popover, dropdown, or sheet is open
     if (
       (popoverMenu && !popoverMenu.classList.contains("hidden")) ||
       (dropdownMenu && !dropdownMenu.classList.contains("hidden")) ||
       (slidingSheet && !slidingSheet.classList.contains("hidden")) ||
       (slidingSheetLeft && !slidingSheetLeft.classList.contains("hidden"))
     ) {
+      // Close popover, dropdown, or sheet if it's open
       if (popoverMenu) popoverMenu.classList.add("hidden");
       if (dropdownMenu) dropdownMenu.classList.add("hidden");
       if (slidingSheet) slidingSheet.classList.add("hidden");
       if (slidingSheetLeft) slidingSheetLeft.classList.add("hidden");
 
+      // Hide the background blur only if one of the above is open
       if (blurBg) blurBg.classList.add("hidden");
     }
   }
