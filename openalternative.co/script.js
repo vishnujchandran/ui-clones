@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Theme
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   if (prefersDarkScheme.matches) {
     document.body.classList.add("dark");
@@ -16,6 +17,42 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.classList.add("opacity-100", "w-32");
   });
 
+  // Filter Tools
+  document
+    .getElementById("searchTool")
+    .addEventListener("input", function (event) {
+      const searchTerm = event.target.value.toLowerCase();
+      const tollItems = document.querySelectorAll(".toll-item");
+      const ad = document.getElementById("Ads");
+      const pageNav = document.getElementById("pageNav");
+
+      let found = false;
+
+      tollItems.forEach((item) => {
+        const h3Text = item.querySelector("h3").textContent.toLowerCase(); // Get the text content of the h3 tag
+        const pText = item.querySelector("p").textContent.toLowerCase(); // Get the text content of the p tag
+
+        // Check if the search term matches either the h3 or p text
+        if (h3Text.includes(searchTerm) || pText.includes(searchTerm)) {
+          item.style.display = ""; // Show the item if it matches
+          found = true; // Set the flag to true if a match is found
+        } else {
+          item.style.display = "none"; // Hide the item if it doesn't match
+        }
+      });
+
+      // Show or hide the "No tools found" message
+      const noToolsMessage = document.getElementById("noTools");
+      if (found) {
+        noToolsMessage.classList.add("hidden"); // Hide "No tools found"
+      } else {
+        ad.classList.add("hidden");
+        pageNav.classList.add("hidden");
+        noToolsMessage.classList.remove("hidden");
+        // Show "No tools found"
+      }
+    });
+  // Dynamic content
   const tools = [
     {
       name: "Notion Alternatives",
