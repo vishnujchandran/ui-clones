@@ -422,7 +422,7 @@ document
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     popoverMenu.classList.add("hidden");
-    blurBg.classList.remove("hidden");
+    blurBg.classList.add("hidden");
   }
 });
 
