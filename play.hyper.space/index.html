@@ -44,11 +44,13 @@
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
-        class="hidden absolute right-0 h-full w-3/5 z-30 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0 dark:border-[#30363D]"
+        class="hidden absolute right-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
-        <div class="px-2.5 pt-6 dark:text-white">
+        <div
+          class="px-2.5 pt-6 dark:text-white dark:bg-[#0D1116] border-l dark:border-[#30363D]"
+        >
           <button
             id="theme-mobile-toggle"
             class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:hover:bg-[#262626] dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
@@ -167,7 +169,7 @@
             </div>
           </div>
           <div
-            class="h-full overflow-hidden transition-all duration-300 w-full dark:text-[#D4D4D4]"
+            class="h-full overflow-hidden transition-all duration-300 w-full dark:text-[#D4D4D4] !bg-[#F5F6F8]"
           >
             <div
               class="h-full w-full overflow-y-auto border-l dark:border-[#30363D] transition-all duration-300 translate-x-0"
@@ -3599,7 +3601,7 @@
     </div>
     <div
       id="data-sheet"
-      class="hidden px-2 pt-6 flex absolute bottom-0 z-30 right-0 top-0 max-w-[370px] md:w-3/5 bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md transition-all duration-300 ease-in-out"
+      class="hidden px-2 pt-6 flex absolute bottom-0 z-30 right-0 top-0 max-w-[370px] md:w-5/8 bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md transition-all duration-300 ease-in-out"
     >
       <div class="" tabindex="-1" style="pointer-events: auto">
         <div class="flex flex-col text-center sm:text-left space-y-0">
