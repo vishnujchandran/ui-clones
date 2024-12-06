@@ -548,7 +548,7 @@ const dataSheet = document.getElementById("data-sheet");
 const openSheetButton = document.getElementById("open-data-sheet-button");
 const openSheetButton2 = document.getElementById("open-data-sheet-button2");
 const closeSheetBtn = document.getElementById("close-data-sheet-button");
-const blurBg2 = document.getElementById("bgblur2");
+const blurBg2 = document.getElementById("bgblur3");
 
 openSheetButton.addEventListener("click", () => {
   dataSheet.classList.remove("hidden");
