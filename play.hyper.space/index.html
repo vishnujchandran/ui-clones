@@ -28,13 +28,18 @@
       style="pointer-events: auto"
     ></div>
     <div
+      id="bgblur2"
+      class="hidden bg-white/80 dark:bg-[#0D1116] bg-opacity-70 dark:bg-opacity-70 fixed inset-0 z-30 backdrop-blur-sm"
+      style="pointer-events: auto"
+    ></div>
+    <div
       id="main"
       class="grid supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1 h-screen"
     >
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
-        class="hidden absolute right-0 h-full w-3/5 z-50 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0 dark:border-[#30363D]"
+        class="hidden absolute right-0 h-full w-3/5 z-30 gap-4 bg-white dark:bg-[#0D1116] shadow-lg transition ease-in-out sm:max-w-sm p-0 dark:border-[#30363D]"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -96,7 +101,7 @@
           </button>
           <div
             id="theme-mobile"
-            class="hidden z-50 absolute mt-2 w-[118px] bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
+            class="hidden z-30 absolute mt-2 w-[118px] bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
           >
             <div class="flex flex-col text-xs p-1">
               <button
@@ -213,7 +218,7 @@
                       </button>
                       <div
                         id="dropdownMenu"
-                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
+                        class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-30 bg-white dark:bg-[#0D1116]"
                       >
                         <button
                           class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
@@ -419,7 +424,7 @@
                       </button>
                       <div
                         id="dropdownMenu2"
-                        class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
+                        class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-30 bg-white dark:bg-[#0D1116]"
                       >
                         <button
                           class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
@@ -843,7 +848,7 @@
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
-        class="hidden absolute left-0 z-50 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
+        class="hidden absolute left-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -1210,7 +1215,7 @@
               </button>
               <div
                 id="popoverLogoContentMain"
-                class="hidden fixed left-0 top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border dark:border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-50 dark:bg-[#0d1116]"
+                class="hidden fixed left-0 top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border dark:border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-30 dark:bg-[#0d1116]"
               >
                 <div
                   role="menu"
@@ -1404,7 +1409,7 @@
             </button>
             <div
               id="dropdown-menu-main"
-              class="hidden z-50 absolute top-12 left-56 mt-2 w-[118px] bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
+              class="hidden z-30 absolute top-12 left-56 mt-2 w-[118px] bg-white dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 rounded-lg shadow-lg"
             >
               <div class="flex flex-col text-xs p-1">
                 <button
@@ -2102,7 +2107,7 @@
 
                     <div
                       id="popoverLogoContent"
-                      class="hidden fixed left-0 top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border dark:border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-50 dark:bg-[#0d1116]"
+                      class="hidden fixed left-0 top-0 transform translate-x-[96px] translate-y-[53px] min-w-max max-w-[300px] bg-white text-white border dark:border-gray-700 shadow-md rounded-lg p-2.5 space-y-2.5 z-30 dark:bg-[#0d1116]"
                     >
                       <div
                         role="menu"
@@ -2228,7 +2233,7 @@
                   <button
                     type="button"
                     id="toggle-sheet-r"
-                    class="z-50 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4]"
+                    class="z-30 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4]"
                   >
                     <svg
                       class="h-4 w-4"
@@ -2429,7 +2434,7 @@
                 >
                   <div
                     id="popoverMenu"
-                    class="absolute blur-none max-w-[512px] hidden z-50 bg-white dark:bg-[#0D1116] p-4 rounded-md shadow-lg w-full text-xs backdrop-blur-sm"
+                    class="absolute blur-none max-w-[512px] hidden z-30 bg-white dark:bg-[#0D1116] p-4 rounded-md shadow-lg w-full text-xs backdrop-blur-sm"
                   >
                     <div class="" style="pointer-events: auto">
                       <div
@@ -2945,7 +2950,7 @@
                           </button>
                           <div
                             id="dropdownMenuMain"
-                            class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-50 bg-white dark:bg-[#0D1116]"
+                            class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-30 bg-white dark:bg-[#0D1116]"
                           >
                             <button
                               class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
@@ -3160,7 +3165,7 @@
 
                           <div
                             id="dropdownMenu2Main"
-                            class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-50 bg-white dark:bg-[#0D1116]"
+                            class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-30 bg-white dark:bg-[#0D1116]"
                           >
                             <button
                               class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
@@ -3589,7 +3594,7 @@
     </div>
     <div
       id="data-sheet"
-      class="hidden px-2 pt-6 flex min-w-[321px] md:w-[384px] absolute bottom-0 z-50 right-0 top-0 bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md transition-all duration-300 ease-in-out"
+      class="hidden px-2 pt-6 flex absolute bottom-0 z-30 right-0 top-0 max-w-[360px] w-3/5 bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md transition-all duration-300 ease-in-out"
     >
       <div class="" tabindex="-1" style="pointer-events: auto">
         <div class="flex flex-col text-center sm:text-left space-y-0">
