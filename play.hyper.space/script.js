@@ -39,27 +39,49 @@ function handleThemeChange(savedTheme, isMobile = false) {
 }
 
 // Desktop Theme Logic
+const themeButton = document.getElementById("theme-toggle");
+const dropdownMenu = document.getElementById("dropdown-menu-main");
+
+themeButton.addEventListener("click", function (e) {
+  e.stopPropagation();
+  dropdownMenu.classList.toggle("hidden");
+});
+
+window.addEventListener("click", function (e) {
+  if (!themeButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+    dropdownMenu.classList.add("hidden");
+  }
+});
+
 const savedTheme = localStorage.getItem("theme") || "system";
 handleThemeChange(savedTheme);
 
 document.getElementById("light-btn").addEventListener("click", () => {
-  document.body.classList.remove("dark");
-  localStorage.setItem("theme", "light");
-  updateDots("light");
-  if (themeMobileDropdown) themeMobileDropdown.classList.add("hidden");
+  setTheme("light");
 });
 
 document.getElementById("dark-btn").addEventListener("click", () => {
-  document.body.classList.add("dark");
-  localStorage.setItem("theme", "dark");
-  updateDots("dark");
-  if (themeMobileDropdown) themeMobileDropdown.classList.add("hidden");
+  setTheme("dark");
 });
 
 document.getElementById("system-btn").addEventListener("click", () => {
-  applySystemTheme();
-  if (themeMobileDropdown) themeMobileDropdown.classList.add("hidden");
+  setTheme("system");
 });
+
+function setTheme(theme) {
+  if (theme === "light") {
+    document.body.classList.remove("dark");
+  } else if (theme === "dark") {
+    document.body.classList.add("dark");
+  } else {
+    applySystemTheme();
+  }
+
+  localStorage.setItem("theme", theme);
+  updateDots(theme);
+
+  dropdownMenu.classList.add("hidden");
+}
 
 // Mobile Theme Logic
 const themeMobileToggle = document.getElementById("theme-mobile-toggle");
@@ -468,21 +490,6 @@ document.addEventListener("DOMContentLoaded", function () {
       closeAllSheets();
     }
   });
-});
-
-// Theme button and dropdown menu
-const themeButton = document.getElementById("theme-toggle");
-const dropdownMenu = document.getElementById("dropdown-menu-main");
-
-themeButton.addEventListener("click", function (e) {
-  e.stopPropagation();
-  dropdownMenu.classList.toggle("hidden");
-});
-
-window.addEventListener("click", function (e) {
-  if (!themeButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-    dropdownMenu.classList.add("hidden");
-  }
 });
 
 //Logo popover
