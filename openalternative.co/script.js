@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.classList.add("opacity-100", "w-32");
   });
 
-  // Filter Tools
   document
     .getElementById("searchTool")
     .addEventListener("input", function (event) {
@@ -29,30 +28,26 @@ document.addEventListener("DOMContentLoaded", function () {
       let found = false;
 
       tollItems.forEach((item) => {
-        const h3Text = item.querySelector("h3").textContent.toLowerCase(); // Get the text content of the h3 tag
-        const pText = item.querySelector("p").textContent.toLowerCase(); // Get the text content of the p tag
+        const h3Text = item.querySelector("h3").textContent.toLowerCase();
+        const pText = item.querySelector("p").textContent.toLowerCase();
 
-        // Check if the search term matches either the h3 or p text
         if (h3Text.includes(searchTerm) || pText.includes(searchTerm)) {
-          item.style.display = ""; // Show the item if it matches
-          found = true; // Set the flag to true if a match is found
+          item.style.display = "";
+          found = true;
         } else {
-          item.style.display = "none"; // Hide the item if it doesn't match
+          item.style.display = "none";
         }
       });
 
-      // Show or hide the "No tools found" message
       const noToolsMessage = document.getElementById("noTools");
       if (found) {
-        noToolsMessage.classList.add("hidden"); // Hide "No tools found"
+        noToolsMessage.classList.add("hidden");
       } else {
         ad.classList.add("hidden");
         pageNav.classList.add("hidden");
         noToolsMessage.classList.remove("hidden");
-        // Show "No tools found"
       }
     });
-  // Dynamic content
   const tools = [
     {
       name: "Notion Alternatives",
