@@ -44,7 +44,7 @@
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
-        class="hidden absolute right-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg dark:bg-[#161B22] p-0"
+        class="sliding-sheet hidden absolute right-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg dark:bg-[#161B22] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -855,7 +855,7 @@
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
-        class="hidden absolute left-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
+        class="sliding-sheet hidden absolute left-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -1000,7 +1000,7 @@
 
       <!-- Main -->
       <div
-        class="flex items-stretch overflow-hidden h-screen bg-gray-100 text-gray-700 dark:text-[#D4D4D4]"
+        class="flex overflow-hidden h-screen bg-gray-100 dark:bg-[#0D1116] text-gray-700 dark:text-[#D4D4D4]"
       >
         <!-- Left -->
         <div
@@ -2441,7 +2441,7 @@
                 >
                   <div
                     id="popoverMenu"
-                    class="absolute blur-none max-w-[512px] hidden z-30 bg-white dark:bg-[#0D1116] p-4 rounded-md shadow-lg w-full text-xs backdrop-blur-sm"
+                    class="border dark:border-[#30363D] absolute blur-none max-w-[512px] hidden z-30 bg-white dark:bg-[#0D1116] rounded-md shadow-lg w-full text-xs backdrop-blur-sm px-4"
                   >
                     <div class="" style="pointer-events: auto">
                       <div
@@ -2479,10 +2479,13 @@
                           id="searchableItems"
                           class="max-h-[300px] overflow-y-auto overflow-x-hidden"
                         >
-                          <div id="searchResultsContainer">
-                            <div class="searchable-section" id="generalSection">
+                          <div id="searchResultsContainer ">
+                            <div
+                              class="searchable-section py-2"
+                              id="generalSection"
+                            >
                               <div
-                                class="text-[10px] opacity-70 flex justify-start"
+                                class="text-[10px] opacity-70 flex justify-start pt-2"
                               >
                                 General
                               </div>
@@ -2491,7 +2494,7 @@
                                 data-search-terms="random project shuffle"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="pt-2 relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2534,7 +2537,7 @@
                                 Projects
                               </div>
                               <div
-                                class="searchable-item"
+                                class="searchable-item pt-2"
                                 data-search-terms="nuclear base security breach project"
                               >
                                 <div
@@ -2567,16 +2570,16 @@
 
                             <div class="searchable-section" id="themeSection">
                               <div
-                                class="text-[10px] opacity-70 flex justify-start"
+                                class="text-[10px] opacity-70 flex justify-start pt-2"
                               >
                                 Theme
                               </div>
                               <div
-                                class="searchable-item"
-                                data-search-terms="light theme sun brightness"
+                                class="searchable-item pt-2"
+                                data-search-terms="light theme sun brightness "
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2610,7 +2613,7 @@
                                 data-search-terms="dark theme moon night"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2638,7 +2641,7 @@
                                 data-search-terms="lights out contrast dark"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2665,7 +2668,7 @@
                                 data-search-terms="system theme computer default"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2708,7 +2711,7 @@
                               id="advancedSection"
                             >
                               <div
-                                class="text-[10px] opacity-70 flex justify-start"
+                                class="text-[10px] opacity-70 flex justify-start pt-2"
                               >
                                 Advanced
                               </div>
@@ -2717,7 +2720,7 @@
                                 data-search-terms="manage private key security"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2746,7 +2749,7 @@
 
                             <div
                               id="noResultsFound"
-                              class="hidden text-center text-gray-500 p-4"
+                              class="hidden text-center text-black dark:text-white p-4"
                             >
                               No results found
                             </div>
@@ -2894,11 +2897,11 @@
         </div>
         <!-- Right -->
         <div
-          class="relative hidden lg:block bg-white dark:bg-[#0D1116] border-l dark:border-[#30363D]"
+          id="sidebar"
+          class="max-w-[360px] relative hidden lg:flex transition-all duration-300 hidden bg-white dark:bg-[#0D1116] border-l dark:border-[#30363D] w-1/4"
         >
           <div
-            id="sidebar"
-            class="max-w-[360px] transition-all duration-300 hidden w-1/4 lg:block bg-white dark:bg-[#0D1116]"
+            class="transition-all duration-300 hidden lg:flex bg-white dark:bg-[#0D1116]"
           >
             <div class="relative h-full">
               <div

@@ -322,15 +322,15 @@ body {
 }
 
 #sidebar {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease, width 0.2s ease;
   transform: translateX(0);
-  width: 360px;
 }
 
 #sidebar.sidebar-collapsed {
   transform: translateX(100%);
-  overflow: hidden;
-  display: none;
+  transition: transform 0.2s ease, width 0.2s ease;
+
+  width: 0;
 }
 
 #right-collapse {
