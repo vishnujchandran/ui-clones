@@ -799,23 +799,32 @@
                 <div class="flex flex-col space-y-5">
                   <div class="flex items-center justify-between">
                     <h2 class="text-sm font-semibold">Vector Chunks</h2>
-                    <button>
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
+                    <div class="relative inline-block group">
+                      <button class="cursor-help">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
+                        >
+                          <path
+                            d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+
+                      <div
+                        class="absolute p-2 z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 top-0 right-full mr-2 bg-gray-900 text-white text-xs px-3 py-2 rounded shadow-lg w-[320px]"
                       >
-                        <path
-                          d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    </button>
+                        This is a tooltip. This is a tooltip. This is a tooltip.
+                        This is a tooltip. This is a tooltip.
+                      </div>
+                    </div>
                   </div>
                   <div class="space-y-2">
                     <p
@@ -1769,23 +1778,33 @@
             class="border-t dark:border-[#30363D] bg-[#f5f6f8] p-3 dark:bg-[#161B22]"
           >
             <label class="ml-3"
-              ><span class="text-sm font-semibold"> Public Key</span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-info mb-1 ml-2 inline size-3.5 cursor-help"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 16v-4"></path>
-                <path d="M12 8h.01"></path>
-              </svg>
+              ><span class="text-sm font-semibold"> Public Key</span>
+
+              <div class="relative inline-block group">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-info mb-1 ml-2 inline size-3.5 cursor-help"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 16v-4"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+
+                <div
+                  class="border dark:border-[#30363D] bg-white dark:bg-[#0D1116] absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 bottom-full mb-2 left-14 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded shadow-lg w-64"
+                >
+                  Your public key is your unique identifier on the Hyperspace
+                  network.
+                </div>
+              </div>
             </label>
             <div class="relative">
               <input
@@ -1796,55 +1815,73 @@
               <div
                 class="absolute inset-y-0 right-0 flex items-center gap-1 pr-1.5"
               >
-                <button
-                  class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-copy size-3"
+                <div class="relative inline-block group">
+                  <button
+                    class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
                   >
-                    <rect
-                      width="14"
-                      height="14"
-                      x="8"
-                      y="8"
-                      rx="2"
-                      ry="2"
-                    ></rect>
-                    <path
-                      d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
-                    ></path>
-                  </svg></button
-                ><button
-                  class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-key size-3"
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-copy size-3"
+                    >
+                      <rect
+                        width="14"
+                        height="14"
+                        x="8"
+                        y="8"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <path
+                        d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                      ></path>
+                    </svg>
+                  </button>
+
+                  <div
+                    class="bg-white dark:bg-[#0D1116] absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded shadow-lg w-32"
                   >
-                    <path
-                      d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"
-                    ></path>
-                    <path d="m21 2-9.6 9.6"></path>
-                    <circle cx="7.5" cy="15.5" r="5.5"></circle>
-                  </svg>
-                </button>
+                    Copy public key
+                  </div>
+                </div>
+
+                <div class="relative inline-block group">
+                  <button
+                    class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-key size-3"
+                    >
+                      <path
+                        d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"
+                      ></path>
+                      <path d="m21 2-9.6 9.6"></path>
+                      <circle cx="7.5" cy="15.5" r="5.5"></circle>
+                    </svg>
+                  </button>
+
+                  <div
+                    class="bg-white dark:bg-[#0D1116] absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded shadow-lg w-48"
+                  >
+                    Manage private Key
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -3539,27 +3576,35 @@
                       </div>
                     </div>
                     <hr class="border-t dark:border-[#30363D]" />
-
                     <div class="flex flex-col space-y-5">
                       <div class="flex items-center justify-between">
                         <h2 class="text-sm font-semibold">Vector Chunks</h2>
-                        <button>
-                          <svg
-                            width="15"
-                            height="15"
-                            viewBox="0 0 15 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
+                        <div class="relative inline-block group">
+                          <button class="cursor-help">
+                            <svg
+                              width="15"
+                              height="15"
+                              viewBox="0 0 15 15"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
+                            >
+                              <path
+                                d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+
+                          <div
+                            class="bg-white dark:bg-[#0D1116] absolute p-2 border dark:border-[#30363D] z-30 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 top-0 right-full mr-2 bg-gray-900 dark:bg-[#0D1116] text-white text-xs px-3 py-2 rounded shadow-lg w-[310px]"
                           >
-                            <path
-                              d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
-                              fill="currentColor"
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
+                            This is a tooltip. This is a tooltip. This is a
+                            tooltip. This is a tooltip. This is a tooltip.
+                          </div>
+                        </div>
                       </div>
                       <div class="space-y-2">
                         <p
