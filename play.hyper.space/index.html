@@ -21,7 +21,7 @@
       };
     </script>
   </head>
-  <body class="dark:bg-[#161B22] bg-[#F3F4F6]">
+  <body class="dark:bg-[#0D1116] bg-white">
     <div
       id="bgblur"
       class="hidden bg-white/80 dark:bg-[#0D1116] bg-opacity-70 dark:bg-opacity-70 fixed inset-0 z-30 backdrop-blur-sm"
@@ -38,13 +38,12 @@
       style="pointer-events: auto"
     ></div>
     <div
-      id="main"
-      class="grid supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1 h-screen"
+      class="grid supports-dvh:!h-dvh max-lg:grid-rows-[auto_1fr] lg:grid-flow-row border-1"
     >
       <!-- Right Sheet -->
       <div
         id="sliding-sheet-r"
-        class="sliding-sheet hidden absolute right-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg dark:bg-[#161B22] p-0"
+        class="sliding-sheet hidden absolute right-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg dark:bg-[#0D1116] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
@@ -53,7 +52,7 @@
         >
           <button
             id="theme-mobile-toggle"
-            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:hover:bg-[#262626] dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:hover:bg-[#141A22] dark:text-[#D4D4D4] dark:border-[#30363D] transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-50"
             type="button"
           >
             <svg
@@ -113,7 +112,7 @@
             <div class="flex flex-col text-xs p-1">
               <button
                 id="light-btn-mob"
-                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#141A22] rounded-sm"
               >
                 <span
                   class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
@@ -123,7 +122,7 @@
               </button>
               <button
                 id="dark-btn-mob"
-                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#141A22] rounded-sm"
               >
                 <span
                   class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
@@ -134,7 +133,7 @@
 
               <button
                 id="system-btn-mob"
-                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#141A22] rounded-sm"
               >
                 <span
                   class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
@@ -169,7 +168,7 @@
             </div>
           </div>
           <div
-            class="h-full overflow-hidden transition-all duration-300 w-full dark:text-[#D4D4D4] dark:bg-[#161B22] bg-[#F5F6F8]"
+            class="h-full overflow-hidden transition-all duration-300 w-full dark:text-[#D4D4D4] dark:bg-[#0D1116] bg-[#F5F6F8]"
           >
             <div
               class="h-full w-full overflow-y-auto border-l dark:border-[#30363D] transition-all duration-300 translate-x-0"
@@ -205,10 +204,7 @@
                               id="selectedTextmini"
                               class="truncate text-sm font-medium"
                               >Groq</span
-                            ><span
-                              id="selectedSubTextmini"
-                              class="ml-1 hidden items-center text-sm text-gray-500 dark:text-[#818181] text-xs 2xl:block"
-                              >(Default)</span
+                            >
                             >
                           </div>
                           <img
@@ -228,10 +224,9 @@
                         class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-30 bg-white dark:bg-[#0D1116]"
                       >
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           data-name="Groq"
                           data-img="https://play.hyper.space/groq.svg"
-                          data-subtext="(Default)"
                         >
                           <div class="flex items-center">
                             <img
@@ -243,15 +238,12 @@
                               class="mr-2"
                               src="https://play.hyper.space/groq.svg"
                             />
-                            <span class="text-xs font-medium"
-                              >Groq
-                              <span class="opacity-50">(Default)</span></span
-                            >
+                            <span class="text-xs font-medium">Groq </span>
                           </div>
                         </button>
 
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           data-name="Together AI"
                           data-img="https://play.hyper.space/togetherai.svg"
                           data-subtext=""
@@ -271,7 +263,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           data-name="Mistral AI"
                           data-img="https://play.hyper.space/mistral.svg"
                           data-subtext=""
@@ -291,7 +283,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           data-name="Open AI"
                           data-img="https://play.hyper.space/openai.svg"
                           data-subtext=""
@@ -311,7 +303,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           data-name="Anthropic"
                           data-img="https://play.hyper.space/anthropic.svg"
                           data-subtext=""
@@ -331,7 +323,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           data-name="xAI"
                           data-img="https://play.hyper.space/xai.svg"
                           data-subtext=""
@@ -351,7 +343,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           data-name="Google"
                           data-img="https://play.hyper.space/google.svg"
                           data-subtext=""
@@ -434,7 +426,7 @@
                         class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-30 bg-white dark:bg-[#0D1116]"
                       >
                         <button
-                          class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
+                          class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] dark:bg-[#272e37]"
                           data-name="llama3-70b-8192"
                           data-img="https://play.hyper.space/meta.svg"
                           data-subtext=""
@@ -457,7 +449,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                           data-name="llama-3.1-8b-instant"
                           data-img="https://play.hyper.space/meta.svg"
                           data-subtext=""
@@ -480,7 +472,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                           data-name="llama3-8b-8192"
                           data-img="https://play.hyper.space/meta.svg"
                           data-subtext=""
@@ -503,7 +495,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                           data-name="llama-3.1-70b-versatile"
                           data-img="https://play.hyper.space/meta.svg"
                           data-subtext=""
@@ -526,7 +518,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                           data-name="mixtral-8x7b-32768"
                           data-img="https://play.hyper.space/mistral.svg"
                           data-subtext=""
@@ -549,7 +541,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                           data-name="gemma2-9b-it"
                           data-img="https://play.hyper.space/Google__G__logo 1.svg"
                           data-subtext=""
@@ -572,7 +564,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                           data-name="gemma-7b-it"
                           data-img="https://play.hyper.space/Google__G__logo 1.svg"
                           data-subtext=""
@@ -593,7 +585,7 @@
                         </button>
 
                         <button
-                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                          class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                           data-name="llava-v1.5-7b-4096-preview"
                           data-img="https://play.hyper.space/meta.svg"
                           data-subtext=""
@@ -624,10 +616,10 @@
                           <div class="flex w-full items-center">
                             <input id="apiKeyInput" placeholder="Enter API key"
                             autocomplete="current-password" class="h-full w-full
-                            bg-transparent text-gray-800 dark:text-[#D4D4D4]
-                            text-xs font-medium placeholder-gray-400
-                            outline-none dark:placeholder-white
-                            placeholder="Enter API key" type="password" />
+                            bg-transparent text-gray-800 dark:text-white text-xs
+                            font-medium placeholder-gray-400 outline-none
+                            dark:placeholder-white placeholder="Enter API key"
+                            type="password" />
                           </div>
                           <button
                             id="showButton"
@@ -661,7 +653,7 @@
                   <div class="space-y-2" tabindex="0" style="outline: none">
                     <button
                       type="button"
-                      class="group w-full border-black rounded-md p-4 transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px hover:border-black"
+                      class="group w-full border-black rounded-md p-4 transition bg-[#f5f6f8] dark:bg-[#0D1116] border dark:border-[#30363D] border-gray-300 hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] transform-gpu hover:-translate-y-px hover:border-black"
                       tabindex="0"
                     >
                       <svg
@@ -708,17 +700,6 @@
                     class="flex w-full flex-col items-center justify-center gap-3 rounded border-2 border-dashed p-4 border-gray-300"
                     onclick="document.getElementById('file-upload').click()"
                   >
-                    <input
-                      accept=".pdf,.txt"
-                      class="hidden"
-                      id="file-upload"
-                      type="file"
-                    />
-                    <div
-                      class="text-sm text-gray-500 dark:text-[#818181] text-xs"
-                    >
-                      Drag and drop a PDF or Text File, or click to upload
-                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -737,6 +718,17 @@
                       <polyline points="17 8 12 3 7 8"></polyline>
                       <line x1="12" x2="12" y1="3" y2="15"></line>
                     </svg>
+                    <input
+                      accept=".pdf,.txt"
+                      class="hidden"
+                      id="file-upload"
+                      type="file"
+                    />
+                    <div
+                      class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+                    >
+                      Upload PDFs or text files
+                    </div>
                   </div>
                 </div>
                 <ul class="flex flex-col gap-1"></ul>
@@ -754,7 +746,7 @@
                       <div class="relative inline-block group">
                         <button
                           id="open-data-sheet-button2"
-                          class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                           type="button"
                         >
                           <svg
@@ -864,13 +856,13 @@
       <!-- Left Sheet -->
       <div
         id="sliding-sheet-l"
-        class="sliding-sheet hidden absolute left-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#161B22] p-0"
+        class="sliding-sheet hidden absolute left-0 z-30 shadow-lg transition w-3/5 ease-in-out inset-y-0 left-0 border-r dark:border-[#30363D] sm:max-w-sm flex h-full flex-col gap-0 rounded-lg bg-white dark:bg-[#0D1116] p-0"
         tabindex="-1"
         style="pointer-events: auto"
       >
         <div class="absolute bottom-3 left-1/3">
           <div
-            class="flex items-center gap-4 p-2 bg-[#F2F2F2] dark:bg-[#161B22] dark:text-gray-400 max-w-[120px]"
+            class="flex items-center gap-4 p-2 bg-[#F2F2F2] dark:bg-[#0D1116] dark:text-gray-400 max-w-[120px]"
             style="pointer-events: all"
           >
             <button type="button" title="zoom in" aria-label="zoom in" disabled>
@@ -1013,7 +1005,7 @@
       >
         <!-- Left -->
         <div
-          class="bg-white dark:bg-[#0D1116] grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r dark:border-[#30363D] max-lg:hidden"
+          class="bg-white dark:bg-[#0D1116] grid grid-rows-[auto_1fr_auto] w-1/4 max-w-[360px] flex-shrink-0 border-r dark:border-[#30363D] lg:inset-4 max-lg:hidden"
         >
           <nav
             class="flex items-center justify-between gap-3 border-b dark:border-[#30363D] pl-6 pr-3 max-md:h-[50px] md:h-[67px]"
@@ -1046,7 +1038,7 @@
               <button
                 type="button"
                 onclick="popoverLogoContentMain(event)"
-                class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
               >
                 <div>
                   <svg
@@ -1241,7 +1233,7 @@
                   <a
                     href="https://compute.hyper.space"
                     target="_blank"
-                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                   >
                     <div class="flex items-center">
                       <svg
@@ -1289,7 +1281,7 @@
                   <a
                     href="https://network.hyper.space"
                     target="_blank"
-                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                   >
                     <div class="flex items-center">
                       <svg
@@ -1328,7 +1320,7 @@
                   <a
                     href="https://node.hyper.space"
                     target="_blank"
-                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                    class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                   >
                     <div class="flex items-center">
                       <svg
@@ -1367,7 +1359,7 @@
             </div>
             <button
               id="theme-toggle"
-              class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+              class="flex h-8 w-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
               type="button"
             >
               <svg
@@ -1430,7 +1422,7 @@
               <div class="flex flex-col text-xs p-1">
                 <button
                   id="light-btn"
-                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#141A22] rounded-sm"
                 >
                   <span
                     class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
@@ -1440,7 +1432,7 @@
                 </button>
                 <button
                   id="dark-btn"
-                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#141A22] rounded-sm"
                 >
                   <span
                     class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
@@ -1451,7 +1443,7 @@
 
                 <button
                   id="system-btn"
-                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#262626] rounded-sm"
+                  class="flex items-center py-2 px-4 text-left pl-2 hover:bg-[#F2F2F2F2] dark:hover:bg-[#141A22] rounded-sm"
                 >
                   <span
                     class="mr-4 w-2 h-2 rounded-full bg-black dark:bg-white opacity-0"
@@ -1471,20 +1463,20 @@
             >
               <button
                 id="node-tab"
-                class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#161B22] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px"
+                class="disabled:pointer-events-none text-[#f5f6f8] dark:text-black dark:bg-[#0D1116] bg-[#333333] dark:bg-[#D4D4D4] font-medum whitespace-nowrap px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px"
               >
                 Node View
               </button>
 
               <button
                 id="tab-tab"
-                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px bg-[#FFFFFF] hover:bg-[#F2F2F2] dark:bg-[#0D1116] dark:text-[#CBCBCB] dark:hover:bg-[#262626]"
+                class="disabled:pointer-events-none whitespace-nowrap font-medium px-3 py-1.5 text-sm flex h-8 transform items-center justify-center rounded-lg border dark:border-[#30363D] w-auto flex-1 hover:-translate-y-px bg-[#FFFFFF] hover:bg-[#F2F2F2] dark:bg-[#0D1116] dark:text-[#CBCBCB] dark:hover:bg-[#141A22]"
               >
                 Tab View
               </button>
 
               <button
-                class="dark:hover:bg-[#262626] flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] opacity-50"
+                class="dark:hover:bg-[#141A22] flex h-8 w-8 transform items-center cursor-not-allowed justify-center rounded-lg border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] opacity-50"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1563,7 +1555,7 @@
                           >
                             <div class="flex justify-center my-auto">
                               <span
-                                class="mx-auto relative bg-white flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-lg font-bold hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#262626] bg-white dark:bg-[#30363D]"
+                                class="mx-auto relative bg-white flex items-center justify-center rounded border dark:border-[#30363D] px-2 py-1 text-lg font-bold hover:cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#141A22] bg-white dark:bg-[#30363D]"
                                 style="max-width: 130px"
                               >
                                 Welcome!
@@ -1661,7 +1653,7 @@
                   ></div>
                 </div>
                 <button
-                  class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-white shadow-md bg-black hover:bg-[#E5E5E5] hover:text-black dark:bg-[#161B22] dark:hover:bg-[#30363D] dark:text-white dark:hover:text-white"
+                  class="absolute right-2 top-2 rounded-full bg-button-bg p-2 text-white shadow-md bg-black hover:bg-[#E5E5E5] hover:text-black dark:bg-[#0D1116] dark:hover:bg-[#30363D] dark:text-white dark:hover:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1683,7 +1675,7 @@
                 </button>
                 <div class="absolute bottom-0 left-36">
                   <div
-                    class="flex items-center gap-4 p-2 bg-[#F2F2F2] dark:bg-[#161B22] dark:text-gray-400 max-w-[120px]"
+                    class="flex items-center gap-4 p-2 bg-[#F2F2F2] dark:bg-[#0D1116] dark:text-gray-400 max-w-[120px]"
                     style="pointer-events: all"
                   >
                     <button
@@ -1775,7 +1767,7 @@
             ></div>
           </div>
           <div
-            class="border-t dark:border-[#30363D] bg-[#f5f6f8] p-3 dark:bg-[#161B22]"
+            class="border-t dark:border-[#30363D] bg-[#f5f6f8] p-3 dark:bg-[#0D1116]"
           >
             <label class="ml-3"
               ><span class="text-sm font-semibold"> Public Key</span>
@@ -1817,7 +1809,7 @@
               >
                 <div class="relative inline-block group">
                   <button
-                    class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
+                    class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] size-7 rounded border-none"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1854,7 +1846,7 @@
 
                 <div class="relative inline-block group">
                   <button
-                    class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] size-7 rounded border-none"
+                    class="flex transform items-center justify-center border dark:border-[#30363D] transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] size-7 rounded border-none"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1887,39 +1879,38 @@
           </div>
         </div>
         <!-- Middle -->
-        <div
-          class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2 dark:bg-[#151A21]"
-        >
+        <div class="relative flex flex-grow flex-col overflow-hidden lg:w-1/2">
           <div
-            class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white dark:bg-[#0D1116] shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:inset-4 lg:rounded-lg lg:border dark:lg:border-[#30363D]"
+            class="mx-auto max-w-screen-lg absolute inset-0 overflow-hidden bg-white dark:bg-[#0D1116] shadow-lg grid grid-cols-1 grid-rows-[1fr_auto] lg:p-4"
           >
             <div
               class="pointer-events-none absolute bottom-[6rem] left-[0rem] z-10 p-4"
             ></div>
-            <div
-              class="relative mb-1.5 overflow-y-auto overflow-x-hidden border-b dark:border-[#30363D]"
-            >
+            <div class="relative mb-1.5 overflow-y-auto overflow-x-hidden">
               <nav
-                class="flex items-center justify-between border-b dark:border-[#30363D] bg-white dark:bg-[#0D1116] p-2.5 lg:hidden"
+                class="flex items-center justify-between bg-white dark:bg-[#0D1116] p-2.5 border-b dark:border-[#30363D] lg:hidden"
               >
-                <div class="w-10">
+                <div>
                   <button
                     type="button"
-                    class="border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] dark:text-[#D4D4D4]"
+                    class="w-8 border-gray-300 dark:border-[#30363D] p-2.5 rounded-lg dark:border bg-[#FFFFFF] dark:bg-[#161B22] text-black dark:text-[#D4D4D4] dark:text-[#D4D4D4]"
                     id="toggle-sheet-l"
                   >
                     <svg
-                      class="h-4 w-4"
+                      class="transform transition-transform duration-200"
                       fill="none"
-                      height="10"
-                      viewBox="0 0 12 10"
-                      width="12"
+                      height="12"
+                      viewBox="0 0 10 12"
+                      width="10"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M2.5 9H9.5C10.3284 9 11 8.32843 11 7.5V2.5C11 1.67157 10.3284 1 9.5 1H2.5M2.5 9C1.67157 9 1 8.32843 1 7.5V2.5C1 1.67157 1.67157 1 2.5 1M2.5 9H5V1H2.5"
-                        stroke="currentColor"
-                        stroke-width="1.5"
+                        d="M2.5 0.999999L7.5 6L2.5 11"
+                        stroke="#333333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.42857"
+                        class="stroke-[#333333] dark:stroke-[#D4D4D4]"
                       ></path>
                     </svg>
                   </button>
@@ -1957,7 +1948,7 @@
                     <button
                       type="button"
                       onclick="toggleLogoPopover(event)"
-                      class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                      class="flex cursor-pointer items-center gap-x-2 rounded-md p-[5px] hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                     >
                       <div class="text-[#333333] dark:text-[#D4D4D4]">
                         <svg
@@ -2129,7 +2120,7 @@
                           </defs>
                         </svg>
                       </div>
-                      <span class="dark:text-[#D4D4D4]">Play</span>
+                      <span class="text-sm dark:text-[#D4D4D4]">Play</span>
                       <div>
                         <svg
                           fill="none"
@@ -2161,7 +2152,7 @@
                         <a
                           href="https://compute.hyper.space"
                           target="_blank"
-                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                         >
                           <div class="flex items-center">
                             <svg
@@ -2196,7 +2187,7 @@
                         <a
                           href="https://network.hyper.space"
                           target="_blank"
-                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                         >
                           <div class="flex items-center">
                             <svg
@@ -2235,7 +2226,7 @@
                         <a
                           href="https://node.hyper.space"
                           target="_blank"
-                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                          class="flex items-center space-x-2.5 px-3 py-2 text-sm rounded-lg hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                         >
                           <div class="flex items-center">
                             <svg
@@ -2273,37 +2264,28 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-10">
+                <div>
                   <button
                     type="button"
+                    flex
+                    class="z-30 flex justify-center border-gray-300 dark:border-[#30363D] p-2.5 rounded-lg dark:border bg-[#FFFFFF] dark:bg-[#161B22] text-black dark:text-[#D4D4D4] dark:text-[#D4D4D4]"
                     id="toggle-sheet-r"
-                    class="z-30 flex justify-center rounded-full border-gray-300 bg-[#FFFFFF] dark:bg-[#0D1116] text-black dark:text-[#D4D4D4]"
                   >
                     <svg
-                      class="h-4 w-4"
+                      class="rotate-180 transform transition-transform duration-200"
                       fill="none"
-                      height="8"
-                      viewBox="0 0 11 8"
-                      width="11"
+                      height="12"
+                      viewBox="0 0 10 12"
+                      width="10"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M1.15125 1H9.55124"
-                        stroke="currentColor"
+                        d="M2.5 0.999999L7.5 6L2.5 11"
+                        stroke="#333333"
                         stroke-linecap="round"
-                        stroke-width="1.2"
-                      ></path>
-                      <path
-                        d="M1.15125 4H7.15125"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-width="1.2"
-                      ></path>
-                      <path
-                        d="M1.15125 7H4.75125"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-width="1.2"
+                        stroke-linejoin="round"
+                        stroke-width="1.42857"
+                        class="stroke-[#333333] dark:stroke-[#D4D4D4]"
                       ></path>
                     </svg>
                   </button>
@@ -2345,7 +2327,7 @@
                         style="transform: translate3d(0px, 0px, 0px)"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.2s"
                         >
                           <h3
@@ -2374,7 +2356,7 @@
                         class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.3s"
                         >
                           <h3
@@ -2404,7 +2386,7 @@
                         style="transform: translate3d(0px, 0px, 0px)"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.2s"
                         >
                           <h3
@@ -2433,7 +2415,125 @@
                         class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
                       >
                         <button
-                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#262626] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          style="animation-duration: 0.3s"
+                        >
+                          <h3
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
+                          >
+                            Spurs say Popovich's absence due to mild stroke -
+                            ESPN
+                          </h3>
+                          <p
+                            class="mb-4 line-clamp-3 flex-grow text-sm text-gray-400 font-medium text-xs max-sm:line-clamp-2"
+                          >
+                            Spurs say Popovich's absence due to mild stroke
+                            ESPNSan Antonio Spurs' coach Gregg Popovich suffers
+                            mild stroke NBC NewsSpurs coach Gregg Popovich ...
+                          </p>
+                          <div class="mb-1 flex items-center justify-between">
+                            <span class="text-start text-[10px] text-gray-400"
+                              >espn.com</span
+                            ><span class="text-end text-[10px] text-gray-400"
+                              >about 1 hour</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
+                        style="transform: translate3d(0px, 0px, 0px)"
+                      >
+                        <button
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          style="animation-duration: 0.2s"
+                        >
+                          <h3
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
+                          >
+                            Live Scam Detection in calls rolling out to Pixel
+                            6-9 Phone app - 9to5Google
+                          </h3>
+                          <p
+                            class="mb-4 line-clamp-3 flex-grow text-sm text-gray-400 font-medium text-xs max-sm:line-clamp-2"
+                          >
+                            Live Scam Detection in calls rolling out to Pixel
+                            6-9 Phone app 9to5GoogleNew Google Pixel AI feature
+                            analyzes phone conversations for scams Bleepi...
+                          </p>
+                          <div class="mb-1 flex items-center justify-between">
+                            <span class="text-start text-[10px] text-gray-400"
+                              >google.com</span
+                            ><span class="text-end text-[10px] text-gray-400"
+                              >about 1 hour</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
+                      >
+                        <button
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          style="animation-duration: 0.3s"
+                        >
+                          <h3
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
+                          >
+                            Spurs say Popovich's absence due to mild stroke -
+                            ESPN
+                          </h3>
+                          <p
+                            class="mb-4 line-clamp-3 flex-grow text-sm text-gray-400 font-medium text-xs max-sm:line-clamp-2"
+                          >
+                            Spurs say Popovich's absence due to mild stroke
+                            ESPNSan Antonio Spurs' coach Gregg Popovich suffers
+                            mild stroke NBC NewsSpurs coach Gregg Popovich ...
+                          </p>
+                          <div class="mb-1 flex items-center justify-between">
+                            <span class="text-start text-[10px] text-gray-400"
+                              >espn.com</span
+                            ><span class="text-end text-[10px] text-gray-400"
+                              >about 1 hour</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
+                        style="transform: translate3d(0px, 0px, 0px)"
+                      >
+                        <button
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
+                          style="animation-duration: 0.2s"
+                        >
+                          <h3
+                            class="text-sm text-gray-700 dark:text-[#D4D4D4] mb-2 line-clamp-2 font-semibold"
+                          >
+                            Live Scam Detection in calls rolling out to Pixel
+                            6-9 Phone app - 9to5Google
+                          </h3>
+                          <p
+                            class="mb-4 line-clamp-3 flex-grow text-sm text-gray-400 font-medium text-xs max-sm:line-clamp-2"
+                          >
+                            Live Scam Detection in calls rolling out to Pixel
+                            6-9 Phone app 9to5GoogleNew Google Pixel AI feature
+                            analyzes phone conversations for scams Bleepi...
+                          </p>
+                          <div class="mb-1 flex items-center justify-between">
+                            <span class="text-start text-[10px] text-gray-400"
+                              >google.com</span
+                            ><span class="text-end text-[10px] text-gray-400"
+                              >about 1 hour</span
+                            >
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class="min-w-0 shrink-0 grow-0 basis-full mx-2 p-px max-md:basis-1/2 md:basis-1/3"
+                      >
+                        <button
+                          class="flex h-full flex-col rounded-lg border dark:border-[#30363D] px-4 py-2 text-start bg-white dark:bg-[#0D1116] transition hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] animate-in fade-in slide-in-from-bottom-1 transform hover:-translate-y-px hover:shadow-sm"
                           style="animation-duration: 0.3s"
                         >
                           <h3
@@ -2465,7 +2565,7 @@
                   id="openMenuBtn"
                   onclick="openPopover()"
                   type="button"
-                  class="inline-flex items-center justify-center text-[#333333] dark:text-[white] whitespace-nowrap rounded-md text-xs font-medium disabled:pointer-events-none hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:hover:bg-[#262626] h-10 px-4 py-2 gap-2"
+                  class="inline-flex items-center justify-center text-[#333333] dark:text-[white] whitespace-nowrap rounded-md text-xs font-medium disabled:pointer-events-none hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] dark:hover:bg-[#141A22] h-10 px-4 py-2 gap-2"
                 >
                   <span>Open menu</span
                   ><kbd
@@ -2531,7 +2631,7 @@
                                 data-search-terms="random project shuffle"
                               >
                                 <div
-                                  class="pt-2 relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="pt-2 relative flex select-none rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#141A22]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2578,7 +2678,7 @@
                                 data-search-terms="nuclear base security breach project"
                               >
                                 <div
-                                  class="relative flex items-center rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex items-center rounded-sm px-2 py-1.5 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#141A22]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2616,7 +2716,7 @@
                                 data-search-terms="light theme sun brightness "
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#141A22]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2650,7 +2750,7 @@
                                 data-search-terms="dark theme moon night"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#141A22]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2678,7 +2778,7 @@
                                 data-search-terms="lights out contrast dark"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#141A22]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2705,7 +2805,7 @@
                                 data-search-terms="system theme computer default"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#141A22]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2757,7 +2857,7 @@
                                 data-search-terms="manage private key security"
                               >
                                 <div
-                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#262626]"
+                                  class="relative flex select-none rounded-sm px-2 py-3 text-xs outline-none cursor-pointer items-center gap-2 hover:bg-[#F2F2F2] dark:hover:bg-[#141A22]"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -2821,9 +2921,12 @@
               </div>
             </div>
             <div class="relative animate-in fade-in slide-in-from-bottom-1 z-0">
-              <div class="overflow-hidden">
+              <div
+                id="scrollContainer"
+                class="overflow-x-auto overflow-y-hidden no-scrollbar scroll-smooth"
+              >
                 <div
-                  class="flex mx-3 cursor-grab select-none space-x-2 *:cursor-grab"
+                  class="flex cursor-grab select-none space-x-2 *:cursor-grab"
                   style="transform: translate3d(0px, 0px, 0px)"
                 >
                   <div class="min-w-0 shrink-0 grow-0 basis-auto px-0">
@@ -2859,7 +2962,74 @@
                     style="animation-duration: 0.2s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Smart contracts and decentralized applications"
+                    >
+                      Smart contracts and decentralized applications
+                    </button>
+                  </div>
+                  <div
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.2s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Theory of mind in artificial intelligence"
+                    >
+                      Theory of mind in artificial intelligence
+                    </button>
+                  </div>
+                  <div
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.2s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Decentralized finance (DeFi) protocols"
+                    >
+                      Decentralized finance (DeFi) protocols
+                    </button>
+                  </div>
+                  <div
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.2s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="The hard problem of consciousness in philosophy"
+                    >
+                      The hard problem of consciousness in philosophy
+                    </button>
+                  </div>
+                  <div
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.2s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Active Inference and predictive coding in the brain"
+                    >
+                      Active Inference and predictive coding in the brain
+                    </button>
+                  </div>
+                  <div
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.2s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Tokenomics and cryptocurrency economics"
+                    >
+                      Tokenomics and cryptocurrency economics
+                    </button>
+                  </div>
+                  <div
+                    class="min-w-0 shrink-0 grow-0 basis-full px-0 animate-in fade-in slide-in-from-bottom-2 max-md:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                    style="animation-duration: 0.2s"
+                  >
+                    <button
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Comparative cognition between humans and AI"
                     >
                       Comparative cognition between humans and AI
                     </button>
@@ -2869,7 +3039,8 @@
                     style="animation-duration: 0.4s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Blockchain consensus mechanisms"
                     >
                       Blockchain consensus mechanisms
                     </button>
@@ -2879,7 +3050,8 @@
                     style="animation-duration: 0.6s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Neural correlates of consciousness"
                     >
                       Neural correlates of consciousness
                     </button>
@@ -2889,7 +3061,8 @@
                     style="animation-duration: 0.8s"
                   >
                     <button
-                      class="text-xs font-medium my-px truncate rounded-md border dark:border-[#30363D] bg-white dark:bg-[#0D1116] px-3 py-1 text-center transform transition hover:-translate-y-px hover:bg-[#f2f2f2] dark:hover:bg-[#262626] disabled:pointer-events-none w-full"
+                      class="text-xs font-medium my-px truncate rounded-md p-3 text-center transform transition hover:-translate-y-px disabled:pointer-events-none w-full bg-[#F5F6F8] hover:bg-[#F2F2F2] dark:bg-[#161B22] dark:hover:bg-[#141A22]"
+                      data-value="Cryptocurrency mining and energy consumption"
                     >
                       Cryptocurrency mining and energy consumption
                     </button>
@@ -2897,19 +3070,19 @@
                 </div>
               </div>
             </div>
-            <div class="group relative p-3 pt-1.5">
+            <div class="group relative pt-1.5">
               <textarea
-                class="flex outline-none w-full font-semibold opacity-60 border dark:border-[#30363D] sm:p-16 md:p-2 bg-white dark:bg-[#0D1116] px-3 py-2 placeholder:text-gray-500 dark:text-[#818181] text-xs disabled:cursor-not-allowed disabled:opacity-50 min-h-0 resize-none rounded pr-14 text-md transition hide-scrollbar"
-                placeholder="What would you like to ask?"
-                required=""
-                rows="2"
+                id="dynamicTextarea"
+                class="flex outline-none w-full font-semibold opacity-60 sm:p-16 md:p-2 md:px-3 bg-[#F5F6F8] dark:bg-[#141A22] px-5 py-2 placeholder:text-gray-500 dark:placeholder:text-white placeholder:bold dark:text-white text-sm disabled:cursor-not-allowed disabled:opacity-50 min-h-0 md:h-[64px] resize-none pr-14 transition hide-scrollbar rounded-2xl focus:border focus:borser-white focus:border-2"
+                placeholder="Ask anything"
+                value=""
+                rows=""
               ></textarea>
               <div
                 class="absolute flex items-center justify-end bottom-2.5 right-6 top-2 translate-y-[-2px]"
               >
                 <button
-                  class="aspect-square rounded bg-[#333333] p-2 text-[#f5f6f8] dark:bg-[#161B22] opacity-100 transition disabled:opacity-50"
-                  disabled=""
+                  class="aspect-square rounded bg-[#333333] p-2 text-[#f5f6f8] dark:bg-white opacity-100 transition"
                   type="submit"
                 >
                   <svg
@@ -2922,7 +3095,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-arrow-up size-4"
+                    class="lucide lucide-arrow-up size-4 dark:text-black"
                   >
                     <path d="m5 12 7-7 7 7"></path>
                     <path d="M12 19V5"></path>
@@ -2935,28 +3108,25 @@
         <!-- Right -->
         <div
           id="sidebar"
-          class="max-w-[360px] relative hidden lg:flex transition-all duration-300 hidden bg-white dark:bg-[#0D1116] border-l dark:border-[#30363D] w-1/4"
+          class="max-w-[375px] relative hidden lg:flex transition-all duration-300 hidden w-1/4"
         >
-          <div
-            class="transition-all duration-300 hidden lg:flex bg-white dark:bg-[#0D1116]"
-          >
-            <div class="relative h-full">
+          <div class="transition-all duration-300 hidden lg:flex mt-2 mr-2">
+            <div class="relative">
               <div
                 class="h-full overflow-hidden transition-all duration-300 w-full w-0"
               >
                 <div
                   class="h-full w-full overflow-y-auto transition-all duration-300 translate-x-0"
                 >
-                  <div class="flex flex-col space-y-4 p-4">
-                    <div class="flex flex-col space-y-2">
-                      <h2 class="text-md font-semibold capitalize">
-                        AI Providers
-                      </h2>
+                  <div class="flex flex-col space-y-4 p-2">
+                    <div
+                      class="flex flex-col space-y-2 p-2 rounded-lg border dark:border-[#30363D] bg-white dark:bg-[#161B22]"
+                    >
                       <div class="flex flex-col space-y-3">
                         <div class="flex space-x-2">
                           <button
                             type="button"
-                            class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
+                            class="w-1/2 flex-1 rounded-lg dark:bg-[#0D1116] p-1.5 text-left"
                             onclick="toggleDropdownMain(event)"
                           >
                             <div class="flex items-center justify-between">
@@ -2965,8 +3135,8 @@
                                   id="selectedIcon"
                                   alt="groq"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2 flex-shrink-0"
                                   style="color: transparent"
@@ -2976,11 +3146,6 @@
                                   id="selectedText"
                                   class="truncate text-sm font-medium"
                                   >Groq</span
-                                >
-                                <span
-                                  id="selectedSubText"
-                                  class="ml-1 hidden items-center text-sm text-gray-500 dark:text-[#818181] text-xs 2xl:block"
-                                  >(Default)</span
                                 >
                               </div>
                               <img
@@ -3000,32 +3165,26 @@
                             class="hidden flex-col p-2 mt-2 w-[202px] border dark:border-[#30363D] rounded-md absolute top-20 left-0 center z-30 bg-white dark:bg-[#0D1116]"
                           >
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 dark:bg-[#272e37] rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                               data-name="Groq"
                               data-img="https://play.hyper.space/groq.svg"
-                              data-subtext="(Default)"
                             >
                               <div class="flex items-center">
                                 <img
                                   alt="groq"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   src="https://play.hyper.space/groq.svg"
                                 />
-                                <span class="text-xs font-medium"
-                                  >Groq
-                                  <span class="opacity-50"
-                                    >(Default)</span
-                                  ></span
-                                >
+                                <span class="text-xs font-medium">Groq </span>
                               </div>
                             </button>
 
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                               data-name="Together AI"
                               data-img="https://play.hyper.space/togetherai.svg"
                               data-subtext=""
@@ -3034,8 +3193,8 @@
                                 <img
                                   alt="Together AI"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   src="https://play.hyper.space/togetherai.svg"
@@ -3047,7 +3206,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                               data-name="Mistral AI"
                               data-img="https://play.hyper.space/mistral.svg"
                               data-subtext=""
@@ -3056,8 +3215,8 @@
                                 <img
                                   alt="Mistral AI"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   src="https://play.hyper.space/mistral.svg"
@@ -3069,7 +3228,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                               data-name="Open AI"
                               data-img="https://play.hyper.space/openai.svg"
                               data-subtext=""
@@ -3078,8 +3237,8 @@
                                 <img
                                   alt="Open AI"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   src="https://play.hyper.space/openai.svg"
@@ -3089,7 +3248,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                               data-name="Anthropic"
                               data-img="https://play.hyper.space/anthropic.svg"
                               data-subtext=""
@@ -3098,8 +3257,8 @@
                                 <img
                                   alt="Anthropic"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   src="https://play.hyper.space/anthropic.svg"
@@ -3111,7 +3270,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                               data-name="xAI"
                               data-img="https://play.hyper.space/xai.svg"
                               data-subtext=""
@@ -3120,8 +3279,8 @@
                                 <img
                                   alt="xAI"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   src="https://play.hyper.space/xai.svg"
@@ -3131,7 +3290,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
+                              class="dropdown-item w-full p-2 text-left text-xs rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
                               data-name="Google"
                               data-img="https://play.hyper.space/google.svg"
                               data-subtext=""
@@ -3140,8 +3299,8 @@
                                 <img
                                   alt="Google"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   src="https://play.hyper.space/google.svg"
@@ -3176,7 +3335,7 @@
                           <button
                             type="button"
                             onclick="toggleDropdown2Main(event)"
-                            class="w-1/2 flex-1 rounded-lg border dark:border-[#30363D] p-1.5 text-left"
+                            class="w-1/2 flex-1 rounded-lg p-1.5 text-left dark:bg-[#0D1116]"
                           >
                             <div class="flex items-center justify-between">
                               <div class="flex items-center overflow-hidden">
@@ -3184,8 +3343,8 @@
                                   id="selectedIcon2"
                                   alt="llama3-70b-8192"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2 flex-shrink-0"
                                   style="color: transparent"
@@ -3209,13 +3368,12 @@
                               />
                             </div>
                           </button>
-
                           <div
                             id="dropdownMenu2Main"
                             class="hidden flex-col mt-2 w-[232px] border dark:border-[#30363D] p-2 rounded-md absolute right-0 top-20 z-30 bg-white dark:bg-[#0D1116]"
                           >
                             <button
-                              class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] dark:bg-[#272e37]"
+                              class="dropdown-item w-full p-2 text-left text-xs bg-gray-200 rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] dark:bg-[#272e37]"
                               data-name="llama3-70b-8192"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3224,8 +3382,8 @@
                                 <img
                                   alt="llama3-70b-8192"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3238,7 +3396,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                               data-name="llama-3.1-8b-instant"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3247,8 +3405,8 @@
                                 <img
                                   alt="llama-3.1-8b-instant"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3261,7 +3419,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                               data-name="llama3-8b-8192"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3270,8 +3428,8 @@
                                 <img
                                   alt="llama3-8b-8192"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3284,7 +3442,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                               data-name="llama-3.1-70b-versatile"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3293,8 +3451,8 @@
                                 <img
                                   alt="llama-3.1-70b-versatile"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3307,7 +3465,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                               data-name="mixtral-8x7b-32768"
                               data-img="https://play.hyper.space/mistral.svg"
                               data-subtext=""
@@ -3316,8 +3474,8 @@
                                 <img
                                   alt="mixtral-8x7b-32768"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3330,7 +3488,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                               data-name="gemma2-9b-it"
                               data-img="https://play.hyper.space/Google__G__logo 1.svg"
                               data-subtext=""
@@ -3339,8 +3497,8 @@
                                 <img
                                   alt="gemma2-9b-it"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3353,7 +3511,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                               data-name="gemma-7b-it"
                               data-img="https://play.hyper.space/Google__G__logo 1.svg"
                               data-subtext=""
@@ -3362,8 +3520,8 @@
                                 <img
                                   alt="gemma-7b-it"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3376,7 +3534,7 @@
                             </button>
 
                             <button
-                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#262626] w-full p-2 text-left text-xs"
+                              class="dropdown-item rounded-md hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] w-full p-2 text-left text-xs"
                               data-name="llava-v1.5-7b-4096-preview"
                               data-img="https://play.hyper.space/meta.svg"
                               data-subtext=""
@@ -3385,8 +3543,8 @@
                                 <img
                                   alt="llava-v1.5-7b-4096-preview"
                                   loading="lazy"
-                                  width="20"
-                                  height="20"
+                                  width="16"
+                                  height="16"
                                   decoding="async"
                                   class="mr-2"
                                   style="color: transparent"
@@ -3402,12 +3560,12 @@
                         <div>
                           <div class="relative">
                             <div
-                              class="flex h-[35px] w-full items-center justify-between rounded-lg border dark:border-[#30363D] px-3 py-1 text-left"
+                              class="flex h-[35px] w-full items-center justify-between rounded-lg dark:bg-[#0D1116] px-3 py-1 text-left"
                             >
                               <div class="flex w-full items-center">
                                 <input
                                   id="apiKeyInputMain"
-                                  class="h-full w-full bg-transparent outline-none text-gray-800 text-xs font-medium placeholder-gray-400"
+                                  class="h-full w-full bg-transparent outline-none text-gray-800 text-xs font-medium placeholder-gray-400 dark:text-white"
                                   placeholder="Enter API key"
                                   type="password"
                                 />
@@ -3418,131 +3576,36 @@
                                 type="button"
                                 onclick="togglePasswordVisibilityMain()"
                               >
-                                Show
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="lucide lucide-eye size-3"
+                                >
+                                  <path
+                                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                                  ></path>
+                                  <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
                               </button>
                             </div>
                           </div>
                         </div>
-                        <div class="flex items-center space-x-2">
-                          <p class="text-xs font-medium">
-                            Get Groq API key
+                        <div class="flex justify-end items-center space-x-2">
+                          <p class="text-xs font-medium p-1">
                             <a
-                              class="text-blue-500 hover:underline"
+                              class="text-blue-500 hover:underline flex"
                               href="https://console.groq.com/keys"
                               rel="noopener noreferrer"
                               target="_blank"
-                              >here </a
-                            >.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <hr class="border-t dark:border-[#30363D]" />
-
-                    <div class="flex w-full flex-col space-y-2">
-                      <h2 class="text-md font-semibold capitalize">
-                        Data Sources
-                      </h2>
-                      <div class="space-y-2" tabindex="0" style="outline: none">
-                        <button
-                          type="button"
-                          class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#161B22] border dark:border-gray-200 hover:bg-[#f2f2f2] dark:hover:bg-[#262626] transform-gpu hover:-translate-y-px"
-                          tabindex="0"
-                        >
-                          <svg
-                            onclick="toggleOpacity(this)"
-                            id="tick"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-check absolute right-3 top-3 size-4 text-gray-800 dark:text-[#585d67] transition-opacity duration-200"
-                          >
-                            <path d="M20 6 9 17l-5-5"></path>
-                          </svg>
-                          <div class="flex items-center space-x-2">
-                            <img
-                              alt="Web"
-                              class="h-6 w-6 dark:hidden"
-                              style="filter: none"
-                              src="./images/web.svg"
-                            />
-
-                            <img
-                              alt="Web"
-                              class="h-6 w-6 hidden dark:block"
-                              style="filter: none"
-                              src="./images/web-invert.svg"
-                            />
-                            <h3 class="text-md font-semibold capitalize">
-                              Web
-                            </h3>
-                          </div>
-                          <p class="mt-2 text-sm">
-                            Search and retrieve information from the web
-                          </p>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="p-2">
-                      <div
-                        class="flex w-full flex-col items-center justify-center gap-3 rounded border-2 border-dashed p-4 border-gray-300"
-                        onclick="document.getElementById('file-upload').click()"
-                      >
-                        <input
-                          accept=".pdf,.txt"
-                          class="hidden"
-                          id="file-upload"
-                          type="file"
-                        />
-                        <div
-                          class="text-sm text-gray-500 dark:text-[#818181] text-xs"
-                        >
-                          Drag and drop a PDF or Text File, or click to upload
-                        </div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-upload"
-                        >
-                          <path
-                            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                          ></path>
-                          <polyline points="17 8 12 3 7 8"></polyline>
-                          <line x1="12" x2="12" y1="3" y2="15"></line>
-                        </svg>
-                      </div>
-                    </div>
-                    <ul class="flex flex-col gap-1"></ul>
-                    <hr class="border-t dark:border-[#30363D]" />
-
-                    <div class="flex flex-col space-y-5">
-                      <div class="space-y-1">
-                        <p class="text-sm">
-                          Select your preferred source below. You may choose
-                          multiple sources.
-                        </p>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <div class="flex flex-wrap gap-2">
-                          <div class="relative inline-block group">
-                            <button
-                              id="open-data-sheet-button"
-                              class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#0D1116] hover:bg-[#f2f2f2] dark:hover:bg-[#262626]"
-                              type="button"
                             >
+                              <span> Get your Groq API key &nbsp; </span>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -3553,65 +3616,590 @@
                                 stroke-width="2"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="lucide lucide-plus size-4 text-[#333333] dark:text-[white]"
+                                class="lucide lucide-external-link mb-1 size-3"
                               >
-                                <path d="M5 12h14"></path>
-                                <path d="M12 5v14"></path>
+                                <path d="M15 3h6v6"></path>
+                                <path d="M10 14 21 3"></path>
+                                <path
+                                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                ></path>
                               </svg>
-                            </button>
-
-                            <div
-                              class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
-                            >
-                              Add data source
-                            </div>
-                          </div>
-
-                          <img
-                            alt="Wikipedia"
-                            class="h-7 w-7 cursor-pointer"
-                            src="https://play.hyper.space/data-sources/wikipedia.svg"
-                          />
+                            </a>
+                          </p>
                         </div>
                       </div>
                     </div>
-                    <hr class="border-t dark:border-[#30363D]" />
-                    <div class="flex flex-col space-y-5">
-                      <div class="flex items-center justify-between">
-                        <h2 class="text-sm font-semibold">Vector Chunks</h2>
-                        <div class="relative inline-block group">
-                          <button class="cursor-help">
+
+                    <div
+                      class="flex w-full flex-col space-y-2 p-2 rounded-lg border dark:border-[#30363D] bg-white dark:bg-[#161B22]"
+                    >
+                      <h2 class="text-sm font-semibold capitalize pl-3">
+                        Data Source
+                      </h2>
+                      <div class="space-y-2" tabindex="0" style="outline: none">
+                        <div
+                          type="button"
+                          class="group w-full border-black rounded-md p-4 text-start transition bg-[#f5f6f8] dark:bg-[#0D1116] border dark:border-[#30363D] hover:bg-[#f2f2f2] dark:hover:bg-[#141A22] transform-gpu"
+                          tabindex="0"
+                        >
+                          <div
+                            class="flex justify-between items-center space-x-2"
+                          >
+                            <h3 class="text-sm font-semibold capitalize">
+                              Web Search
+                            </h3>
+                            <button
+                              id="toggle-button"
+                              type="button"
+                              role="switch"
+                              aria-checked="false"
+                              class="relative flex h-6 w-11 items-center rounded-full transition-colors duration-300 bg-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 dark:bg-[#2E2E2E]"
+                            >
+                              <span
+                                id="circle"
+                                class="absolute left-0 block h-5 w-5 rounded-full bg-white shadow-lg transition-transform duration-300 transform translate-x-0"
+                              ></span>
+                            </button>
+                          </div>
+                          <p class="mt-2 text-xs opacity-60">
+                            Data will crawl the web for real-time, relevant
+                            answers to your queries.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="space-y-2 border p-2 px-4 rounded-lg bg-[#f5f6f8] dark:bg-[#0D1116] border dark:border-[#30363D]"
+                        tabindex="0"
+                        style="outline: none"
+                      >
+                        <h3 class="text-sm font-semibold capitalize">Files</h3>
+                        <div
+                          class="flex w-full items-center justify-start gap-3 rounded border border-dashed p-2.5 border-gray-700 rounded-lg hover:brightness-95 dark:hover:bg-[#1C222B] dark:bg-[#151A20]"
+                          onclick="document.getElementById('file-upload').click()"
+                        >
+                          <div class="dark:bg-[#10151C] p-2 rounded-lg">
                             <svg
-                              width="15"
-                              height="15"
-                              viewBox="0 0 15 15"
-                              fill="none"
                               xmlns="http://www.w3.org/2000/svg"
-                              class="h-4 w-4 text-gray-500 dark:text-[#818181] text-xs"
+                              width="12"
+                              height="12"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-upload"
                             >
                               <path
-                                d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
+                                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
                               ></path>
+                              <polyline points="17 8 12 3 7 8"></polyline>
+                              <line x1="12" x2="12" y1="3" y2="15"></line>
                             </svg>
-                          </button>
-
+                          </div>
+                          <input
+                            accept=".pdf,.txt"
+                            class="hidden"
+                            id="file-upload"
+                            type="file"
+                          />
                           <div
-                            class="bg-white dark:bg-[#0D1116] absolute p-2 border dark:border-[#30363D] z-30 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 top-0 right-full mr-2 bg-gray-900 dark:bg-[#0D1116] text-white text-xs px-3 py-2 rounded shadow-lg w-[310px]"
+                            class="text-sm text-gray-500 dark:text-white text-xs"
                           >
-                            This is a tooltip. This is a tooltip. This is a
-                            tooltip. This is a tooltip. This is a tooltip.
+                            Upload PDFs or text files
                           </div>
                         </div>
                       </div>
-                      <div class="space-y-2">
-                        <p
-                          class="text-sm text-gray-500 dark:text-[#818181] text-xs"
+
+                      <div class="space-y-2" tabindex="0" style="outline: none">
+                        <div
+                          class="flex flex-col space-y-2 p-2 px-4 rounded-lg border dark:border-[#30363D] bg-white dark:bg-[#0D1116]"
                         >
-                          No vector chunks available. Start a chat to see
-                          relevant chunks.
+                          <div class="space-y-1">
+                            <p class="text-sm font-semibold capitalize">
+                              Data Sources
+                            </p>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <div class="flex flex-wrap gap-2">
+                              <div class="relative inline-block group">
+                                <button
+                                  id="open-data-sheet-button"
+                                  class="flex h-7 w-7 items-center justify-center rounded-md border dark:border-[#30363D] border-gray-200 bg-white dark:bg-[#C0C0C1] hover:bg-[#f2f2f2] dark:hover:bg-[#141A22]"
+                                  type="button"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-plus size-4 text-[#333333] dark:text-[black]"
+                                  >
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5v14"></path>
+                                  </svg>
+                                </button>
+
+                                <div
+                                  class="absolute h-full left-full top-1/2 transform -translate-y-1/2 ml-2 hidden group-hover:block bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-sm shadow-md whitespace-nowrap"
+                                >
+                                  Add data source
+                                </div>
+                              </div>
+
+                              <img
+                                alt="Wikipedia"
+                                class="h-7 w-7 cursor-pointer"
+                                src="https://play.hyper.space/data-sources/wikipedia.svg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col overflow-hidden h-[425px]">
+                      <div
+                        class="flex-grow flex flex-col space-y-2 p-2 rounded-lg border dark:border-[#30363D] bg-white dark:bg-[#161B22]"
+                      >
+                        <div class="flex items-center justify-between px-4">
+                          <h2 class="text-sm font-semibold">Vector Chunks</h2>
+                          <div class="relative inline-block group flex fle">
+                            <button class="cursor-help">
+                              <svg
+                                width="15"
+                                height="15"
+                                viewBox="0 0 15 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 text-gray-500 dark:text-[#D4D4D4] text-xs"
+                              >
+                                <path
+                                  d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM8.24992 4.49999C8.24992 4.9142 7.91413 5.24999 7.49992 5.24999C7.08571 5.24999 6.74992 4.9142 6.74992 4.49999C6.74992 4.08577 7.08571 3.74999 7.49992 3.74999C7.91413 3.74999 8.24992 4.08577 8.24992 4.49999ZM6.00003 5.99999H6.50003H7.50003C7.77618 5.99999 8.00003 6.22384 8.00003 6.49999V9.99999H8.50003H9.00003V11H8.50003H7.50003H6.50003H6.00003V9.99999H6.50003H7.00003V6.99999H6.50003H6.00003V5.99999Z"
+                                  fill="currentColor"
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </button>
+                            <p
+                              class="bg-white text-center dark:bg-[#0D1116] absolute p-2 border dark:border-[#30363D] z-30 invisible group-hover:visible opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 top-0 right-full mr-2 bg-gray-900 dark:bg-[#0D1116] text-white text-xs px-3 py-2 rounded shadow-lg w-[310px]"
+                            >
+                              This is a tooltip. This is a tooltip. This is a
+                              tooltip. This is a tooltip. This is a tooltip.
+                            </p>
+                          </div>
+                        </div>
+                        <hr class="border-t dark:border-[#30363D]" />
+
+                        <div
+                          class="space-y-2 flex flex-col justify-center pt-4"
+                        >
+                          <h3 class="text-sm mx-auto font-semibold">
+                            No vector chunks available
+                          </h3>
+
+                          <p
+                            class="text-sm text-center text-gray-500 dark:text-[#A8A8A8] text-xs px-8"
+                          >
+                            Relevant data segments are missing for this
+                            conversation. Please provide more input or check
+                            your data source(s).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden lg:block xl:hidden absolute top-1/2 flex items-center justify-center w-full h-screen"
+          >
+            <div
+              id="right-collapse"
+              class="z-5 cursor-pointer h-14 py-5 rounded-l-lg border dark:border-[#30363D] bg-white dark:bg-[#161B22] dark:text-white p-2 transition-all duration-300"
+            >
+              <div
+                class="transform transition-transform duration-200 rotate-180"
+              >
+                <svg
+                  class="rotate-180 transform transition-transform duration-200"
+                  fill="none"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  width="10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0.999999L7.5 6L2.5 11"
+                    stroke="#333333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.42857"
+                    class="stroke-[#333333] dark:stroke-[#D4D4D4]"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="data-sheet"
+        class="hidden overflow-y-hidden px-2 pt-6 flex absolute bottom-0 z-30 right-5 top-5 max-w-[370px] md:w-5/8 bg-white dark:bg-[#161B22] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md transition-all duration-300 ease-in-out"
+      >
+        <div class="" tabindex="-1" style="pointer-events: auto">
+          <div class="flex flex-col text-center sm:text-left space-y-2 px-2">
+            <h2 class="text-lg font-semibold text-sm">Data Sources</h2>
+            <p class="text-sm text-xs">
+              Select your preffered source below. You may choose multiple
+              sources.
+            </p>
+            <button
+              class="size-7 overflow-hidden rounded bg-app-background transition hover:-translate-y-px animate-in fade-in slide-in-from-bottom-1"
+              data-state="closed"
+            >
+              <img
+                alt="Wikipedia"
+                class="size-full animate-pulse bg-app-background data-[loaded=true]:animate-none data-[loaded=true]:bg-transparent"
+                src="https://halcyon.hyper.space/assets/wikipedia.svg"
+                data-loaded="true"
+              />
+            </button>
+          </div>
+          <hr class="border-t mt-2 w-full dark:border-[#30363D]" />
+
+          <div
+            class="relative overflow-hidden mt-4 h-[calc(100vh-120px)]"
+            style="position: relative"
+          >
+            <div
+              class="h-full w-full rounded-[inherit]"
+              style="overflow: hidden scroll"
+            >
+              <div style="min-width: 100%; display: table">
+                <div class="space-y-2 px-2">
+                  <div
+                    class="cursor-pointer rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 hover:-translate-y-px dark:hover:bg-[#141A22] transition-colors border-app-hyperspace-black bg-app-highlight"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Wikipedia"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/wikipedia.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Wikipedia
+                          </h3>
+                          <span class="ml-2 text-lg font-semibold text-gray-400"
+                            >(Sept. 2024)</span
+                          >
+                        </div>
+                        <p class="mt-1 text-">
+                          The open content encyclopedia that you already know
+                          and love
+                        </p>
+                        <p class="mt-1 text-[10px] text-gray-400">
+                          Powered by: Hyperspace Vector Database
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 hover:-translate-y-px dark:hover:bg-[#141A22] transition-colors bg-app-container hover:border-gray-300"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="PubMed"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/pubmed.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            PubMed
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          More than 37 million citations for biomedical
+                          literature
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 hover:-translate-y-px dark:hover:bg-[#141A22] transition-colors bg-app-container hover:border-gray-300"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="arXiv"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/arxiv.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            arXiv
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          An open-access archive of nearly 2.4 million scholarly
+                          articles
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 hover:-translate-y-px dark:hover:bg-[#141A22] transition-colors bg-app-container hover:border-gray-300"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Reddit Comments"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/reddit-comments.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Reddit Comments
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Large-scale dataset of Reddit comments across various
+                          subreddits
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 hover:-translate-y-px dark:hover:bg-[#141A22] transition-colors bg-app-container hover:border-gray-300"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Polymarket"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/polymarket.png"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Polymarket
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Polymarket is an online prediction market platform
+                          that would allow users to trade on the outcome of
+                          world events.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="pb-2 pt-4 pl-4 text-sm font-semibold">
+                    Coming Soon
+                  </p>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Seattle Airbnb Data"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/airbnb.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Seattle Airbnb Data
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Comprehensive dataset of Airbnb listings and pricing
+                          in Seattle
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Real Estate Data for the US"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/real-estate.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Real Estate Data for the US
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Extensive collection of US real estate market trends
+                          and property data
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Tesla Stock"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/tesla-stock.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Tesla Stock
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Historical and real-time stock data for Tesla, Inc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="EV Sales Dataset"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/ev-sales.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            EV Sales Dataset
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Global electric vehicle sales statistics and market
+                          analysis
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Amazon Products"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/amazon.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Amazon Products
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Detailed catalog of Amazon products, including reviews
+                          and pricing
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="US univ Admissions"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/us-univ.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            US univ Admissions
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Comprehensive data on US university admissions,
+                          including acceptance rates and demographics
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="US Airline"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/us-airlines.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            US Airline
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Extensive dataset on US airline performance, including
+                          delays, cancellations, and customer satisfaction
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Trip Advisor"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/tripadvisor.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Trip Advisor
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Curated collection of TripAdvisor reviews and ratings
+                          for various travel destinations
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cursor-disabled rounded-lg border dark:border-[#30363D] dark:bg-[#0D1116] p-4 pr-8 transition-colors cursor-not-allowed opacity-50 dark:hover:bg-[#141A22]"
+                  >
+                    <div class="flex items-center">
+                      <div>
+                        <div class="flex items-center">
+                          <img
+                            alt="Fineweb by HF"
+                            class="mr-2 h-5 w-5"
+                            src="https://play.hyper.space/data-sources/fineweb-hf.svg"
+                          />
+                          <h3 class="text-lg font-semibold capitalize text-sm">
+                            Fineweb by HF
+                          </h3>
+                        </div>
+                        <p class="mt-1 text-">
+                          Comprehensive financial web data curated by Hugging
+                          Face
                         </p>
                       </div>
                     </div>
@@ -3620,422 +4208,28 @@
               </div>
             </div>
           </div>
-          <div
-            id="right-collapse"
-            class="sm:hidden hidden md:block absolute top-4 z-5 cursor-pointer rounded-l-lg border dark:border-[#30363D] bg-white dark:bg-[#0D1116] dark:text-white p-2 transition-all duration-300 lg:block"
+          <button
+            type="button"
+            id="close-data-sheet-button"
+            class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none"
           >
-            <div class="transform transition-transform duration-200 rotate-180">
-              <svg
-                class="rotate-180 transform transition-transform duration-200"
-                fill="none"
-                height="12"
-                viewBox="0 0 10 12"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.5 0.999999L7.5 6L2.5 11"
-                  stroke="#333333"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.42857"
-                  class="stroke-[#333333] dark:stroke-[#D4D4D4]"
-                ></path>
-              </svg>
-            </div>
-          </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-x h-4 w-4"
+            >
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path></svg
+            ><span class="sr-only">Close</span>
+          </button>
         </div>
-      </div>
-    </div>
-    <div
-      id="data-sheet"
-      class="hidden px-2 pt-6 flex absolute bottom-0 z-30 right-0 top-0 max-w-[370px] md:w-5/8 bg-white dark:bg-[#0D1116] text-black dark:text-[#D4D4D4] text-xs px-2 py-1 rounded-md shadow-md transition-all duration-300 ease-in-out"
-    >
-      <div class="" tabindex="-1" style="pointer-events: auto">
-        <div class="flex flex-col text-center sm:text-left space-y-0">
-          <h2 class="text-lg font-semibold text-app-hyperspace-black">
-            Data Sources
-          </h2>
-          <p class="text-sm text-app-hyperspace-black">
-            Select your preffered source below. You may choose multiple sources.
-          </p>
-        </div>
-        <div
-          class="relative overflow-hidden mt-4 h-[calc(100vh-120px)]"
-          style="position: relative"
-        >
-          <div
-            class="h-full w-full rounded-[inherit]"
-            style="overflow: hidden scroll"
-          >
-            <div style="min-width: 100%; display: table">
-              <div class="space-y-2">
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors border-app-hyperspace-black bg-app-highlight"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Wikipedia"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/wikipedia.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Wikipedia
-                        </h3>
-                        <span class="ml-2 text-lg font-semibold text-gray-400"
-                          >(Sept. 2024)</span
-                        >
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        The open content encyclopedia that you already know and
-                        love
-                      </p>
-                      <p class="mt-1 text-xs text-gray-400">
-                        Powered by: Hyperspace Vector Database
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="PubMed"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/pubmed.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          PubMed
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        More than 37 million citations for biomedical literature
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="arXiv"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/arxiv.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          arXiv
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        An open-access archive of nearly 2.4 million scholarly
-                        articles
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Reddit Comments"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/reddit-comments.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Reddit Comments
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Large-scale dataset of Reddit comments across various
-                        subreddits
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors bg-app-container hover:border-gray-300 hover:bg-app-highlight"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Polymarket"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/polymarket.png"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Polymarket
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Polymarket is an online prediction market platform that
-                        would allow users to trade on the outcome of world
-                        events.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <p class="pb-2 pt-4 text-lg font-semibold">Coming soon...</p>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Seattle Airbnb Data"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/airbnb.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Seattle Airbnb Data
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Comprehensive dataset of Airbnb listings and pricing in
-                        Seattle
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Real Estate Data for the US"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/real-estate.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Real Estate Data for the US
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Extensive collection of US real estate market trends and
-                        property data
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Tesla Stock"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/tesla-stock.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Tesla Stock
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Historical and real-time stock data for Tesla, Inc.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="EV Sales Dataset"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/ev-sales.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          EV Sales Dataset
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Global electric vehicle sales statistics and market
-                        analysis
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Amazon Products"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/amazon.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Amazon Products
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Detailed catalog of Amazon products, including reviews
-                        and pricing
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="US univ Admissions"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/us-univ.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          US univ Admissions
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Comprehensive data on US university admissions,
-                        including acceptance rates and demographics
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="US Airline"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/us-airlines.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          US Airline
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Extensive dataset on US airline performance, including
-                        delays, cancellations, and customer satisfaction
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Trip Advisor"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/tripadvisor.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Trip Advisor
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Curated collection of TripAdvisor reviews and ratings
-                        for various travel destinations
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="cursor-pointer rounded-lg border dark:border-[#30363D] p-2 transition-colors cursor-not-allowed opacity-50 hover:bg-app-highlight hover:opacity-90"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="flex items-center">
-                        <img
-                          alt="Fineweb by HF"
-                          class="mr-2 h-5 w-5"
-                          src="https://play.hyper.space/data-sources/fineweb-hf.svg"
-                        />
-                        <h3
-                          class="text-lg font-semibold capitalize text-app-hyperspace-black"
-                        >
-                          Fineweb by HF
-                        </h3>
-                      </div>
-                      <p class="mt-1 text-sm text-app-hyperspace-black">
-                        Comprehensive financial web data curated by Hugging Face
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          type="button"
-          id="close-data-sheet-button"
-          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-app-stroke transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-app-stroke-dark focus:ring-offset-2 disabled:pointer-events-none"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-x h-4 w-4"
-          >
-            <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path></svg
-          ><span class="sr-only">Close</span>
-        </button>
       </div>
     </div>
     <script src="script.js"></script>

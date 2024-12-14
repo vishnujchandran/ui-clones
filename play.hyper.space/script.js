@@ -372,31 +372,34 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// Show password Main
+// Show password
 function togglePasswordVisibilityMain() {
   const passwordInput = document.getElementById("apiKeyInputMain");
   const showButton = document.getElementById("showButtonMain");
 
+  const eyeOpenIcon = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye size-3">
+      <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+  `;
+
+  const eyeClosedIcon = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-closed size-3">
+      <path d="m15 18-.722-3.25"></path>
+      <path d="M2 8a10.645 10.645 0 0 0 20 0"></path>
+      <path d="m20 15-1.726-2.05"></path>
+      <path d="m4 15 1.726-2.05"></path>
+      <path d="m9 18 .722-3.25"></path>
+    </svg>
+  `;
+
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
-    showButton.textContent = "Hide";
+    showButton.innerHTML = eyeClosedIcon;
   } else {
     passwordInput.type = "password";
-    showButton.textContent = "Show";
-  }
-}
-
-// Show password
-function togglePasswordVisibility() {
-  const passwordInput = document.getElementById("apiKeyInput");
-  const showButton = document.getElementById("showButton");
-
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    showButton.textContent = "Hide";
-  } else {
-    passwordInput.type = "password";
-    showButton.textContent = "Show";
+    showButton.innerHTML = eyeOpenIcon;
   }
 }
 
@@ -643,4 +646,85 @@ nodeTab.addEventListener("click", () => {
 
 tabTab.addEventListener("click", () => {
   switchTab(tabTab, tabViewContent);
+});
+
+// Scroll container
+const scrollContainer = document.getElementById("scrollContainer");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+scrollContainer.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  scrollContainer.scrollLeft += e.deltaY * 5;
+});
+
+scrollContainer.addEventListener("mousedown", (e) => {
+  isDown = true;
+  scrollContainer.classList.add("cursor-grabbing");
+  startX = e.pageX - scrollContainer.offsetLeft;
+  scrollLeft = scrollContainer.scrollLeft;
+});
+
+scrollContainer.addEventListener("mouseleave", () => {
+  isDown = false;
+  scrollContainer.classList.remove("cursor-grabbing");
+});
+
+scrollContainer.addEventListener("mouseup", () => {
+  isDown = false;
+  scrollContainer.classList.remove("cursor-grabbing");
+});
+
+scrollContainer.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - scrollContainer.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  scrollContainer.scrollLeft = scrollLeft - walk;
+});
+
+// Dynamic type area
+const buttons = document.querySelectorAll("[data-value]");
+const textarea = document.getElementById("dynamicTextarea");
+const defaultValue = "Ask anything";
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", (event) => {
+    const newValue = event.target.closest("button").getAttribute("data-value");
+    textarea.value = newValue;
+  });
+
+  button.addEventListener("mouseleave", () => {
+    textarea.value = defaultValue;
+  });
+});
+
+document.addEventListener("mouseover", (event) => {
+  if (![...buttons].some((button) => button.contains(event.target))) {
+    textarea.value = defaultValue;
+  }
+});
+
+// Toggle Functionality
+const toggleButton = document.getElementById("toggle-button");
+const circle = document.getElementById("circle");
+
+toggleButton.addEventListener("click", () => {
+  const isChecked = toggleButton.getAttribute("aria-checked") === "true";
+
+  if (isChecked) {
+    toggleButton.setAttribute("aria-checked", "false");
+    toggleButton.classList.remove("bg-green-500", "dark:bg-green-400");
+    toggleButton.classList.add("bg-neutral-200", "dark:bg-neutral-700");
+    circle.classList.remove("translate-x-5");
+    circle.classList.add("translate-x-0");
+  } else {
+    toggleButton.setAttribute("aria-checked", "true");
+    toggleButton.classList.remove("bg-neutral-200", "dark:bg-neutral-700");
+    toggleButton.classList.add("bg-green-500", "dark:bg-green-400");
+    circle.classList.remove("translate-x-0");
+    circle.classList.add("translate-x-5");
+  }
 });
