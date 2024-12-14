@@ -418,5 +418,9 @@ body.blurred {
 
 .no-scrollbar {
   -ms-overflow-style: none;
-  scrollbar-width: none; 
+  scrollbar-width: none;
+}
+
+#data-sheet.active {
+  transform: translateX(0);
 }
