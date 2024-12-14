@@ -293,7 +293,6 @@ document.addEventListener("keydown", function (event) {
 const dropdownMenuMini = document.getElementById("dropdownMenu");
 const selectedIconmini = document.getElementById("selectedIconmini");
 const selectedTextmini = document.getElementById("selectedTextmini");
-const selectedSubTextMini = document.getElementById("selectedSubTextmini");
 
 function toggleDropdown(event) {
   dropdownMenuMini.classList.toggle("hidden");
@@ -310,7 +309,6 @@ dropdownItemsmini.forEach((item) => {
 
     selectedIconmini.src = imgSrc;
     selectedTextmini.textContent = name;
-    selectedSubTextMini.textContent = subText;
 
     dropdownMenuMini.classList.add("hidden");
   });
@@ -530,29 +528,29 @@ document.addEventListener("click", function (e) {
     popoverMain.classList.add("hidden");
   }
 });
-// document.addEventListener("keydown", function (event) {
-//   if (event.key === "Escape") {
-//     const popoverMenu = document.getElementById("popoverMenu");
-//     const dropdownMenu = document.getElementById("dropdownMenuMain");
-//     const slidingSheet = document.getElementById("sliding-sheet-r");
-//     const slidingSheetLeft = document.getElementById("sliding-sheet-l");
-//     const blurBg = document.getElementById("bgblur");
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    const popoverMenu = document.getElementById("popoverMenu");
+    const dropdownMenu = document.getElementById("dropdownMenuMain");
+    const slidingSheet = document.getElementById("sliding-sheet-r");
+    const slidingSheetLeft = document.getElementById("sliding-sheet-l");
+    const blurBg = document.getElementById("bgblur");
 
-//     if (
-//       (popoverMenu && !popoverMenu.classList.contains("hidden")) ||
-//       (dropdownMenu && !dropdownMenu.classList.contains("hidden")) ||
-//       (slidingSheet && !slidingSheet.classList.contains("hidden")) ||
-//       (slidingSheetLeft && !slidingSheetLeft.classList.contains("hidden"))
-//     ) {
-//       if (popoverMenu) popoverMenu.classList.add("hidden");
-//       if (dropdownMenu) dropdownMenu.classList.add("hidden");
-//       if (slidingSheet) slidingSheet.classList.add("hidden");
-//       if (slidingSheetLeft) slidingSheetLeft.classList.add("hidden");
+    if (
+      (popoverMenu && !popoverMenu.classList.contains("hidden")) ||
+      (dropdownMenu && !dropdownMenu.classList.contains("hidden")) ||
+      (slidingSheet && !slidingSheet.classList.contains("hidden")) ||
+      (slidingSheetLeft && !slidingSheetLeft.classList.contains("hidden"))
+    ) {
+      if (popoverMenu) popoverMenu.classList.add("hidden");
+      if (dropdownMenu) dropdownMenu.classList.add("hidden");
+      if (slidingSheet) slidingSheet.classList.add("hidden");
+      if (slidingSheetLeft) slidingSheetLeft.classList.add("hidden");
 
-//       if (blurBg) blurBg.classList.toggle("hidden");
-//     }
-//   }
-// });
+      if (blurBg) blurBg.classList.toggle("hidden");
+    }
+  }
+});
 
 const dataSheet = document.getElementById("data-sheet");
 const openSheetButton = document.getElementById("open-data-sheet-button");
