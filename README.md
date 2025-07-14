@@ -2,10 +2,6 @@
 
 This repository is dedicated to developing UI clones inspired by various websites. The aim is to explore design techniques and implement user interfaces similar to those found on popular sites.
 
-## Future UI Clones
-
-### Planned Clones
-
 1. **Perplexity AI**
 
    - **Page**: Logged-in page
